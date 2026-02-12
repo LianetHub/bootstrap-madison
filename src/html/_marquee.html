@@ -1,0 +1,24 @@
+<div class="marquee marquee--@@color">
+    <div class="marquee__slider swiper" @@if(color==='dark' ){ data-direction="reverse" }>
+        <div class="swiper-wrapper">
+            @@if(typeof texts !== 'undefined' && texts.length > 0) {
+            @@for (var i = 0; i < texts.length; i++) { <div class="marquee__slide swiper-slide">
+                `+texts[i]+`
+        </div>
+        }
+        }
+        @@if(typeof texts !== 'undefined' && texts.length > 0) {
+        @@for (var i = 0; i < texts.length; i++) { <div class="marquee__slide swiper-slide">
+            `+texts[i]+`
+    </div>
+    }
+    }
+    @@if(typeof texts !== 'undefined' && texts.length > 0) {
+    @@for (var i = 0; i < texts.length; i++) { <div class="marquee__slide swiper-slide">
+        `+texts[i]+`
+</div>
+}
+}
+</div>
+</div>
+</div>
