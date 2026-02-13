@@ -1,0 +1,42 @@
+[
+    {
+        "image": "@img/directions/01.jpg",
+        "title": "Baby Dance",
+        "desc": "Дети 2-3 года"
+    },
+    {
+        "image": "@img/directions/02.jpg",
+        "title": "HIP HOP",
+        "desc": "Подростки 12-16 лет"
+    },
+    {
+        "image": "@img/directions/03.jpg",
+        "title": "Jazz Funk",
+        "desc": "Любой возраст"
+    },
+    {
+        "image": "@img/directions/04.jpg",
+        "title": "Современные танцы",
+        "desc": "Разные возрастные группы: <br> 6-8 лет, <br> 9-11 лет, <br> 12-16 лет"
+    },
+    {
+        "image": "@img/directions/05.jpg",
+        "title": "High Heels",
+        "desc": "Взрослые группы"
+    },
+    {
+        "image": "@img/directions/06.jpg",
+        "title": "Lady’s Dance",
+        "desc": "Взрослые группы"
+    },
+    {
+        "image": "@img/directions/07.jpg",
+        "title": "Стриппластика",
+        "desc": "Взрослые группы"
+    },
+    {
+        "image": "@img/directions/08.jpg",
+        "title": "Латино-американские танцы",
+        "desc": "Взрослые группы"
+    }
+]

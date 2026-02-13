@@ -132,6 +132,129 @@
 	}
 }
 
+.directions {
+	// .directions__header
+	&__header {
+		padding: rem(10) 0 rem(30);
+		.container {
+			gap: rem(30);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			background: url("@img/directions-decor.svg") center calc(100% + 1px) / 100% auto no-repeat;
+		}
+	}
+	// .directions__arrow
+	&__arrow {
+		font-size: 2.6875rem;
+		animation: arrow-bounce 2s infinite ease-in-out;
+		@keyframes arrow-bounce {
+			0%,
+			100% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(15px);
+			}
+		}
+	}
+	// .directions__title
+	&__title {
+	}
+	// .directions__subtitle
+	&__subtitle {
+		font-size: 1.5625rem;
+		line-height: 140%;
+		max-width: 58.625rem;
+	}
+	// .directions__body
+	&__body {
+		padding: rem(50) 0 rem(80);
+		.row {
+			--bs-gutter-x: #{rem(20)};
+			--bs-gutter-y: #{rem(20)};
+		}
+	}
+	// .directions__bottom
+	&__bottom {
+		gap: 2.5rem;
+	}
+	// .directions__bottom-icon
+	&__bottom-icon {
+		font-size: 3.75rem;
+		line-height: 140%;
+	}
+	// .directions__bottom-text
+	&__bottom-text {
+		font-size: 1.5625rem;
+	}
+	// .directions__card
+	&__card {
+		border-radius: 0.9375rem;
+		box-shadow: 0 0 rem(25) 0 rgba(55, 9, 11, 0.6);
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					opacity: 1;
+				}
+				.directions__card-desc {
+					opacity: 1;
+					max-height: 100%;
+				}
+			}
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 24.63%, rgba(118, 26, 27, 0.8) 53.51%, rgba(228, 35, 41, 0.8) 100%);
+			z-index: 2;
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: rem(5) solid #761a1b;
+			border-radius: 0.9375rem;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+		}
+	}
+	// .directions__card-image
+	&__card-image {
+	}
+	// .directions__card-content
+	&__card-content {
+		padding: rem(30);
+	}
+	// .directions__card-title
+	&__card-title {
+	}
+	// .directions__card-desc
+	&__card-desc {
+		margin-top: rem(12);
+		line-height: 140%;
+		color: rgba(255, 255, 255, 0.8);
+		max-height: rem(30);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+}
+
 .faq {
 	padding: 5rem 0;
 	// .faq__title
