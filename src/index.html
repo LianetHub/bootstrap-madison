@@ -58,7 +58,23 @@
                 </div>
                 <section class="faq">
                     <div class="container">
-                        <h2 class="faq__title title"></h2>
+                        <h2 class="faq__title fs-title text-uppercase text-center font-try fw-bold text-center lh-base">Частые вопросы</h2>
+                        <ol class="faq__list">
+                            @@loop('./html/templates/_faq-item.html', './html/json/faq.json')
+                        </ol>
+                        <div class="faq__actions d-flex justify-content-center flex-wrap">
+                            <a href="" class="btn btn-primary text-uppercase">Задать вопрос</a>
+                            <a href="" class="btn btn-primary text-uppercase">Записаться на пробное занятие</a>
+                            <a href="" class="btn btn-outline-primary text-uppercase">
+                                <img src="@img/icons/whatsapp.svg" width="20" height="20" class="flex-shrink-0" alt="Иконка">
+                                WhatsApp
+                            </a>
+                            <a href="" class="btn btn-outline-primary text-uppercase">
+                                <img src="@img/icons/telegram.svg" width="30" height="30" class="flex-shrink-0" alt="Иконка">
+                                Telegram</a>
+
+                            <a href="" class="btn btn-outline-primary text-uppercase">Звонок</a>
+                        </div>
                     </div>
                 </section>
             </main>

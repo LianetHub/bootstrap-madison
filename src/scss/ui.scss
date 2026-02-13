@@ -2,6 +2,10 @@
 	background: #761a1b;
 }
 
+.fs-title {
+	font-size: rem(50);
+}
+
 .font-try {
 	font-family: $font-try;
 }
@@ -146,243 +150,178 @@
 }
 
 .typography-block {
-	& p {
-		&:not(:first-child) {
-			margin-top: 0.75rem;
-		}
-		&:not(:last-child) {
-			margin-bottom: 0.75rem;
-		}
-		line-height: 150%;
-		font-size: 1rem;
+	font-size: 1.0625rem;
+	line-height: 1.4;
 
-		@media (min-width: $md4) {
-			font-size: 1.125rem;
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 600;
+
+		@media screen and (max-width: $md4) {
+			line-height: 1.5;
 		}
 	}
 
-	& img {
-		width: fit-content;
-		&:not(:first-child) {
-			margin-top: 1rem;
-		}
-		&:not(:last-child) {
-			margin-bottom: 0.5rem;
+	h1 {
+		margin-top: 0;
+		margin-bottom: 2.4rem;
+		font-size: 3rem;
+		font-weight: 500;
+		line-height: 1.25;
+	}
+
+	h2 {
+		margin: 2.5rem 0 1.25rem;
+		font-size: 2.25rem;
+		line-height: 116.667%;
+
+		&:first-child {
+			margin-top: 0;
 		}
 	}
 
-	& ul {
-		line-height: 150%;
-		padding-left: 1em;
-		font-size: 0.875rem;
-		@media (min-width: $md4) {
-			font-size: 1rem;
+	h3 {
+		font-size: 1.75rem;
+		margin: 2rem 0 1rem;
+		line-height: 128.571%;
+		&:first-child {
+			margin-top: 0;
 		}
-		@media (min-width: $md2) {
-			font-size: 1.125rem;
+	}
+
+	h4 {
+		font-size: 1.5rem;
+		line-height: 1.45;
+		margin: 2rem 0 1rem;
+		&:first-child {
+			margin-top: 0;
 		}
-		& li {
-			padding-left: 1.5em;
+	}
+
+	p {
+		a {
+			color: #1570ef;
+		}
+		margin-bottom: 1.25rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	ul,
+	ol {
+		margin: 0 0 1.5rem;
+		padding-left: 0;
+		@media screen and (max-width: $md4) {
+			margin-bottom: 1.2em;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		li {
 			position: relative;
+			padding-left: 1.75rem;
+
 			&::before {
 				content: "";
+				display: block;
 				position: absolute;
-				top: 0.55em;
-				left: 0;
-				width: 0.55em;
-				height: 0.55em;
-				background: $accent;
-				border-radius: 50%;
-			}
-			&:not(:last-child) {
-				margin-bottom: 0.75rem;
+				left: 0.5em;
 			}
 		}
 	}
 
-	& a {
-		&:not([class]) {
-			color: $accent;
-			text-decoration: underline;
-			transition: color 0.2s ease;
-			&:hover {
-				color: darken($accent, 10%);
-				text-decoration: none;
-			}
+	ul li::before {
+		width: 4px;
+		height: 4px;
+		top: 0.7em;
+		background: currentColor;
+		border-radius: 50%;
+	}
+
+	ol {
+		counter-reset: i;
+
+		li::before {
+			counter-increment: i;
+			content: counter(i) ".";
+			top: 0;
 		}
 	}
 
-	& strong,
-	& b {
-		font-weight: 700;
-		color: inherit;
-	}
+	a {
+		&:not(.article__more) {
+			color: #1570ef;
 
-	& em,
-	& i {
-		font-style: italic;
-		color: inherit;
-	}
-
-	& hr {
-		border: none;
-		border-top: 1px solid #ccc;
-		margin: 2rem 0;
-	}
-
-	& blockquote {
-		margin: 1.5rem 0;
-		padding-left: 1.5rem;
-		border-left: rem(4) solid $accent;
-		font-style: italic;
-		color: #555;
-		& p {
-			margin: 0;
-			font-size: 0.875rem;
-			@media (min-width: $md4) {
-				font-size: 1rem;
-			}
-			@media (min-width: $md2) {
-				font-size: 1.125rem;
-			}
-		}
-	}
-	& h1,
-	& h2,
-	& h3,
-	& h4,
-	& h5,
-	& h6 {
-		& a {
-			text-decoration: none;
-			color: inherit;
-			display: inline-flex;
-			gap: 1rem;
-			align-items: center;
-			&::before {
-				order: 1;
-				color: $accent;
-				transition: transform 0.3s ease;
-			}
 			@media (any-hover: hover) {
 				&:hover {
-					color: $accent;
-					&::before {
-						transform: translateX(0.5rem);
-					}
+					text-decoration: underline;
 				}
 			}
 		}
 	}
 
-	& h1 {
-		&:not(:last-child) {
-			margin-bottom: 0.75rem;
-			@media (min-width: $md4) {
-				margin-bottom: 1rem;
-			}
-		}
-		font-weight: 700;
-		line-height: 120%;
-		font-size: 1.5rem;
-		@media (min-width: $md4) {
-			font-size: 1.75rem;
-		}
-	}
-
-	& h2 {
-		&:not(:first-child) {
-			margin-top: 0.75rem;
-			@media (min-width: $md4) {
-				margin-top: 1.5rem;
-			}
-		}
-		&:not(:last-child) {
-			margin-bottom: 1rem;
-			@media (min-width: $md4) {
-				margin-bottom: 1.25rem;
-			}
-		}
-		font-weight: 500;
-		line-height: 120%;
-		font-size: 1.25rem;
-		@media (min-width: $md4) {
-			font-size: 1.5rem;
-		}
-	}
-
-	& h3 {
-		&:not(:first-child) {
-			margin-top: 1rem;
-		}
-		&:not(:last-child) {
-			margin-bottom: 1rem;
-		}
-		font-weight: 500;
-		line-height: 120%;
-		@media (min-width: $md4) {
-			font-size: 1.25rem;
-		}
-	}
-
-	& h4 {
-		&:not(:first-child) {
-			margin-top: 1rem;
-		}
-		&:not(:last-child) {
-			margin-bottom: 1rem;
-		}
+	& cite,
+	& blockquote {
+		margin: 1.5rem 0 2rem;
+		padding: 1.125rem;
+		border-radius: 0.5rem;
+		background: #f5f5f5;
+		color: #181d27;
 		font-weight: 600;
-		line-height: 130%;
-		@media (min-width: $md4) {
-			font-size: 1.125rem;
-		}
-	}
-
-	& h5,
-	& h6 {
-		&:not(:first-child) {
-			margin-top: 1rem;
-		}
-		&:not(:last-child) {
-			margin-bottom: 0.5rem;
-		}
-		font-size: 1rem;
-		font-weight: 600;
-		line-height: 140%;
-	}
-
-	& ol {
+		line-height: 155.556%;
+		display: block;
 		font-size: 1.125rem;
-		line-height: 150%;
-		padding-left: 1.5rem;
-		list-style: decimal;
-		& li {
-			& h4 {
-				& ~ * {
-					margin-left: -1.25rem;
-				}
-				&:not(:last-child) {
-					margin-bottom: rem(8);
+		padding-left: rem(42);
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 1.125rem;
+			left: rem(18);
+			bottom: 1.125rem;
+			width: rem(4);
+			background: #ff4405;
+		}
+	}
+
+	& figure {
+		margin: 3rem 0 2rem;
+		& figcaption {
+			margin-top: 1rem;
+			margin-bottom: 0;
+			color: #414651;
+			font-size: 0.875rem;
+			line-height: 142.857%;
+		}
+	}
+	.wp-block-columns {
+		margin: 3rem 0 2rem;
+		gap: rem(12) !important;
+		.wp-block-column {
+			display: flex;
+			flex-direction: column;
+			&:last-child {
+				& figcaption {
+					text-align: right;
 				}
 			}
-			&:has(h4) {
-				& p {
-					&:not(:first-child) {
-						margin-top: rem(8);
-					}
+			& figure {
+				flex: 1 1 auto;
+				display: flex;
+				flex-direction: column;
+				margin: 0;
+				& img {
+					width: 100%;
+					height: 100%;
+					flex: 1 1 auto;
+					object-fit: cover;
 				}
-				& p,
-				& ul {
-					font-size: 1rem;
-				}
-			}
-			&::marker {
-				color: $accent;
-				font-weight: 500;
-			}
-			&:not(:last-child) {
-				margin-bottom: 0.75rem;
 			}
 		}
 	}
