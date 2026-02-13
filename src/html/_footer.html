@@ -1,13 +1,39 @@
 <footer class="footer">
-    <div class="container">
-
+    <div class="footer__body text-white position-relative z-1">
+        <div class="container">
+            <div class="footer__content d-flex flex-column align-items-center text-center">
+                <a href="/" class="footer__logo">
+                    <img src="@img/logo-white.svg" alt="Логотип Школы Танцев Madison">
+                </a>
+                <nav aria-label="Меню в подвале" class="footer__menu border-bottom pb-3">
+                    <ul class="footer__menu-list d-flex flex-wrap pb-1">
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Концерты</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Обработка персональных данных</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Правила школы</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Аренда зала</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Карта сайта</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:+74954320814" class="footer__phone icon-phone fw-bold d-inline-flex align-items-center">+7 (495) 432-08-14</a>
+                <div class="footer__socials d-flex justify-content-center flex-wrap ">
+                    <a href="" aria-label="Читайте нас в Telegram" class="footer__social icon-telegram"></a>
+                    <a href="" aria-label="Читайте нас в Вконтакте" class="footer__social icon-vk-square"></a>
+                </div>
+                <a href="mailto:info@madison-dance.ru" class="footer__mail font-lt-superior fs-5 d-inline-flex icon-mail">info@madison-dance.ru</a>
+                <address class="footer__address font-lt-superior fs-5 d-inline-flex icon-location">Москва, м. Мякинино, ул. Международная 12, ТРК VEGAS Сити, 3 и 6 этаж, школа танцев Madison</address>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom text-white">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="footer__copyright fs-5">© 2023-2026 Студия танцев «Madison»</div>
+                <div class="footer__rate">
+                    <img src="@img/rate.svg" alt="Виджет рейтинга">
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
-<div class="cookie" style="display: none;">
-    <button type="button" aria-label="Закрыть" class="cookie__close icon-cross"></button>
-    <div class="cookie__text">
-        На сайте используются файлы cookies.
-        Продолжая им пользоваться, вы соглашаетесь на обработку персональных данных в соответствии с <a href="">Политикой конфиденциальности</a>. Вы можете запретить использование cookies, изменив настройки браузера.
-    </div>
-</div>
+
 @@include('./_modal.html')
