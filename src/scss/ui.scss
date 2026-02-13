@@ -1,63 +1,9 @@
-.h1,
-h1 {
-	font-family: $font-oswald;
-	font-weight: 600;
-	line-height: 140%;
-	text-transform: uppercase;
-	font-size: 1.875rem;
-	@media (min-width: $md2) {
-		font-size: 2.5rem;
-	}
+.bg-red {
+	background: #761a1b;
 }
 
-.h2,
-h2 {
-	font-family: $font-oswald;
-	font-weight: 600;
-	line-height: 140%;
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	@media (min-width: $md2) {
-		font-size: 2rem;
-	}
-}
-
-.h3,
-h3 {
-	font-family: $font-oswald;
-	font-weight: 600;
-	line-height: 130%;
-	text-transform: uppercase;
-	font-size: 1rem;
-	@media (min-width: $md5) {
-		font-size: 1.25rem;
-	}
-	@media (min-width: $md2) {
-		font-size: 1.5rem;
-	}
-}
-
-.subtitle {
-	font-family: $font-oswald;
-	font-weight: 600;
-	line-height: 130%;
-	text-transform: uppercase;
-	font-size: 1.25rem;
-	@media (min-width: $md3) {
-		font-size: 1.5rem;
-	}
-	@media (min-width: $md2) {
-		font-size: 1.75rem;
-	}
-}
-
-.subtitle-sm {
-	font-family: $font-oswald;
-	text-transform: uppercase;
-	font-size: 1.125rem;
-	@media (min-width: $md3) {
-		font-size: 1.5rem;
-	}
+.font-try {
+	font-family: $font-try;
 }
 
 .color-accent {
@@ -75,7 +21,9 @@ h3 {
 	box-shadow: 0 0 rem(12) 0 rgba(39, 42, 45, 0.2);
 
 	line-height: 130%;
-	transition: opacity 0.5s ease, visibility 0.5s ease;
+	transition:
+		opacity 0.5s ease,
+		visibility 0.5s ease;
 	opacity: 0;
 	visibility: hidden;
 	bottom: 0;

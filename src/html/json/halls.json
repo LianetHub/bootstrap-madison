@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Зал №1",
+        "image": "@img/halls/01.jpg",
+        "square": "75 м²"
+    },
+    {
+        "name": "Зал №2",
+        "image": "@img/halls/02.jpg",
+        "square": "45 м²"
+    },
+    {
+        "name": "Зал №3",
+        "image": "@img/halls/03.jpg",
+        "square": "25 м²"
+    },
+    {
+        "name": "Зал №4",
+        "image": "@img/halls/04.jpg",
+        "square": "45 м²"
+    },
+    {
+        "name": "Зал №5",
+        "image": "@img/halls/05.jpg",
+        "square": "75 м²"
+    }
+]

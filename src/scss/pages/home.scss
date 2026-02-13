@@ -1,0 +1,133 @@
+.promo {
+	background: radial-gradient(51.63% 71.82% at 49.37% 43.69%, #e42329 0%, #761a1b 100%), #761a1b;
+	// .promo__body
+	&__body {
+		max-width: 56.625rem;
+	}
+	// .promo__title
+	&__title {
+		font-size: 8.4375rem;
+		line-height: 130%;
+	}
+	// .promo__image
+	&__image {
+	}
+	// .promo__name
+	&__name {
+		font-size: 9.375rem;
+		opacity: 0.62;
+		mix-blend-mode: overlay;
+	}
+	// .promo__columns
+	&__columns {
+		font-size: 1.5625rem;
+		line-height: 140%;
+	}
+	// .promo__column
+	&__column {
+		&:not(:last-child) {
+			border-right: rem(2) solid;
+		}
+	}
+	// .promo__column-text
+	&__column-text {
+	}
+	// .promo__label
+	&__label {
+		line-height: 130%;
+		font-size: 1.5625rem;
+		transform: translateX(-50%) rotate(-13.267deg);
+		border-radius: 1.875rem;
+		background: #d62d32;
+		bottom: 3rem;
+		left: 50%;
+		padding: 0.75rem 1.75rem;
+		max-width: 11.625rem;
+	}
+	// .promo__image
+	&__image {
+		pointer-events: none;
+	}
+}
+
+.rent-banner {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		opacity: 0.62;
+		mix-blend-mode: overlay;
+		z-index: 1;
+	}
+
+	.container {
+		z-index: 2;
+		position: relative;
+	}
+	// .rent-banner__title
+	&__title {
+		font-size: 2.1875rem;
+	}
+	// .rent-banner__subtitle
+	&__subtitle {
+		font-size: 1.5625rem;
+	}
+}
+
+.special-offer {
+	padding-top: rem(60);
+	padding-bottom: rem(40);
+	// .special-offer__body
+	&__body {
+	}
+	// .special-offer__caption
+	&__caption {
+		padding: rem(30);
+	}
+	// .special-offer__column
+	&__column {
+	}
+	// .special-offer__card
+	&__card {
+		width: rem(705);
+		--bs-border-width: #{rem(8)};
+		--bs-border-color: #bc0482;
+		padding: rem(50);
+	}
+	// .special-offer__card-title
+	&__card-title {
+		font-size: 1.875rem;
+	}
+	// .special-offer__card-separator
+	&__card-separator {
+		--bs-border-width: 0.1875rem;
+		color: #bc0482;
+		width: 3.125rem;
+		margin: rem(50) 0;
+	}
+	// .special-offer__card-desc
+	&__card-desc {
+	}
+	// .special-offer__card-tagline
+	&__card-tagline {
+	}
+	// .special-offer__card-btn
+	&__card-btn {
+	}
+	// .special-offer__image
+	&__image {
+		margin-bottom: rem(83);
+		margin-left: rem(-120);
+	}
+	// .special-offer__badge
+	&__badge {
+		top: rem(40);
+		right: rem(42);
+		transform: rotate(-4.995deg);
+		font-size: 1.5625rem;
+	}
+}

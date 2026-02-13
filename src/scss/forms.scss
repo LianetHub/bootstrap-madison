@@ -2,7 +2,9 @@
 	// .form__control
 	&__control {
 		text-overflow: ellipsis;
-		transition: border-color 0.3s ease, color 0.3s ease;
+		transition:
+			border-color 0.3s ease,
+			color 0.3s ease;
 		width: 100%;
 		border-radius: 0;
 		background: #fff;
@@ -71,7 +73,7 @@
 		&:checked {
 			& ~ .form__checkbox-field {
 				&::before {
-					@extend %ic, .icon-check;
+					// @extend %ic, .icon-check;
 				}
 			}
 		}
@@ -201,7 +203,11 @@
 	align-items: center;
 	text-align: center;
 	user-select: none;
-	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease,
+		border-color 0.3s ease,
+		box-shadow 0.3s ease;
 	border-radius: 0.5rem;
 	padding: 0.75rem 2rem;
 	font-size: 1rem;

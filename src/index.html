@@ -7,6 +7,60 @@
         <div class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
+                <div class="promo text-white text-center">
+                    <div class="container">
+                        <div class="promo__title font-try text-uppercase fw-bold">ТАНЦы</div>
+                        <div class="promo__body position-relative mx-auto">
+                            <ul class="promo__columns row position-absolute z-1 top-0 bottom-0 start-0 end-0">
+                                <li class="promo__column col-4">
+                                    <p class="promo__column-text">Обучаем с нуля до&nbsp;профи</p>
+                                </li>
+                                <li class="promo__column col-4">
+                                    <p class="promo__column-text">Все современные направления</p>
+                                </li>
+                                <li class="promo__column col-4">
+                                    <p class="promo__column-text">Участие в концертах и&nbsp;конкурсах</p>
+                                </li>
+                            </ul>
+                            <div class="promo__name position-absolute top-0 start-50 translate-middle-x lh-base text-uppercase fw-bold font-try">MADISON</div>
+                            <div class="promo__label z-3 font-try rounded-5 fw-semibold position-absolute ">от 3 до 100 лет</div>
+                            <div class="promo__image z-2 position-relative">
+                                <img src="@img/promo.png" alt="Промо">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rent-banner py-1 bg-red text-center text-white position-relative text-uppercase lh-base">
+                    <div class="container">
+                        <div class="rent-banner__title font-try fw-bold">Аренда залов</div>
+                        <p class="rent-banner__subtitle mb-0">Для индивидуальных занятий</p>
+                    </div>
+                </div>
+                <div class="special-offer bg-red text-white">
+                    <div class="container">
+                        <div class="special-offer__body d-flex align-items-start">
+                            <div class="special-offer__column d-flex flex-column position-relative z-2 flex-grow-0 flex-shrink-0">
+                                <div class="special-offer__caption fw-bold">Специальное предложение!</div>
+                                <div class="special-offer__card border-top bg-white text-black rounded-3 flex-grow-1">
+                                    <div class="special-offer__card-title text-uppercase font-try fw-bold lh-base">ТАНЦУЙ, МАРТ!</div>
+                                    <hr class="special-offer__card-separator opacity-100 ">
+                                    <p class="special-offer__card-desc">Весна — время новых начинаний. Подарите себе не цветы, а новую уверенность, грацию и заряд энергии на весь год. Наш подарок к 8 Марта — особые условия на первый абонемент.</p>
+                                    <p class="special-offer__card-tagline fw-bold">Выберите направление и забронируйте скидку!</p>
+                                    <a href="" class="special-offer__card-btn btn btn-primary">Перейти к направлениям</a>
+                                </div>
+                            </div>
+                            <div class="special-offer__image position-relative z-1 flex-grow-1 align-self-stretch">
+                                <span class="special-offer__badge font-try badge rounded-5 color-accent bg-white position-absolute">Акция!</span>
+                                <img src="@img/halls/02.jpg" class="img-fluid object-fit-cover w-100 h-100" alt="Фото зала">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="faq">
+                    <div class="container">
+                        <h2 class="faq__title title"></h2>
+                    </div>
+                </section>
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_js.html', {})
