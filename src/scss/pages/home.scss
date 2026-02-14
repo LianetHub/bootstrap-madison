@@ -255,6 +255,93 @@
 	}
 }
 
+.prices {
+	padding: rem(90) 0;
+	// .prices__title
+	&__title {
+	}
+	// .prices__subtitle
+	&__subtitle {
+		margin-top: rem(20);
+		font-size: 1.5625rem;
+	}
+	// .prices__types
+	&__types {
+		margin-top: 1.25rem;
+	}
+	// .prices__type
+	&__type {
+		padding: rem(10);
+		border-radius: 3.125rem;
+		background: #fff;
+		box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.08);
+		padding: 0.625rem 0.9375rem;
+		gap: rem(15);
+		color: rgba(34, 34, 34, 0.8);
+		font-size: 1.0625rem;
+		line-height: 140%;
+	}
+	// .prices__type-icon
+	&__type-icon {
+		width: 3.75rem;
+		height: 3.75rem;
+	}
+	// .prices__content
+	&__content {
+		margin-top: rem(40);
+		.row {
+			--bs-gutter-x: #{rem(20)};
+			--bs-gutter-y: #{rem(20)};
+		}
+	}
+	// .prices__bottom
+	&__bottom {
+		margin-top: 2.5rem;
+		gap: 2.5rem;
+	}
+	// .prices__bottom-icon
+	&__bottom-icon {
+		font-size: 3.75rem;
+		line-height: 140%;
+	}
+	// .prices__bottom-text
+	&__bottom-text {
+		font-size: 1.5625rem;
+	}
+}
+
+.prices-card {
+	padding: rem(30) rem(20);
+	border-radius: rem(15);
+	border-radius: 0.9375rem;
+	box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.08);
+	background:
+		linear-gradient(180deg, rgba(16, 3, 3, 0.8) 0%, rgba(118, 22, 22, 0.8) 100%),
+		url("@img/halls/02.jpg") 0 0 / cover no-repeat;
+	// .prices-card__name
+	&__name {
+		font-size: 1.5625rem;
+	}
+	// .prices-card__time
+	&__time {
+		font-size: 1.5625rem;
+		line-height: 150%;
+	}
+	// .prices-card__price
+	&__price {
+		margin-top: 1.53rem;
+		font-size: 1.875rem;
+	}
+	// .prices-card__bottom
+	&__bottom {
+		margin-top: 1.53rem;
+	}
+	// .prices-card__logo
+	&__logo {
+		max-width: 7.75rem;
+	}
+}
+
 .teachers {
 	padding: 5rem 0;
 	// .teachers__title

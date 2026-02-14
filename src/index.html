@@ -80,6 +80,51 @@
                         </div>
                     </div>
                 </div>
+                <section class="prices">
+                    <div class="container">
+                        <h2 class="prices__title fs-title text-center text-uppercase font-try fw-bold lh-base">Стоимость занятий</h2>
+                        <p class="prices__subtitle text-center">Действуют разные способы оплаты</p>
+                        <div class="prices__types d-flex justify-content-center gap-3">
+                            <div class="prices__type d-flex align-items-center bg-white">
+                                <span class="prices__type-icon flex-shrink-0 rounded-circle overflow-hidden">
+                                    <img src="@img/icons/money.svg" class="img-fluid object-fit-cover w-100 h-100" alt="Иконка">
+                                </span>
+                                Наличными
+                            </div>
+                            <div class="prices__type d-flex align-items-center bg-white">
+                                <span class="prices__type-icon flex-shrink-0 rounded-circle overflow-hidden">
+                                    <img src="@img/icons/credit-card.svg" class="img-fluid object-fit-cover w-100 h-100" alt="Иконка">
+                                </span>
+                                Картой
+                            </div>
+                            <div class="prices__type d-flex align-items-center bg-white">
+                                <span class="prices__type-icon flex-shrink-0 rounded-circle overflow-hidden">
+                                    <img src="@img/icons/payment-link.svg" class="img-fluid object-fit-cover w-100 h-100" alt="Иконка">
+                                </span>
+                                На сайте онлайн
+                            </div>
+                            <div class="prices__type d-flex align-items-center bg-white">
+                                <span class="prices__type-icon flex-shrink-0 rounded-circle overflow-hidden">
+                                    <img src="@img/icons/sbp.svg" class="img-fluid object-fit-cover w-100 h-100" alt="Иконка">
+                                </span>
+                                Через СПБ
+                            </div>
+                        </div>
+                        <div class="prices__content">
+                            <div class="row">
+                                @@loop('./html/templates/_prices-card.html', './html/json/prices.json')
+                            </div>
+                        </div>
+                        <div class="prices__bottom d-flex align-items-center mt-4">
+                            <span class="prices__bottom-icon flex-shrink-0">⚡️</span>
+                            <p class="prices__bottom-text flex-grow-1">
+                                Гибкие абонементы для любого графика.
+                                Занимайтесь в группе, индивидуально или комбинируйте — <strong>так, как удобно именно вам →</strong>
+                            </p>
+                            <a href="" class="btn btn-primary flex-shrink-0">Смотреть все Абонементы</a>
+                        </div>
+                    </div>
+                </section>
                 <section class="teachers">
                     <div class="container">
                         <h2 class="teachers__title fs-title text-uppercase text-center font-try fw-bold text-center lh-base">Наши преподаватели</h2>
