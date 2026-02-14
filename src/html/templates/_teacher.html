@@ -1,0 +1,14 @@
+<a href="" class="teacher text-white position-relative h-auto  d-flex flex-column swiper-slide">
+    <span class="teacher__image flex-grow-1 position-relative overflow-hidden">
+        <img src="@@image" class="teacher__image-static img-fluid object-fit-cover w-100 h-100" alt="Фото преподавателя">
+        <img src="@@hover" class="teacher__image-hover img-fluid object-fit-cover w-100 h-100 position-absolute top-0 bottom-0 end-0 start-0" alt="Фото преподавателя">
+    </span>
+    <span class="teacher__content z-2 position-absolute top-0 bottom-0 start-0 end-0 d-flex flex-column justify-content-end">
+        <span class="teacher__name font-try text-uppercase lh-base fw-bold">@@name</span>
+        <span class="teacher__surname font-try text-uppercase lh-base fw-bold">@@surname</span>
+        <span class="teacher__skills d-flex flex-wrap">
+            @@for (var i = 0; i < skills.length; i++) { <span class="teacher__skill bg-white color-accent"> `+skills[i]+`</span>}
+    </span>
+    </span>
+    <span class="teacher__expirience z-3 position-absolute  bg-white color-accent">@@expirience</span>
+</a>

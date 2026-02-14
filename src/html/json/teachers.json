@@ -4,6 +4,7 @@
         "name": "Александра",
         "surname": "Толмач",
         "image": "@img/teachers/Alexandra-Tolmach.png",
+        "hover": "@img/teachers/Alexandra-Tolmach-2.png",
         "skills": [
             "High Heels",
             "Lady's Dance"
@@ -14,9 +15,8 @@
         "name": "Ирина",
         "surname": "Анучина",
         "image": "@img/teachers/Irina-Anuchina.png",
+        "hover": "@img/teachers/Irina-Anuchina-2.png",
         "skills": [
-            "Современные танцы",
-            "Хип-Хоп",
             "High Heels",
             "Lady's Dance"
         ]
@@ -26,8 +26,8 @@
         "name": "Полина",
         "surname": "Кобс",
         "image": "@img/teachers/Polina-Kobs.png",
+        "hover": "@img/teachers/Polina-Kobs-2.png",
         "skills": [
-            "Jazz Funk",
             "High Heels",
             "Lady's Dance"
         ]
@@ -37,6 +37,7 @@
         "name": "Анна",
         "surname": "Черникова",
         "image": "@img/teachers/Anna-Chernikova.png",
+        "hover": "@img/teachers/Anna-Chernikova-2.png",
         "skills": [
             "Латина соло"
         ]
@@ -44,8 +45,9 @@
     {
         "expirience": "Танцует 7 лет",
         "name": "Вероника",
-        "surname": "Персидская",
-        "image": "@img/teachers/Veronika-Persidskaya.png",
+        "surname": "Комова",
+        "image": "@img/teachers/Valeria-Komova.png",
+        "hover": "@img/teachers/Valeria-Komova-2.png",
         "skills": [
             "Стрип-пластика"
         ]
@@ -55,6 +57,7 @@
         "name": "Анастасия",
         "surname": "Якунина",
         "image": "@img/teachers/Anastasia-Yakunina.png",
+        "hover": "@img/teachers/Anastasia-Yakunina-2.png",
         "skills": [
             "Стрип-пластика"
         ]
@@ -64,6 +67,7 @@
         "name": "Валерия",
         "surname": "Комова",
         "image": "@img/teachers/Valeria-Komova.png",
+        "hover": "@img/teachers/Valeria-Komova-2.png",
         "skills": [
             "Contemporary",
             "Растяжка"
@@ -74,6 +78,7 @@
         "name": "Надежда",
         "surname": "Колосова",
         "image": "@img/teachers/Nadezhda-Kolosova.png",
+        "hover": "@img/teachers/Nadezhda-Kolosova-2.png",
         "skills": [
             "Стрип-пластика",
             "High Heels"

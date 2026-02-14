@@ -59,78 +59,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    document.querySelectorAll('.marquee__slider').forEach(function (el) {
-        var isReverse = el.getAttribute('data-direction') === 'reverse';
-
-        new Swiper(el, {
-            loop: true,
-            slidesPerView: 'auto',
-            observer: true,
-            observeParents: true,
-            freeMode: true,
-            allowTouchMove: false,
-            spaceBetween: 16,
-            speed: 24000,
-            autoplay: {
-                delay: 1,
-                disableOnInteraction: false,
-                reverseDirection: isReverse
-            },
-        });
-    });
-
-
-    const certsImages = new Swiper('.about__certs-images .swiper', {
-        slidesPerView: 1,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true
-        },
-    });
-
-    const certsSlider = new Swiper('.about__certs-slider', {
-
-        autoHeight: true,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true
-        },
-        pagination: {
-            el: '.about__certs-pagination',
-            type: 'fraction',
-            renderFraction: function (currentClass, totalClass) {
-                return '<span class="' + currentClass + '"></span>' +
-                    '/' +
-                    '<span class="' + totalClass + '"></span>';
+    // sliders
+    if (document.querySelector('.teachers__slider')) {
+        new Swiper('.teachers__slider', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: {
+                prevEl: ".teachers__prev",
+                nextEl: ".teachers__next"
             }
-        },
-        navigation: {
-            nextEl: '.about__certs-next',
-            prevEl: '.about__certs-prev',
-        },
-    });
+        })
+    }
 
-    certsSlider.controller.control = certsImages;
-    certsImages.controller.control = certsSlider;
+    if (document.querySelector('.reviews__slider')) {
+        new Swiper('.reviews__slider', {
+            slidesPerView: 3,
+            spaceBetween: 20,
 
-    const reviewsSlider = new Swiper('.reviews__slider', {
-        slidesPerView: "auto",
-        spaceBetween: 16,
-        navigation: {
-            nextEl: '.reviews__next',
-            prevEl: '.reviews__prev',
-        },
-        breakpoints: {
-            991.98: {
-                slidesPerView: 2,
-                spaceBetween: 24,
-            },
-            1199.98: {
-                spaceBetween: 24,
-                slidesPerView: 3,
-            }
-        }
-    });
+        })
+    }
+
+
 
     initPhoneMask();
 

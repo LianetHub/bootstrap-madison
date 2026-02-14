@@ -255,6 +255,151 @@
 	}
 }
 
+.teachers {
+	padding: 5rem 0;
+	// .teachers__title
+	&__title {
+	}
+	// .teachers__desc
+	&__desc {
+		margin-top: rem(20);
+		font-size: 1.5625rem;
+		line-height: 140%;
+		max-width: rem(1160);
+	}
+	// .teachers__slider
+	&__slider {
+		margin-top: 2.5rem;
+	}
+	// .teachers__controls
+	&__controls {
+		margin-top: rem(40);
+		gap: rem(20);
+	}
+	// .teachers__btns
+	&__btns {
+		gap: rem(20);
+	}
+	// .teachers__prev
+	&__prev {
+	}
+	// .teachers__next
+	&__next {
+	}
+}
+
+.teacher {
+	border-radius: 0.9375rem;
+	background: linear-gradient(180deg, #100303 0%, #761616 100%);
+	&:hover {
+		.teacher__image-static {
+			opacity: 0;
+		}
+		.teacher__image-hover {
+			opacity: 1;
+		}
+	}
+	// .teacher__image
+	&__image {
+		border-radius: 0.9375rem;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65.47%, rgba(0, 0, 0, 0.5) 100%);
+			z-index: 1;
+		}
+	}
+	// .teacher__image-static
+	&__image-static {
+		transition: opacity 0.3s ease;
+	}
+	// .teacher__image-hover
+	&__image-hover {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+	// .teacher__content
+	&__content {
+		padding: rem(40) rem(35);
+	}
+	// .teacher__name
+	&__name {
+		font-size: 1.875rem;
+	}
+	// .teacher__surname
+	&__surname {
+		font-size: 1.375rem;
+	}
+	// .teacher__skills
+	&__skills {
+		margin-top: 1.25rem;
+		gap: rem(10);
+	}
+	// .teacher__skill
+	&__skill {
+		padding: rem(8) rem(14);
+		border-radius: 0.1875rem;
+		font-size: 1.0625rem;
+		line-height: 140%;
+	}
+	// .teacher__expirience
+	&__expirience {
+		top: rem(-1);
+		right: rem(-1);
+		z-index: 10;
+		font-size: 1.0625rem;
+		line-height: 140%;
+		padding: 0.43669rem 0.87331rem;
+		box-shadow: 0 0 rem(7) 0 rgba(96, 0, 0, 0.2);
+		border-radius: 0 0.9375rem 0 0;
+	}
+}
+
+.reviews {
+	padding: 5rem 0;
+	// .reviews__title
+	&__title {
+	}
+	// .reviews__body
+	&__body {
+		margin-top: rem(40);
+	}
+	// .reviews__content
+	&__content {
+		font-size: rem(25);
+		line-height: 150%;
+		padding: 0 rem(20);
+	}
+	// .reviews__bottom
+	&__bottom {
+		margin-top: rem(57);
+	}
+	// .reviews__btn
+	&__btn {
+	}
+	// .reviews__slider
+	&__slider {
+	}
+	// .reviews__slide
+	&__slide {
+		position: relative;
+		border-radius: rem(15);
+		overflow: hidden;
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: rem(80);
+			color: #e42329;
+		}
+	}
+}
+
 .faq {
 	padding: 5rem 0;
 	// .faq__title

@@ -97,20 +97,20 @@
 	z-index: 1;
 	transform: none;
 	margin: 0;
-	width: 3rem;
-	height: 3rem;
+	width: rem(65);
+	height: rem(65);
 	font-size: 1.25rem;
-	border: rem(1) solid currentColor;
+	border: rem(1) solid $accent;
 	border-radius: 0.5rem;
-	color: currentColor;
+	color: $accent;
 	transition: all 0.3s ease;
 	& svg {
 		display: none;
 	}
 	@media (any-hover: hover) {
 		&:hover {
-			background: #e6e4dc;
-			color: #eb5b38;
+			background: $accent;
+			color: #fff;
 		}
 	}
 }
