@@ -81,6 +81,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+    if (document.querySelectorAll('.gallery__slider').length) {
+        const gallerySliders = document.querySelectorAll('.gallery__slider');
+
+        gallerySliders.forEach((slider, index) => {
+            new Swiper(slider, {
+                loop: true,
+                speed: 20000,
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 0,
+                    pauseOnMouseEnter: true,
+                    disableOnInteraction: false,
+                    reverseDirection: index % 2 !== 0,
+                },
+            });
+        });
+    }
+
+
     initPhoneMask();
 
 
