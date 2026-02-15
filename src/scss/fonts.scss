@@ -20,9 +20,9 @@
 								font-style: normal;
 							}
 @font-face {
-								font-family: 'TRYGrtsk';
+								font-family: 'LTSuperior';
 								font-display: swap;
-								src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
+								src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
 								font-weight: 400;
 								font-style: normal;
 							}
@@ -34,6 +34,13 @@
 								font-style: normal;
 							}
 @font-face {
+								font-family: 'TRYGrtsk';
+								font-display: swap;
+								src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
+								font-weight: 400;
+								font-style: normal;
+							}
+@font-face {
 								font-family: 'Roboto';
 								src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
 									url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"),
@@ -42,11 +49,4 @@
 								font-stretch: 75% 125%;
 								font-style: normal;
 								font-display: swap;
-							}
-@font-face {
-								font-family: 'LTSuperior';
-								font-display: swap;
-								src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
-								font-weight: 400;
-								font-style: normal;
 							}

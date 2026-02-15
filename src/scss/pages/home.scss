@@ -441,6 +441,191 @@
 	}
 }
 
+.steps {
+	padding: rem(20) 0 rem(30);
+	// .steps__header
+	&__header {
+		padding: 1.25rem 0;
+	}
+	// .steps__title
+	&__title {
+		font-size: 1.875rem;
+	}
+	// .steps__label
+	&__label {
+		border-radius: 3.125rem;
+		padding: 0.43669rem 0.87331rem;
+		font-size: 1.5625rem;
+		background: #fff;
+		box-shadow: 0 0 rem(7) 0 rgba(96, 0, 0, 0.2);
+	}
+	// .steps__list
+	&__list {
+		margin-top: rem(60);
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		height: rem(500);
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 100%;
+			height: rem(5);
+			background: #761a1b;
+		}
+	}
+	// .steps__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		width: 2.0625rem;
+		height: 2.0625rem;
+		background: #edecec;
+		border-radius: 50%;
+		border: rem(5) solid #761a1b;
+		&:nth-child(odd) {
+			.steps__item-content {
+				bottom: rem(15);
+				left: 0;
+				justify-content: flex-end;
+				padding-bottom: rem(44);
+			}
+			.steps__item-image {
+				top: rem(59);
+			}
+		}
+		&:nth-child(even) {
+			.steps__item-content {
+				top: rem(15);
+				left: 0;
+				justify-content: flex-start;
+				padding-top: rem(44);
+			}
+			.steps__item-image {
+				bottom: rem(59);
+			}
+		}
+		&:nth-child(1) {
+			.steps__item-image {
+				width: 13.3125rem;
+				height: 13.3125rem;
+				background: radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
+				border-radius: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+			}
+			.steps__item-content {
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					right: 2rem;
+					width: 3.5rem;
+					height: 3.5rem;
+					background: url("@img/steps/stars-decor.svg") center / contain no-repeat;
+				}
+			}
+		}
+		&:nth-child(2) {
+			.steps__item-image {
+				width: 13.3125rem;
+				height: 13.3125rem;
+				border-radius: 50%;
+				&::before {
+					content: "";
+					position: absolute;
+					top: rem(-10);
+					right: 0;
+					z-index: -1;
+					background: radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
+					width: 3.125rem;
+					height: 3.125rem;
+					border-radius: 50%;
+				}
+			}
+		}
+		&:nth-child(3) {
+			.steps__item-image {
+				top: 1rem;
+				width: 11rem;
+			}
+		}
+		&:nth-child(4) {
+			.steps__item-image {
+				width: 15rem;
+				margin-left: -2rem;
+			}
+		}
+		&:nth-child(5) {
+			.steps__item-image {
+				width: 12.4375rem;
+				height: 12.4375rem;
+			}
+			.steps__item-content {
+				&::before {
+					content: "";
+					position: absolute;
+					top: rem(-10);
+					right: rem(-20);
+					z-index: -1;
+					width: 3.77481rem;
+					height: 3.44756rem;
+					background: url("@img/steps/phone-decor.svg") center / contain no-repeat;
+				}
+			}
+		}
+		&:last-child {
+			.steps__item-content {
+				right: rem(-32);
+				left: auto;
+				text-align: center;
+			}
+		}
+	}
+	// .steps__item-content
+	&__item-content {
+		height: rem(243);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 13.4375rem;
+		position: absolute;
+	}
+	// .steps__item-icon
+	&__item-icon {
+		max-width: rem(60);
+		margin-bottom: rem(20);
+		align-self: center;
+	}
+	// .steps__item-name
+	&__item-name {
+		font-size: 1.375rem;
+		&:not(:last-child) {
+			padding-bottom: 0.44rem;
+			border-bottom: rem(1) solid rgba(34, 34, 34, 0.1);
+		}
+	}
+	// .steps__item-desc
+	&__item-desc {
+		margin-top: 0.44rem;
+		color: rgba(34, 34, 34, 0.8);
+		font-size: 1.0625rem;
+		line-height: 140%;
+	}
+	// .steps__item-image
+	&__item-image {
+		width: 10rem;
+		position: absolute;
+	}
+}
+
 .features {
 	padding: 5rem 0;
 	// .features__title
