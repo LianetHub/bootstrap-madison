@@ -714,6 +714,8 @@
 	padding: rem(90) 0;
 	background: radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
 	overflow: hidden;
+	min-height: rem(1040);
+	margin: 0 auto;
 	&::before {
 		content: "";
 		position: absolute;
@@ -725,19 +727,23 @@
 		pointer-events: none;
 		z-index: 2;
 	}
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background:
-			linear-gradient(90deg, #edecec 0%, #edecec calc((100% - 3007px) / 2), transparent calc((100% - 3007px) / 2)),
-			linear-gradient(270deg, #edecec 0%, #edecec calc((100% - 3007px) / 2), transparent calc((100% - 3007px) / 2));
-		pointer-events: none;
-		z-index: 1;
+	@media (min-width: 1920px) {
+		max-width: rem(3200);
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background:
+				linear-gradient(90deg, #edecec 0%, #edecec calc((100% - 3007px) / 2), transparent calc((100% - 3007px) / 2)),
+				linear-gradient(270deg, #edecec 0%, #edecec calc((100% - 3007px) / 2), transparent calc((100% - 3007px) / 2));
+			pointer-events: none;
+			z-index: 1;
+		}
 	}
+
 	// .halls__container
 	&__container {
 		&::before {
@@ -785,6 +791,7 @@
 	}
 	// .halls__features-text
 	&__features-text {
+		font-size: rem(18);
 	}
 }
 
