@@ -666,6 +666,42 @@
 	}
 }
 
+.benefits {
+	padding: rem(30) 0;
+	// .benefits__card
+	&__card {
+		border-radius: 0.9375rem;
+		border: rem(1) solid rgba(255, 255, 255, 0.03);
+		box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.08);
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #000;
+			opacity: 0.4;
+		}
+	}
+	// .benefits__card-content
+	&__card-content {
+		padding: 1.875rem 1.25rem;
+	}
+	// .benefits__card-title
+	&__card-title {
+	}
+	// .benefits__card-desc
+	&__card-desc {
+		font-size: 1.0625rem;
+		line-height: 140%;
+	}
+	// .benefits__card-btn
+	&__card-btn {
+		margin-top: rem(30);
+	}
+}
+
 .features {
 	padding: 5rem 0;
 	// .features__title
