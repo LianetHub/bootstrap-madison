@@ -1,158 +1,35 @@
-.form {
-	// .form__control
-	&__control {
-		text-overflow: ellipsis;
-		transition:
-			border-color 0.3s ease,
-			color 0.3s ease;
-		width: 100%;
-		border-radius: 0;
-		background: #fff;
-		color: #334b59;
+.form-check-input {
+	&:checked {
+		background-color: #bc0482;
+		border-color: #bc0482;
+	}
+}
 
-		font-size: 1rem;
-		line-height: 160%;
-		border-radius: 0.375rem;
-		border: 1px solid #666f79;
-		background: #fff;
-		padding: 0.65rem 1rem;
-		@media (min-width: $md5) {
-			padding: 0.65rem 1.5rem;
-		}
-		@media (min-width: $md3) {
-			padding: 1rem;
-		}
-		&.form__control--grey {
-			color: #fff;
-			background: #3a3d3f;
-			border-color: #3a3d3f;
-			&:hover {
-				border-color: #666f79;
-			}
-			&:focus {
-				border-color: #e6e4dc;
-			}
-			&::placeholder {
-				color: #8f9192;
-			}
-		}
-		&::placeholder {
-			opacity: 1;
-		}
-		&:hover,
-		&:focus {
-			border-color: $accent;
-		}
-		&:disabled {
-			background: #ddd;
-			border-color: #ddd;
-		}
-		&._error {
-			border-color: #f63a19;
-		}
-		&:is(textarea) {
-			height: 7.5rem;
-			resize: none;
-		}
+.form-control {
+	padding: 0.9375rem 1.875rem;
+	font-size: 1.125rem;
+	letter-spacing: 0.03375rem;
+	font-weight: 400;
+	color: #131313;
+	background-color: #f0f0f0;
+	--bs-border-width: #{rem(1)};
+	--bs-border-color: rgba(34, 34, 34, 0.3);
+	--bs-border-radius: 0.5625rem;
+	&:focus {
+		color: #131313;
+		background-color: #f0f0f0;
+		border-color: #bc0482;
+		outline: 0;
+		box-shadow: 0 0 0 0.25rem rgba(188, 4, 130, 0.25);
 	}
-	// .form__checkbox
-	&__checkbox {
-		display: block;
-		&--dark {
-			.form__checkbox-field {
-				color: #8f9192;
-				&::before {
-					background: #e6e4dc;
-					border: rem(1) solid #e6e4dc;
-				}
-			}
-		}
+	&::placeholder {
+		opacity: 0.5;
 	}
-	// .form__checkbox-input
-	&__checkbox-input {
-		&:checked {
-			& ~ .form__checkbox-field {
-				&::before {
-					// @extend %ic, .icon-check;
-				}
-			}
-		}
-	}
-	// .form__checkbox-field
-	&__checkbox-field {
-		color: #666f79;
-		line-height: 130%;
-		position: relative;
-		text-align: left;
-		cursor: pointer;
-		user-select: none;
-		min-height: 2rem;
-		align-content: center;
-		display: block;
-		font-size: 0.875rem;
-		padding-left: rem(40);
-		@media (min-width: $md3) {
-			padding-left: rem(48);
-			font-size: 1rem;
-		}
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 1.5rem;
-			height: 1.5rem;
-			background: #f8f8f8;
-			color: #272a2d;
-			border: rem(1) solid #666f79;
-			border-radius: 0.25rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			@media (min-width: $md3) {
-				width: 2rem;
-				height: 2rem;
-			}
-		}
-		& a {
-			text-decoration: underline;
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: none;
-					color: $accent;
-				}
-			}
-		}
-	}
-	// .form__bottom
-	&__bottom {
-		display: flex;
-		margin-top: 0.7rem;
-		flex-direction: column;
+}
 
-		gap: 1rem;
-		@media (min-width: $md5) {
-			gap: rem(40);
-
-			flex-direction: row;
-		}
-		@media (min-width: $md3) {
-			gap: rem(80);
-			margin-top: 1.5rem;
-		}
-	}
-	// .form__submit
-	&__submit {
-		@media (min-width: $md5) {
-			flex: 0 1 rem(300);
-		}
-		@media (min-width: $md3) {
-			flex: 1 1 auto;
-		}
-	}
-	// .form__socials
-	&__socials {
-		align-self: center;
+.form-policy {
+	// .form-policy__link
+	&__link {
 	}
 }
 

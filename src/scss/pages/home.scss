@@ -255,6 +255,85 @@
 	}
 }
 
+.trial-lesson {
+	padding: rem(40) 0;
+	// .trial-lesson__title
+	&__title {
+	}
+	// .trial-lesson__content
+	&__content {
+		margin-top: 2.5rem;
+	}
+
+	// .trial-lesson__banner
+	&__banner {
+		border-radius: 0.9375rem;
+	}
+	// .trial-lesson__banner-content
+	&__banner-content {
+		padding: 2.5rem 1.875rem;
+	}
+	// .trial-lesson__banner-caption
+	&__banner-caption {
+		font-size: 1.3125rem;
+		line-height: 160%;
+		& span {
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 50%;
+				background: #e42329;
+				z-index: -1;
+			}
+		}
+	}
+	// .trial-lesson__banner-desc
+	&__banner-desc {
+		font-size: 1.5625rem;
+		line-height: 140%;
+	}
+	// .trial-lesson__caption
+	&__caption {
+		font-size: 1.6875rem;
+	}
+	// .trial-lesson__subtitle
+	&__subtitle {
+		margin-top: rem(25);
+		font-size: 1.5625rem;
+		line-height: 140%;
+	}
+	// .trial-lesson__form
+	&__form {
+		margin-top: rem(25);
+		padding: rem(50);
+		border-top: rem(8) solid #bc0482;
+	}
+	// .trial-lesson__form-caption
+	&__form-caption {
+		font-size: 1.875rem;
+		line-height: 140%;
+	}
+	// .trial-lesson__fields
+	&__form-fields {
+		margin-top: rem(30);
+		.row {
+			--bs-gutter-x: 1.25rem;
+			--bs-gutter-y: 1.25rem;
+		}
+	}
+	// .trial-lesson__cards
+	&__cards {
+		margin-top: rem(40);
+		.row {
+			--bs-gutter-x: #{rem(10)};
+			--bs-gutter-y: #{rem(10)};
+		}
+	}
+}
+
 .features {
 	padding: 5rem 0;
 	// .features__title

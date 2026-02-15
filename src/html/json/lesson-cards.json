@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "@img/icons/location.svg",
+        "name": "Близко",
+        "desc": "ТРК VEGAS Сити, м.&nbsp;Мякинино"
+    },
+    {
+        "icon": "@img/icons/parking.svg",
+        "name": "Удобно",
+        "desc": "Бесплатная парковка"
+    },
+    {
+        "icon": "@img/icons/clock.svg",
+        "name": "Доступно",
+        "desc": "Занятия проходят днем и вечером"
+    },
+    {
+        "icon": "@img/icons/stars.svg",
+        "name": "Комфортно",
+        "desc": "Любой танцевальный уровень"
+    }
+]

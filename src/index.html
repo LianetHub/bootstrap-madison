@@ -80,6 +80,77 @@
                         </div>
                     </div>
                 </div>
+                <div class="trial-lesson">
+                    <div class="container">
+                        <div class="trial-lesson__title fs-title font-try text-uppercase fw-bold text-center">Пробный урок</div>
+                        <div class="trial-lesson__content">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="trial-lesson__banner position-relative h-100 bg-black text-white overflow-hidden">
+                                        <img src="@img/lesson.jpg" class="img-fluid object-fit-cover w-100 h-100" alt="Баннер">
+                                        <div class="trial-lesson__banner-content d-flex flex-column justify-content-between position-absolute top-0 end-0 start-0 bottom-0">
+                                            <div class="trial-lesson__banner-caption font-try fw-bold text-center z-1">Самые крутые истории начинаются с&nbsp;фразы <span class="d-inline-block position-relative text-nowrap">«Ладно, давай попробую!»</span></div>
+                                            <div class="trial-lesson__banner-desc text-end">Не жди завтра, <br> начни свою историю сегодня!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="trial-lesson__main d-flex flex-column">
+                                        <div class="trial-lesson__caption font-try fw-bold lh-base text-uppercase text-center">Первое занятие бесплатно</div>
+                                        <p class="trial-lesson__subtitle text-center">*При покупке абонемента в день занятия</p>
+                                        <form action="#" class="trial-lesson__form bg-white text-black rounded-3 flex-grow-1">
+                                            <div class="trial-lesson__form-caption fw-bold text-center">Первое занятие</div>
+                                            <div class="trial-lesson__form-fields">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <input type="text" required name="username" class="form-control" placeholder="Ваше имя*">
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="tel" required name="phone" class="form-control" placeholder="Телефон*">
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="text" name="telegram" class="form-control" placeholder="@telegram_nickname">
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <p class="form-label-custom">Выберите удобный канал для связи</p>
+                                                        <div class="d-flex gap-4">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="contactMethod" id="phone" value="phone">
+                                                                <label class="form-check-label" for="phone">Телефон</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="contactMethod" id="max" value="max">
+                                                                <label class="form-check-label" for="max">MAX</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="contactMethod" id="telegram" value="telegram" checked>
+                                                                <label class="form-check-label" for="telegram">Telegram</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 d-flex">
+                                                        <a href="" class="btn btn-primary mx-auto">Записаться</a>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <p class="form-policy text-center mb-0">
+                                                            Нажимая на кнопку “Записаться” вы соглашаетесь <br>
+                                                            с <a href="" class="form-policy__link color-accent">“Соглашением об обработке персональных данных”</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trial-lesson__cards">
+                            <div class="row">
+                                @@loop('./html/templates/_trial-lesson-card.html', './html/json/lesson-cards.json')
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <section class="features">
                     <div class="container">
                         <h2 class="features__title fs-title text-uppercase text-center font-try fw-bold text-center lh-base">Madison — для каждого из вас</h2>
