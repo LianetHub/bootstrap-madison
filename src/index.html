@@ -151,6 +151,31 @@
                         </div>
                     </div>
                 </div>
+                <section class="school text-white">
+                    <div class="school__container container">
+                        <div class="school__content">
+                            <div class="school__header row align-items-center">
+                                <div class="col-6">
+                                    <span class="school__badge font-try badge rounded-5 color-accent bg-white">Для всех возрастов</span>
+                                    <h1 class="school__title fs-title text-uppercase font-try fw-bold">Школа танцев madison</h1>
+                                    <p class="school__subtitle text-end">Доступное танцевальное пространство 💫</p>
+                                </div>
+                                <div class="col-6">
+                                    <a href="" class="school__video position-relative d-block h-100 icon-play">
+                                        <img src="@img/school.jpg" class="img-fluid object-fit-cover w-100 h-100" alt="Фото танцоров">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="school__body d-flex align-items-center justify-content-between">
+                                <div class="school__tagline text-uppercase font-try fw-bold lh-base">Философия школы — Атмосфера, в&nbsp;которой раскрывается каждый</div>
+                                <a href="" class="school__btn btn btn-white flex-shrink-0">Записаться на занятие</a>
+                            </div>
+                            <div class="school__cards d-grid gap-3">
+                                @@loop('./html/templates/_school-card.html', './html/json/school-cards.json')
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section class="features">
                     <div class="container">
                         <h2 class="features__title fs-title text-uppercase text-center font-try fw-bold text-center lh-base">Madison — для каждого из вас</h2>

@@ -73,4 +73,15 @@
 		--bs-btn-active-bg: #bc0482;
 		--bs-btn-active-border-color: #bc0482;
 	}
+	&.btn-white {
+		--bs-btn-color: #fff;
+		--bs-btn-border-color: #fff;
+		--bs-btn-hover-color: #fff;
+		--bs-btn-hover-bg: #bc0482;
+		--bs-btn-hover-border-color: #bc0482;
+		--bs-btn-focus-shadow-rgb: 188, 4, 130;
+		--bs-btn-active-color: #fff;
+		--bs-btn-active-bg: #bc0482;
+		--bs-btn-active-border-color: #bc0482;
+	}
 }
