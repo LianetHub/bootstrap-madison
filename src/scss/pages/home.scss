@@ -1277,6 +1277,11 @@
 		.teacher__image-hover {
 			opacity: 1;
 		}
+		.teacher__expirience,
+		.teacher__skill {
+			background: #bc0482;
+			color: #fff;
+		}
 	}
 	height: rem(560);
 	// .teacher__image
@@ -1325,6 +1330,9 @@
 		border-radius: 0.1875rem;
 		font-size: 1.0625rem;
 		line-height: 140%;
+		background: #fff;
+		color: $accent;
+		transition: all 0.3s ease;
 	}
 	// .teacher__expirience
 	&__expirience {
@@ -1336,6 +1344,9 @@
 		padding: 0.43669rem 0.87331rem;
 		box-shadow: 0 0 rem(7) 0 rgba(96, 0, 0, 0.2);
 		border-radius: 0 0.9375rem 0 0;
+		background: #fff;
+		color: $accent;
+		transition: all 0.3s ease;
 	}
 }
 

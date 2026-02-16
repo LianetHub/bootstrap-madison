@@ -1,23 +1,7 @@
 @font-face {
-  font-family: "druktextwidecyr";
-  font-display: swap;
-  src: url("../fonts/druktextwidecyr-medium.woff2") format("woff2"), url("../fonts/druktextwidecyr-medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TRYGrtsk";
-  font-display: swap;
-  src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -27,6 +11,22 @@
   font-display: swap;
   src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "druktextwidecyr";
+  font-display: swap;
+  src: url("../fonts/druktextwidecyr-medium.woff2") format("woff2"), url("../fonts/druktextwidecyr-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TRYGrtsk";
+  font-display: swap;
+  src: url("../fonts/TRYGrtsk-Bold.woff2") format("woff2"), url("../fonts/TRYGrtsk-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -42,8 +42,8 @@
 @font-face {
   font-family: "TRYGrtsk";
   font-display: swap;
-  src: url("../fonts/TRYGrtsk-Bold.woff2") format("woff2"), url("../fonts/TRYGrtsk-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -1950,6 +1950,12 @@ body {
   opacity: 1;
 }
 
+.teacher:hover .teacher__expirience,
+.teacher:hover .teacher__skill {
+  background: #bc0482;
+  color: #fff;
+}
+
 .teacher__image {
   border-radius: 0.9375rem;
 }
@@ -1999,6 +2005,10 @@ body {
   border-radius: 0.1875rem;
   font-size: 1.0625rem;
   line-height: 140%;
+  background: #fff;
+  color: #bc0482;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .teacher__expirience {
@@ -2011,6 +2021,10 @@ body {
   -webkit-box-shadow: 0 0 0.4375rem 0 rgba(96, 0, 0, 0.2);
           box-shadow: 0 0 0.4375rem 0 rgba(96, 0, 0, 0.2);
   border-radius: 0 0.9375rem 0 0;
+  background: #fff;
+  color: #bc0482;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .reviews {
