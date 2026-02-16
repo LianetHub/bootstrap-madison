@@ -7,12 +7,12 @@
     {
         "icon": "@img/icons/parking.svg",
         "name": "Удобно",
-        "desc": "Бесплатная парковка"
+        "desc": "Бесплатная <br> парковка"
     },
     {
         "icon": "@img/icons/clock.svg",
         "name": "Доступно",
-        "desc": "Занятия проходят днем и вечером"
+        "desc": "Занятия проходят днем и&nbsp;вечером"
     },
     {
         "icon": "@img/icons/stars.svg",

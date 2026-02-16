@@ -2,18 +2,20 @@
 	background: radial-gradient(51.63% 71.82% at 49.37% 43.69%, #e42329 0%, #761a1b 100%), #761a1b;
 	// .promo__body
 	&__body {
-		max-width: 56.625rem;
+		margin-top: 0.6rem;
+		max-width: rem(880);
 	}
 	// .promo__title
 	&__title {
 		font-size: 8.4375rem;
-		line-height: 130%;
+		line-height: 120%;
 	}
 	// .promo__image
 	&__image {
 	}
 	// .promo__name
 	&__name {
+		margin-top: 0.75rem;
 		font-size: 9.375rem;
 		opacity: 0.62;
 		mix-blend-mode: overlay;
@@ -31,6 +33,7 @@
 	}
 	// .promo__column-text
 	&__column-text {
+		margin-top: -0.3rem;
 	}
 	// .promo__label
 	&__label {
@@ -39,13 +42,14 @@
 		transform: translateX(-50%) rotate(-13.267deg);
 		border-radius: 1.875rem;
 		background: #d62d32;
-		bottom: 3rem;
+		bottom: 5.6rem;
 		left: 50%;
 		padding: 0.75rem 1.75rem;
 		max-width: 11.625rem;
 	}
 	// .promo__image
 	&__image {
+		margin-bottom: -3rem;
 		pointer-events: none;
 	}
 }
@@ -87,6 +91,8 @@
 	// .special-offer__caption
 	&__caption {
 		padding: rem(30);
+		font-size: 1.0625rem;
+		line-height: 140%;
 	}
 	// .special-offer__column
 	&__column {
@@ -96,7 +102,8 @@
 		width: rem(705);
 		--bs-border-width: #{rem(8)};
 		--bs-border-color: #bc0482;
-		padding: rem(50);
+		padding: rem(44) rem(50) rem(50) rem(50);
+		gap: rem(50);
 	}
 	// .special-offer__card-title
 	&__card-title {
@@ -107,21 +114,24 @@
 		--bs-border-width: 0.1875rem;
 		color: #bc0482;
 		width: 3.125rem;
-		margin: rem(50) 0;
 	}
 	// .special-offer__card-desc
 	&__card-desc {
+		font-size: 1.5625rem;
+		line-height: 140%;
 	}
 	// .special-offer__card-tagline
 	&__card-tagline {
+		font-size: 1.5625rem;
+		line-height: 140%;
 	}
 	// .special-offer__card-btn
 	&__card-btn {
 	}
 	// .special-offer__image
 	&__image {
-		margin-bottom: rem(83);
-		margin-left: rem(-120);
+		height: rem(588);
+		margin-left: rem(-210);
 	}
 	// .special-offer__badge
 	&__badge {
@@ -184,10 +194,11 @@
 	// .directions__bottom
 	&__bottom {
 		gap: 2.5rem;
+		margin-top: rem(40);
 	}
 	// .directions__bottom-icon
 	&__bottom-icon {
-		font-size: 3.75rem;
+		width: 3.75rem;
 		line-height: 140%;
 	}
 	// .directions__bottom-text
@@ -204,8 +215,12 @@
 					opacity: 1;
 				}
 				.directions__card-desc {
+					margin-top: rem(12);
 					opacity: 1;
-					max-height: 100%;
+					visibility: visible;
+					& span {
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
@@ -246,23 +261,30 @@
 	}
 	// .directions__card-desc
 	&__card-desc {
-		margin-top: rem(12);
 		line-height: 140%;
 		color: rgba(255, 255, 255, 0.8);
-		max-height: rem(30);
+		margin: 0;
 		opacity: 0;
-		transition: opacity 0.3s ease;
+		visibility: hidden;
+		transition: margin 0.15s cubic-bezier(0.39, 0.58, 0.57, 1);
+		& span {
+			margin-bottom: -100%;
+			display: block;
+		}
 	}
 }
 
 .trial-lesson {
-	padding: rem(40) 0;
+	padding: rem(40) 0 rem(60);
 	// .trial-lesson__title
 	&__title {
 	}
 	// .trial-lesson__content
 	&__content {
-		margin-top: 2.5rem;
+		margin-top: 2.75rem;
+		.row {
+			--bs-gutter-x: #{rem(40)};
+		}
 	}
 
 	// .trial-lesson__banner
@@ -308,7 +330,7 @@
 	// .trial-lesson__form
 	&__form {
 		margin-top: rem(25);
-		padding: rem(50);
+		padding: rem(45) rem(30) rem(50);
 		border-top: rem(8) solid #bc0482;
 	}
 	// .trial-lesson__form-caption
@@ -322,6 +344,10 @@
 		.row {
 			--bs-gutter-x: 1.25rem;
 			--bs-gutter-y: 1.25rem;
+		}
+		& .caption-text {
+			font-size: 1.0625rem;
+			line-height: 140%;
 		}
 	}
 	// .trial-lesson__cards

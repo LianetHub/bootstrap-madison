@@ -1,12 +1,31 @@
-.form-check-input {
-	&:checked {
-		background-color: #bc0482;
-		border-color: #bc0482;
+.form-check-label {
+	font-size: rem(18);
+}
+
+.form-checkboxes {
+	gap: rem(34);
+}
+
+.form-check {
+	display: inline-flex;
+	align-items: center;
+	gap: rem(10);
+	&-input {
+		width: 1.0625rem;
+		height: 1.0625rem;
+		border: rem(2) solid #bfbfbf;
+		&:checked {
+			background-color: #bc0482;
+			border-color: #bc0482;
+		}
+		&:focus {
+			box-shadow: 0 0 0 0.25rem rgba(34, 34, 34, 0.3);
+		}
 	}
 }
 
 .form-control {
-	padding: 0.9375rem 1.875rem;
+	padding: 1.05rem 1.875rem;
 	font-size: 1.125rem;
 	letter-spacing: 0.03375rem;
 	font-weight: 400;
@@ -28,6 +47,8 @@
 }
 
 .form-policy {
+	font-size: 0.875rem;
+	line-height: 140%;
 	// .form-policy__link
 	&__link {
 	}
