@@ -3,7 +3,16 @@
 }
 
 .fs-title {
-	font-size: rem(36);
+	font-size: 1.25rem;
+	@media (min-width: $md5) {
+		font-size: 1.5rem;
+	}
+	@media (min-width: $md4) {
+		font-size: rem(28);
+	}
+	@media (min-width: $md3) {
+		font-size: rem(36);
+	}
 	@media (min-width: $md2) {
 		font-size: rem(42);
 	}

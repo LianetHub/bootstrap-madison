@@ -1,4 +1,10 @@
 .header {
+	background: #761a1b;
+	color: #fff;
+	@media (min-width: $md4) {
+		background: #fff;
+		color: #222;
+	}
 	// .header__top
 	&__top {
 		gap: rem(30);
@@ -21,6 +27,9 @@
 			flex-shrink: 0;
 		}
 		transition: color 0.3s ease;
+		@media (min-width: $md3) {
+			font-size: 1.25rem;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: darken($color: $accent, $amount: 10);
@@ -31,7 +40,10 @@
 	&__phone {
 		line-height: 140%;
 		transition: color 0.3s ease;
-		font-size: 1.375rem;
+		font-size: 1.25rem;
+		@media (min-width: $md3) {
+			font-size: 1.375rem;
+		}
 		@media (min-width: $md2) {
 			font-size: 1.5625rem;
 		}

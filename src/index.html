@@ -38,9 +38,9 @@
                 </div>
                 <div class="special-offer bg-red text-white">
                     <div class="container">
-                        <div class="special-offer__body d-flex align-items-start">
+                        <div class="special-offer__body d-flex align-items-lg-start flex-lg-row flex-column-reverse">
                             <div class="special-offer__column d-flex flex-column position-relative z-2 flex-grow-0 flex-shrink-0">
-                                <div class="special-offer__caption fw-bold">Специальное предложение!</div>
+                                <div class="special-offer__caption fw-bold d-lg-block d-none">Специальное предложение!</div>
                                 <div class="special-offer__card border-top bg-white text-black rounded-4 flex-grow-1 d-flex flex-column align-items-start">
                                     <div class="special-offer__card-title text-uppercase font-try fw-bold lh-base">ТАНЦУЙ, МАРТ!</div>
                                     <hr class="special-offer__card-separator opacity-100 m-0">
@@ -69,7 +69,7 @@
                             <div class="row">
                                 @@loop('./html/templates/_direction-card.html', './html/json/directions.json')
                             </div>
-                            <div class="directions__bottom d-flex align-items-center">
+                            <div class="directions__bottom d-flex align-items-center flex-lg-row flex-column text-lg-start text-center">
                                 <span class="directions__bottom-icon flex-shrink-0">
                                     <img src="@img/icons/energy.png" alt="Иконка">
                                 </span>
@@ -87,7 +87,7 @@
                         <div class="trial-lesson__title fs-title font-try text-uppercase fw-bold text-center">Пробный урок</div>
                         <div class="trial-lesson__content">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <div class="trial-lesson__banner position-relative h-100 bg-black text-white overflow-hidden">
                                         <img src="@img/lesson.jpg" alt="Баннер">
                                         <div class="trial-lesson__banner-content d-flex flex-column justify-content-between position-absolute top-0 end-0 start-0 bottom-0">
@@ -96,7 +96,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <div class="trial-lesson__main d-flex flex-column">
                                         <div class="trial-lesson__caption font-try fw-bold lh-base text-uppercase text-center">Первое занятие бесплатно</div>
                                         <p class="trial-lesson__subtitle text-center mb-0">*При покупке абонемента в день занятия</p>
@@ -158,7 +158,7 @@
                         <div class="school__content">
                             <div class="school__header row align-items-start">
                                 <div class="col-xl-6 pt-4">
-                                    <span class="school__badge badge rounded-5 color-accent bg-white fw-normal mt-3">Для всех возрастов</span>
+                                    <span class="school__badge badge rounded-5 color-accent bg-white me-auto d-flex fw-normal mt-3 ">Для всех возрастов</span>
                                     <h1 class="school__title fs-title text-uppercase font-try fw-bold lh-base">Школа танцев madison</h1>
                                     <p class="school__subtitle text-end">Доступное танцевальное пространство 💫</p>
                                 </div>
@@ -433,14 +433,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="halls__body d-flex align-items-center">
-                                <div class="halls__info fw-medium flex-shrink-0 d-flex flex-column">
+                            <div class="halls__body d-flex align-items-lg-center flex-lg-row flex-column">
+                                <div class="halls__info fw-medium flex-shrink-0 d-lg-flex flex-column">
                                     <div class="halls__info-text d-flex align-items-center font-druk">
                                         <strong class="d-block">5</strong>
                                         Просторных
                                         залов
                                     </div>
-                                    <a href="" class="halls__info-btn btn btn-white">Узнать подробнее</a>
+                                    <a href="" class="halls__info-btn btn btn-white order-1 align-self-center">Узнать подробнее</a>
                                 </div>
                                 <div class="halls__slider swiper ms-0">
                                     <div class="swiper-wrapper">
@@ -462,14 +462,14 @@
 
                             <div class="features__block">
                                 <div class="row align-items-center">
-                                    <div class="col-7">
+                                    <div class="col-lg-7">
                                         <a href="" class="features__image overflow-hidden icon-play position-relative d-block">
                                             <img src="@img/features/01.jpg" alt="Детям">
                                         </a>
                                     </div>
-                                    <div class="col-5">
-                                        <span class="features__badge badge rounded-5 color-accent bg-white">Танец — фундамент для будущего</span>
-                                        <div class="features__caption font-try fw-semibold">Детям</div>
+                                    <div class="col-lg-5">
+                                        <span class="features__badge badge rounded-5 color-accent bg-white mx-lg-0 mx-auto d-flex">Танец — фундамент для будущего</span>
+                                        <div class="features__caption font-try fw-semibold text-lg-start text-center">Детям</div>
                                         <ul class="features__list d-flex flex-column">
                                             <li class="features__item d-flex align-items-center">
                                                 <div class="features__item-icon d-flex justify-content-center align-items-center rounded-circle flex-shrink-0">
@@ -502,29 +502,29 @@
 
                             <div class="features__block">
                                 <div class="row align-items-center">
-                                    <div class="col-5 text-end">
-                                        <span class="features__badge badge rounded-5 color-accent bg-white">Танец — своя территория, где тебя понимают</span>
-                                        <div class="features__caption font-try fw-semibold">Подросткам</div>
+                                    <div class="col-lg-5 text-lg-end">
+                                        <span class="features__badge badge rounded-5 color-accent bg-white mx-lg-0 mx-auto d-flex">Танец — своя территория, где тебя понимают</span>
+                                        <div class="features__caption font-try fw-semibold text-lg-start text-center">Подросткам</div>
                                         <ul class="features__list d-flex flex-column">
-                                            <li class="features__item d-flex align-items-center flex-row-reverse">
+                                            <li class="features__item d-flex align-items-center flex-lg-row-reverse">
                                                 <div class="features__item-icon d-flex justify-content-center align-items-center rounded-circle flex-shrink-0">
                                                     <img src="@img/icons/person-star.svg" alt="Иконка">
                                                 </div>
                                                 <div class="features__item-text fw-bold">Научим заявлять о себе без слов</div>
                                             </li>
-                                            <li class="features__item d-flex align-items-center flex-row-reverse">
+                                            <li class="features__item d-flex align-items-center flex-lg-row-reverse">
                                                 <div class="features__item-icon d-flex justify-content-center align-items-center rounded-circle flex-shrink-0">
                                                     <img src="@img/icons/fire.svg" alt="Иконка">
                                                 </div>
                                                 <div class="features__item-text fw-bold">Направим эмоции в драйв и творчество</div>
                                             </li>
-                                            <li class="features__item d-flex align-items-center flex-row-reverse">
+                                            <li class="features__item d-flex align-items-center flex-lg-row-reverse">
                                                 <div class="features__item-icon d-flex justify-content-center align-items-center rounded-circle flex-shrink-0">
                                                     <img src="@img/icons/rocket.svg" alt="Иконка">
                                                 </div>
                                                 <div class="features__item-text fw-bold">Дисциплина и достижение танцевальных целей</div>
                                             </li>
-                                            <li class="features__item d-flex align-items-center flex-row-reverse">
+                                            <li class="features__item d-flex align-items-center flex-lg-row-reverse">
                                                 <div class="features__item-icon d-flex justify-content-center align-items-center rounded-circle flex-shrink-0">
                                                     <img src="@img/icons/community.svg" alt="Иконка">
                                                 </div>
@@ -532,7 +532,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-7">
+                                    <div class="col-lg-7 order-lg-0 order-first">
                                         <a href="" class="features__image overflow-hidden icon-play position-relative d-block">
                                             <img src="@img/features/02.jpg" alt="Подросткам">
                                         </a>
@@ -542,14 +542,14 @@
 
                             <div class="features__block">
                                 <div class="row align-items-center">
-                                    <div class="col-7">
+                                    <div class="col-lg-7">
                                         <a href="" class="features__image overflow-hidden icon-play position-relative d-block">
                                             <img src="@img/features/03.jpg" alt="Взрослым">
                                         </a>
                                     </div>
-                                    <div class="col-5">
-                                        <span class="features__badge badge rounded-5 color-accent bg-white">Танец — фундамент для будущего</span>
-                                        <div class="features__caption font-try fw-semibold">Взрослым</div>
+                                    <div class="col-lg-5">
+                                        <span class="features__badge badge rounded-5 color-accent bg-white mx-lg-0 mx-auto d-flex">Танец — фундамент для будущего</span>
+                                        <div class="features__caption font-try fw-semibold text-lg-start text-center">Взрослым</div>
                                         <ul class="features__list d-flex flex-column">
                                             <li class="features__item d-flex align-items-center">
                                                 <div class="features__item-icon d-flex justify-content-center align-items-center rounded-circle flex-shrink-0">
@@ -607,7 +607,7 @@
                     <div class="container">
                         <h2 class="prices__title fs-title text-center text-uppercase font-try fw-bold lh-base">Стоимость занятий</h2>
                         <p class="prices__subtitle text-center">Действуют разные способы оплаты</p>
-                        <div class="prices__types d-flex justify-content-center gap-3">
+                        <div class="prices__types d-flex justify-content-center flex-wrap gap-3">
                             <div class="prices__type d-flex align-items-center bg-white">
                                 <span class="prices__type-icon flex-shrink-0 rounded-circle overflow-hidden">
                                     <img src="@img/icons/money.svg" alt="Иконка">
@@ -638,7 +638,7 @@
                                 @@loop('./html/templates/_prices-card.html', './html/json/prices.json')
                             </div>
                         </div>
-                        <div class="prices__bottom d-flex align-items-center">
+                        <div class="prices__bottom d-flex align-items-center flex-lg-row flex-column text-lg-start text-center">
                             <span class="prices__bottom-icon flex-shrink-0"><img src="@img/icons/stars.png" alt="Иконка"></span>
                             <p class="prices__bottom-text flex-grow-1 mb-0">
                                 Гибкие абонементы для любого графика.
@@ -658,7 +658,7 @@
                             </div>
                         </div>
                         <div class="teachers__controls d-flex justify-content-end">
-                            <div class="teachers__btns d-flex">
+                            <div class="teachers__btns d-md-flex d-none">
                                 <button type="button" class="teachers__prev swiper-button-prev icon-prev"></button>
                                 <button type="button" class="teachers__next swiper-button-next icon-next"></button>
                             </div>
@@ -669,8 +669,8 @@
                 <section class="reviews">
                     <div class="container">
                         <h2 class="reviews__title fs-title text-uppercase text-center font-try fw-bold text-center lh-base">Видеоотзывы наших учеников</h2>
-                        <div class="reviews__body d-flex">
-                            <div class="reviews__content d-flex flex-column text-center flex-shrink-0">
+                        <div class="reviews__body d-flex flex-lg-row flex-column">
+                            <div class="reviews__content d-lg-flex flex-column text-center flex-shrink-0">
                                 <p class="mb-5"><strong>За кадром наших занятий 👋</strong></p>
                                 <p>
                                     Самые честные эмоции, прорывы и "вау!"-моменты
@@ -682,7 +682,7 @@
                                     до уверенности в себе.
                                 </p>
                                 <p><strong>Ваша история может быть следующей!</strong></p>
-                                <div class="reviews__bottom position-relative">
+                                <div class="reviews__bottom position-relative order-1">
                                     <a href="" class="reviews__btn btn btn-primary">Попробовать себя</a>
                                 </div>
                             </div>
