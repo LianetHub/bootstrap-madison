@@ -41,26 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
             target.nextElementSibling.slideToggle()
         }
 
-        if (target.matches('.services__tabs-btn')) {
-            const btns = Array.from(document.querySelectorAll('.services__tabs-btn'));
-            const blocks = document.querySelectorAll('.services__block');
-            const index = btns.indexOf(target);
-
-            btns.forEach(btn => btn.classList.remove('active'));
-            target.classList.add('active');
-
-            blocks.forEach(block => block.classList.remove('active'));
-            if (blocks[index]) {
-                blocks[index].classList.add('active');
-            }
-        }
-
-        if (target.matches('.footer__arrow-top')) {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
-        }
 
         if (target.closest('.header__toggler')) {
             toggler.classList.toggle('active');
@@ -113,11 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector('.reviews__slider')) {
         new Swiper('.reviews__slider', {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 10,
             watchOverflow: true,
             breakpoints: {
                 1200: {
                     slidesPerView: 3,
+                    spaceBetween: 20,
                 }
             },
             on: {

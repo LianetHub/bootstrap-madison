@@ -7,9 +7,9 @@
 	}
 	// .header__top
 	&__top {
-		gap: rem(15);
+		gap: rem(12);
 		@media (max-width: $md4) {
-			padding: 0.625rem 0 1.25rem;
+			padding: 0.25rem 3rem 1.25rem;
 		}
 		@media (min-width: $md3) {
 			gap: rem(30);
@@ -30,10 +30,17 @@
 	// .header__location
 	&__location {
 		&::before {
-			font-size: rem(23);
 			flex-shrink: 0;
+			font-size: rem(18);
+			@media (min-width: $md5) {
+				font-size: rem(23);
+			}
 		}
 		transition: color 0.3s ease;
+		font-size: rem(11);
+		@media (min-width: $md5) {
+			font-size: 1rem;
+		}
 		@media (min-width: $md3) {
 			font-size: 1.25rem;
 		}
@@ -66,9 +73,11 @@
 		font-size: 1.75rem;
 		@media (max-width: $md4) {
 			position: absolute;
-			left: 0;
+			left: 0.5rem;
 			top: 50%;
 			transform: translateY(-50%);
+			width: rem(30);
+			height: rem(30);
 		}
 		@media (min-width: $md2) {
 			font-size: 2.1875rem;
@@ -82,11 +91,13 @@
 	// .header__body
 	&__body {
 		@media (max-width: $md4) {
-			padding: 2.34rem 0 0.625rem;
+			padding: rem(30) 0.5rem 0.625rem;
 		}
 	}
 	// .header__logo
 	&__logo {
+		position: relative;
+		z-index: 11;
 		max-width: 6.25rem;
 		@media (min-width: $md4) {
 			max-width: 14rem;
@@ -110,8 +121,13 @@
 		overflow-y: auto;
 		transition: transform 0.3s ease;
 		transform: translateX(100%);
-		&.active {
+		opacity: 0;
+		visibility: hidden;
+		padding: 6rem 1rem 1rem;
+		.header.open-menu & {
 			transform: none;
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 	// .menu__list
@@ -145,8 +161,9 @@
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-	width: 2rem;
-	height: 1rem;
+	width: rem(45);
+	height: rem(45);
+	padding: 0 0.25rem;
 	margin-left: auto;
 	color: #fff;
 	z-index: 11;
@@ -162,10 +179,7 @@
 			transform 0.4s ease 0.4s,
 			opacity 0.4s ease 0.4s;
 		will-change: transform;
-		padding: rem(3) rem(0);
-		@media (min-width: $md5) {
-			padding: rem(5) rem(0);
-		}
+		padding: rem(5) rem(0);
 		&::before {
 			content: "";
 			display: block;
@@ -187,16 +201,9 @@
 				transition:
 					transform 0.45s ease 0.35s,
 					width 0.3s ease 0s;
-				width: 75%;
-				@media (min-width: $md5) {
-					width: 50%;
-				}
 			}
 			&:first-child {
-				transform: translateY(rem(8));
-				@media (min-width: $md5) {
-					transform: translateY(rem(12));
-				}
+				transform: translateY(rem(12));
 				&::before {
 					transform: rotate(-135deg);
 				}
@@ -205,10 +212,7 @@
 				opacity: 0;
 			}
 			&:nth-child(3) {
-				transform: translateY(rem(-8));
-				@media (min-width: $md5) {
-					transform: translateY(rem(-12));
-				}
+				transform: translateY(rem(-12));
 				&::before {
 					transform: rotate(-225deg);
 				}
