@@ -79,6 +79,17 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
+    if (document.querySelector('.halls__slider')) {
+        new Swiper('.halls__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            navigation: {
+                prevEl: ".halls__prev",
+                nextEl: ".halls__next"
+            }
+        })
+    }
+
 
 
     if (document.querySelectorAll('.gallery__slider').length) {

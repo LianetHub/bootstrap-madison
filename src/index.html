@@ -204,7 +204,7 @@
                                     <div class="steps__item-desc">Тело становится послушным, движения — осознанными и точными</div>
                                 </div>
                                 <div class="steps__item-image">
-                                    <img src="@img/halls/04.png" class="img-fluid object-fit-cover w-100 h-100 rounded-circle overflow-hidden" alt="Фото зала">
+                                    <img src="@img/halls/04.jpg" class="img-fluid object-fit-cover w-100 h-100 rounded-circle overflow-hidden" alt="Фото зала">
                                 </div>
                             </li>
                             <li class="steps__item">
@@ -340,7 +340,7 @@
                     <div class="halls__container container">
                         <div class="halls__content">
                             <div class="halls__header d-flex justify-content-between align-items-end">
-                                <h2 class="halls__title fs-title text-uppercase font-try fw-bold">Почасовая Аренда залов</h2>
+                                <h2 class="halls__title fs-title text-uppercase font-try fw-bold lh-base">Почасовая Аренда залов</h2>
                                 <div class="halls__features row flex-shrink-0">
                                     <div class="col-4">
                                         <div class="halls__features-column d-flex flex-column text-center">
@@ -355,7 +355,7 @@
                                             <div class="halls__features-image">
                                                 <img src="@img/halls/decor-2.png" alt="Декор">
                                             </div>
-                                            <div class="halls__features-text">Оборудование для занятий</div>
+                                            <div class="halls__features-text">Оборудование для&nbsp;занятий</div>
                                         </div>
                                     </div>
                                     <div class="col-4">
@@ -368,14 +368,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="halls__body">
-                                <div class="halls__info fw-medium">
-                                    <div class="halls__info-text">
-                                        <strong>5</strong>
+                            <div class="halls__body d-flex align-items-center">
+                                <div class="halls__info fw-medium flex-shrink-0 d-flex flex-column">
+                                    <div class="halls__info-text d-flex align-items-center font-druk">
+                                        <strong class="d-block">5</strong>
                                         Просторных
                                         залов
                                     </div>
+                                    <a href="" class="halls__info-btn btn btn-white">Узнать подробнее</a>
                                 </div>
+                                <div class="halls__slider swiper ms-0">
+                                    <div class="swiper-wrapper">
+                                        @@loop('./html/templates/_halls-block.html', './html/json/halls.json')
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="halls__bottom d-flex justify-content-center align-items-center">
+                                <button type="button" class="halls__prev swiper-button-prev icon-prev"></button>
+                                <button type="button" class="halls__next swiper-button-next icon-next"></button>
                             </div>
                         </div>
                     </div>

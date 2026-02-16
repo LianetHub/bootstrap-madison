@@ -719,7 +719,7 @@
 }
 
 .benefits {
-	padding: rem(30) 0;
+	padding: rem(30) 0 rem(60);
 	.row {
 		--bs-gutter-x: #{rem(20)};
 	}
@@ -762,10 +762,9 @@
 .halls {
 	position: relative;
 	z-index: 1;
-	padding: rem(90) 0;
+	padding: rem(120) 0 rem(90);
 	background: radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
-	overflow: hidden;
-	min-height: rem(1040);
+	min-height: rem(942);
 	margin: 0 auto;
 	&::before {
 		content: "";
@@ -774,12 +773,12 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: url("@img/school-mask.svg") center / auto 100% no-repeat;
+		background: url("@img/halls-mask.svg") center / auto 100% no-repeat;
 		pointer-events: none;
 		z-index: 2;
 	}
 	@media (min-width: 1920px) {
-		max-width: rem(3200);
+		max-width: rem(3154);
 		&::after {
 			content: "";
 			position: absolute;
@@ -788,8 +787,8 @@
 			width: 100%;
 			height: 100%;
 			background:
-				linear-gradient(90deg, #edecec 0%, #edecec calc((100% - 3007px) / 2), transparent calc((100% - 3007px) / 2)),
-				linear-gradient(270deg, #edecec 0%, #edecec calc((100% - 3007px) / 2), transparent calc((100% - 3007px) / 2));
+				linear-gradient(90deg, #edecec 0%, #edecec calc((100% - 2900px) / 2), transparent calc((100% - 2900px) / 2)),
+				linear-gradient(270deg, #edecec 0%, #edecec calc((100% - 2900px) / 2), transparent calc((100% - 2900px) / 2));
 			pointer-events: none;
 			z-index: 1;
 		}
@@ -804,8 +803,8 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: url("@img/halls/02.jpg") center / cover no-repeat;
-			opacity: 0.2;
+			background: url("@img/halls/05.jpg") center / cover no-repeat;
+			opacity: 0.05;
 			z-index: -1;
 		}
 		&::after {
@@ -833,9 +832,12 @@
 	}
 	// .halls__features
 	&__features {
+		--bs-gutter-x: 0rem;
+		max-width: rem(690);
 	}
 	// .halls__features-column
 	&__features-column {
+		padding: 0 rem(20);
 	}
 	// .halls__features-image
 	&__features-image {
@@ -843,6 +845,74 @@
 	// .halls__features-text
 	&__features-text {
 		font-size: rem(18);
+		line-height: 140%;
+	}
+	// .halls__body
+	&__body {
+		margin-top: rem(60);
+		gap: 1.25rem;
+	}
+	// .halls__info
+	&__info {
+		padding: 0 rem(15);
+		width: 16.25rem;
+	}
+	// .halls__info-text
+	&__info-text {
+		font-size: 1.125rem;
+		gap: 1.25rem;
+		line-height: 140%;
+		& strong {
+			font-size: 4.6875rem;
+			line-height: 140%;
+		}
+	}
+	// .halls__info-btn
+	&__info-btn {
+		margin-top: 1.25rem;
+	}
+	// .halls__slider
+	&__slider {
+		min-width: 0;
+		margin-right: calc(-1 * (100vw - 1464px) / 2);
+	}
+	&__slide {
+		&.swiper-slide {
+			height: auto;
+			width: 21.5625rem;
+			border-radius: 0.9375rem;
+			background: #fff;
+			box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.08);
+		}
+	}
+	// .halls__slide-image
+	&__slide-image {
+	}
+	// .halls__slide-bottom
+	&__slide-bottom {
+		padding: rem(20) 0 1.45rem;
+	}
+	// .halls__bottom
+	&__bottom {
+		margin-top: 5rem;
+		gap: 1.25rem;
+	}
+	// .halls__prev
+	&__prev {
+		@extend.halls__next;
+	}
+	// .halls__next
+	&__next {
+		color: #fff;
+		border: rem(1) solid #fff;
+		background: rgba(255, 255, 255, 0.05);
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: $accent;
+				background-color: $accent;
+				color: #fff;
+			}
+		}
 	}
 }
 
