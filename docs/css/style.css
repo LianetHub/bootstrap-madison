@@ -7,26 +7,10 @@
 }
 
 @font-face {
-  font-family: "LTSuperior";
-  font-display: swap;
-  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TRYGrtsk";
-  font-display: swap;
-  src: url("../fonts/TRYGrtsk-Bold.woff2") format("woff2"), url("../fonts/TRYGrtsk-Bold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -39,12 +23,28 @@
 }
 
 @font-face {
+  font-family: "LTSuperior";
+  font-display: swap;
+  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "TRYGrtsk";
+  font-display: swap;
+  src: url("../fonts/TRYGrtsk-Bold.woff2") format("woff2"), url("../fonts/TRYGrtsk-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
@@ -402,49 +402,6 @@
   color: #414651;
   font-size: 0.875rem;
   line-height: 142.857%;
-}
-
-.typography-block .wp-block-columns {
-  margin: 3rem 0 2rem;
-  gap: 0.75rem !important;
-}
-
-.typography-block .wp-block-columns .wp-block-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.typography-block .wp-block-columns .wp-block-column:last-child figcaption {
-  text-align: right;
-}
-
-.typography-block .wp-block-columns .wp-block-column figure {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0;
-}
-
-.typography-block .wp-block-columns .wp-block-column figure img {
-  width: 100%;
-  height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 ::-webkit-scrollbar {
@@ -877,6 +834,20 @@ body {
   margin-left: -13.125rem;
 }
 
+.special-offer__image picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.special-offer__image picture img,
+.special-offer__image picture source {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .special-offer__badge {
   top: 2.5rem;
   right: 2.625rem;
@@ -1033,6 +1004,20 @@ body {
   border-radius: 0.9375rem;
 }
 
+.trial-lesson__banner picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.trial-lesson__banner picture img,
+.trial-lesson__banner picture source {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .trial-lesson__banner-content {
   padding: 2.5rem 1.875rem;
 }
@@ -1124,6 +1109,9 @@ body {
   z-index: 2;
 }
 
+.no-webp .school__container::before {
+  background: url("../img/halls/02.jpg") center/cover no-repeat; }
+
 .school__container::before {
   content: "";
   position: absolute;
@@ -1131,7 +1119,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/halls/02.jpg") center/cover no-repeat;
   opacity: 0.2;
   z-index: -1;
 }
@@ -1183,6 +1170,20 @@ body {
           transform: translate(-50%, -50%);
   font-size: 5rem;
   color: #e42329;
+}
+
+.school__video picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.school__video picture img,
+.school__video picture source {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .school__body {
@@ -1445,10 +1446,6 @@ body {
 
 .gallery {
   padding: 1.875rem 0;
-  margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .gallery__slider {
@@ -1473,6 +1470,20 @@ body {
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.gallery__slide picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gallery__slide picture img,
+.gallery__slide picture source {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .benefits {
@@ -1500,6 +1511,20 @@ body {
   height: 100%;
   background: #000;
   opacity: 0.4;
+}
+
+.benefits__card picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.benefits__card picture img,
+.benefits__card picture source {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .benefits__card-content {
@@ -1540,6 +1565,9 @@ body {
   z-index: 2;
 }
 
+.no-webp .halls__container::before {
+  background: url("../img/halls/05.jpg") center/cover no-repeat; }
+
 .halls__container::before {
   content: "";
   position: absolute;
@@ -1547,7 +1575,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/halls/05.jpg") center/cover no-repeat;
   opacity: 0.05;
   z-index: -1;
 }
@@ -1667,6 +1694,17 @@ body {
   height: 28.1875rem;
 }
 
+.features__image::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: #e42329;
+}
+
 .features__caption {
   margin-top: 1.875rem;
   font-size: 1.875rem;
@@ -1717,6 +1755,21 @@ body {
   z-index: 2;
 }
 
+.start__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/school-mask-bottom.svg") center/auto 100% no-repeat;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.no-webp .start__container::before {
+  background: url("../img/halls/05.jpg") center/cover no-repeat; }
+
 .start__container::before {
   content: "";
   position: absolute;
@@ -1724,7 +1777,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/halls/05.jpg") center/cover no-repeat;
   opacity: 0.05;
   z-index: -1;
 }
@@ -1827,14 +1879,16 @@ body {
   font-size: 1.5625rem;
 }
 
+.no-webp .prices-card {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 3, 3, 0.8)), to(rgba(118, 22, 22, 0.8))), url("../img/halls/02.jpg") 0 0/cover no-repeat;
+  background: linear-gradient(180deg, rgba(16, 3, 3, 0.8) 0%, rgba(118, 22, 22, 0.8) 100%), url("../img/halls/02.jpg") 0 0/cover no-repeat; }
+
 .prices-card {
   padding: 2.1875rem 1.25rem 1.875rem;
   border-radius: 0.9375rem;
   min-height: 18.4375rem;
   -webkit-box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.08);
           box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.08);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 3, 3, 0.8)), to(rgba(118, 22, 22, 0.8))), url("../img/halls/02.jpg") 0 0/cover no-repeat;
-  background: linear-gradient(180deg, rgba(16, 3, 3, 0.8) 0%, rgba(118, 22, 22, 0.8) 100%), url("../img/halls/02.jpg") 0 0/cover no-repeat;
 }
 
 .prices-card__name {
@@ -1980,6 +2034,9 @@ body {
   margin-top: 3.5625rem;
 }
 
+.no-webp .reviews__bottom::before {
+  background: url("../img/icons/stars.png") center/cover no-repeat; }
+
 .reviews__bottom::before {
   content: "";
   position: absolute;
@@ -1987,8 +2044,10 @@ body {
   left: 0;
   width: 3.5rem;
   height: 3.5rem;
-  background: url("../img/icons/stars.png") center/cover no-repeat;
 }
+
+.no-webp .reviews__bottom::after {
+  background: url("../img/icons/stars.png") center/cover no-repeat; }
 
 .reviews__bottom::after {
   content: "";
@@ -1997,7 +2056,6 @@ body {
   right: 0;
   width: 3.5rem;
   height: 3.5rem;
-  background: url("../img/icons/stars.png") center/cover no-repeat;
 }
 
 .reviews__slide {
@@ -2104,6 +2162,7 @@ body {
           transform: translateX(-50%);
   width: 100vw;
   height: 100%;
+  pointer-events: none;
   border-bottom: 0.0625rem solid rgba(34, 34, 34, 0.1);
 }
 
@@ -2250,6 +2309,9 @@ body {
   background: linear-gradient(90deg, #761a1b 0%, #8c1b1d 50%, #761a1b 100%);
 }
 
+.no-webp .footer__body::before {
+  background: url("../img/halls/01.jpg") 0 0/cover no-repeat; }
+
 .footer__body::before {
   content: "";
   position: absolute;
@@ -2257,7 +2319,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/halls/01.jpg") 0 0/cover no-repeat;
   z-index: -1;
   opacity: 0.05;
 }
@@ -2587,3 +2648,17 @@ body {
     opacity: 0.875;
   }
 }
+
+.webp .school__container::before { background: url(../img/halls/02.webp) center/cover no-repeat; }
+
+.webp .halls__container::before { background: url(../img/halls/05.webp) center/cover no-repeat; }
+
+.webp .start__container::before { background: url(../img/halls/05.webp) center/cover no-repeat; }
+
+.webp .prices-card { background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 3, 3, 0.8)), to(rgba(118, 22, 22, 0.8))), url(../img/halls/02.webp) 0 0/cover no-repeat; background: linear-gradient(180deg, rgba(16, 3, 3, 0.8) 0%, rgba(118, 22, 22, 0.8) 100%), url(../img/halls/02.webp) 0 0/cover no-repeat; }
+
+.webp .reviews__bottom::before { background: url(../img/icons/stars.webp) center/cover no-repeat; }
+
+.webp .reviews__bottom::after { background: url(../img/icons/stars.webp) center/cover no-repeat; }
+
+.webp .footer__body::before { background: url(../img/halls/01.webp) 0 0/cover no-repeat; }

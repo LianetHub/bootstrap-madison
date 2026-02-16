@@ -132,6 +132,17 @@
 	&__image {
 		height: rem(588);
 		margin-left: rem(-210);
+		& picture {
+			width: 100%;
+			height: 100%;
+			display: block;
+			& img,
+			source {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 	}
 	// .special-offer__badge
 	&__badge {
@@ -290,6 +301,17 @@
 	// .trial-lesson__banner
 	&__banner {
 		border-radius: 0.9375rem;
+		& picture {
+			width: 100%;
+			height: 100%;
+			display: block;
+			& img,
+			source {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 	}
 	// .trial-lesson__banner-content
 	&__banner-content {
@@ -456,6 +478,17 @@
 			transform: translate(-50%, -50%);
 			font-size: rem(80);
 			color: #e42329;
+		}
+		& picture {
+			width: 100%;
+			height: 100%;
+			display: block;
+			& img,
+			source {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 	// .school__body
@@ -692,8 +725,9 @@
 
 .gallery {
 	padding: rem(30) 0;
-	margin: 0 auto;
-	width: fit-content;
+	// .gallery__content
+	&__content {
+	}
 	// .gallery__slider
 	&__slider {
 		overflow: visible;
@@ -712,6 +746,17 @@
 		overflow: hidden;
 		border-radius: 0.9375rem;
 		transition: transform 0.3s ease;
+		& picture {
+			width: 100%;
+			height: 100%;
+			display: block;
+			& img,
+			source {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				transform: scale(1.015);
@@ -740,6 +785,17 @@
 			height: 100%;
 			background: #000;
 			opacity: 0.4;
+		}
+		& picture {
+			width: 100%;
+			height: 100%;
+			display: block;
+			& img,
+			source {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 	// .benefits__card-content
@@ -947,6 +1003,14 @@
 	&__image {
 		border-radius: rem(15);
 		height: rem(451);
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: rem(80);
+			color: #e42329;
+		}
 	}
 	// .features__caption
 	&__caption {
@@ -1012,7 +1076,19 @@
 			z-index: 1;
 		}
 	}
-
+	&__wrapper {
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url("@img/school-mask-bottom.svg") center / auto 100% no-repeat;
+			pointer-events: none;
+			z-index: 10;
+		}
+	}
 	// .start__container
 	&__container {
 		&::before {
