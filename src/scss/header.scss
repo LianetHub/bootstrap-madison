@@ -53,15 +53,23 @@
 	}
 	// .header__logo
 	&__logo {
+		max-width: 14rem;
+		@media (min-width: $md1) {
+			max-width: 17.271rem;
+		}
 	}
 }
 
 .menu {
 	// .menu__list
 	&__list {
-		column-gap: rem(40);
-		font-size: rem(18);
+		row-gap: rem(10);
 		line-height: 140%;
+		column-gap: rem(30);
+		@media (min-width: $md1) {
+			column-gap: rem(40);
+			font-size: rem(18);
+		}
 	}
 	// .menu__item
 	&__item {

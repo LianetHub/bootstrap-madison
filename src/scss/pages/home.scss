@@ -7,8 +7,11 @@
 	}
 	// .promo__title
 	&__title {
-		font-size: 8.4375rem;
 		line-height: 120%;
+		font-size: 7.5rem;
+		@media (min-width: $md1) {
+			font-size: 8.4375rem;
+		}
 	}
 	// .promo__image
 	&__image {
@@ -16,14 +19,20 @@
 	// .promo__name
 	&__name {
 		margin-top: 0.75rem;
-		font-size: 9.375rem;
 		opacity: 0.62;
 		mix-blend-mode: overlay;
+		font-size: 8rem;
+		@media (min-width: $md1) {
+			font-size: 9.375rem;
+		}
 	}
 	// .promo__columns
 	&__columns {
-		font-size: 1.5625rem;
 		line-height: 140%;
+		font-size: 1.375rem;
+		@media (min-width: $md1) {
+			font-size: 1.5625rem;
+		}
 	}
 	// .promo__column
 	&__column {
@@ -33,7 +42,9 @@
 	}
 	// .promo__column-text
 	&__column-text {
-		margin-top: -0.3rem;
+		@media (min-width: $md1) {
+			margin-top: -0.3rem;
+		}
 	}
 	// .promo__label
 	&__label {
@@ -96,18 +107,28 @@
 	}
 	// .special-offer__column
 	&__column {
+		width: rem(505);
+		@media (min-width: $md1) {
+			width: rem(705);
+		}
 	}
 	// .special-offer__card
 	&__card {
-		width: rem(705);
 		--bs-border-width: #{rem(8)};
 		--bs-border-color: #bc0482;
-		padding: rem(44) rem(50) rem(50) rem(50);
-		gap: rem(50);
+		gap: rem(40);
+		padding: rem(34) rem(40) rem(40) rem(40);
+		@media (min-width: $md1) {
+			padding: rem(44) rem(50) rem(50) rem(50);
+			gap: rem(50);
+		}
 	}
 	// .special-offer__card-title
 	&__card-title {
-		font-size: 1.875rem;
+		font-size: 1.75rem;
+		@media (min-width: $md1) {
+			font-size: 1.875rem;
+		}
 	}
 	// .special-offer__card-separator
 	&__card-separator {
@@ -117,13 +138,19 @@
 	}
 	// .special-offer__card-desc
 	&__card-desc {
-		font-size: 1.5625rem;
 		line-height: 140%;
+		font-size: 1.375rem;
+		@media (min-width: $md1) {
+			font-size: 1.5625rem;
+		}
 	}
 	// .special-offer__card-tagline
 	&__card-tagline {
-		font-size: 1.5625rem;
 		line-height: 140%;
+		font-size: 1.375rem;
+		@media (min-width: $md1) {
+			font-size: 1.5625rem;
+		}
 	}
 	// .special-offer__card-btn
 	&__card-btn {
@@ -505,7 +532,10 @@
 	// .school__cards
 	&__cards {
 		margin-top: rem(60);
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(3, 1fr);
+		@media (min-width: $md1) {
+			grid-template-columns: repeat(5, 1fr);
+		}
 	}
 }
 
@@ -523,20 +553,27 @@
 	&__label {
 		border-radius: 3.125rem;
 		padding: 0.43669rem 0.87331rem;
-		font-size: 1.5625rem;
 		background: #fff;
 		box-shadow: 0 0 rem(7) 0 rgba(96, 0, 0, 0.2);
+		font-size: 1.25rem;
+		@media (min-width: $md1) {
+			font-size: 1.5625rem;
+		}
 	}
 	// .steps__list
 	&__list {
-		margin-top: rem(80);
 		margin-inline: -1rem;
 		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		position: relative;
-		height: rem(500);
+		height: rem(420);
+		margin-top: rem(40);
+		@media (min-width: $md1) {
+			margin-top: rem(80);
+			height: rem(500);
+		}
 		&::before {
 			content: "";
 			position: absolute;
@@ -692,12 +729,18 @@
 	}
 	// .steps__item-content
 	&__item-content {
-		height: rem(243);
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		width: 13.4375rem;
 		position: absolute;
+		transform-origin: left center;
+		transform: scale(0.75);
+		height: rem(180);
+		@media (min-width: $md1) {
+			height: rem(243);
+			transform: none;
+		}
 	}
 	// .steps__item-icon
 	&__item-icon {
@@ -725,6 +768,11 @@
 	&__item-image {
 		width: 10rem;
 		position: absolute;
+		transform-origin: left center;
+		transform: scale(0.75);
+		@media (min-width: $md1) {
+			transform: none;
+		}
 	}
 }
 

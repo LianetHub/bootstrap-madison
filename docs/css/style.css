@@ -7,17 +7,17 @@
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "LTSuperior";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "LTSuperior";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -42,16 +42,16 @@
 @font-face {
   font-family: "TRYGrtsk";
   font-display: swap;
-  src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/TRYGrtsk-SemiBold.woff2") format("woff2"), url("../fonts/TRYGrtsk-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TRYGrtsk";
   font-display: swap;
-  src: url("../fonts/TRYGrtsk-SemiBold.woff2") format("woff2"), url("../fonts/TRYGrtsk-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -123,7 +123,7 @@
 }
 
 .fs-title {
-  font-size: 3rem;
+  font-size: 2.625rem;
 }
 
 .font-try {
@@ -721,28 +721,24 @@ body {
 }
 
 .promo__title {
-  font-size: 8.4375rem;
   line-height: 120%;
+  font-size: 7.5rem;
 }
 
 .promo__name {
   margin-top: 0.75rem;
-  font-size: 9.375rem;
   opacity: 0.62;
   mix-blend-mode: overlay;
+  font-size: 8rem;
 }
 
 .promo__columns {
-  font-size: 1.5625rem;
   line-height: 140%;
+  font-size: 1.375rem;
 }
 
 .promo__column:not(:last-child) {
   border-right: 0.125rem solid;
-}
-
-.promo__column-text {
-  margin-top: -0.3rem;
 }
 
 .promo__label {
@@ -801,16 +797,19 @@ body {
   line-height: 140%;
 }
 
+.special-offer__column {
+  width: 31.5625rem;
+}
+
 .special-offer__card {
-  width: 44.0625rem;
   --bs-border-width: 0.5rem;
   --bs-border-color: #bc0482;
-  padding: 2.75rem 3.125rem 3.125rem 3.125rem;
-  gap: 3.125rem;
+  gap: 2.5rem;
+  padding: 2.125rem 2.5rem 2.5rem 2.5rem;
 }
 
 .special-offer__card-title {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 
 .special-offer__card-separator {
@@ -820,13 +819,13 @@ body {
 }
 
 .special-offer__card-desc {
-  font-size: 1.5625rem;
   line-height: 140%;
+  font-size: 1.375rem;
 }
 
 .special-offer__card-tagline {
-  font-size: 1.5625rem;
   line-height: 140%;
+  font-size: 1.375rem;
 }
 
 .special-offer__image {
@@ -1196,8 +1195,8 @@ body {
 
 .school__cards {
   margin-top: 3.75rem;
-  -ms-grid-columns: (1fr)[5];
-  grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .steps {
@@ -1215,14 +1214,13 @@ body {
 .steps__label {
   border-radius: 3.125rem;
   padding: 0.43669rem 0.87331rem;
-  font-size: 1.5625rem;
   background: #fff;
   -webkit-box-shadow: 0 0 0.4375rem 0 rgba(96, 0, 0, 0.2);
           box-shadow: 0 0 0.4375rem 0 rgba(96, 0, 0, 0.2);
+  font-size: 1.25rem;
 }
 
 .steps__list {
-  margin-top: 5rem;
   margin-inline: -1rem;
   position: relative;
   display: -webkit-box;
@@ -1235,7 +1233,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  height: 31.25rem;
+  height: 26.25rem;
+  margin-top: 2.5rem;
 }
 
 .steps__list::before {
@@ -1385,7 +1384,6 @@ body {
 }
 
 .steps__item-content {
-  height: 15.1875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1398,6 +1396,13 @@ body {
           align-items: flex-start;
   width: 13.4375rem;
   position: absolute;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+          transform: scale(0.75);
+  height: 11.25rem;
 }
 
 .steps__item-icon {
@@ -1428,6 +1433,12 @@ body {
 .steps__item-image {
   width: 10rem;
   position: absolute;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+          transform: scale(0.75);
 }
 
 .community {
@@ -2223,12 +2234,16 @@ body {
   transition: color 0.3s ease;
 }
 
+.header__logo {
+  max-width: 14rem;
+}
+
 .menu__list {
-  -webkit-column-gap: 2.5rem;
-     -moz-column-gap: 2.5rem;
-          column-gap: 2.5rem;
-  font-size: 1.125rem;
+  row-gap: 0.625rem;
   line-height: 140%;
+  -webkit-column-gap: 1.875rem;
+     -moz-column-gap: 1.875rem;
+          column-gap: 1.875rem;
 }
 
 .menu__link {
@@ -2526,6 +2541,87 @@ body {
 
   .icon-menu {
     display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .fs-title {
+    font-size: 3rem;
+  }
+
+  .promo__title {
+    font-size: 8.4375rem;
+  }
+
+  .promo__name {
+    font-size: 9.375rem;
+  }
+
+  .promo__columns {
+    font-size: 1.5625rem;
+  }
+
+  .promo__column-text {
+    margin-top: -0.3rem;
+  }
+
+  .special-offer__column {
+    width: 44.0625rem;
+  }
+
+  .special-offer__card {
+    padding: 2.75rem 3.125rem 3.125rem 3.125rem;
+    gap: 3.125rem;
+  }
+
+  .special-offer__card-title {
+    font-size: 1.875rem;
+  }
+
+  .special-offer__card-desc {
+    font-size: 1.5625rem;
+  }
+
+  .special-offer__card-tagline {
+    font-size: 1.5625rem;
+  }
+
+  .school__cards {
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .steps__label {
+    font-size: 1.5625rem;
+  }
+
+  .steps__list {
+    margin-top: 5rem;
+    height: 31.25rem;
+  }
+
+  .steps__item-content {
+    height: 15.1875rem;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .steps__item-image {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .header__logo {
+    max-width: 17.271rem;
+  }
+
+  .menu__list {
+    -webkit-column-gap: 2.5rem;
+       -moz-column-gap: 2.5rem;
+            column-gap: 2.5rem;
+    font-size: 1.125rem;
   }
 }
 
