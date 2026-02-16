@@ -518,16 +518,16 @@
                         </div>
                     </div>
                 </section>
-                <section class="start">
+                <section class="start text-white">
                     <div class="start__container container">
                         <div class="start__content d-flex">
-                            <div class="start__main">
-                                <div class="start__tagline">💫 Madison — пространство, где верят в вас</div>
-                                <h2 class="start__title fs-title text-uppercase font-try fw-bold">Вы можете больше,чем думаете! <br> Докажите это себе на первом занятии! ⚡️</h2>
-                                <div class="start__actions">
+                            <div class="start__main flex-grow-1">
+                                <div class="start__tagline fw-bold">💫 Madison — пространство, где верят в вас</div>
+                                <h2 class="start__title text-uppercase font-try fw-bold lh-base">Вы можете больше,чем думаете!</h2>
+                                <div class="start__actions d-flex flex-wrap">
                                     <a href="" class="btn btn-primary">Записаться на пробный урок</a>
                                     <a href="" class="btn btn-white">Смотреть расписание</a>
-                                    <a href="" class="btn btn-primary">Выбрать направление</a>
+                                    <a href="" class="btn btn-white">Выбрать направление</a>
                                 </div>
                             </div>
                             <div class="start__image">
@@ -571,9 +571,9 @@
                                 @@loop('./html/templates/_prices-card.html', './html/json/prices.json')
                             </div>
                         </div>
-                        <div class="prices__bottom d-flex align-items-center mt-4">
-                            <span class="prices__bottom-icon flex-shrink-0">⚡️</span>
-                            <p class="prices__bottom-text flex-grow-1">
+                        <div class="prices__bottom d-flex align-items-center">
+                            <span class="prices__bottom-icon flex-shrink-0"><img src="@img/icons/stars.png" alt="Иконка"></span>
+                            <p class="prices__bottom-text flex-grow-1 mb-0">
                                 Гибкие абонементы для любого графика.
                                 Занимайтесь в группе, индивидуально или комбинируйте — <strong>так, как удобно именно вам →</strong>
                             </p>
@@ -602,40 +602,34 @@
                 <section class="reviews">
                     <div class="container">
                         <h2 class="reviews__title fs-title text-uppercase text-center font-try fw-bold text-center lh-base">Видеоотзывы наших учеников</h2>
-                        <div class="reviews__body">
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="reviews__content d-flex flex-column text-center">
-                                        <p><strong>За кадром наших занятий 👋</strong></p>
-                                        <p>
-                                            Самые честные эмоции, прорывы и "вау!"-моменты
-                                        </p>
-                                        <p>
-                                            Посмотрите живые отзывы от наших учеников о том,
-                                            что дают занятия: <br>
-                                            от физической формы
-                                            до уверенности в себе.
-                                        </p>
-                                        <p><strong>Ваша история может быть следующей!</strong></p>
-                                        <div class="reviews__bottom">
-                                            <a href="" class="reviews__btn btn btn-primary">Попробовать себя</a>
-                                        </div>
-                                    </div>
+                        <div class="reviews__body d-flex">
+                            <div class="reviews__content d-flex flex-column text-center flex-shrink-0">
+                                <p class="mb-5"><strong>За кадром наших занятий 👋</strong></p>
+                                <p>
+                                    Самые честные эмоции, прорывы и "вау!"-моменты
+                                </p>
+                                <p>
+                                    Посмотрите живые отзывы от наших учеников о том,
+                                    что дают занятия: <br>
+                                    от физической формы
+                                    до уверенности в себе.
+                                </p>
+                                <p><strong>Ваша история может быть следующей!</strong></p>
+                                <div class="reviews__bottom position-relative">
+                                    <a href="" class="reviews__btn btn btn-primary">Попробовать себя</a>
                                 </div>
-                                <div class="col-9">
-                                    <div class="reviews__slider swiper">
-                                        <div class="swiper-wrapper">
-                                            <a href="" class="reviews__slide swiper-slide icon-play">
-                                                <img src="@img/video-reviews/01.jpg" class="img-fluid object-fit-cover w-100 h-100" alt="Фото">
-                                            </a>
-                                            <a href="" class="reviews__slide swiper-slide icon-play">
-                                                <img src="@img/video-reviews/02.jpg" class="img-fluid object-fit-cover w-100 h-100" alt="Фото">
-                                            </a>
-                                            <a href="" class="reviews__slide swiper-slide icon-play">
-                                                <img src="@img/video-reviews/03.jpg" class="img-fluid object-fit-cover w-100 h-100" alt="Фото">
-                                            </a>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="reviews__slider swiper flex-grow-1">
+                                <div class="swiper-wrapper">
+                                    <a href="" class="reviews__slide swiper-slide icon-play">
+                                        <img src="@img/video-reviews/01.jpg" class="img-fluid object-fit-cover w-100 h-100" alt="Фото">
+                                    </a>
+                                    <a href="" class="reviews__slide swiper-slide icon-play">
+                                        <img src="@img/video-reviews/02.jpg" class="img-fluid object-fit-cover w-100 h-100" alt="Фото">
+                                    </a>
+                                    <a href="" class="reviews__slide swiper-slide icon-play">
+                                        <img src="@img/video-reviews/03.jpg" class="img-fluid object-fit-cover w-100 h-100" alt="Фото">
+                                    </a>
                                 </div>
                             </div>
                         </div>
