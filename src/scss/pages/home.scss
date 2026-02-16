@@ -363,7 +363,7 @@
 .school {
 	position: relative;
 	z-index: 1;
-	padding: rem(90) 0;
+	padding: rem(80) 0;
 	background: radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
 	overflow: hidden;
 
@@ -428,16 +428,19 @@
 	}
 	// .school__header
 	&__header {
-		.row {
+		&.row {
 			--bs-gutter-x: 2.5rem;
 		}
 	}
 	// .school__badge
 	&__badge {
+		font-size: 1.5625rem;
+		line-height: 140%;
+		transform: rotate(-4.995deg);
 	}
 	// .school__title
 	&__title {
-		margin-top: rem(30);
+		margin-top: rem(40);
 	}
 	// .school__subtitle
 	&__subtitle {
@@ -474,7 +477,7 @@
 }
 
 .steps {
-	padding: rem(20) 0 rem(50);
+	padding: rem(20) 0 rem(40);
 	// .steps__header
 	&__header {
 		padding: 1.25rem 0;
@@ -493,7 +496,8 @@
 	}
 	// .steps__list
 	&__list {
-		margin-top: rem(60);
+		margin-top: rem(80);
+		margin-inline: -1rem;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -540,7 +544,7 @@
 				padding-top: rem(44);
 			}
 			.steps__item-image {
-				bottom: rem(59);
+				bottom: 2.3875rem;
 			}
 		}
 		&:nth-child(1) {
@@ -557,8 +561,8 @@
 				&::before {
 					content: "";
 					position: absolute;
-					top: 0;
-					right: 2rem;
+					top: rem(-5);
+					right: 4.4rem;
 					width: 3.5rem;
 					height: 3.5rem;
 					background: url("@img/steps/stars-decor.svg") center / contain no-repeat;
@@ -569,12 +573,13 @@
 			.steps__item-image {
 				width: 13.3125rem;
 				height: 13.3125rem;
+				left: -2.2rem;
 				border-radius: 50%;
 				&::before {
 					content: "";
 					position: absolute;
 					top: rem(-10);
-					right: 0;
+					right: rem(5);
 					z-index: -1;
 					background: radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
 					width: 3.125rem;
@@ -585,30 +590,44 @@
 		}
 		&:nth-child(3) {
 			.steps__item-image {
-				top: 1rem;
-				width: 11rem;
+				top: 1.4rem;
+				width: 9.7rem;
+				left: 2.9rem;
 			}
 		}
 		&:nth-child(4) {
 			.steps__item-image {
-				width: 15rem;
-				margin-left: -2rem;
+				width: 17.2rem;
+				margin-left: -3rem;
 			}
 		}
 		&:nth-child(5) {
 			.steps__item-image {
 				width: 12.4375rem;
 				height: 12.4375rem;
+				left: 1rem;
+				top: 4rem;
+				&::before {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 6.58331rem;
+					height: 6.58331rem;
+					background: radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
+					border-radius: 50%;
+					z-index: -1;
+				}
 			}
 			.steps__item-content {
 				&::before {
 					content: "";
 					position: absolute;
-					top: rem(-10);
-					right: rem(-20);
+					top: -0.725rem;
+					right: -3.85rem;
 					z-index: -1;
-					width: 3.77481rem;
-					height: 3.44756rem;
+					width: rem(66);
+					height: rem(61);
 					background: url("@img/steps/phone-decor.svg") center / contain no-repeat;
 				}
 			}
@@ -639,6 +658,7 @@
 	// .steps__item-name
 	&__item-name {
 		font-size: 1.375rem;
+		line-height: 140%;
 		&:not(:last-child) {
 			padding-bottom: 0.44rem;
 			border-bottom: rem(1) solid rgba(34, 34, 34, 0.1);
@@ -700,11 +720,15 @@
 
 .benefits {
 	padding: rem(30) 0;
+	.row {
+		--bs-gutter-x: #{rem(20)};
+	}
 	// .benefits__card
 	&__card {
 		border-radius: 0.9375rem;
 		border: rem(1) solid rgba(255, 255, 255, 0.03);
 		box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.08);
+		min-height: rem(550);
 		&::before {
 			content: "";
 			position: absolute;
@@ -722,6 +746,7 @@
 	}
 	// .benefits__card-title
 	&__card-title {
+		line-height: 140%;
 	}
 	// .benefits__card-desc
 	&__card-desc {
