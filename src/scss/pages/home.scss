@@ -1,5 +1,8 @@
 .promo {
-	background: radial-gradient(51.63% 71.82% at 49.37% 43.69%, #e42329 0%, #761a1b 100%), #761a1b;
+	background: radial-gradient(40.13% 43.69% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
+	@media (min-width: $md4) {
+		background: radial-gradient(51.63% 71.82% at 49.37% 43.69%, #e42329 0%, #761a1b 100%), #761a1b;
+	}
 	// .promo__body
 	&__body {
 		margin-top: 0.6rem;
@@ -151,8 +154,11 @@
 	&__card {
 		--bs-border-width: #{rem(8)};
 		--bs-border-color: #bc0482;
-		gap: rem(40);
 		padding: rem(34) rem(40) rem(40) rem(40);
+		gap: rem(20);
+		@media (min-width: $md4) {
+			gap: rem(40);
+		}
 		@media (min-width: $md1) {
 			padding: rem(44) rem(50) rem(50) rem(50);
 			gap: rem(50);
@@ -566,8 +572,11 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			font-size: rem(80);
 			color: #e42329;
+			font-size: rem(40);
+			@media (min-width: $md4) {
+				font-size: rem(80);
+			}
 		}
 		& picture {
 			width: 100%;
@@ -587,15 +596,23 @@
 	}
 	// .school__tagline
 	&__tagline {
-		font-size: 1.875rem;
+		font-size: 0.9375rem;
+		@media (min-width: $md5) {
+			font-size: 1.5rem;
+		}
+		@media (min-width: $md3) {
+			font-size: 1.875rem;
+		}
 	}
 	// .school__btn
 	&__btn {
 	}
 	// .school__cards
 	&__cards {
-		grid-template-columns: repeat(2, 1fr);
 		margin-top: rem(30);
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 		@media (min-width: $md3) {
 			margin-top: rem(60);
 			grid-template-columns: repeat(3, 1fr);
@@ -954,12 +971,16 @@
 	}
 	// .gallery__slide
 	&__slide {
-		width: 24rem;
-		height: 16rem;
 		display: block;
 		overflow: hidden;
 		border-radius: 0.9375rem;
 		transition: transform 0.3s ease;
+		width: 13.79313rem;
+		height: 9.19538rem;
+		@media (min-width: $md4) {
+			width: 24rem;
+			height: 16rem;
+		}
 		& picture {
 			width: 100%;
 			height: 100%;
@@ -1291,8 +1312,11 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			font-size: rem(80);
 			color: #e42329;
+			font-size: rem(40);
+			@media (min-width: $md4) {
+				font-size: rem(80);
+			}
 		}
 		& picture {
 			width: 100%;
@@ -1411,12 +1435,19 @@
 	&__content {
 		position: relative;
 		z-index: 3;
+		@media (max-width: $md4) {
+			padding: rem(120) 0;
+		}
 	}
 	// .start__main
 	&__main {
-		position: relative;
-		z-index: 10;
-		padding: rem(120) 0 rem(70);
+		display: contents;
+		@media (min-width: $md4) {
+			position: relative;
+			z-index: 10;
+			display: block;
+			padding: rem(120) 0 rem(70);
+		}
 		@media (min-width: $md0) {
 			padding: rem(150) 0 rem(90);
 		}
@@ -1445,15 +1476,19 @@
 	// .start__actions
 	&__actions {
 		gap: rem(10);
-		margin-top: 2rem;
+		@media (min-width: $md4) {
+			margin-top: 2rem;
+		}
 		@media (min-width: $md0) {
 			margin-top: 5rem;
 		}
 	}
 	// .start__image
 	&__image {
-		align-self: flex-end;
-		flex: 0 0 rem(460);
+		@media (min-width: $md4) {
+			align-self: flex-end;
+			flex: 0 0 rem(460);
+		}
 		@media (min-width: $md2) {
 			margin-top: -4.7rem;
 			margin-right: -3rem;
@@ -1537,16 +1572,21 @@
 }
 
 .prices-card {
+	position: relative;
 	padding: rem(35) rem(20) rem(30);
 	border-radius: rem(15);
-	min-height: rem(295);
+
 	box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.08);
 	background:
 		linear-gradient(180deg, rgba(16, 3, 3, 0.8) 0%, rgba(118, 22, 22, 0.8) 100%),
 		url("@img/halls/02.jpg") 0 0 / cover no-repeat;
+	@media (min-width: $md3) {
+		min-height: rem(295);
+	}
 	// .prices-card__name
 	&__name {
 		font-size: 1.5625rem;
+
 		@media (min-width: $md5) {
 			font-size: 1.125rem;
 		}
@@ -1571,6 +1611,15 @@
 		@media (min-width: $md3) {
 			margin-top: 1.53rem;
 			font-size: 1.875rem;
+		}
+	}
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: rem(10);
+		@media (min-width: $md3) {
+			display: contents;
 		}
 	}
 	// .prices-card__bottom
@@ -1647,6 +1696,7 @@
 			color: #fff;
 		}
 	}
+	height: auto;
 	@media (min-width: $md3) {
 		height: rem(560);
 	}
@@ -1814,8 +1864,11 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			font-size: rem(80);
 			color: #e42329;
+			font-size: rem(40);
+			@media (min-width: $md4) {
+				font-size: rem(80);
+			}
 		}
 		& picture {
 			width: 100%;
@@ -1908,7 +1961,10 @@
 	}
 	// .faq__actions
 	&__actions {
-		margin-top: rem(40);
 		gap: rem(10);
+		margin-top: rem(20);
+		@media (min-width: $md4) {
+			margin-top: rem(40);
+		}
 	}
 }

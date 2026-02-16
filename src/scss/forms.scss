@@ -58,10 +58,8 @@
 }
 
 .btn {
-	--bs-btn-padding-x: #{rem(23)};
-	--bs-btn-padding-y: #{rem(18)};
 	--bs-btn-font-family: #{$fontfamily};
-	--bs-btn-font-size: 1.125rem;
+
 	--bs-btn-font-weight: 500;
 	--bs-btn-line-height: 1.4;
 	--bs-btn-border-width: #{rem(1)};
@@ -75,6 +73,13 @@
 	justify-content: center;
 	align-items: center;
 	gap: rem(10);
+	--bs-btn-font-size: 1rem;
+	--bs-btn-padding-x: #{rem(23)};
+	--bs-btn-padding-y: #{rem(14)};
+	@media (min-width: $md4) {
+		--bs-btn-padding-y: #{rem(18)};
+		--bs-btn-font-size: 1.125rem;
+	}
 	&.btn-primary {
 		--bs-btn-color: #fff;
 		--bs-btn-bg: #bc0482;

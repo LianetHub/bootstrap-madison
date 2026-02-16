@@ -8,29 +8,37 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/libs/bootstrap.min.css?_v=20260216205608">
-	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260216205608">
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260216205608">
+	<link rel="stylesheet" href="css/libs/bootstrap.min.css?_v=20260216212949">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260216212949">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260216212949">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20260216205608">
-	<link rel="stylesheet" href="css/style.min.css?_v=20260216205608">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20260216212949">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260216212949">
 </head>
 
 <body>
 	<div class="wrapper">
 		<header class="header ">
-			<div class="container">
-				<div class="header__top position-relative py-2 d-flex justify-content-between align-items-center color-accent">
-					<a href="" class="header__location d-inline-flex align-items-center fw-bold icon-location gap-2 me-auto">м. Мякинино, ТРК VEGAS Сити</a>
+			<div class="container d-flex flex-lg-column flex-column-reverse">
+				<div class="header__top position-relative py-md-2 d-flex justify-content-md-between align-items-center flex-md-row flex-column">
+					<a href="" class="header__location d-inline-flex align-items-center fw-bold icon-location gap-2 me-md-auto">м. Мякинино, ТРК VEGAS Сити</a>
 					<a href="tel:+74954320814" class="header__phone d-inline-flex align-items-center fw-bold icon-phone gap-2">+7 (495) 432-08-14</a>
 					<a href="" aria-label="Читайте нас ВКонтакте" class="header__social icon-vk"></a>
 				</div>
-				<div class="header__body d-flex align-items-center py-4">
+				<div class="header__body d-flex align-items-center py-md-4">
 					<a href="/" class="header__logo">
-						<img src="img/logo.svg" alt="Логотип Школы Танцев Madison">
+						<picture>
+							<source media="(min-width: 768px)" srcset="img/logo.svg">
+							<img src="img/logo-white.svg" alt="Логотип Школы Танцев Madison">
+						</picture>
 					</a>
-					<nav aria-label="Меню" class="menu ms-auto">
-						<ul class="menu__list d-flex align-items-center flex-wrap justify-content-end">
+					<button type="button" aria-label="Открыть меню" class="header__menu-toggler icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<nav aria-label="Меню" class="menu ms-md-auto">
+						<ul class="menu__list d-flex align-items-center flex-md-row flex-column flex-md-wrap justify-content-md-end">
 							<li class="menu__item"><a href="" class="menu__link">Концерты</a></li>
 							<li class="menu__item"><a href="" class="menu__link">Направления</a></li>
 							<li class="menu__item"><a href="" class="menu__link">Новости</a></li>
@@ -81,7 +89,7 @@
 					<div class="special-offer__body d-flex align-items-lg-start flex-lg-row flex-column-reverse">
 						<div class="special-offer__column d-flex flex-column position-relative z-2 flex-grow-0 flex-shrink-0">
 							<div class="special-offer__caption fw-bold d-lg-block d-none">Специальное предложение!</div>
-							<div class="special-offer__card border-top bg-white text-black rounded-4 flex-grow-1 d-flex flex-column align-items-start">
+							<div class="special-offer__card border-top bg-white text-black rounded-4 flex-grow-1 d-flex flex-column align-items-md-start align-items-center text-md-start text-center">
 								<div class="special-offer__card-title text-uppercase font-try fw-bold lh-base">ТАНЦУЙ, МАРТ!</div>
 								<hr class="special-offer__card-separator opacity-100 m-0">
 								<p class="special-offer__card-desc mb-0">Весна — время новых начинаний. Подарите себе не цветы, а новую уверенность, грацию и заряд энергии на весь год. Наш подарок к 8 Марта — особые условия на первый абонемент.</p>
@@ -374,7 +382,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="school__body d-flex align-items-xl-center align-items-start flex-column flex-xl-row gap-2 justify-content-between">
+						<div class="school__body d-flex align-items-center flex-column flex-xl-row gap-2 justify-content-between text-xl-start text-center">
 							<div class="school__tagline text-uppercase font-try fw-bold lh-base">Философия школы — Атмосфера, в&nbsp;которой раскрывается каждый</div>
 							<a href="" class="school__btn btn btn-white flex-shrink-0">Записаться на занятие</a>
 						</div>
@@ -515,7 +523,7 @@
 			</section>
 			<section class="community">
 				<div class="container">
-					<div class="community__content d-flex justify-content-between align-items-center gap-2">
+					<div class="community__content d-flex justify-content-between align-items-center gap-2 flex-md-row flex-column text-md-start text-center">
 						<h2 class="community__title fw-bold text-uppercase font-try lh-base">Стань частью танцевального комьюнити</h2>
 						<a href="" class="btn btn-primary flex-shrink-0">Записаться на занятие</a>
 					</div>
@@ -1011,11 +1019,11 @@
 			<section class="start text-white">
 				<div class="start__wrapper">
 					<div class="start__container container">
-						<div class="start__content d-flex">
+						<div class="start__content d-flex flex-md-row flex-column">
 							<div class="start__main flex-grow-1">
 								<div class="start__tagline fw-bold">💫 Madison — пространство, где верят в вас</div>
 								<h2 class="start__title text-uppercase font-try fw-bold lh-base">Вы можете больше,чем думаете!</h2>
-								<div class="start__actions d-flex flex-wrap">
+								<div class="start__actions d-flex flex-md-wrap flex-md-row flex-column order-1">
 									<a href="" class="btn btn-primary">Записаться на пробный урок</a>
 									<a href="" class="btn btn-white">Смотреть расписание</a>
 									<a href="" class="btn btn-white">Выбрать направление</a>
@@ -1062,12 +1070,14 @@
 								<a href="" class="prices-card d-flex flex-column bg-red h-100 text-white">
 									<span class="prices-card__name font-try fw-bold lh-base">ПРОБНОЕ</span>
 									<span class="prices-card__time fw-medium">1 час</span>
-									<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">850 ₽</span>
-									<span class="prices-card__bottom d-flex justify-content-between align-items-end">
-										<span class="prices-card__logo d-lg-block d-none">
-											<img src="img/logo-white.svg" alt="Логотип">
+									<span class="prices-card__footer">
+										<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">850 ₽</span>
+										<span class="prices-card__bottom d-flex justify-content-lg-between justify-content-end align-items-end">
+											<span class="prices-card__logo d-lg-block d-none">
+												<img src="img/logo-white.svg" alt="Логотип">
+											</span>
+											<span class="btn btn-white">ЗАПИСАТЬСЯ</span>
 										</span>
-										<span class="btn btn-white">ЗАПИСАТЬСЯ</span>
 									</span>
 								</a>
 							</div>
@@ -1075,12 +1085,14 @@
 								<a href="" class="prices-card d-flex flex-column bg-red h-100 text-white">
 									<span class="prices-card__name font-try fw-bold lh-base">РАЗОВОЕ</span>
 									<span class="prices-card__time fw-medium">1 час</span>
-									<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">1 800 ₽</span>
-									<span class="prices-card__bottom d-flex justify-content-between align-items-end">
-										<span class="prices-card__logo d-lg-block d-none">
-											<img src="img/logo-white.svg" alt="Логотип">
+									<span class="prices-card__footer">
+										<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">1 800 ₽</span>
+										<span class="prices-card__bottom d-flex justify-content-lg-between justify-content-end align-items-end">
+											<span class="prices-card__logo d-lg-block d-none">
+												<img src="img/logo-white.svg" alt="Логотип">
+											</span>
+											<span class="btn btn-white">КУПИТЬ</span>
 										</span>
-										<span class="btn btn-white">КУПИТЬ</span>
 									</span>
 								</a>
 							</div>
@@ -1088,12 +1100,14 @@
 								<a href="" class="prices-card d-flex flex-column bg-red h-100 text-white">
 									<span class="prices-card__name font-try fw-bold lh-base">4 ЗАНЯТИЯ</span>
 									<span class="prices-card__time fw-medium">1 месяц</span>
-									<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">5 900 ₽</span>
-									<span class="prices-card__bottom d-flex justify-content-between align-items-end">
-										<span class="prices-card__logo d-lg-block d-none">
-											<img src="img/logo-white.svg" alt="Логотип">
+									<span class="prices-card__footer">
+										<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">5 900 ₽</span>
+										<span class="prices-card__bottom d-flex justify-content-lg-between justify-content-end align-items-end">
+											<span class="prices-card__logo d-lg-block d-none">
+												<img src="img/logo-white.svg" alt="Логотип">
+											</span>
+											<span class="btn btn-white">КУПИТЬ</span>
 										</span>
-										<span class="btn btn-white">КУПИТЬ</span>
 									</span>
 								</a>
 							</div>
@@ -1101,12 +1115,14 @@
 								<a href="" class="prices-card d-flex flex-column bg-red h-100 text-white">
 									<span class="prices-card__name font-try fw-bold lh-base">8 ЗАНЯТИЙ</span>
 									<span class="prices-card__time fw-medium">1 месяц</span>
-									<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">7 900 ₽</span>
-									<span class="prices-card__bottom d-flex justify-content-between align-items-end">
-										<span class="prices-card__logo d-lg-block d-none">
-											<img src="img/logo-white.svg" alt="Логотип">
+									<span class="prices-card__footer">
+										<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">7 900 ₽</span>
+										<span class="prices-card__bottom d-flex justify-content-lg-between justify-content-end align-items-end">
+											<span class="prices-card__logo d-lg-block d-none">
+												<img src="img/logo-white.svg" alt="Логотип">
+											</span>
+											<span class="btn btn-white">КУПИТЬ</span>
 										</span>
-										<span class="btn btn-white">КУПИТЬ</span>
 									</span>
 								</a>
 							</div>
@@ -1114,12 +1130,14 @@
 								<a href="" class="prices-card d-flex flex-column bg-red h-100 text-white">
 									<span class="prices-card__name font-try fw-bold lh-base">12 ЗАНЯТИЙ</span>
 									<span class="prices-card__time fw-medium">1 месяц</span>
-									<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">9 900 ₽</span>
-									<span class="prices-card__bottom d-flex justify-content-between align-items-end">
-										<span class="prices-card__logo d-lg-block d-none">
-											<img src="img/logo-white.svg" alt="Логотип">
+									<span class="prices-card__footer">
+										<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">9 900 ₽</span>
+										<span class="prices-card__bottom d-flex justify-content-lg-between justify-content-end align-items-end">
+											<span class="prices-card__logo d-lg-block d-none">
+												<img src="img/logo-white.svg" alt="Логотип">
+											</span>
+											<span class="btn btn-white">КУПИТЬ</span>
 										</span>
-										<span class="btn btn-white">КУПИТЬ</span>
 									</span>
 								</a>
 							</div>
@@ -1127,12 +1145,14 @@
 								<a href="" class="prices-card d-flex flex-column bg-red h-100 text-white">
 									<span class="prices-card__name font-try fw-bold lh-base">ИНДИВИДУАЛЬНОЕ ЗАНЯТИЕ</span>
 									<span class="prices-card__time fw-medium">1 час</span>
-									<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">ОТ 3 000 ₽</span>
-									<span class="prices-card__bottom d-flex justify-content-between align-items-end">
-										<span class="prices-card__logo d-lg-block d-none">
-											<img src="img/logo-white.svg" alt="Логотип">
+									<span class="prices-card__footer">
+										<span class="prices-card__price text-xl-end font-try lh-base fw-bold my-auto">ОТ 3 000 ₽</span>
+										<span class="prices-card__bottom d-flex justify-content-lg-between justify-content-end align-items-end">
+											<span class="prices-card__logo d-lg-block d-none">
+												<img src="img/logo-white.svg" alt="Логотип">
+											</span>
+											<span class="btn btn-white">КУПИТЬ</span>
 										</span>
-										<span class="btn btn-white">КУПИТЬ</span>
 									</span>
 								</a>
 							</div>
@@ -1293,7 +1313,7 @@
 								<span class="teacher__expirience z-3 position-absolute">Танцует 11 лет</span>
 							</a> </div>
 					</div>
-					<div class="teachers__controls d-flex justify-content-end">
+					<div class="teachers__controls d-flex justify-content-md-end justify-content-center">
 						<div class="teachers__btns d-md-flex d-none">
 							<button type="button" class="teachers__prev swiper-button-prev icon-prev"></button>
 							<button type="button" class="teachers__next swiper-button-next icon-next"></button>
@@ -1454,7 +1474,7 @@
 					</ol>
 					<div class="faq__actions d-flex justify-content-center flex-wrap">
 						<a href="" class="btn btn-primary text-uppercase">Задать вопрос</a>
-						<a href="" class="btn btn-primary text-uppercase">Записаться на пробное занятие</a>
+						<a href="" class="btn btn-primary text-uppercase order-md-0 order-first">Записаться на пробное занятие</a>
 						<a href="" class="btn btn-outline-primary text-uppercase">
 							<img src="img/icons/whatsapp.svg" width="20" height="20" class="flex-shrink-0" alt="Иконка"> WhatsApp </a>
 						<a href="" class="btn btn-outline-primary text-uppercase">
@@ -1492,8 +1512,8 @@
 			</div>
 			<div class="footer__bottom text-white">
 				<div class="container">
-					<div class="d-flex justify-content-between align-items-center">
-						<div class="footer__copyright fs-5">© 2023-2026 Студия танцев «Madison»</div>
+					<div class="d-flex justify-content-md-between flex-md-row flex-column align-items-center">
+						<div class="footer__copyright fs-5 mb-md-0 mb-3 pb-md-0 pb-1">© 2023-2026 Студия танцев «Madison»</div>
 						<div class="footer__rate">
 							<img src="img/rate.svg" alt="Виджет рейтинга">
 						</div>
@@ -1502,10 +1522,10 @@
 			</div>
 		</footer>
 		<!-- plugins -->
-		<script src="js/libs/fancybox.umd.js?_v=20260216205608"></script>
-		<script src="js/libs/swiper-bundle.min.js?_v=20260216205608"></script>
+		<script src="js/libs/fancybox.umd.js?_v=20260216212949"></script>
+		<script src="js/libs/swiper-bundle.min.js?_v=20260216212949"></script>
 		<!-- plugins -->
-		<script src="js/app.min.js?_v=20260216205608"></script>
+		<script src="js/app.min.js?_v=20260216212949"></script>
 	</div>
 </body>
 
