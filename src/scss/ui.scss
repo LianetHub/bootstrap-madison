@@ -3,7 +3,10 @@
 }
 
 .fs-title {
-	font-size: rem(42);
+	font-size: rem(36);
+	@media (min-width: $md2) {
+		font-size: rem(42);
+	}
 	@media (min-width: $md1) {
 		font-size: rem(48);
 	}
@@ -127,6 +130,43 @@
 		width: auto;
 		font-size: 1.25rem;
 		line-height: 150%;
+	}
+}
+
+@keyframes swipeHint {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(rem(-10));
+	}
+}
+
+.swiper {
+	&.can-scroll {
+		display: flex;
+		flex-direction: column;
+
+		&::before {
+			order: 1;
+			width: 1.875rem;
+			height: 1.875rem;
+			font-size: 1.875rem;
+			margin: 1.25rem auto 0;
+			color: #737272;
+			transition:
+				opacity 0.3s ease,
+				visibility 0.3s ease;
+			animation: swipeHint 2s ease-in-out infinite;
+			@extend %ic, .icon-swipe-indicator;
+		}
+
+		&.is-swiped::before {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
 	}
 }
 

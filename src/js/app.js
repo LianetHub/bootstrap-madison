@@ -79,20 +79,60 @@ document.addEventListener("DOMContentLoaded", function () {
     // sliders
     if (document.querySelector('.teachers__slider')) {
         new Swiper('.teachers__slider', {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 20,
+            watchOverflow: true,
             navigation: {
                 prevEl: ".teachers__prev",
                 nextEl: ".teachers__next"
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1200: {
+                    slidesPerView: 3,
+                }
+            },
+            on: {
+                init: function () {
+                    if (!this.isLocked) {
+                        this.el.classList.add('can-scroll');
+                    }
+                },
+                sliderMove: function () {
+                    this.el.classList.add('is-swiped');
+                },
+                slideChange: function () {
+                    this.el.classList.add('is-swiped');
+                }
             }
         })
     }
 
     if (document.querySelector('.reviews__slider')) {
         new Swiper('.reviews__slider', {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 20,
-
+            watchOverflow: true,
+            breakpoints: {
+                1200: {
+                    slidesPerView: 3,
+                }
+            },
+            on: {
+                init: function () {
+                    if (!this.isLocked) {
+                        this.el.classList.add('can-scroll');
+                    }
+                },
+                sliderMove: function () {
+                    this.el.classList.add('is-swiped');
+                },
+                slideChange: function () {
+                    this.el.classList.add('is-swiped');
+                }
+            }
         })
     }
 
@@ -100,13 +140,51 @@ document.addEventListener("DOMContentLoaded", function () {
         new Swiper('.halls__slider', {
             slidesPerView: "auto",
             spaceBetween: 20,
+            watchOverflow: true,
             navigation: {
                 prevEl: ".halls__prev",
                 nextEl: ".halls__next"
+            },
+            on: {
+                init: function () {
+                    if (!this.isLocked) {
+                        this.el.classList.add('can-scroll');
+                    }
+                },
+                sliderMove: function () {
+                    this.el.classList.add('is-swiped');
+                },
+                slideChange: function () {
+                    this.el.classList.add('is-swiped');
+                }
             }
         })
     }
 
+    if (document.querySelector('.benefits__slider')) {
+        new Swiper('.benefits__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
+                }
+            },
+            on: {
+                init: function () {
+                    if (!this.isLocked) {
+                        this.el.classList.add('can-scroll');
+                    }
+                },
+                sliderMove: function () {
+                    this.el.classList.add('is-swiped');
+                },
+                slideChange: function () {
+                    this.el.classList.add('is-swiped');
+                }
+            }
+        })
+    }
 
 
     if (document.querySelectorAll('.gallery__slider').length) {

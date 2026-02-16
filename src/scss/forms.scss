@@ -25,15 +25,18 @@
 }
 
 .form-control {
-	padding: 1.05rem 1.875rem;
-	font-size: 1.125rem;
-	letter-spacing: 0.03375rem;
+	padding: em(1.05, 1.125) em(1.875, 1.125);
+	letter-spacing: em(0.03375, 1.125);
 	font-weight: 400;
 	color: #131313;
 	background-color: #f0f0f0;
 	--bs-border-width: #{rem(1)};
 	--bs-border-color: rgba(34, 34, 34, 0.3);
-	--bs-border-radius: 0.5625rem;
+	--bs-border-radius: #{em(0.5625, 1.125)};
+	font-size: 1rem;
+	@media (min-width: $md2) {
+		font-size: 1.125rem;
+	}
 	&:focus {
 		color: #131313;
 		background-color: #f0f0f0;

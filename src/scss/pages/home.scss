@@ -8,7 +8,10 @@
 	// .promo__title
 	&__title {
 		line-height: 120%;
-		font-size: 7.5rem;
+		font-size: 6.75rem;
+		@media (min-width: $md2) {
+			font-size: 7.5rem;
+		}
 		@media (min-width: $md1) {
 			font-size: 8.4375rem;
 		}
@@ -21,7 +24,10 @@
 		margin-top: 0.75rem;
 		opacity: 0.62;
 		mix-blend-mode: overlay;
-		font-size: 8rem;
+		font-size: 7rem;
+		@media (min-width: $md2) {
+			font-size: 8rem;
+		}
 		@media (min-width: $md1) {
 			font-size: 9.375rem;
 		}
@@ -29,7 +35,10 @@
 	// .promo__columns
 	&__columns {
 		line-height: 140%;
-		font-size: 1.375rem;
+		font-size: 1.25rem;
+		@media (min-width: $md2) {
+			font-size: 1.375rem;
+		}
 		@media (min-width: $md1) {
 			font-size: 1.5625rem;
 		}
@@ -217,9 +226,12 @@
 	}
 	// .directions__subtitle
 	&__subtitle {
-		font-size: 1.5625rem;
 		line-height: 140%;
 		max-width: 58.625rem;
+		font-size: 1.375rem;
+		@media (min-width: $md1) {
+			font-size: 1.5625rem;
+		}
 	}
 	// .directions__body
 	&__body {
@@ -241,7 +253,10 @@
 	}
 	// .directions__bottom-text
 	&__bottom-text {
-		font-size: 1.5625rem;
+		font-size: 1.375rem;
+		@media (min-width: $md2) {
+			font-size: 1.5625rem;
+		}
 	}
 	// .directions__card
 	&__card {
@@ -262,6 +277,7 @@
 				}
 			}
 		}
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -346,8 +362,10 @@
 	}
 	// .trial-lesson__banner-caption
 	&__banner-caption {
-		font-size: 1.3125rem;
 		line-height: 160%;
+		@media (min-width: $md2) {
+			font-size: 1.3125rem;
+		}
 		& span {
 			&::before {
 				content: "";
@@ -372,15 +390,25 @@
 	}
 	// .trial-lesson__subtitle
 	&__subtitle {
-		margin-top: rem(25);
-		font-size: 1.5625rem;
 		line-height: 140%;
+		font-size: 1.25rem;
+		margin-top: rem(16);
+		@media (min-width: $md2) {
+			margin-top: rem(25);
+			font-size: 1.375rem;
+		}
+		@media (min-width: $md1) {
+			font-size: 1.5625rem;
+		}
 	}
 	// .trial-lesson__form
 	&__form {
 		margin-top: rem(25);
-		padding: rem(45) rem(30) rem(50);
 		border-top: rem(8) solid #bc0482;
+		padding: rem(25) rem(20) rem(30);
+		@media (min-width: $md2) {
+			padding: rem(45) rem(30) rem(50);
+		}
 	}
 	// .trial-lesson__form-caption
 	&__form-caption {
@@ -568,8 +596,12 @@
 		align-items: center;
 		justify-content: space-between;
 		position: relative;
-		height: rem(420);
-		margin-top: rem(40);
+		height: rem(400);
+		margin-top: 2rem;
+		@media (min-width: $md2) {
+			height: rem(420);
+			margin-top: rem(40);
+		}
 		@media (min-width: $md1) {
 			margin-top: rem(80);
 			height: rem(500);
@@ -671,7 +703,9 @@
 			.steps__item-image {
 				top: 1.4rem;
 				width: 9.7rem;
-				left: 2.9rem;
+				@media (min-width: $md2) {
+					left: 2.9rem;
+				}
 			}
 		}
 		&:nth-child(4) {
@@ -721,9 +755,13 @@
 		}
 		&:last-child {
 			.steps__item-content {
-				right: rem(-32);
 				left: auto;
 				text-align: center;
+				transform-origin: right center;
+				right: rem(0);
+				@media (min-width: $md2) {
+					right: rem(-32);
+				}
 			}
 		}
 	}
@@ -780,11 +818,16 @@
 	padding: rem(30) 0;
 	// .community__content
 	&__content {
-		padding: 1.25rem 0;
+		@media (min-width: $md2) {
+			padding: 1.25rem 0;
+		}
 	}
 	// .community__title
 	&__title {
-		font-size: 1.875rem;
+		font-size: 1.75rem;
+		@media (min-width: $md2) {
+			font-size: 1.875rem;
+		}
 	}
 }
 
@@ -834,6 +877,7 @@
 	padding: rem(30) 0 rem(60);
 	.row {
 		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(20)};
 	}
 	// .benefits__card
 	&__card {
@@ -841,6 +885,12 @@
 		border: rem(1) solid rgba(255, 255, 255, 0.03);
 		box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.08);
 		min-height: rem(550);
+		&.swiper-slide {
+			width: 19.6875rem;
+			@media (min-width: $md2) {
+				width: 100%;
+			}
+		}
 		&::before {
 			content: "";
 			position: absolute;
@@ -854,9 +904,12 @@
 		& picture {
 			width: 100%;
 			height: 100%;
-			display: block;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
 			& img,
 			source {
+				flex: 1 1 auto;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
@@ -956,7 +1009,9 @@
 	// .halls__features
 	&__features {
 		--bs-gutter-x: 0rem;
-		max-width: rem(690);
+		@media (min-width: $md2) {
+			max-width: rem(690);
+		}
 	}
 	// .halls__features-column
 	&__features-column {
@@ -997,9 +1052,17 @@
 	// .halls__slider
 	&__slider {
 		min-width: 0;
-		margin-right: calc(-1 * (100vw - 1320px) / 2);
+		margin-right: calc(-1 * (100vw - 960px) / 2);
+		@media (min-width: $md1) {
+			margin-right: calc(-1 * (100vw - 11400px) / 2);
+		}
 		@media (min-width: $md0) {
 			margin-right: calc(-1 * (100vw - 1464px) / 2);
+		}
+		&.can-scroll {
+			&::before {
+				color: #fff;
+			}
 		}
 	}
 	&__slide {
@@ -1043,13 +1106,19 @@
 }
 
 .features {
-	padding: 5rem 0;
+	padding: 4rem 0;
+	@media (min-width: $md2) {
+		padding: 5rem 0;
+	}
 	// .features__title
 	&__title {
 	}
 	// .features__blocks
 	&__blocks {
-		margin-top: rem(60);
+		margin-top: rem(40);
+		@media (min-width: $md2) {
+			margin-top: rem(60);
+		}
 	}
 	// .features__block
 	&__block {
@@ -1057,7 +1126,9 @@
 			margin-bottom: rem(60);
 		}
 		.row {
-			--bs-gutter-x: #{rem(80)};
+			@media (min-width: $md2) {
+				--bs-gutter-x: #{rem(80)};
+			}
 		}
 	}
 	// .features__image
@@ -1078,6 +1149,17 @@
 			transform: translate(-50%, -50%);
 			font-size: rem(80);
 			color: #e42329;
+		}
+		& picture {
+			width: 100%;
+			height: 100%;
+			display: block;
+			& img,
+			source {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 	// .features__caption
@@ -1113,7 +1195,6 @@
 .start {
 	position: relative;
 	z-index: 1;
-
 	background: radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
 	min-height: rem(727);
 	margin: 0 auto;
@@ -1199,13 +1280,21 @@
 	// .start__tagline
 	&__tagline {
 		line-height: 140%;
-		font-size: 1.5625rem;
+		font-size: 1.375rem;
+		@media (min-width: $md1) {
+			font-size: 1.5625rem;
+		}
 	}
 	// .start__title
 	&__title {
-		font-size: rem(45);
-		margin-top: rem(30);
+		margin-top: rem(20);
+		font-size: rem(36);
+		@media (min-width: $md2) {
+			font-size: rem(40);
+			margin-top: rem(30);
+		}
 		@media (min-width: $md0) {
+			font-size: rem(45);
 			margin-top: rem(40);
 		}
 	}
@@ -1219,10 +1308,13 @@
 	}
 	// .start__image
 	&__image {
-		margin-right: -3rem;
 		align-self: flex-end;
-		flex: 0 0 rem(520);
-		margin-top: -4.7rem;
+		flex: 0 0 rem(460);
+		@media (min-width: $md2) {
+			margin-top: -4.7rem;
+			margin-right: -3rem;
+			flex: 0 0 rem(520);
+		}
 		@media (min-width: $md0) {
 			flex: 0 0 rem(556);
 			margin-bottom: -4rem;
@@ -1234,7 +1326,10 @@
 	position: relative;
 	z-index: 2;
 	background: #edecec;
-	padding: rem(20) 0 rem(90);
+	padding: rem(20) 0 rem(60);
+	@media (min-width: $md2) {
+		padding: rem(20) 0 rem(90);
+	}
 	// .prices__title
 	&__title {
 	}
@@ -1284,7 +1379,13 @@
 	}
 	// .prices__bottom-text
 	&__bottom-text {
-		font-size: 1.5625rem;
+		font-size: 1.25rem;
+		@media (min-width: $md2) {
+			font-size: 1.375rem;
+		}
+		@media (min-width: $md1) {
+			font-size: 1.5625rem;
+		}
 	}
 }
 
@@ -1322,20 +1423,36 @@
 }
 
 .teachers {
-	padding: 5rem 0;
+	padding: 4rem 0;
+	@media (min-width: $md2) {
+		padding: 5rem 0;
+	}
 	// .teachers__title
 	&__title {
 	}
 	// .teachers__desc
 	&__desc {
 		margin-top: rem(20);
-		font-size: 1.5625rem;
 		line-height: 140%;
 		max-width: rem(1160);
+		font-size: 1.25rem;
+		@media (min-width: $md2) {
+			font-size: 1.375rem;
+		}
+		@media (min-width: $md1) {
+			font-size: 1.5625rem;
+		}
 	}
 	// .teachers__slider
 	&__slider {
 		margin-top: 2.5rem;
+		&.can-scroll {
+			@media (min-width: $md3) {
+				&::before {
+					display: none;
+				}
+			}
+		}
 	}
 	// .teachers__controls
 	&__controls {
@@ -1438,7 +1555,10 @@
 }
 
 .reviews {
-	padding: 5rem 0;
+	padding: 4rem 0;
+	@media (min-width: $md2) {
+		padding: 5rem 0;
+	}
 	// .reviews__title
 	&__title {
 	}
@@ -1448,10 +1568,16 @@
 	}
 	// .reviews__content
 	&__content {
-		font-size: rem(25);
 		line-height: 150%;
 		padding: 0 rem(20);
 		flex: 0 0 rem(410);
+		font-size: rem(20);
+		@media (min-width: $md2) {
+			font-size: rem(22);
+		}
+		@media (min-width: $md1) {
+			font-size: rem(25);
+		}
 	}
 	// .reviews__bottom
 	&__bottom {
@@ -1509,14 +1635,19 @@
 }
 
 .faq {
-	padding: 5rem 0;
+	padding: 4rem 0;
+	@media (min-width: $md2) {
+		padding: 5rem 0;
+	}
 	// .faq__title
 	&__title {
 	}
 	// .faq__list
 	&__list {
 		margin-top: rem(40);
-		padding: 0 rem(20);
+		@media (min-width: $md2) {
+			padding: 0 rem(20);
+		}
 	}
 	// .faq__item
 	&__item {

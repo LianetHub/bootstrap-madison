@@ -157,18 +157,18 @@
                     <div class="school__container container">
                         <div class="school__content">
                             <div class="school__header row align-items-start">
-                                <div class="col-6 pt-4">
+                                <div class="col-xl-6 pt-4">
                                     <span class="school__badge badge rounded-5 color-accent bg-white fw-normal mt-3">Для всех возрастов</span>
                                     <h1 class="school__title fs-title text-uppercase font-try fw-bold lh-base">Школа танцев madison</h1>
                                     <p class="school__subtitle text-end">Доступное танцевальное пространство 💫</p>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-xl-6">
                                     <a href="" class="school__video position-relative d-block h-100 icon-play">
                                         <img src="@img/school.jpg" alt="Фото танцоров">
                                     </a>
                                 </div>
                             </div>
-                            <div class="school__body d-flex align-items-center justify-content-between">
+                            <div class="school__body d-flex align-items-xl-center align-items-start flex-column flex-xl-row gap-2 justify-content-between">
                                 <div class="school__tagline text-uppercase font-try fw-bold lh-base">Философия школы — Атмосфера, в&nbsp;которой раскрывается каждый</div>
                                 <a href="" class="school__btn btn btn-white flex-shrink-0">Записаться на занятие</a>
                             </div>
@@ -181,11 +181,11 @@
                 <section class="steps">
                     <div class="container">
                         <div class="steps__header row align-items-center">
-                            <div class="col-7">
+                            <div class="col-xl-7">
                                 <h2 class="steps__title font-try lh-base fw-bold text-uppercase">больше, чем школа — Это&nbsp;ваш танцевальный путь</h2>
                             </div>
-                            <div class="col-5 d-flex justify-content-end">
-                                <div class="steps__label color-accent bg-white text-center d-inline-block ms-auto">С 2015 года меняем жизни через танец ✨</div>
+                            <div class="col-xl-5 d-flex justify-content-xl-end">
+                                <div class="steps__label color-accent bg-white text-center d-inline-block ms-xl-auto">С 2015 года меняем жизни через танец ✨</div>
                             </div>
                         </div>
                         <ul class="steps__list">
@@ -394,15 +394,17 @@
                 </div>
                 <div class="benefits">
                     <div class="container">
-                        <div class="row">
-                            @@loop('./html/templates/_benefits-card.html', './html/json/benefits.json')
+                        <div class="benefits__slider swiper overflow-visible">
+                            <div class="swiper-wrapper">
+                                @@loop('./html/templates/_benefits-card.html', './html/json/benefits.json')
+                            </div>
                         </div>
                     </div>
                 </div>
                 <section class="halls text-white">
                     <div class="halls__container container">
                         <div class="halls__content">
-                            <div class="halls__header d-flex justify-content-between align-items-end">
+                            <div class="halls__header d-flex justify-content-between align-items-xl-end align-items-center flex-xl-row flex-column">
                                 <h2 class="halls__title fs-title text-uppercase font-try fw-bold lh-base">Почасовая Аренда залов</h2>
                                 <div class="halls__features row flex-shrink-0">
                                     <div class="col-4">
@@ -446,7 +448,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="halls__bottom d-flex justify-content-center align-items-center">
+                            <div class="halls__bottom d-xl-flex d-none justify-content-center align-items-center">
                                 <button type="button" class="halls__prev swiper-button-prev icon-prev"></button>
                                 <button type="button" class="halls__next swiper-button-next icon-next"></button>
                             </div>

@@ -23,20 +23,20 @@
 }
 
 @font-face {
-  font-family: "TRYGrtsk";
-  font-display: swap;
-  src: url("../fonts/TRYGrtsk-Bold.woff2") format("woff2"), url("../fonts/TRYGrtsk-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "TRYGrtsk";
+  font-display: swap;
+  src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
@@ -50,12 +50,13 @@
 @font-face {
   font-family: "TRYGrtsk";
   font-display: swap;
-  src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/TRYGrtsk-Bold.woff2") format("woff2"), url("../fonts/TRYGrtsk-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
 .faq__item-question::after,
+.swiper.can-scroll::before,
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   font-family: "icons";
@@ -72,6 +73,11 @@
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-swipe-indicator:before,
+.swiper.can-scroll:before {
+  content: "\e90b";
 }
 
 .icon-arrow-bottom:before {
@@ -123,7 +129,7 @@
 }
 
 .fs-title {
-  font-size: 2.625rem;
+  font-size: 2.25rem;
 }
 
 .font-try {
@@ -254,6 +260,61 @@
   width: auto;
   font-size: 1.25rem;
   line-height: 150%;
+}
+
+@-webkit-keyframes swipeHint {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  50% {
+    -webkit-transform: translateX(-0.625rem);
+            transform: translateX(-0.625rem);
+  }
+}
+
+@keyframes swipeHint {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  50% {
+    -webkit-transform: translateX(-0.625rem);
+            transform: translateX(-0.625rem);
+  }
+}
+
+.swiper.can-scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.swiper.can-scroll::before {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 1.875rem;
+  height: 1.875rem;
+  font-size: 1.875rem;
+  margin: 1.25rem auto 0;
+  color: #737272;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  -webkit-animation: swipeHint 2s ease-in-out infinite;
+          animation: swipeHint 2s ease-in-out infinite;
+}
+
+.swiper.can-scroll.is-swiped::before {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .typography-block {
@@ -472,15 +533,15 @@
 }
 
 .form-control {
-  padding: 1.05rem 1.875rem;
-  font-size: 1.125rem;
-  letter-spacing: 0.03375rem;
+  padding: 0.9333333333em 1.6666666667em;
+  letter-spacing: 0.03em;
   font-weight: 400;
   color: #131313;
   background-color: #f0f0f0;
   --bs-border-width: 0.0625rem;
   --bs-border-color: rgba(34, 34, 34, 0.3);
-  --bs-border-radius: 0.5625rem;
+  --bs-border-radius: 0.5em;
+  font-size: 1rem;
 }
 
 .form-control:focus {
@@ -722,19 +783,19 @@ body {
 
 .promo__title {
   line-height: 120%;
-  font-size: 7.5rem;
+  font-size: 6.75rem;
 }
 
 .promo__name {
   margin-top: 0.75rem;
   opacity: 0.62;
   mix-blend-mode: overlay;
-  font-size: 8rem;
+  font-size: 7rem;
 }
 
 .promo__columns {
   line-height: 140%;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
 }
 
 .promo__column:not(:last-child) {
@@ -906,9 +967,9 @@ body {
 }
 
 .directions__subtitle {
-  font-size: 1.5625rem;
   line-height: 140%;
   max-width: 58.625rem;
+  font-size: 1.375rem;
 }
 
 .directions__body {
@@ -931,7 +992,7 @@ body {
 }
 
 .directions__bottom-text {
-  font-size: 1.5625rem;
+  font-size: 1.375rem;
 }
 
 .directions__card {
@@ -1022,7 +1083,6 @@ body {
 }
 
 .trial-lesson__banner-caption {
-  font-size: 1.3125rem;
   line-height: 160%;
 }
 
@@ -1047,15 +1107,15 @@ body {
 }
 
 .trial-lesson__subtitle {
-  margin-top: 1.5625rem;
-  font-size: 1.5625rem;
   line-height: 140%;
+  font-size: 1.25rem;
+  margin-top: 1rem;
 }
 
 .trial-lesson__form {
   margin-top: 1.5625rem;
-  padding: 2.8125rem 1.875rem 3.125rem;
   border-top: 0.5rem solid #bc0482;
+  padding: 1.5625rem 1.25rem 1.875rem;
 }
 
 .trial-lesson__form-caption {
@@ -1233,8 +1293,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  height: 26.25rem;
-  margin-top: 2.5rem;
+  height: 25rem;
+  margin-top: 2rem;
 }
 
 .steps__list::before {
@@ -1340,7 +1400,6 @@ body {
 .steps__item:nth-child(3) .steps__item-image {
   top: 1.4rem;
   width: 9.7rem;
-  left: 2.9rem;
 }
 
 .steps__item:nth-child(4) .steps__item-image {
@@ -1378,9 +1437,12 @@ body {
 }
 
 .steps__item:last-child .steps__item-content {
-  right: -2rem;
   left: auto;
   text-align: center;
+  -webkit-transform-origin: right center;
+      -ms-transform-origin: right center;
+          transform-origin: right center;
+  right: 0rem;
 }
 
 .steps__item-content {
@@ -1445,12 +1507,8 @@ body {
   padding: 1.875rem 0;
 }
 
-.community__content {
-  padding: 1.25rem 0;
-}
-
 .community__title {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
 }
 
 .gallery {
@@ -1501,6 +1559,7 @@ body {
 
 .benefits .row {
   --bs-gutter-x: 1.25rem;
+  --bs-gutter-y: 1.25rem;
 }
 
 .benefits__card {
@@ -1509,6 +1568,10 @@ body {
   -webkit-box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.08);
           box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.08);
   min-height: 34.375rem;
+}
+
+.benefits__card.swiper-slide {
+  width: 19.6875rem;
 }
 
 .benefits__card::before {
@@ -1525,11 +1588,23 @@ body {
 .benefits__card picture {
   width: 100%;
   height: 100%;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .benefits__card picture img,
 .benefits__card picture source {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1607,7 +1682,6 @@ body {
 
 .halls__features {
   --bs-gutter-x: 0rem;
-  max-width: 43.125rem;
 }
 
 .halls__features-column {
@@ -1646,7 +1720,11 @@ body {
 
 .halls__slider {
   min-width: 0;
-  margin-right: calc(-1 * (100vw - 1320px) / 2);
+  margin-right: calc(-1 * (100vw - 960px) / 2);
+}
+
+.halls__slider.can-scroll::before {
+  color: #fff;
 }
 
 .halls__slide.swiper-slide {
@@ -1675,19 +1753,15 @@ body {
 }
 
 .features {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 .features__blocks {
-  margin-top: 3.75rem;
+  margin-top: 2.5rem;
 }
 
 .features__block:not(:last-child) {
   margin-bottom: 3.75rem;
-}
-
-.features__block .row {
-  --bs-gutter-x: 5rem;
 }
 
 .features__badge {
@@ -1712,6 +1786,20 @@ body {
           transform: translate(-50%, -50%);
   font-size: 5rem;
   color: #e42329;
+}
+
+.features__image picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.features__image picture img,
+.features__image picture source {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .features__caption {
@@ -1815,12 +1903,12 @@ body {
 
 .start__tagline {
   line-height: 140%;
-  font-size: 1.5625rem;
+  font-size: 1.375rem;
 }
 
 .start__title {
-  font-size: 2.8125rem;
-  margin-top: 1.875rem;
+  margin-top: 1.25rem;
+  font-size: 2.25rem;
 }
 
 .start__actions {
@@ -1829,20 +1917,18 @@ body {
 }
 
 .start__image {
-  margin-right: -3rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 32.5rem;
-          flex: 0 0 32.5rem;
-  margin-top: -4.7rem;
+      -ms-flex: 0 0 28.75rem;
+          flex: 0 0 28.75rem;
 }
 
 .prices {
   position: relative;
   z-index: 2;
   background: #edecec;
-  padding: 1.25rem 0 5.625rem;
+  padding: 1.25rem 0 3.75rem;
 }
 
 .prices__subtitle {
@@ -1892,7 +1978,7 @@ body {
 }
 
 .prices__bottom-text {
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
 }
 
 .no-webp .prices-card {
@@ -1928,14 +2014,14 @@ body {
 }
 
 .teachers {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 .teachers__desc {
   margin-top: 1.25rem;
-  font-size: 1.5625rem;
   line-height: 140%;
   max-width: 72.5rem;
+  font-size: 1.25rem;
 }
 
 .teachers__slider {
@@ -2044,7 +2130,7 @@ body {
 }
 
 .reviews {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 .reviews__body {
@@ -2052,12 +2138,12 @@ body {
 }
 
 .reviews__content {
-  font-size: 1.5625rem;
   line-height: 150%;
   padding: 0 1.25rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25.625rem;
           flex: 0 0 25.625rem;
+  font-size: 1.25rem;
 }
 
 .reviews__bottom {
@@ -2120,12 +2206,11 @@ body {
 }
 
 .faq {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 .faq__list {
   margin-top: 2.5rem;
-  padding: 0 1.25rem;
 }
 
 .faq__item {
@@ -2222,16 +2307,16 @@ body {
 }
 
 .header__phone {
-  font-size: 1.5625rem;
   line-height: 140%;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  font-size: 1.375rem;
 }
 
 .header__social {
-  font-size: 2.1875rem;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  font-size: 1.75rem;
 }
 
 .header__logo {
@@ -2539,8 +2624,145 @@ body {
     line-height: 150%;
   }
 
+  .teachers__slider.can-scroll::before {
+    display: none;
+  }
+
   .icon-menu {
     display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fs-title {
+    font-size: 2.625rem;
+  }
+
+  .form-control {
+    font-size: 1.125rem;
+  }
+
+  .promo__title {
+    font-size: 7.5rem;
+  }
+
+  .promo__name {
+    font-size: 8rem;
+  }
+
+  .promo__columns {
+    font-size: 1.375rem;
+  }
+
+  .directions__bottom-text {
+    font-size: 1.5625rem;
+  }
+
+  .trial-lesson__banner-caption {
+    font-size: 1.3125rem;
+  }
+
+  .trial-lesson__subtitle {
+    margin-top: 1.5625rem;
+    font-size: 1.375rem;
+  }
+
+  .trial-lesson__form {
+    padding: 2.8125rem 1.875rem 3.125rem;
+  }
+
+  .steps__list {
+    height: 26.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .steps__item:nth-child(3) .steps__item-image {
+    left: 2.9rem;
+  }
+
+  .steps__item:last-child .steps__item-content {
+    right: -2rem;
+  }
+
+  .community__content {
+    padding: 1.25rem 0;
+  }
+
+  .community__title {
+    font-size: 1.875rem;
+  }
+
+  .benefits__card.swiper-slide {
+    width: 100%;
+  }
+
+  .halls__features {
+    max-width: 43.125rem;
+  }
+
+  .features {
+    padding: 5rem 0;
+  }
+
+  .features__blocks {
+    margin-top: 3.75rem;
+  }
+
+  .features__block .row {
+    --bs-gutter-x: 5rem;
+  }
+
+  .start__title {
+    font-size: 2.5rem;
+    margin-top: 1.875rem;
+  }
+
+  .start__image {
+    margin-top: -4.7rem;
+    margin-right: -3rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 32.5rem;
+            flex: 0 0 32.5rem;
+  }
+
+  .prices {
+    padding: 1.25rem 0 5.625rem;
+  }
+
+  .prices__bottom-text {
+    font-size: 1.375rem;
+  }
+
+  .teachers {
+    padding: 5rem 0;
+  }
+
+  .teachers__desc {
+    font-size: 1.375rem;
+  }
+
+  .reviews {
+    padding: 5rem 0;
+  }
+
+  .reviews__content {
+    font-size: 1.375rem;
+  }
+
+  .faq {
+    padding: 5rem 0;
+  }
+
+  .faq__list {
+    padding: 0 1.25rem;
+  }
+
+  .header__phone {
+    font-size: 1.5625rem;
+  }
+
+  .header__social {
+    font-size: 2.1875rem;
   }
 }
 
@@ -2586,6 +2808,14 @@ body {
     font-size: 1.5625rem;
   }
 
+  .directions__subtitle {
+    font-size: 1.5625rem;
+  }
+
+  .trial-lesson__subtitle {
+    font-size: 1.5625rem;
+  }
+
   .school__cards {
     -ms-grid-columns: (1fr)[5];
     grid-template-columns: repeat(5, 1fr);
@@ -2611,6 +2841,26 @@ body {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
+  }
+
+  .halls__slider {
+    margin-right: calc(-1 * (100vw - 11400px) / 2);
+  }
+
+  .start__tagline {
+    font-size: 1.5625rem;
+  }
+
+  .prices__bottom-text {
+    font-size: 1.5625rem;
+  }
+
+  .teachers__desc {
+    font-size: 1.5625rem;
+  }
+
+  .reviews__content {
+    font-size: 1.5625rem;
   }
 
   .header__logo {
@@ -2665,6 +2915,7 @@ body {
   }
 
   .start__title {
+    font-size: 2.8125rem;
     margin-top: 2.5rem;
   }
 
