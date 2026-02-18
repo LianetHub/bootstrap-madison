@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "druktextwidecyr";
+  font-display: swap;
+  src: url("../fonts/druktextwidecyr-medium.woff2") format("woff2"), url("../fonts/druktextwidecyr-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "LTSuperior";
   font-display: swap;
   src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
@@ -15,30 +23,6 @@
 }
 
 @font-face {
-  font-family: "TRYGrtsk";
-  font-display: swap;
-  src: url("../fonts/TRYGrtsk-Bold.woff2") format("woff2"), url("../fonts/TRYGrtsk-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "druktextwidecyr";
-  font-display: swap;
-  src: url("../fonts/druktextwidecyr-medium.woff2") format("woff2"), url("../fonts/druktextwidecyr-medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TRYGrtsk";
-  font-display: swap;
-  src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
@@ -50,8 +34,24 @@
 @font-face {
   font-family: "TRYGrtsk";
   font-display: swap;
+  src: url("../fonts/TRYGrtsk-Bold.woff2") format("woff2"), url("../fonts/TRYGrtsk-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TRYGrtsk";
+  font-display: swap;
   src: url("../fonts/TRYGrtsk-SemiBold.woff2") format("woff2"), url("../fonts/TRYGrtsk-SemiBold.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TRYGrtsk";
+  font-display: swap;
+  src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
