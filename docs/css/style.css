@@ -7,17 +7,17 @@
 }
 
 @font-face {
-  font-family: "LTSuperior";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "LTSuperior";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -464,19 +464,6 @@
   color: #414651;
   font-size: 0.875rem;
   line-height: 142.857%;
-}
-
-::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-  background: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #bc0482;
-  border-radius: 0.5rem;
 }
 
 .hidden {
@@ -4056,10 +4043,6 @@ body {
 
   .typography-block a:not(.article__more):hover {
     text-decoration: underline;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #8a035f;
   }
 
   .popup__phone:hover {
