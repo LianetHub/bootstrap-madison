@@ -191,73 +191,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
     initPhoneMask();
 
+    setupTrialFormLogic()
 
-    // cookies
-
-    window.onload = function () {
-        function getCookie(name) {
-            var matches = document.cookie.match(new RegExp(
-                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-            ));
-            return matches ? decodeURIComponent(matches[1]) : undefined;
-        }
-
-        function setCookie(name, value, options) {
-            options = options || {};
-            var expires = options.expires;
-
-            if (typeof expires == "number" && expires) {
-                var d = new Date();
-                d.setTime(d.getTime() + expires * 1000);
-                expires = options.expires = d;
-            }
-            if (expires && expires.toUTCString) {
-                options.expires = expires.toUTCString();
-            }
-            value = encodeURIComponent(value);
-            var updatedCookie = name + "=" + value;
-
-            for (var propName in options) {
-                updatedCookie += "; " + propName;
-                var propValue = options[propName];
-                if (propValue !== true) {
-                    updatedCookie += "=" + propValue;
-                }
-            }
-
-            document.cookie = updatedCookie;
-        }
-
-        var cookieBlock = document.querySelector('.cookie');
-        var noticed = getCookie('cookie_notice');
-
-        if (cookieBlock) {
-            if (typeof noticed !== 'undefined' && noticed == 1) {
-                cookieBlock.style.display = 'none';
-            } else {
-                cookieBlock.style.display = 'block';
-
-                setTimeout(function () {
-                    cookieBlock.classList.add('cookie--visible');
-                }, 1000);
-
-                var closeBtn = cookieBlock.querySelector('.cookie__close');
-                if (closeBtn) {
-                    closeBtn.addEventListener('click', function () {
-                        setCookie('cookie_notice', 1, { expires: 180 * 24 * 60 * 60, path: '/' });
-                        cookieBlock.classList.remove('cookie--visible');
-
-                        setTimeout(function () {
-                            cookieBlock.style.display = 'none';
-                        }, 500);
-                    });
-                }
-            }
-        }
-    }
 });
 
+function setupTrialFormLogic() {
+    const form = document.querySelector('#sign-up');
 
+    if (!form) return;
+
+    const phoneInput = form.querySelector('input[name="phone"]');
+    const tgInput = form.querySelector('input[name="telegram"]');
+
+    if (!phoneInput || !tgInput) return;
+
+    const phoneContainer = phoneInput.closest('.col-sm-6, .col-12');
+    const tgContainer = tgInput.closest('.col-sm-6');
+
+    const toggleFields = () => {
+        const checkedRadio = form.querySelector('input[name="contactMethod"]:checked');
+        if (!checkedRadio) return;
+
+        const isTelegram = checkedRadio.value === 'telegram';
+
+        if (isTelegram) {
+            tgContainer.style.display = 'block';
+            tgInput.disabled = false;
+
+            phoneContainer.classList.remove('col-12');
+            phoneContainer.classList.add('col-sm-6');
+        } else {
+            tgContainer.style.display = 'none';
+            tgInput.disabled = true;
+
+            phoneContainer.classList.remove('col-sm-6');
+            phoneContainer.classList.add('col-12');
+        }
+    };
+
+    form.addEventListener('change', (e) => {
+        if (e.target.name === 'contactMethod') {
+            toggleFields();
+        }
+    });
+
+    toggleFields();
+}
 
 
 function initPhoneMask() {
