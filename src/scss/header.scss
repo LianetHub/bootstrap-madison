@@ -1,19 +1,24 @@
 .header {
 	background: #761a1b;
 	color: #fff;
+
 	@media (min-width: $md4) {
 		background: #fff;
 		color: #222;
 	}
+
 	// .header__top
 	&__top {
 		gap: rem(12);
+
 		@media (max-width: $md4) {
 			padding: 0.25rem 3rem 1.25rem;
 		}
+
 		@media (min-width: $md3) {
 			gap: rem(30);
 			color: $accent;
+
 			&::before {
 				content: "";
 				position: absolute;
@@ -27,50 +32,62 @@
 			}
 		}
 	}
+
 	// .header__location
 	&__location {
 		&::before {
 			flex-shrink: 0;
 			font-size: rem(18);
+
 			@media (min-width: $md5) {
 				font-size: rem(23);
 			}
 		}
+
 		transition: color 0.3s ease;
 		font-size: rem(11);
+
 		@media (min-width: $md5) {
 			font-size: 1rem;
 		}
+
 		@media (min-width: $md3) {
 			font-size: 1.25rem;
 		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: darken($color: $accent, $amount: 10);
 			}
 		}
 	}
+
 	// .header__phone
 	&__phone {
 		line-height: 140%;
 		transition: color 0.3s ease;
 		font-size: 1.25rem;
+
 		@media (min-width: $md3) {
 			font-size: 1.375rem;
 		}
+
 		@media (min-width: $md2) {
 			font-size: 1.5625rem;
 		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: darken($color: $accent, $amount: 10);
 			}
 		}
 	}
+
 	// .header__social
 	&__social {
 		transition: color 0.3s ease;
 		font-size: 1.75rem;
+
 		@media (max-width: $md4) {
 			position: absolute;
 			left: 0.5rem;
@@ -79,29 +96,35 @@
 			width: rem(30);
 			height: rem(30);
 		}
+
 		@media (min-width: $md2) {
 			font-size: 2.1875rem;
 		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: darken($color: $accent, $amount: 10);
 			}
 		}
 	}
+
 	// .header__body
 	&__body {
 		@media (max-width: $md4) {
 			padding: rem(30) 0.5rem 0.625rem;
 		}
 	}
+
 	// .header__logo
 	&__logo {
 		position: relative;
 		z-index: 11;
 		max-width: 6.25rem;
+
 		@media (min-width: $md4) {
 			max-width: 14rem;
 		}
+
 		@media (min-width: $md1) {
 			max-width: 17.271rem;
 		}
@@ -124,28 +147,39 @@
 		opacity: 0;
 		visibility: hidden;
 		padding: 6rem 1rem 1rem;
+
 		.header.open-menu & {
 			transform: none;
 			opacity: 1;
 			visibility: visible;
 		}
 	}
+
 	// .menu__list
 	&__list {
 		row-gap: rem(10);
 		line-height: 140%;
 		column-gap: rem(30);
+		font-size: 1.375rem;
+
+		@media (min-width:$md4) {
+			font-size: 1rem;
+
+		}
+
 		@media (min-width: $md1) {
 			column-gap: rem(40);
 			font-size: rem(18);
 		}
 	}
+
 	// .menu__item
-	&__item {
-	}
+	&__item {}
+
 	// .menu__link
 	&__link {
 		transition: color 0.3s ease;
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: $accent;
@@ -172,6 +206,7 @@
 	@media (min-width: $md4) {
 		display: none;
 	}
+
 	& span {
 		display: block;
 		align-self: stretch;
@@ -180,6 +215,7 @@
 			opacity 0.4s ease 0.4s;
 		will-change: transform;
 		padding: rem(5) rem(0);
+
 		&::before {
 			content: "";
 			display: block;
@@ -190,6 +226,7 @@
 			margin: auto;
 		}
 	}
+
 	&.active {
 		background: transparent;
 
@@ -197,22 +234,28 @@
 			transition:
 				transform 0.3s ease 0s,
 				opacity 0.3s ease 0s;
+
 			&::before {
 				transition:
 					transform 0.45s ease 0.35s,
 					width 0.3s ease 0s;
 			}
+
 			&:first-child {
 				transform: translateY(rem(12));
+
 				&::before {
 					transform: rotate(-135deg);
 				}
 			}
+
 			&:nth-child(2) {
 				opacity: 0;
 			}
+
 			&:nth-child(3) {
 				transform: translateY(rem(-12));
+
 				&::before {
 					transform: rotate(-225deg);
 				}

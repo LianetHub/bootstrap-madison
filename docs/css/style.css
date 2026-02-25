@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "druktextwidecyr";
-  font-display: swap;
-  src: url("../fonts/druktextwidecyr-medium.woff2") format("woff2"), url("../fonts/druktextwidecyr-medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -15,19 +7,10 @@
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-  font-style: normal;
+  font-family: "druktextwidecyr";
   font-display: swap;
-}
-
-@font-face {
-  font-family: "TRYGrtsk";
-  font-display: swap;
-  src: url("../fonts/TRYGrtsk-Bold.woff2") format("woff2"), url("../fonts/TRYGrtsk-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/druktextwidecyr-medium.woff2") format("woff2"), url("../fonts/druktextwidecyr-medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -42,8 +25,8 @@
 @font-face {
   font-family: "TRYGrtsk";
   font-display: swap;
-  src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../fonts/TRYGrtsk-Bold.woff2") format("woff2"), url("../fonts/TRYGrtsk-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -53,6 +36,23 @@
   src: url("../fonts/TRYGrtsk-SemiBold.woff2") format("woff2"), url("../fonts/TRYGrtsk-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "TRYGrtsk";
+  font-display: swap;
+  src: url("../fonts/TRYGrtsk-Regular.woff2") format("woff2"), url("../fonts/TRYGrtsk-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
 }
 
 .faq__item-question::after,
@@ -73,6 +73,10 @@
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-max:before {
+  content: "\e90c";
 }
 
 .icon-swipe-indicator:before,
@@ -2219,6 +2223,7 @@ body {
   -webkit-column-gap: 1.875rem;
      -moz-column-gap: 1.875rem;
           column-gap: 1.875rem;
+  font-size: 1.375rem;
 }
 
 .menu__link {
@@ -2403,12 +2408,19 @@ body {
 
 .footer__socials {
   gap: 1.25rem;
-  font-size: 2.5rem;
+  row-gap: 0.625rem;
 }
 
 .footer__social {
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  line-height: 140%;
+  gap: 0.625rem;
+  font-size: 1rem;
+}
+
+.footer__social::before {
+  font-size: 2.5rem;
 }
 
 .footer__mail {
@@ -2439,6 +2451,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.footer__reqs {
+  line-height: 140%;
+  font-size: 0.875rem;
 }
 
 .footer__bottom {
@@ -2863,12 +2880,13 @@ body {
     font-size: 1.125rem;
   }
 
-  .footer__socials {
-    font-size: 1.875rem;
-  }
-
   .footer__address,
   .footer__mail {
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .footer__reqs {
     font-size: 1.25rem;
     letter-spacing: 0.05rem;
   }
@@ -3066,8 +3084,20 @@ body {
     max-width: 14rem;
   }
 
+  .menu__list {
+    font-size: 1rem;
+  }
+
   .icon-menu {
     display: none;
+  }
+
+  .footer__social {
+    font-size: 1.25rem;
+  }
+
+  .footer__social::before {
+    font-size: 3.125rem;
   }
 }
 
