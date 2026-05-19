@@ -8,12 +8,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/libs/bootstrap.min.css?_v=20260311205156">
-	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260311205156">
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260311205156">
+	<link rel="stylesheet" href="css/libs/bootstrap.min.css?_v=20260519225541">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260519225541">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260519225541">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20260311205156">
-	<link rel="stylesheet" href="css/style.min.css?_v=20260311205156">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20260519225541">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260519225541">
 </head>
 
 <body>
@@ -262,17 +262,22 @@
 										<source srcset="img/lesson.webp" type="image/webp"><img src="img/lesson.jpg" alt="Баннер">
 									</picture>
 									<div class="trial-lesson__banner-content d-flex flex-column justify-content-between position-absolute top-0 end-0 start-0 bottom-0">
-										<div class="trial-lesson__banner-caption font-unbounded fw-bold text-sm-center text-start z-1">Самые крутые истории начинаются с&nbsp;фразы <span class="d-inline-block position-relative text-nowrap">«Ладно, давай попробую!»</span></div>
+										<div class="trial-lesson__banner-caption font-unbounded fw-bold z-1">Самые крутые истории начинаются с&nbsp;фразы <span class="d-inline-block position-relative text-nowrap">«Ладно, давай попробую!»</span></div>
 										<div class="trial-lesson__banner-desc text-end">Не жди завтра, <br> начни свою историю сегодня!</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="trial-lesson__main d-flex flex-column">
-									<div class="trial-lesson__caption font-unbounded fw-bold lh-base text-uppercase text-center">Первое занятие бесплатно</div>
-									<p class="trial-lesson__subtitle text-center mb-0">*При покупке абонемента в день занятия</p>
+									<div class="trial-lesson__caption d-flex ps-sm-2">
+										<span class="trial-lesson__caption-icon flex-shrink-0">
+											<img src="img/icons/gift.svg" alt="Иконка">
+										</span>
+										<span class="trial-lesson__caption-text font-unbounded fw-bold lh-base text-uppercase text-center">
+											<span class="color-accent">Дарим 800 ₽</span> на абонемент в&nbsp;день пробного занятия </span>
+									</div>
 									<form action="#" id="sign-up" class="trial-lesson__form bg-white text-black rounded-4 flex-grow-1">
-										<div class="trial-lesson__form-caption fw-bold text-center">Первое занятие</div>
+										<div class="trial-lesson__form-caption fw-bold text-center">Запишись на пробный урок</div>
 										<div class="trial-lesson__form-fields">
 											<div class="row">
 												<div class="col-12">
@@ -301,12 +306,14 @@
 														</div>
 													</div>
 												</div>
-												<div class="col-12 d-flex">
+												<div class="col-12 d-flex flex-sm-row flex-column align-items-center gap-3">
+													<div class="form-check d-flex  justify-content-center align-items-center">
+														<input class="form-check-input me-2" type="checkbox" id="consent" name="consent" required>
+														<label class="form-check-label mb-0 form-policy" for="consent">
+															<span> Я ознакомлен(а) и соглашаюсь с <a href="" class="form-policy__link color-accent">Политикой конфиденциальности</a> и даю <a href="" class="form-policy__link color-accent">согласие</a> на <a href="" class="form-policy__link color-accent">обработку персональных данных</a>. </span>
+														</label>
+													</div>
 													<button type="submit" class="btn btn-primary mx-auto">Записаться</button>
-												</div>
-												<div class="col-12">
-													<p class="form-policy text-center mb-0"> Нажимая на кнопку “Записаться” вы соглашаетесь <br> с <a href="" class="form-policy__link color-accent">“Соглашением об обработке персональных данных”</a>
-													</p>
 												</div>
 											</div>
 										</div>
@@ -323,7 +330,7 @@
 										<img src="img/icons/location.svg" alt="Иконка">
 									</div>
 									<div class="card__content d-flex flex-column flex-grow-1">
-										<div class="card__content-text fw-bold">Близко</div>
+										<div class="card__content-text fw-bold">Удобно</div>
 										<div class="card__content-desc">ТРК VEGAS Сити, м.&nbsp;Мякинино</div>
 									</div>
 								</div>
@@ -334,19 +341,19 @@
 										<img src="img/icons/parking.svg" alt="Иконка">
 									</div>
 									<div class="card__content d-flex flex-column flex-grow-1">
-										<div class="card__content-text fw-bold">Удобно</div>
-										<div class="card__content-desc">Бесплатная <br> парковка</div>
+										<div class="card__content-text fw-bold">Парковка</div>
+										<div class="card__content-desc">Бесплатная парковка на территории ТРК</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-xl-3 col-6">
 								<div class="card border-0 h-100 flex-md-row flex-column ">
 									<div class="card__icon flex-shrink-0 d-flex justify-content-center align-items-center rounded-circle">
-										<img src="img/icons/clock.svg" alt="Иконка">
+										<img src="img/icons/users.svg" alt="Иконка">
 									</div>
 									<div class="card__content d-flex flex-column flex-grow-1">
-										<div class="card__content-text fw-bold">Доступно</div>
-										<div class="card__content-desc">Занятия проходят днем и&nbsp;вечером</div>
+										<div class="card__content-text fw-bold">Гибко</div>
+										<div class="card__content-desc">Занятия групповые и&nbsp;индивидуальные</div>
 									</div>
 								</div>
 							</div>
@@ -357,7 +364,7 @@
 									</div>
 									<div class="card__content d-flex flex-column flex-grow-1">
 										<div class="card__content-text fw-bold">Комфортно</div>
-										<div class="card__content-desc">Любой танцевальный уровень</div>
+										<div class="card__content-desc">Для начинающих и&nbsp;продолжающих</div>
 									</div>
 								</div>
 							</div>
@@ -1533,10 +1540,10 @@
 			</div>
 		</footer>
 		<!-- plugins -->
-		<script src="js/libs/fancybox.umd.js?_v=20260311205156"></script>
-		<script src="js/libs/swiper-bundle.min.js?_v=20260311205156"></script>
+		<script src="js/libs/fancybox.umd.js?_v=20260519225541"></script>
+		<script src="js/libs/swiper-bundle.min.js?_v=20260519225541"></script>
 		<!-- plugins -->
-		<script src="js/app.min.js?_v=20260311205156"></script>
+		<script src="js/app.min.js?_v=20260519225541"></script>
 	</div>
 </body>
 

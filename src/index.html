@@ -91,17 +91,23 @@
                                     <div class="trial-lesson__banner position-relative h-100 bg-black text-white overflow-hidden">
                                         <img src="@img/lesson.jpg" alt="Баннер">
                                         <div class="trial-lesson__banner-content d-flex flex-column justify-content-between position-absolute top-0 end-0 start-0 bottom-0">
-                                            <div class="trial-lesson__banner-caption font-unbounded fw-bold text-sm-center text-start z-1">Самые крутые истории начинаются с&nbsp;фразы <span class="d-inline-block position-relative text-nowrap">«Ладно, давай попробую!»</span></div>
+                                            <div class="trial-lesson__banner-caption font-unbounded fw-bold z-1">Самые крутые истории начинаются с&nbsp;фразы <span class="d-inline-block position-relative text-nowrap">«Ладно, давай попробую!»</span></div>
                                             <div class="trial-lesson__banner-desc text-end">Не жди завтра, <br> начни свою историю сегодня!</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="trial-lesson__main d-flex flex-column">
-                                        <div class="trial-lesson__caption font-unbounded fw-bold lh-base text-uppercase text-center">Первое занятие бесплатно</div>
-                                        <p class="trial-lesson__subtitle text-center mb-0">*При покупке абонемента в день занятия</p>
+                                        <div class="trial-lesson__caption d-flex ps-sm-2">
+                                            <span class="trial-lesson__caption-icon flex-shrink-0">
+                                                <img src="@img/icons/gift.svg" alt="Иконка">
+                                            </span>
+                                            <span class="trial-lesson__caption-text font-unbounded fw-bold lh-base text-uppercase text-center">
+                                                <span class="color-accent">Дарим 800 ₽</span> на абонемент в&nbsp;день пробного занятия
+                                            </span>
+                                        </div>
                                         <form action="#" id="sign-up" class="trial-lesson__form bg-white text-black rounded-4 flex-grow-1">
-                                            <div class="trial-lesson__form-caption fw-bold text-center">Первое занятие</div>
+                                            <div class="trial-lesson__form-caption fw-bold text-center">Запишись на пробный урок</div>
                                             <div class="trial-lesson__form-fields">
                                                 <div class="row">
                                                     <div class="col-12">
@@ -130,14 +136,16 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 d-flex">
+                                                    <div class="col-12 d-flex flex-sm-row flex-column align-items-center gap-3">
+                                                        <div class="form-check d-flex  justify-content-center align-items-center">
+                                                            <input class="form-check-input me-2" type="checkbox" id="consent" name="consent" required>
+                                                            <label class="form-check-label mb-0 form-policy" for="consent">
+                                                                <span>
+                                                                    Я ознакомлен(а) и соглашаюсь с <a href="" class="form-policy__link color-accent">Политикой конфиденциальности</a> и даю <a href="" class="form-policy__link color-accent">согласие</a> на <a href="" class="form-policy__link color-accent">обработку персональных данных</a>.
+                                                                </span>
+                                                            </label>
+                                                        </div>
                                                         <button type="submit" class="btn btn-primary mx-auto">Записаться</button>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <p class="form-policy text-center mb-0">
-                                                            Нажимая на кнопку “Записаться” вы соглашаетесь <br>
-                                                            с <a href="" class="form-policy__link color-accent">“Соглашением об обработке персональных данных”</a>
-                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>

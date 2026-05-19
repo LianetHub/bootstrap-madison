@@ -71,7 +71,30 @@
 	}
 
 	// .form-policy__link
-	&__link {}
+	&__link {
+		text-decoration: underline;
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.form-check-input {
+	width: 1.25rem;
+	height: 1.25rem;
+	border-radius: 0.3125rem;
+	border: rem(2) solid #BC0482;
+	// // background: #F0F0F0;
+	box-shadow: 0 0 4px 0 #BC0482;
+}
+
+.form-check-label {
+	@media (max-width:$md5) {
+		font-size: 0.875rem;
+	}
 }
 
 .btn {
