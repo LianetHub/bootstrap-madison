@@ -2926,6 +2926,19 @@ body {
     font-size: 1.5625rem;
   }
 }
+.prices__actions {
+  margin-top: 1.5rem;
+}
+@media (min-width: 576px) {
+  .prices__actions {
+    margin-top: 2.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .prices--cta {
+    padding: 5.625rem 0;
+  }
+}
 
 .no-webp .prices-card {
   background: linear-gradient(180deg, rgba(16, 3, 3, 0.8) 0%, rgba(118, 22, 22, 0.8) 100%), url("../img/halls/02.jpg") 0 0/cover no-repeat; }

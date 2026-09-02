@@ -7,7 +7,47 @@
         <div class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
-
+                <section class="prices prices--cta">
+                    <div class="container">
+                        <h2 class="prices__title fs-title text-center text-uppercase font-unbounded fw-bold lh-base">Стоимость занятий</h2>
+                        <p class="prices__subtitle text-center">Действуют разные способы оплаты</p>
+                        <div class="prices__types d-flex justify-content-center flex-wrap">
+                            <div class="prices__type d-flex align-items-center bg-white">
+                                <span class="prices__type-icon flex-shrink-0 rounded-circle overflow-hidden">
+                                    <img src="@img/icons/money.svg" alt="Иконка">
+                                </span>
+                                Наличными
+                            </div>
+                            <div class="prices__type d-flex align-items-center bg-white">
+                                <span class="prices__type-icon flex-shrink-0 rounded-circle overflow-hidden">
+                                    <img src="@img/icons/credit-card.svg" alt="Иконка">
+                                </span>
+                                Картой
+                            </div>
+                            <div class="prices__type d-flex align-items-center bg-white">
+                                <span class="prices__type-icon flex-shrink-0 rounded-circle overflow-hidden">
+                                    <img src="@img/icons/payment-link.svg" alt="Иконка">
+                                </span>
+                                На сайте онлайн
+                            </div>
+                            <div class="prices__type d-flex align-items-center bg-white">
+                                <span class="prices__type-icon flex-shrink-0 rounded-circle overflow-hidden">
+                                    <img src="@img/icons/sbp.svg" alt="Иконка">
+                                </span>
+                                Через СПБ
+                            </div>
+                        </div>
+                        <div class="prices__content">
+                            <div class="row justify-content-center">
+                                @@loop('./html/templates/_prices-card.html', './html/json/prices-high-heels.json')
+                            </div>
+                        </div>
+                        <div class="prices__actions d-flex justify-content-center">
+                            <a href="" class="btn btn-primary">Смотреть все Абонементы</a>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_reviews.html', {})
                 <section class="faq">
                     <div class="container">
                         <h2 class="faq__title fs-title text-uppercase text-center font-unbounded fw-bold text-center lh-base">Частые вопросы</h2>

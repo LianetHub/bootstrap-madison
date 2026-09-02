@@ -2330,6 +2330,22 @@
 			font-size: 1.5625rem;
 		}
 	}
+
+	// .prices__actions — вариация без плашки с текстом (только CTA)
+	&__actions {
+		margin-top: 1.5rem;
+
+		@media (min-width: $md5) {
+			margin-top: rem(40);
+		}
+	}
+
+	// .prices--cta
+	&--cta {
+		@media (min-width: $md2) {
+			padding: rem(90) 0;
+		}
+	}
 }
 
 .prices-card {
