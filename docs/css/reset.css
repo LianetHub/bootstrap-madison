@@ -22,7 +22,19 @@ body {
 }
 
 html {
-  font-size: 100%;
+  font-size: 120%;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
