@@ -1997,6 +1997,11 @@
 		@media (min-width: $md5) {
 			width: 3.75rem;
 			height: 3.75rem;
+			padding: 0.75rem;
+
+			& img {
+				max-height: 2.25rem;
+			}
 		}
 	}
 
@@ -2331,7 +2336,7 @@
 		}
 	}
 
-	// .prices__actions — вариация без плашки с текстом (только CTA)
+	// .prices__actions
 	&__actions {
 		margin-top: 1.5rem;
 
