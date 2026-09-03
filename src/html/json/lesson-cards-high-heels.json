@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "@img/icons/location.svg",
+        "name": "Удобно",
+        "desc": "ТРК VEGAS Сити, м.&nbsp;Мякинино"
+    },
+    {
+        "icon": "@img/icons/parking.svg",
+        "name": "Доступно",
+        "desc": "Бесплатная парковка на территории ТРК"
+    },
+    {
+        "icon": "@img/icons/users.svg",
+        "name": "Гибко",
+        "desc": "Занятия групповые и&nbsp;индивидуальные"
+    },
+    {
+        "icon": "@img/icons/stars-fill.svg",
+        "name": "Комфортно",
+        "desc": "Для начинающих и&nbsp;продолжающих"
+    }
+]

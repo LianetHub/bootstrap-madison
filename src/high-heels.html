@@ -7,6 +7,27 @@
         <div class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
+                <div class="trial-lesson">
+                    <div class="container">
+                        <div class="trial-lesson__content">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="trial-lesson__banner position-relative h-100 overflow-hidden">
+                                        <img src="@img/features/trial-lesson-high-heels.jpg" alt="Пробное занятие High Heels">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    @@include('html/_trial-lesson-form.html', {})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trial-lesson__cards">
+                            <div class="row">
+                                @@loop('./html/templates/_trial-lesson-card.html', './html/json/lesson-cards-high-heels.json')
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <section class="prices prices--cta">
                     <div class="container">
                         <h2 class="prices__title fs-title text-center text-uppercase font-unbounded fw-bold lh-base">Стоимость занятий</h2>

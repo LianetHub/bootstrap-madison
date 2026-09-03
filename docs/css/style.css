@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "LTSuperior";
-  font-display: swap;
-  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "druktextwidecyr";
   font-display: swap;
   src: url("../fonts/druktextwidecyr-medium.woff2") format("woff2"), url("../fonts/druktextwidecyr-medium.woff") format("woff");
@@ -16,6 +9,13 @@
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LTSuperior";
+  font-display: swap;
+  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -186,6 +186,7 @@
   .card__icon {
     width: 3.75rem;
     height: 3.75rem;
+    padding: 0.75rem;
     background: linear-gradient(90deg, #e42329 -23.8%, #761a1b 122.53%);
   }
 }
@@ -1385,16 +1386,16 @@ body {
     padding: 2.5rem 0 3.75rem;
   }
 }
-.trial-lesson__content {
+.trial-lesson__content:not(:first-child) {
   margin-top: 1.25rem;
 }
 @media (min-width: 576px) {
-  .trial-lesson__content {
+  .trial-lesson__content:not(:first-child) {
     margin-top: 2.75rem;
   }
 }
 .trial-lesson__content .row {
-  --bs-gutter-x: 2.5rem;
+  --bs-gutter-x: 1.25rem;
   --bs-gutter-y: 1.25rem;
 }
 .trial-lesson__banner {
@@ -1551,12 +1552,12 @@ body {
   font-size: 1.0625rem;
   line-height: 140%;
 }
-.trial-lesson__cards {
+.trial-lesson__cards:not(:first-child) {
   margin-top: 1.25rem;
 }
 @media (min-width: 768px) {
-  .trial-lesson__cards {
-    margin-top: 2.5rem;
+  .trial-lesson__cards:not(:first-child) {
+    margin-top: 1.25rem;
   }
 }
 .trial-lesson__cards .card__icon {
@@ -1568,7 +1569,7 @@ body {
 }
 @media (min-width: 768px) {
   .trial-lesson__cards .row {
-    --bs-gutter-x: 0.625rem;
+    --bs-gutter-x: 1.25rem;
     --bs-gutter-y: 0.625rem;
   }
 }

@@ -640,14 +640,17 @@
 
 	// .trial-lesson__content
 	&__content {
-		margin-top: 1.25rem;
+		&:not(:first-child) {
 
-		@media (min-width: $md5) {
-			margin-top: 2.75rem;
+			margin-top: 1.25rem;
+
+			@media (min-width: $md5) {
+				margin-top: 2.75rem;
+			}
 		}
 
 		.row {
-			--bs-gutter-x: #{rem(40)};
+			--bs-gutter-x: #{rem(20)};
 			--bs-gutter-y: #{rem(20)};
 		}
 	}
@@ -826,10 +829,12 @@
 
 	// .trial-lesson__cards
 	&__cards {
-		margin-top: 1.25rem;
+		&:not(:first-child) {
+			margin-top: 1.25rem;
 
-		@media (min-width: $md4) {
-			margin-top: rem(40);
+			@media (min-width: $md4) {
+				margin-top: rem(20);
+			}
 		}
 
 		.card__icon {
@@ -841,11 +846,13 @@
 			--bs-gutter-y: #{rem(6)};
 
 			@media (min-width: $md4) {
-				--bs-gutter-x: #{rem(10)};
+				--bs-gutter-x: #{rem(20)};
 				--bs-gutter-y: #{rem(10)};
 			}
 		}
 	}
+
+
 }
 
 .school {
