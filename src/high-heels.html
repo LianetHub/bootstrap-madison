@@ -124,6 +124,20 @@
                         </div>
                     </div>
                 </section>
+                <section class="directions directions--slider">
+                    <div class="container">
+                        <h2 class="directions__title fs-title text-uppercase text-center font-unbounded fw-semibold lh-base">Другие направления школы танцев</h2>
+                        <div class="directions__slider swiper">
+                            <div class="swiper-wrapper">
+                                @@loop('./html/templates/_direction-slide.html', './html/json/directions-other.json')
+                            </div>
+                        </div>
+                        <div class="directions__controls d-xl-flex d-none justify-content-center align-items-center">
+                            <button type="button" class="directions__prev swiper-button-prev icon-prev"></button>
+                            <button type="button" class="directions__next swiper-button-next icon-next"></button>
+                        </div>
+                    </div>
+                </section>
                 @@include('html/_reviews.html', {})
                 <section class="faq">
                     <div class="container">

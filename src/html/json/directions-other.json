@@ -1,0 +1,42 @@
+[
+    {
+        "image": "@img/directions/07.jpg",
+        "title": "Стрип-пластика",
+        "desc": "Взрослые группы"
+    },
+    {
+        "image": "@img/directions/06.jpg",
+        "title": "Женская хореография<br>(Lady’s Dance)",
+        "desc": "Взрослые группы"
+    },
+    {
+        "image": "@img/directions/08.jpg",
+        "title": "Бачата<br>Леди Стайл",
+        "desc": "Взрослые группы"
+    },
+    {
+        "image": "@img/directions/09.jpg",
+        "title": "Джаз-фанк",
+        "desc": "Любой возраст"
+    },
+    {
+        "image": "@img/directions/10.jpg",
+        "title": "Свадебный танец",
+        "desc": "Любой возраст"
+    },
+    {
+        "image": "@img/directions/11.jpg",
+        "title": "Индивидуальные занятия",
+        "desc": "Любой возраст"
+    },
+    {
+        "image": "@img/directions/02.jpg",
+        "title": "Направления<br>для подростков",
+        "desc": "Возрастные группы:<br>6-8 лет<br>9-11 лет"
+    },
+    {
+        "image": "@img/directions/12.jpg",
+        "title": "Направления<br>для детей",
+        "desc": "Возрастная группа:<br>12-16 лет"
+    }
+]
