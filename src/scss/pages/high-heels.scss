@@ -1,5 +1,5 @@
 .hero {
-	padding: rem(16) 0 rem(40);
+	padding: 0 0 rem(32);
 	overflow: visible;
 	background: radial-gradient(47.09% 57.14% at 43.08% 38.01%, #E42329 0%, #761A1B 100%);
 	position: relative;
@@ -7,43 +7,62 @@
 	&::after {
 		content: '';
 		position: absolute;
-		bottom: -1px;
 		left: 0;
 		z-index: 0;
 		width: 100%;
 		height: 100%;
 		background: url("@img/hero-heels-mask.svg") center bottom / 100% auto no-repeat;
 		pointer-events: none;
+		bottom: -1px;
+
+		@media (min-width:$md5) {
+			bottom: -2px;
+
+		}
 	}
 
 	@media (min-width: $md5) {
-		padding: rem(20) 0 rem(56);
-
-
+		padding: 0 0 rem(48);
 	}
 
 	@media (min-width: $md3) {
 		padding: rem(10) 0 rem(40);
-
-
 	}
 
 	// .hero__body
-	&__body {}
+	&__body {
+		padding-top: 2.5rem;
+
+		@media (min-width: $md3) {
+			padding-top: 0;
+		}
+	}
 
 	// .hero__name
 	&__name {
-		top: rem(-24);
-		right: 0;
+		top: 0;
+		left: 0;
 		z-index: 0;
-		opacity: 0.62;
+		opacity: 0.3;
 		mix-blend-mode: overlay;
-		font-weight: 900;
-		font-size: rem(100);
+		font-weight: 700;
+		font-size: rem(45);
+		line-height: 1.35;
+		font-family: $font-unbounded;
+
+		@media (min-width: $md5) {
+			top: rem(-4);
+			font-size: rem(64);
+		}
 
 		@media (min-width: $md3) {
+			font-family: $fontfamily;
+			top: rem(-50);
+			left: auto;
 			right: rem(-20);
+			font-weight: 900;
 			font-size: rem(120);
+			line-height: 1.35;
 		}
 
 		@media (min-width: $md2) {
@@ -58,19 +77,20 @@
 	// .hero__title
 	&__title {
 		max-width: rem(600);
-		margin: rem(12) 0 0;
-		font-size: rem(32);
+		font-size: rem(24);
 		letter-spacing: 0;
-		text-shadow: 0 0 rem(10) #e42329;
+		line-height: 1.3;
 
 		@media (min-width: $md5) {
-			margin-top: rem(16);
-			font-size: rem(42);
+			margin-top: rem(12);
+			font-size: rem(36);
 		}
 
 		@media (min-width: $md3) {
 			margin-top: rem(20);
 			font-size: rem(52);
+			line-height: 1.1;
+			text-shadow: 0 0 rem(10) #e42329;
 		}
 
 		@media (min-width: $md2) {
@@ -82,8 +102,9 @@
 	&__lead {
 		gap: rem(10);
 		max-width: rem(540);
-		margin-top: rem(16);
+		margin-top: rem(15);
 		font-size: 0.875rem;
+		font-weight: 700;
 		line-height: 1.35;
 
 		@media (min-width: $md5) {
@@ -92,8 +113,9 @@
 		}
 
 		@media (min-width: $md3) {
-			margin-top: rem(44);
+			margin-top: rem(34);
 			font-size: 1.3125rem;
+			font-weight: 400;
 		}
 
 		&::before {
@@ -109,20 +131,22 @@
 	// .hero__image
 	&__image {
 		z-index: 1;
-		max-width: rem(520);
-		margin: rem(8) auto rem(-20);
+		width: calc(100% + #{rem(32)});
+		max-width: none;
+		margin: rem(-8) rem(-16) 0;
 
 		@media (min-width: $md5) {
+			width: 100%;
 			max-width: rem(640);
-			margin-top: rem(12);
+			margin: rem(12) auto 0;
 		}
 
 		@media (min-width: $md3) {
 			position: absolute;
 			top: rem(10);
 			right: -2rem;
-			max-width: none;
 			width: rem(640);
+			max-width: none;
 			margin: 0;
 			pointer-events: none;
 		}
@@ -144,13 +168,13 @@
 
 	// .hero__card
 	&__card {
-		max-width: rem(653);
 		margin-top: rem(40);
 		padding: rem(20) rem(25);
 		border-radius: 0.9375rem;
 		background: rgba(228, 35, 41, 0.3);
 		box-shadow: 0 0 rem(10) 0 rgba(243, 57, 63, 0.7);
 		backdrop-filter: blur(5px);
+		max-width: rem(653);
 	}
 
 	// .hero__card-icon
@@ -183,21 +207,25 @@
 	// .hero__cta
 	&__cta {
 		max-width: rem(541);
-		margin-top: rem(24);
+		margin-top: rem(-24);
+		margin-left: auto;
+		margin-right: auto;
 
 		@media (min-width: $md5) {
-			margin-top: rem(28);
+			margin-top: rem(20);
 		}
 
 		@media (min-width: $md3) {
 			margin-top: rem(32);
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 
 	// .hero__cta-text
 	&__cta-text {
 		font-size: 0.875rem;
-		line-height: 1.4;
+		line-height: 1.35;
 
 		@media (min-width: $md5) {
 			font-size: 1.125rem;
@@ -205,27 +233,42 @@
 
 		@media (min-width: $md3) {
 			font-size: 1.3125rem;
+			line-height: 1.4;
 		}
+	}
+
+	// .hero__btn
+	&__btn {
+		--bs-btn-padding-x: #{rem(25)};
+		--bs-btn-padding-y: #{rem(20)};
+		--bs-btn-font-size: 1.125rem;
 	}
 
 	// .hero__stories
 	&__stories {
-		gap: rem(8) rem(4);
-		margin-top: rem(28);
+		gap: rem(18);
+		margin-top: rem(20);
+		padding: 0 rem(10);
 
 		@media (min-width: $md5) {
 			gap: rem(10);
-			margin-top: rem(40);
+			margin-top: rem(36);
+			padding: 0;
 		}
 
-
+		@media (min-width: $md3) {
+			margin-top: rem(40);
+		}
 	}
 
 	// .hero__story
 	&__story {
-		width: rem(72);
+		width: rem(60);
+
+		gap: rem(10);
 
 		@media (min-width: $md5) {
+			gap: rem(6);
 			width: rem(90);
 		}
 
@@ -236,8 +279,8 @@
 
 	// .hero__story-thumb
 	&__story-thumb {
-		width: rem(64);
-		height: rem(64);
+		width: rem(60);
+		height: rem(60);
 		border: rem(2) solid #fff;
 
 		@media (min-width: $md5) {
@@ -254,11 +297,13 @@
 
 	// .hero__story-label
 	&__story-label {
-		font-size: 0.6875rem;
+		font-size: 0.75rem;
 		line-height: 1.2;
+		letter-spacing: -0.03em;
 
 		@media (min-width: $md5) {
 			font-size: 0.8125rem;
+			letter-spacing: 0;
 		}
 
 		@media (min-width: $md3) {
