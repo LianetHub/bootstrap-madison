@@ -7,6 +7,84 @@
         <div class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
+                <section class="hero text-white">
+                    <div class="container">
+                        <nav class="breadcrumbs fw-light py-3" aria-label="Хлебные крошки" itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a class="breadcrumbs__link" itemprop="item" href="/">
+                                        <span itemprop="name">Главная</span>
+                                    </a>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a class="breadcrumbs__link" itemprop="item" href="">
+                                        <span itemprop="name">Направления</span>
+                                    </a>
+                                    <meta itemprop="position" content="2">
+                                </li>
+                                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <span class="breadcrumbs__current fw-bold" itemprop="name">Хай хилс</span>
+                                    <link itemprop="item" href="/high-heels.html">
+                                    <meta itemprop="position" content="3">
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="hero__body position-relative">
+                            <div class="hero__name position-absolute text-uppercase lh-base user-select-none" aria-hidden="true">High heels</div>
+                            <h1 class="hero__title font-unbounded text-uppercase fw-bold">Танцы <br class="d-none d-lg-block">на каблуках</h1>
+                            <div class="hero__lead">
+                                <p class="mb-0">
+                                    <b>Хай Хилс — это не просто танцы, это состояние.</b>
+                                    Каблуки, музыка и ты — уверенная, пластичная, притягательная.
+                                    <span class="d-lg-none"> Здесь не важен опыт — важно желание почувствовать себя ярче.</span>
+                                </p>
+                            </div>
+                            <div class="hero__image">
+                                <img src="@img/promo/high-heels.png" alt="Танцы на каблуках High Heels">
+                            </div>
+                            <div class="hero__card d-none d-lg-flex align-items-center">
+                                <div class="hero__card-icon flex-shrink-0">
+                                    <img src="@img/icons/heel-badge.png" width="102" height="102" alt="">
+                                </div>
+                                <div class="hero__card-text">
+                                    <p class="hero__card-title fw-bold text-uppercase mb-0">Присоединяйся к нашей команде!<br>Здесь Ты научишься:</p>
+                                    <p class="hero__card-desc mb-0">Красиво танцевать на каблуках и раскроешь в себе дерзкую уверенность, от которой невозможно отвести взгляд.</p>
+                                </div>
+                            </div>
+                            <div class="hero__cta">
+                                <p class="hero__cta-text mb-0"><b>Попробуй</b> Танцы на каблуках — и открой в себе новую, смелую и притягательную версию себя.</p>
+                                <a href="#sign-up" class="hero__btn btn btn-outline-primary bg-white">Хочу попробовать</a>
+                            </div>
+                            <div class="hero__stories d-flex justify-content-center">
+                                <a href="" class="hero__story d-flex flex-column align-items-center text-white text-decoration-none" data-fancybox>
+                                    <span class="hero__story-thumb overflow-hidden rounded-circle">
+                                        <img src="@img/promo/stories/01.jpg" alt="Съемки">
+                                    </span>
+                                    <span class="hero__story-label text-center">Съемки</span>
+                                </a>
+                                <a href="" class="hero__story d-flex flex-column align-items-center text-white text-decoration-none" data-fancybox>
+                                    <span class="hero__story-thumb overflow-hidden rounded-circle">
+                                        <img src="@img/promo/stories/02.jpg" alt="Репетиция">
+                                    </span>
+                                    <span class="hero__story-label text-center">Репетиция</span>
+                                </a>
+                                <a href="" class="hero__story d-flex flex-column align-items-center text-white text-decoration-none" data-fancybox>
+                                    <span class="hero__story-thumb overflow-hidden rounded-circle">
+                                        <img src="@img/promo/stories/03.jpg" alt="Видео тренера">
+                                    </span>
+                                    <span class="hero__story-label text-center">Видео тренера</span>
+                                </a>
+                                <a href="" class="hero__story d-flex flex-column align-items-center text-white text-decoration-none" data-fancybox>
+                                    <span class="hero__story-thumb overflow-hidden rounded-circle">
+                                        <img src="@img/promo/stories/04.jpg" alt="Танцуют ученики">
+                                    </span>
+                                    <span class="hero__story-label text-center">Танцуют ученики</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <div class="trial-lesson">
                     <div class="container">
                         <div class="trial-lesson__content">
@@ -28,6 +106,37 @@
                         </div>
                     </div>
                 </div>
+                <section class="schedule">
+                    <div class="container">
+                        <div class="schedule__head text-center">
+                            <h2 class="schedule__title fs-title text-uppercase font-unbounded fw-semibold lh-base">Расписание занятий High heels</h2>
+                            <p class="schedule__note">* Действует с 1 января 2026 г.</p>
+                        </div>
+                        <div class="schedule__table overflow-hidden">
+                            <table class="schedule__table-el table mb-0 w-100">
+                                <thead class="schedule__table-head">
+                                    <tr>
+                                        <th class="schedule__th schedule__th--time-day position-relative font-unbounded fw-bold lh-base text-white">
+                                            <span>Время</span>
+                                            <span class="schedule__table-head-day">День недели</span>
+                                        </th>
+                                        <th class="schedule__th schedule__th--hall font-unbounded fw-bold lh-base text-white">Зал</th>
+                                        <th class="schedule__th schedule__th--teacher font-unbounded fw-bold lh-base text-white">Преподаватель</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="schedule__table-body">
+                                    @@loop('./html/templates/_schedule-row.html', './html/json/schedule-high-heels.json')
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="schedule__teachers">
+                            <h2 class="schedule__teachers-title fs-title text-uppercase text-center font-unbounded fw-semibold lh-base">Преподаватели направления</h2>
+                            <div class="row">
+                                @@loop('./html/templates/_schedule-teacher-card.html', './html/json/schedule-teachers-high-heels.json')
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section class="prices prices--cta">
                     <div class="container">
                         <h2 class="prices__title fs-title text-center text-uppercase font-unbounded fw-bold lh-base">Стоимость занятий</h2>
@@ -142,6 +251,61 @@
                                 </div>
                             </div>
 
+                        </div>
+                    </div>
+                </section>
+                <section class="outfit text-white d-flex flex-column justify-content-start">
+                    <div class="outfit__container container">
+                        <div class="outfit__content d-flex flex-column">
+                            <div class="outfit__header row align-items-start">
+                                <div class="col-xl-6 pt-sm-4">
+                                    <span class="outfit__badge badge rounded-5 color-accent bg-white me-auto d-flex fw-normal mt-3">Форма для первого занятия</span>
+                                    <h2 class="outfit__title fs-title text-uppercase font-unbounded fw-semibold lh-base">Что надеть<br>на первое занятие?</h2>
+                                    <p class="outfit__subtitle">Комфорт превыше всего. Главное — чтобы ты чувствовала себя свободно и могла наслаждаться движением.</p>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="outfit__image position-relative d-block h-100">
+                                        <img src="@img/outfit/heels.png" alt="Туфли для танцев High Heels">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="outfit__cards d-grid gap-3">
+                                @@loop('./html/templates/_school-card.html', './html/json/outfit-cards-high-heels.json')
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="location text-white">
+                    <div class="location__container container">
+                        <div class="location__content">
+                            <div class="location__body row align-items-center">
+                                <div class="col-lg-6">
+                                    <a href="https://yandex.ru/maps/?text=ТРК%20VEGAS%20Сити%2C%20м.%20Мякинино" class="location__map overflow-hidden rounded-4 d-block" target="_blank" rel="noopener noreferrer">
+                                        <img src="@img/location/map.png" alt="Карта — ТРК VEGAS Сити, м. Мякинино">
+                                    </a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2 class="location__title fs-title text-uppercase font-unbounded fw-semibold lh-base">Удобное расположение школы</h2>
+                                    <div class="location__text">
+                                        <p>Занятия проходят в школе танцев Madison в ТРК VEGAS Сити (метро Мякинино)</p>
+                                        <p>Студию удобно посещать жителям Москвы, особенно ближайших районов:</p>
+                                    </div>
+                                    <ul class="location__list">
+                                        <li>Красногорск</li>
+                                        <li>Павшинская Пойма</li>
+                                        <li>Строгино</li>
+                                        <li>Митино</li>
+                                        <li>Тушино</li>
+                                        <li>Крылатское</li>
+                                    </ul>
+                                    <div class="location__parking d-flex align-items-center bg-white">
+                                        <span class="location__parking-icon flex-shrink-0">
+                                            <img src="@img/icons/parking-p.svg" width="42" height="42" alt="Парковка">
+                                        </span>
+                                        <p class="location__parking-text fw-bold mb-0">+ Бесплатная парковка — всегда найдётся место!</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

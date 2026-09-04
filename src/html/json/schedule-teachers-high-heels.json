@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Александра Толмач",
+        "description": "Преподаватель Хай Хилс,<br>хореограф-постановщик",
+        "image": "@img/teachers/Alexandra-Tolmach.png",
+        "link": ""
+    },
+    {
+        "name": "Ольга Колесникова",
+        "description": "Преподаватель Стрип-пластика, Хай Хилс, хореограф-постановщик",
+        "image": "@img/teachers/Olga-Kolesnikova.png",
+        "link": ""
+    }
+]

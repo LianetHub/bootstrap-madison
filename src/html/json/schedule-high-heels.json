@@ -1,0 +1,38 @@
+[
+    {
+        "time": "12:00 — 13:00",
+        "day": "Понедельник",
+        "hall": "Зал №5",
+        "teacher": "Александра Толмач",
+        "teacherImage": "@img/teachers/Alexandra-Tolmach.png",
+        "teacherLink": "",
+        "signUpLink": ""
+    },
+    {
+        "time": "20:00 — 21:00",
+        "day": "Понедельник",
+        "hall": "Зал №5",
+        "teacher": "Александра Толмач",
+        "teacherImage": "@img/teachers/Alexandra-Tolmach.png",
+        "teacherLink": "",
+        "signUpLink": ""
+    },
+    {
+        "time": "12:00 — 13:00",
+        "day": "Среда",
+        "hall": "Зал №5",
+        "teacher": "Александра Толмач",
+        "teacherImage": "@img/teachers/Alexandra-Tolmach.png",
+        "teacherLink": "",
+        "signUpLink": ""
+    },
+    {
+        "time": "20:00 — 21:00",
+        "day": "Среда",
+        "hall": "Зал №5",
+        "teacher": "Александра Толмач",
+        "teacherImage": "@img/teachers/Alexandra-Tolmach.png",
+        "teacherLink": "",
+        "signUpLink": ""
+    }
+]
