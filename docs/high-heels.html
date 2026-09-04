@@ -55,8 +55,8 @@
                 </div>
             </header>
             <main class="page">
-                <section class="hero text-white">
-                    <div class="container">
+                <section class="hero text-white position-relative z-1">
+                    <div class="container position-relative">
                         <nav class="breadcrumbs fw-light py-3" aria-label="Хлебные крошки" itemscope itemtype="https://schema.org/BreadcrumbList">
                             <ul class="breadcrumbs__list">
                                 <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -79,9 +79,9 @@
                             </ul>
                         </nav>
                         <div class="hero__body position-relative">
-                            <div class="hero__name position-absolute text-uppercase lh-base user-select-none" aria-hidden="true">High heels</div>
-                            <h1 class="hero__title font-unbounded text-uppercase fw-bold">Танцы <br class="d-none d-lg-block">на каблуках</h1>
-                            <div class="hero__lead">
+                            <div class="hero__name position-absolute text-uppercase user-select-none pe-none text-nowrap d-none d-lg-block lh-1" aria-hidden="true">High heels</div>
+                            <h1 class="hero__title font-unbounded text-uppercase fw-bold position-relative z-2 lh-1">Танцы <br class="d-none d-lg-block">на каблуках</h1>
+                            <div class="hero__lead position-relative z-2 d-flex">
                                 <p class="mb-0">
                                     <b>Хай Хилс — это не просто танцы, это состояние.</b>
                                     Каблуки, музыка и ты — уверенная, пластичная, притягательная.
@@ -89,46 +89,46 @@
                                 </p>
                             </div>
                             <div class="hero__image">
-                                <picture><source srcset="img/promo/high-heels.webp" type="image/webp"><img src="img/promo/high-heels.png" alt="Танцы на каблуках High Heels"></picture>
+                                <picture><source srcset="img/promo/high-heels.webp" type="image/webp"><img class="d-block w-100" src="img/promo/high-heels.png" alt="Танцы на каблуках High Heels"></picture>
                             </div>
-                            <div class="hero__card d-none d-lg-flex align-items-center">
+                            <div class="hero__card d-none d-lg-flex align-items-center position-relative z-2 gap-2 border border-white">
                                 <div class="hero__card-icon flex-shrink-0">
-                                    <picture><source srcset="img/icons/heel-badge.webp" type="image/webp"><img src="img/icons/heel-badge.png" width="102" height="102" alt=""></picture>
+                                    <img class="d-block w-100 h-100" src="img/icons/heel-badge.svg" width="102" height="102" alt="Иконка">
                                 </div>
-                                <div class="hero__card-text">
+                                <div class="hero__card-text d-flex flex-column gap-2">
                                     <p class="hero__card-title fw-bold text-uppercase mb-0">Присоединяйся к нашей команде!<br>Здесь Ты научишься:</p>
                                     <p class="hero__card-desc mb-0">Красиво танцевать на каблуках и раскроешь в себе дерзкую уверенность, от которой невозможно отвести взгляд.</p>
                                 </div>
                             </div>
-                            <div class="hero__cta">
+                            <div class="hero__cta position-relative z-2 d-flex flex-column align-items-start gap-3">
                                 <p class="hero__cta-text mb-0"><b>Попробуй</b> Танцы на каблуках — и открой в себе новую, смелую и притягательную версию себя.</p>
                                 <a href="#sign-up" class="hero__btn btn btn-outline-primary bg-white">Хочу попробовать</a>
                             </div>
-                            <div class="hero__stories d-flex justify-content-center">
-                                <a href="" class="hero__story d-flex flex-column align-items-center text-white text-decoration-none" data-fancybox>
-                                    <span class="hero__story-thumb overflow-hidden rounded-circle">
-                                        <picture><source srcset="img/promo/stories/01.webp" type="image/webp"><img src="img/promo/stories/01.jpg" alt="Съемки"></picture>
+                            <div class="hero__stories d-flex justify-content-center position-relative z-2 flex-wrap">
+                                <div class="hero__story d-flex flex-column align-items-center text-white text-decoration-none gap-2">
+                                    <span class="hero__story-thumb overflow-hidden rounded-circle d-block flex-shrink-0">
+                                        <picture><source srcset="img/promo/stories/01.webp" type="image/webp"><img class="d-block w-100 h-100 object-fit-cover" src="img/promo/stories/01.jpg" alt="Съемки"></picture>
                                     </span>
                                     <span class="hero__story-label text-center">Съемки</span>
-                                </a>
-                                <a href="" class="hero__story d-flex flex-column align-items-center text-white text-decoration-none" data-fancybox>
-                                    <span class="hero__story-thumb overflow-hidden rounded-circle">
-                                        <picture><source srcset="img/promo/stories/02.webp" type="image/webp"><img src="img/promo/stories/02.jpg" alt="Репетиция"></picture>
+                                </div>
+                                <div class="hero__story d-flex flex-column align-items-center text-white text-decoration-none gap-2">
+                                    <span class="hero__story-thumb overflow-hidden rounded-circle d-block flex-shrink-0">
+                                        <picture><source srcset="img/promo/stories/02.webp" type="image/webp"><img class="d-block w-100 h-100 object-fit-cover" src="img/promo/stories/02.jpg" alt="Репетиция"></picture>
                                     </span>
                                     <span class="hero__story-label text-center">Репетиция</span>
-                                </a>
-                                <a href="" class="hero__story d-flex flex-column align-items-center text-white text-decoration-none" data-fancybox>
-                                    <span class="hero__story-thumb overflow-hidden rounded-circle">
-                                        <picture><source srcset="img/promo/stories/03.webp" type="image/webp"><img src="img/promo/stories/03.jpg" alt="Видео тренера"></picture>
+                                </div>
+                                <div class="hero__story d-flex flex-column align-items-center text-white text-decoration-none gap-2">
+                                    <span class="hero__story-thumb overflow-hidden rounded-circle d-block flex-shrink-0">
+                                        <picture><source srcset="img/promo/stories/03.webp" type="image/webp"><img class="d-block w-100 h-100 object-fit-cover" src="img/promo/stories/03.jpg" alt="Видео тренера"></picture>
                                     </span>
-                                    <span class="hero__story-label text-center">Видео тренера</span>
-                                </a>
-                                <a href="" class="hero__story d-flex flex-column align-items-center text-white text-decoration-none" data-fancybox>
-                                    <span class="hero__story-thumb overflow-hidden rounded-circle">
-                                        <picture><source srcset="img/promo/stories/04.webp" type="image/webp"><img src="img/promo/stories/04.jpg" alt="Танцуют ученики"></picture>
+                                    <span class="hero__story-label text-center">Видео <br> тренера</span>
+                                </div>
+                                <div class="hero__story d-flex flex-column align-items-center text-white text-decoration-none gap-2">
+                                    <span class="hero__story-thumb overflow-hidden rounded-circle d-block flex-shrink-0">
+                                        <picture><source srcset="img/promo/stories/04.webp" type="image/webp"><img class="d-block w-100 h-100 object-fit-cover" src="img/promo/stories/04.jpg" alt="Танцуют ученики"></picture>
                                     </span>
                                     <span class="hero__story-label text-center">Танцуют ученики</span>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
