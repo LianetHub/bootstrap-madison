@@ -6,16 +6,26 @@
 								font-style: normal;
 							}
 @font-face {
-								font-family: 'LTSuperior';
+								font-family: 'icons';
 								font-display: swap;
-								src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
+								src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
 								font-weight: 400;
 								font-style: normal;
 							}
 @font-face {
-								font-family: 'icons';
+								font-family: 'Roboto';
+								src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
+									url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"),
+									url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
+								font-weight: 100 900;
+								font-stretch: 75% 125%;
+								font-style: normal;
 								font-display: swap;
-								src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+							}
+@font-face {
+								font-family: 'LTSuperior';
+								font-display: swap;
+								src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
 								font-weight: 400;
 								font-style: normal;
 							}
@@ -24,16 +34,6 @@
 								src: url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2 supports variations"),
 									url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2-variations"),
 									url("../fonts/Unbounded-VariableFont_wght.woff") format("woff");
-								font-weight: 100 900;
-								font-stretch: 75% 125%;
-								font-style: normal;
-								font-display: swap;
-							}
-@font-face {
-								font-family: 'Roboto';
-								src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"),
-									url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"),
-									url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
 								font-weight: 100 900;
 								font-stretch: 75% 125%;
 								font-style: normal;
