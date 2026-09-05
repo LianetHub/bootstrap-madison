@@ -121,7 +121,7 @@
                                             <span class="schedule__table-head-day">День недели</span>
                                         </th>
                                         <th class="schedule__th schedule__th--hall font-unbounded fw-bold lh-base text-white">Зал</th>
-                                        <th class="schedule__th schedule__th--teacher font-unbounded fw-bold lh-base text-white">Преподаватель</th>
+                                        <th colspan="2" class="schedule__th schedule__th--teacher font-unbounded fw-bold lh-base text-white">Преподаватель</th>
                                     </tr>
                                 </thead>
                                 <tbody class="schedule__table-body">
@@ -130,7 +130,7 @@
                             </table>
                         </div>
                         <div class="schedule__teachers">
-                            <h2 class="schedule__teachers-title fs-title text-uppercase text-center font-unbounded fw-semibold lh-base">Преподаватели направления</h2>
+                            <h2 class="schedule__teachers-title fs-title text-uppercase text-center font-unbounded fw-semibold lh-base mb-4">Преподаватели направления</h2>
                             <div class="row">
                                 @@loop('./html/templates/_schedule-teacher-card.html', './html/json/schedule-teachers-high-heels.json')
                             </div>

@@ -6,21 +6,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "LTSuperior";
   font-display: swap;
   src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
@@ -28,8 +13,23 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: "Unbounded";
   src: url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Unbounded-VariableFont_wght.woff") format("woff");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -679,7 +679,6 @@ body {
 @media (min-width: 1488px) {
   .container {
     max-width: 91.5rem;
-    max-width: 88.75rem;
   }
 }
 
@@ -1266,21 +1265,20 @@ body {
 }
 @media (min-width: 768px) {
   .schedule {
-    padding: 2.5rem 0 3.75rem;
+    padding: 2.5rem 0 2.5rem;
   }
 }
 .schedule__head {
   margin-bottom: 2.5rem;
 }
 .schedule__title {
-  color: #222;
+  letter-spacing: normal;
 }
 .schedule__note {
   margin-top: 1.25rem;
   margin-bottom: 0;
   font-size: 0.875rem;
   line-height: 140%;
-  color: #222;
 }
 @media (min-width: 576px) {
   .schedule__note {
@@ -1293,15 +1291,16 @@ body {
   }
 }
 .schedule__table {
-  border-radius: 0.9375rem;
-  box-shadow: 0 0.25rem 0.46875rem rgba(0, 0, 0, 0.08);
+  box-shadow: none;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .schedule__table {
-    box-shadow: none;
-    background: transparent;
-    border-radius: 0;
-    overflow: visible;
+    border-radius: 0.9375rem;
+    box-shadow: 0 0.25rem 0.46875rem rgba(0, 0, 0, 0.08);
+    overflow: hidden;
   }
 }
 .schedule__table-el {
@@ -1321,126 +1320,108 @@ body {
   --bs-table-hover-bg: transparent;
   border-collapse: separate;
   border-spacing: 0;
-  background: #fff;
+  display: block;
+  background: transparent;
 }
 @media (min-width: 992px) {
   .schedule__table-el {
-    display: block;
-  }
-}
-@media (max-width: 992px) {
-  .schedule__table-el {
-    display: block;
-    background: transparent;
+    display: table;
+    background: #fff;
   }
 }
 .schedule__table-head {
   --bs-table-color: #fff;
+  display: none;
 }
 @media (min-width: 992px) {
   .schedule__table-head {
-    display: block;
+    display: table-header-group;
   }
   .schedule__table-head tr {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
-    padding: 1.25rem;
     background: #91141a;
   }
 }
-@media (max-width: 992px) {
-  .schedule__table-head {
-    display: none;
-  }
-}
 .schedule__th {
-  padding: 0;
+  padding: 1.25rem !important;
   background: transparent;
-  border: 0;
   font-size: 1.0625rem;
   vertical-align: middle;
+  letter-spacing: normal;
 }
 .schedule__th--time-day {
   flex: 0 0 23.75rem;
-  width: 23.75rem;
-}
-.schedule__th--hall {
-  flex: 0 0 12.5rem;
-  width: 12.5rem;
-}
-.schedule__th--teacher {
-  flex: 0 1 39.6875rem;
-  width: 39.6875rem;
+  width: 29.625rem;
 }
 .schedule__table-head-day {
-  position: absolute;
-  left: 11.25rem;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-left: 24%;
 }
 .schedule__table-body {
-  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  background: transparent;
 }
 @media (min-width: 992px) {
   .schedule__table-body {
-    display: block;
+    display: table-row-group;
+    background: #fff;
   }
 }
-@media (max-width: 992px) {
-  .schedule__table-body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-    background: transparent;
-  }
+.schedule__row {
+  display: grid;
+  grid-template-columns: 7.4375rem 1fr;
+  grid-template-areas: "time hall" "time teacher" "time action";
+  gap: 0.1875rem 0.75rem;
+  align-items: center;
+  padding: 0.75rem;
+  background: #fff;
+  border-radius: 0.9375rem;
+  box-shadow: 0 0.25rem 0.46875rem rgba(0, 0, 0, 0.08);
 }
 @media (min-width: 992px) {
   .schedule__row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: table-row;
     width: 100%;
     padding: 0.9375rem 1.25rem;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+.schedule__row:last-child {
+  border-bottom: 0;
+}
+.schedule__row:last-child .schedule__td {
+  border-bottom: 0;
+}
+@media (min-width: 992px) {
+  .schedule__row:last-child .schedule__td {
     border-bottom: 0.0625rem solid #e6e5e5;
   }
 }
-@media (max-width: 992px) {
-  .schedule__row {
-    display: grid;
-    grid-template-columns: 7.4375rem 1fr;
-    grid-template-areas: "time hall" "time teacher" "time action";
-    gap: 0.1875rem 0.75rem;
-    align-items: center;
-    padding: 0.75rem;
-    background: #fff;
-    border-radius: 0.9375rem;
-    box-shadow: 0 0.25rem 0.46875rem rgba(0, 0, 0, 0.08);
-  }
-}
-@media (max-width: 992px) {
-  .schedule__row:last-child {
-    border-bottom: 0;
-  }
-  .schedule__row:last-child .schedule__td {
-    border-bottom: 0;
-  }
-}
 .schedule__td {
-  padding: 0;
+  display: block;
+  width: 100%;
+  padding: 0 !important;
   border: 0;
   vertical-align: middle;
-  background: #fff;
+  background: transparent;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .schedule__td {
-    display: block;
-    width: 100%;
-    padding: 0;
-    border: 0;
-    background: transparent;
+    display: table-cell;
+    width: auto;
+    padding: 0.875rem 1.25rem !important;
+    background: #fff;
+    border-bottom: 0.0625rem solid #e6e5e5;
   }
+}
+.schedule__td--time-day {
+  grid-area: time;
+  align-self: center;
+  min-width: 0;
+  width: 7.4375rem;
 }
 @media (min-width: 992px) {
   .schedule__td--time-day {
@@ -1448,96 +1429,79 @@ body {
     width: 23.75rem;
   }
 }
-@media (max-width: 992px) {
-  .schedule__td--time-day {
-    grid-area: time;
-    align-self: center;
-    min-width: 0;
-    width: 7.4375rem;
-  }
-}
 .schedule__td--hall {
-  font-size: 1.0625rem;
+  grid-area: hall;
+  justify-self: end;
+  text-align: right;
+  font-size: 0.75rem;
 }
 @media (min-width: 992px) {
   .schedule__td--hall {
     flex: 0 0 12.5rem;
     width: 12.5rem;
+    justify-self: auto;
+    text-align: left;
+    font-size: 1.0625rem;
   }
 }
-@media (max-width: 992px) {
-  .schedule__td--hall {
-    grid-area: hall;
-    justify-self: end;
-    text-align: right;
-    font-size: 0.75rem;
-  }
+.schedule__td--teacher {
+  grid-area: teacher;
+  justify-self: end;
 }
 @media (min-width: 992px) {
   .schedule__td--teacher {
     flex: 0 1 25.625rem;
     width: 25.625rem;
-  }
-}
-@media (max-width: 992px) {
-  .schedule__td--teacher {
-    grid-area: teacher;
-    justify-self: end;
+    justify-self: auto;
   }
 }
 .schedule__td--action {
+  grid-area: action;
+  justify-self: end;
   white-space: nowrap;
 }
 @media (min-width: 992px) {
   .schedule__td--action {
     flex: 0 0 auto;
-  }
-}
-@media (max-width: 992px) {
-  .schedule__td--action {
-    grid-area: action;
-    justify-self: end;
+    width: 8.4375rem;
+    justify-self: auto;
   }
 }
 .schedule__teacher {
-  gap: 0.6875rem;
+  gap: 0.3125rem;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 @media (min-width: 992px) {
   .schedule__teacher {
+    gap: 0.6875rem;
     flex-wrap: nowrap;
-  }
-}
-@media (max-width: 992px) {
-  .schedule__teacher {
-    gap: 0.3125rem;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 }
 .schedule__time-day {
-  min-height: 2.1875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+  min-height: 0;
+  width: 100%;
 }
 @media (min-width: 992px) {
   .schedule__time-day {
+    display: block;
+    min-height: 2.1875rem;
     width: 100%;
     max-width: 23.75rem;
-  }
-}
-@media (max-width: 992px) {
-  .schedule__time-day {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3125rem;
-    min-height: 0;
-    width: 100%;
   }
 }
 .schedule__time {
   position: relative;
   z-index: 2;
-  gap: 0.4375rem;
-  min-height: 2.1875rem;
-  padding: 0.3125rem 0.875rem 0.3125rem 0.1875rem;
+  width: 100%;
+  justify-content: center;
+  gap: 0.1875rem;
+  min-height: 0;
+  padding: 0.1875rem 0.875rem 0.1875rem 0.1875rem;
   border-radius: 3.125rem;
   background: #bc0482;
   box-shadow: 0 0 3.493px rgba(96, 0, 0, 0.2);
@@ -1546,80 +1510,88 @@ body {
 @media (min-width: 992px) {
   .schedule__time {
     width: 11.875rem;
-    justify-content: center;
-  }
-}
-@media (max-width: 992px) {
-  .schedule__time {
-    width: 100%;
-    justify-content: center;
-    min-height: 0;
-    padding: 0.1875rem 0.875rem 0.1875rem 0.1875rem;
-    gap: 0.1875rem;
+    gap: 0.4375rem;
+    min-height: 2.1875rem;
+    padding: 0.25rem 0.875rem 0.25rem 0.1875rem;
   }
 }
 .schedule__time-icon {
-  width: 1.5625rem;
-  height: 1.5625rem;
+  width: 1rem;
+  height: 1rem;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .schedule__time-icon {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5625rem;
+    height: 1.5625rem;
   }
 }
 .schedule__time-text {
-  font-size: 1.0625rem;
+  font-size: 0.75rem;
   line-height: 140%;
   white-space: nowrap;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .schedule__time-text {
-    font-size: 0.75rem;
+    font-size: 1.0625rem;
   }
 }
 .schedule__day {
-  position: absolute;
-  top: 0;
-  left: 8.3125rem;
+  position: static;
+  left: auto;
   z-index: 1;
-  min-height: 2.1875rem;
-  padding: 0.3125rem 1.25rem 0.3125rem 4.375rem;
+  width: 100%;
+  justify-content: center;
+  min-height: 0;
+  margin-top: 0;
+  padding: 0.1875rem 1.25rem;
   border: 0.0625rem solid #bc0482;
   border-radius: 3.125rem;
-  font-size: 1.0625rem;
+  font-size: 0.75rem;
   line-height: 150%;
   white-space: nowrap;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .schedule__day {
-    position: static;
-    left: auto;
-    width: 100%;
-    justify-content: center;
-    min-height: 0;
-    margin-top: 0;
-    padding: 0.1875rem 1.25rem;
-    font-size: 0.75rem;
+    position: absolute;
+    top: 0;
+    left: 8.3125rem;
+    width: auto;
+    justify-content: flex-start;
+    min-height: 2.1875rem;
+    padding: 0.125rem 1.25rem 0.125rem 4.375rem;
+    font-size: 1.0625rem;
   }
 }
 .schedule__teacher-avatar {
-  width: 2.3125rem;
-  height: 2.3125rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .schedule__teacher-avatar {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.3125rem;
+    height: 2.3125rem;
   }
 }
 .schedule__teacher-name {
-  font-size: 1.25rem;
+  font-size: 0.8125rem;
   line-height: 1;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .schedule__teacher-name {
-    font-size: 0.8125rem;
+    font-size: 1.25rem;
+  }
+}
+.schedule__teacher-name::before {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+  font-size: 1.125rem;
+}
+@media (min-width: 992px) {
+  .schedule__teacher-name::before {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
   }
 }
 @media (any-hover: hover) {
@@ -1627,24 +1599,14 @@ body {
     text-decoration: underline;
   }
 }
-.schedule__teacher-link-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-@media (max-width: 992px) {
-  .schedule__teacher-link-icon {
-    width: 1.125rem;
-    height: 1.125rem;
-  }
-}
 .schedule__sign-up {
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   line-height: 1;
   white-space: nowrap;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .schedule__sign-up {
-    font-size: 0.875rem;
+    font-size: 1.25rem;
   }
 }
 @media (any-hover: hover) {
@@ -1658,10 +1620,9 @@ body {
 .schedule__teachers .row {
   --bs-gutter-x: 1.25rem;
   --bs-gutter-y: 1.25rem;
-  margin-top: 1.25rem;
 }
 .schedule__teachers-title {
-  color: #222;
+  letter-spacing: normal;
 }
 
 .schedule-teacher {
@@ -1678,7 +1639,7 @@ body {
   object-position: center top;
 }
 .schedule-teacher__content {
-  padding: 1.25rem 0;
+  padding: 1.25rem 0 1.5rem;
   gap: 1.875rem;
 }
 .schedule-teacher__info {
