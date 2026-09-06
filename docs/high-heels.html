@@ -483,13 +483,13 @@
                         <div class="outfit__container container">
                             <div class="outfit__content">
                                 <div class="outfit__header row align-items-start">
-                                    <div class="col-xl-7 pt-sm-4">
-                                        <span class="outfit__badge badge rounded-5 color-accent bg-white me-auto d-flex fw-normal mt-3">Форма для первого занятия</span>
+                                    <div class="col-xl-7 pt-md-4">
+                                        <span class="outfit__badge badge rounded-5 color-accent bg-white me-auto d-flex fw-normal">Форма для первого занятия</span>
                                         <h2 class="outfit__title fs-title text-uppercase font-unbounded fw-semibold lh-base">Что надеть<br>на первое занятие?</h2>
                                         <p class="outfit__subtitle">Комфорт превыше всего. Главное — чтобы ты чувствовала себя свободно и могла наслаждаться движением.</p>
                                     </div>
                                 </div>
-                                <div class="outfit__cards d-grid gap-3">
+                                <div class="outfit__cards d-grid">
                                     <div class="card border-0 h-100 d-flex flex-sm-column flex-row">
                                         <div class="card__icon flex-shrink-0 d-flex justify-content-center align-items-center rounded-circle">
                                             <img src="img/icons/sneaker.svg" alt="Иконка">
@@ -516,9 +516,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="outfit__image">
-                                    <picture><source srcset="img/outfit/heels.webp" type="image/webp"><img src="img/outfit/heels.png" alt="Туфли для танцев High Heels"></picture>
-                                </div>
+                                <picture class="outfit__image">
+                                    <source media="(min-width: 767.98px)" srcset="img/outfit/heels.webp" type="image/webp">
+                                    <source media="(min-width: 767.98px)" srcset="img/outfit/heels.png">
+                                    <source srcset="img/outfit/heels-mobile.webp" type="image/webp">
+                                    <img src="img/outfit/heels-mobile.png" alt="Туфли для танцев High Heels">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -600,14 +603,71 @@
                         </div>
                     </div>
                 </section>
-                <!-- new block 
-                 here -->
+                <section class="outcomes">
+                    <div class="container">
+                        <div class="outcomes__header d-flex flex-column align-items-center text-center">
+                            <h2 class="outcomes__title font-unbounded lh-base fw-semibold text-uppercase">Что дают занятия high heels?</h2>
+                            <div class="outcomes__label color-accent bg-white text-center d-inline-block">Женская энергия, которая зажигает изнутри!</div>
+                        </div>
+                        <ul class="outcomes__list">
+                            <li class="outcomes__item">
+                                <div class="outcomes__item-content">
+                                    <div class="outcomes__item-name fw-bold">Легкость и харизма</div>
+                                    <div class="outcomes__item-desc">Движения становятся плавными, выразительными и притягательными.</div>
+                                </div>
+                                <div class="outcomes__item-image">
+                                    <picture><source srcset="img/benefits/01.webp" type="image/webp"><img src="img/benefits/01.png" alt="Легкость и харизма"></picture>
+                                </div>
+                            </li>
+                            <li class="outcomes__item">
+                                <div class="outcomes__item-content">
+                                    <div class="outcomes__item-name fw-bold">Магнетизм <br>и уверенная походка</div>
+                                    <div class="outcomes__item-desc">От королевской осанки до лёгкой, сексуальной походки, которая притягивает взгляды.</div>
+                                </div>
+                                <div class="outcomes__item-image">
+                                    <picture><source srcset="img/benefits/02.webp" type="image/webp"><img src="img/benefits/02.png" alt="Магнетизм и уверенная походка"></picture>
+                                </div>
+                            </li>
+                            <li class="outcomes__item">
+                                <div class="outcomes__item-content">
+                                    <div class="outcomes__item-name fw-bold">Женственность <br>и привлекательность</div>
+                                    <div class="outcomes__item-desc">— танец помогает чувствовать себя яркой, уверенной и выразительной.</div>
+                                </div>
+                                <div class="outcomes__item-image">
+                                    <picture><source srcset="img/benefits/03.webp" type="image/webp"><img src="img/benefits/03.png" alt="Женственность и привлекательность"></picture>
+                                </div>
+                            </li>
+                            <li class="outcomes__item">
+                                <div class="outcomes__item-content">
+                                    <div class="outcomes__item-name fw-bold">Взрывная уверенность в себе</div>
+                                    <div class="outcomes__item-desc">Танец пробуждает твою внутреннюю богиню. Ты чувствуешь грацию, красоту и притягательность.</div>
+                                </div>
+                                <div class="outcomes__item-image">
+                                    <picture><source srcset="img/benefits/04.webp" type="image/webp"><img src="img/benefits/04.png" alt="Взрывная уверенность в себе"></picture>
+                                </div>
+                            </li>
+                            <li class="outcomes__item">
+                                <div class="outcomes__item-content">
+                                    <div class="outcomes__item-name fw-bold">Развитие пластики <br>и координации</div>
+                                    <div class="outcomes__item-desc">— тело становится гибким, движения уверенными и грациозными</div>
+                                </div>
+                                <div class="outcomes__item-image">
+                                    <picture><source srcset="img/benefits/05.webp" type="image/webp"><img src="img/benefits/05.png" alt="Развитие пластики и координации"></picture>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="outcomes__cta d-flex flex-column flex-md-row align-items-center justify-content-center">
+                            <p class="outcomes__cta-text font-unbounded fw-medium text-uppercase mb-0">Попробуй начать!</p>
+                            <a href="#sign-up" class="btn btn-primary text-uppercase">Записаться на занятие</a>
+                        </div>
+                    </div>
+                </section>
                 <section class="location text-white">
                     <div class="location__container container">
                         <div class="location__content">
-                            <div class="location__body row align-items-center">
+                            <div class="location__body row">
                                 <div class="col-lg-6">
-                                    <a href="https://yandex.ru/maps/?text=ТРК%20VEGAS%20Сити%2C%20м.%20Мякинино" class="location__map overflow-hidden rounded-4 d-block" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://yandex.ru/maps/?text=ТРК%20VEGAS%20Сити%2C%20м.%20Мякинино" class="location__map overflow-hidden rounded-4 d-block h-100" target="_blank" rel="noopener noreferrer">
                                         <picture><source srcset="img/location/map.webp" type="image/webp"><img src="img/location/map.png" alt="Карта — ТРК VEGAS Сити, м. Мякинино"></picture>
                                     </a>
                                 </div>
