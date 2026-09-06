@@ -257,8 +257,8 @@
                             <table class="schedule__table-el table mb-0 w-100">
                                 <thead class="schedule__table-head">
                                     <tr>
-                                        <th class="schedule__th schedule__th--time-day position-relative font-unbounded fw-bold lh-base text-white">
-                                            <span>Время</span>
+                                        <th class="schedule__th schedule__th--time-day position-relative font-unbounded fw-bold lh-base text-white ">
+                                            <span class="d-xl-inline d-block">Время</span>
                                             <span class="schedule__table-head-day">День недели</span>
                                         </th>
                                         <th class="schedule__th schedule__th--hall font-unbounded fw-bold lh-base text-white">Зал</th>
@@ -268,83 +268,91 @@
                                 <tbody class="schedule__table-body">
                                     <tr class="schedule__row">
                                         <td class="schedule__td schedule__td--time-day">
-                                            <div class="schedule__time-day position-relative">
-                                                <div class="schedule__time d-inline-flex align-items-center">
-                                                    <img src="img/icons/clock.svg" width="25" height="25" class="schedule__time-icon flex-shrink-0" alt="">
-                                                    <span class="schedule__time-text fw-bold">12:00 — 13:00</span>
+                                            <div class="schedule__time-day position-relative d-xl-block d-flex flex-column">
+                                                <div class="schedule__time d-inline-flex align-items-center icon-clock fw-bold">
+                                                    12:00 — 13:00
                                                 </div>
                                                 <div class="schedule__day color-accent d-inline-flex align-items-center fw-medium">Понедельник</div>
                                             </div>
                                         </td>
                                         <td class="schedule__td schedule__td--hall fw-medium lh-sm opacity-75">Зал №5</td>
+                                        
                                         <td class="schedule__td schedule__td--teacher">
                                             <div class="schedule__teacher d-flex align-items-center">
-                                                <picture><source srcset="img/teachers/Alexandra-Tolmach-3.webp" type="image/webp"><img src="img/teachers/Alexandra-Tolmach-3.png" width="37" height="37" class="schedule__teacher-avatar rounded-circle flex-shrink-0 object-fit-cover" alt="Александра Толмач"></picture>
-                                                <a href="" class="schedule__teacher-name d-inline-flex align-items-center gap-2 flex-row-reverse color-accent fw-medium text-decoration-none icon-external-link">Александра Толмач</a>
+                                                <div class="schedule__teacher-avatar flex-shrink-0 rounded-circle overflow-hidden">
+                                                    <picture><source srcset="img/teachers/Alexandra-Tolmach-3.webp" type="image/webp"><img src="img/teachers/Alexandra-Tolmach-3.png" width="37" height="37" class="cover-image" alt="Александра Толмач"></picture>
+                                                </div>
+                                                <a href="" class="schedule__teacher-name d-inline-flex align-items-center gap-sm-2 gap-1 flex-row-reverse color-accent fw-medium text-decoration-none icon-external-link">Александра Толмач</a>
                                             </div>
                                         </td>
                                         <td class="schedule__td schedule__td--action">
-                                            <a href="" class="schedule__sign-up color-accent fw-medium text-decoration-none">Записаться →</a>
+                                            <a href="" class="schedule__sign-up color-accent fw-medium text-decoration-none  ms-lg-0 ms-auto">Записаться →</a>
                                         </td>
                                     </tr><tr class="schedule__row">
                                         <td class="schedule__td schedule__td--time-day">
-                                            <div class="schedule__time-day position-relative">
-                                                <div class="schedule__time d-inline-flex align-items-center">
-                                                    <img src="img/icons/clock.svg" width="25" height="25" class="schedule__time-icon flex-shrink-0" alt="">
-                                                    <span class="schedule__time-text fw-bold">20:00 — 21:00</span>
+                                            <div class="schedule__time-day position-relative d-xl-block d-flex flex-column">
+                                                <div class="schedule__time d-inline-flex align-items-center icon-clock fw-bold">
+                                                    20:00 — 21:00
                                                 </div>
                                                 <div class="schedule__day color-accent d-inline-flex align-items-center fw-medium">Понедельник</div>
                                             </div>
                                         </td>
                                         <td class="schedule__td schedule__td--hall fw-medium lh-sm opacity-75">Зал №5</td>
+                                        
                                         <td class="schedule__td schedule__td--teacher">
                                             <div class="schedule__teacher d-flex align-items-center">
-                                                <picture><source srcset="img/teachers/Alexandra-Tolmach-3.webp" type="image/webp"><img src="img/teachers/Alexandra-Tolmach-3.png" width="37" height="37" class="schedule__teacher-avatar rounded-circle flex-shrink-0 object-fit-cover" alt="Александра Толмач"></picture>
-                                                <a href="" class="schedule__teacher-name d-inline-flex align-items-center gap-2 flex-row-reverse color-accent fw-medium text-decoration-none icon-external-link">Александра Толмач</a>
+                                                <div class="schedule__teacher-avatar flex-shrink-0 rounded-circle overflow-hidden">
+                                                    <picture><source srcset="img/teachers/Alexandra-Tolmach-3.webp" type="image/webp"><img src="img/teachers/Alexandra-Tolmach-3.png" width="37" height="37" class="cover-image" alt="Александра Толмач"></picture>
+                                                </div>
+                                                <a href="" class="schedule__teacher-name d-inline-flex align-items-center gap-sm-2 gap-1 flex-row-reverse color-accent fw-medium text-decoration-none icon-external-link">Александра Толмач</a>
                                             </div>
                                         </td>
                                         <td class="schedule__td schedule__td--action">
-                                            <a href="" class="schedule__sign-up color-accent fw-medium text-decoration-none">Записаться →</a>
+                                            <a href="" class="schedule__sign-up color-accent fw-medium text-decoration-none  ms-lg-0 ms-auto">Записаться →</a>
                                         </td>
                                     </tr><tr class="schedule__row">
                                         <td class="schedule__td schedule__td--time-day">
-                                            <div class="schedule__time-day position-relative">
-                                                <div class="schedule__time d-inline-flex align-items-center">
-                                                    <img src="img/icons/clock.svg" width="25" height="25" class="schedule__time-icon flex-shrink-0" alt="">
-                                                    <span class="schedule__time-text fw-bold">12:00 — 13:00</span>
+                                            <div class="schedule__time-day position-relative d-xl-block d-flex flex-column">
+                                                <div class="schedule__time d-inline-flex align-items-center icon-clock fw-bold">
+                                                    12:00 — 13:00
                                                 </div>
                                                 <div class="schedule__day color-accent d-inline-flex align-items-center fw-medium">Среда</div>
                                             </div>
                                         </td>
                                         <td class="schedule__td schedule__td--hall fw-medium lh-sm opacity-75">Зал №5</td>
+                                        
                                         <td class="schedule__td schedule__td--teacher">
                                             <div class="schedule__teacher d-flex align-items-center">
-                                                <picture><source srcset="img/teachers/Alexandra-Tolmach-3.webp" type="image/webp"><img src="img/teachers/Alexandra-Tolmach-3.png" width="37" height="37" class="schedule__teacher-avatar rounded-circle flex-shrink-0 object-fit-cover" alt="Александра Толмач"></picture>
-                                                <a href="" class="schedule__teacher-name d-inline-flex align-items-center gap-2 flex-row-reverse color-accent fw-medium text-decoration-none icon-external-link">Александра Толмач</a>
+                                                <div class="schedule__teacher-avatar flex-shrink-0 rounded-circle overflow-hidden">
+                                                    <picture><source srcset="img/teachers/Alexandra-Tolmach-3.webp" type="image/webp"><img src="img/teachers/Alexandra-Tolmach-3.png" width="37" height="37" class="cover-image" alt="Александра Толмач"></picture>
+                                                </div>
+                                                <a href="" class="schedule__teacher-name d-inline-flex align-items-center gap-sm-2 gap-1 flex-row-reverse color-accent fw-medium text-decoration-none icon-external-link">Александра Толмач</a>
                                             </div>
                                         </td>
                                         <td class="schedule__td schedule__td--action">
-                                            <a href="" class="schedule__sign-up color-accent fw-medium text-decoration-none">Записаться →</a>
+                                            <a href="" class="schedule__sign-up color-accent fw-medium text-decoration-none  ms-lg-0 ms-auto">Записаться →</a>
                                         </td>
                                     </tr><tr class="schedule__row">
                                         <td class="schedule__td schedule__td--time-day">
-                                            <div class="schedule__time-day position-relative">
-                                                <div class="schedule__time d-inline-flex align-items-center">
-                                                    <img src="img/icons/clock.svg" width="25" height="25" class="schedule__time-icon flex-shrink-0" alt="">
-                                                    <span class="schedule__time-text fw-bold">20:00 — 21:00</span>
+                                            <div class="schedule__time-day position-relative d-xl-block d-flex flex-column">
+                                                <div class="schedule__time d-inline-flex align-items-center icon-clock fw-bold">
+                                                    20:00 — 21:00
                                                 </div>
                                                 <div class="schedule__day color-accent d-inline-flex align-items-center fw-medium">Среда</div>
                                             </div>
                                         </td>
                                         <td class="schedule__td schedule__td--hall fw-medium lh-sm opacity-75">Зал №5</td>
+                                        
                                         <td class="schedule__td schedule__td--teacher">
                                             <div class="schedule__teacher d-flex align-items-center">
-                                                <picture><source srcset="img/teachers/Alexandra-Tolmach-3.webp" type="image/webp"><img src="img/teachers/Alexandra-Tolmach-3.png" width="37" height="37" class="schedule__teacher-avatar rounded-circle flex-shrink-0 object-fit-cover" alt="Александра Толмач"></picture>
-                                                <a href="" class="schedule__teacher-name d-inline-flex align-items-center gap-2 flex-row-reverse color-accent fw-medium text-decoration-none icon-external-link">Александра Толмач</a>
+                                                <div class="schedule__teacher-avatar flex-shrink-0 rounded-circle overflow-hidden">
+                                                    <picture><source srcset="img/teachers/Alexandra-Tolmach-3.webp" type="image/webp"><img src="img/teachers/Alexandra-Tolmach-3.png" width="37" height="37" class="cover-image" alt="Александра Толмач"></picture>
+                                                </div>
+                                                <a href="" class="schedule__teacher-name d-inline-flex align-items-center gap-sm-2 gap-1 flex-row-reverse color-accent fw-medium text-decoration-none icon-external-link">Александра Толмач</a>
                                             </div>
                                         </td>
                                         <td class="schedule__td schedule__td--action">
-                                            <a href="" class="schedule__sign-up color-accent fw-medium text-decoration-none">Записаться →</a>
+                                            <a href="" class="schedule__sign-up color-accent fw-medium text-decoration-none  ms-lg-0 ms-auto">Записаться →</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -353,7 +361,7 @@
                         <div class="schedule__teachers">
                             <h2 class="schedule__teachers-title fs-title text-uppercase text-center font-unbounded fw-semibold lh-base mb-4">Преподаватели направления</h2>
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-xl-4 col-lg-6">
                                     <div class="schedule-teacher d-flex bg-white overflow-hidden h-100">
                                         <div class="schedule-teacher__image flex-shrink-0 overflow-hidden">
                                             <picture><source srcset="img/teachers/Alexandra-Tolmach-3.webp" type="image/webp"><img src="img/teachers/Alexandra-Tolmach-3.png" class="schedule-teacher__photo object-fit-cover w-100 h-100" alt="Александра Толмач"></picture>
@@ -369,7 +377,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div><div class="col-lg-4">
+                                </div><div class="col-xl-4 col-lg-6">
                                     <div class="schedule-teacher d-flex bg-white overflow-hidden h-100">
                                         <div class="schedule-teacher__image flex-shrink-0 overflow-hidden">
                                             <picture><source srcset="img/teachers/Olga-Kolesnikova.webp" type="image/webp"><img src="img/teachers/Olga-Kolesnikova.png" class="schedule-teacher__photo object-fit-cover w-100 h-100" alt="Ольга Колесникова"></picture>

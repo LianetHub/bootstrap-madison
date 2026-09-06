@@ -579,15 +579,20 @@ body {
 }
 
 .schedule {
-	padding: rem(40) 0;
+	padding: rem(32) 0;
 
 	@media (min-width: $md4) {
-		padding: rem(40) 0 rem(40);
+		padding: rem(40) 0;
 	}
 
 	// .schedule__head
 	&__head {
-		margin-bottom: rem(40);
+		margin-bottom: rem(18);
+
+		@media (min-width:$md4) {
+			margin-bottom: rem(40);
+
+		}
 	}
 
 	// .schedule__title
@@ -597,12 +602,13 @@ body {
 
 	// .schedule__note
 	&__note {
-		margin-top: rem(20);
 		margin-bottom: 0;
 		font-size: 0.875rem;
 		line-height: 140%;
+		margin-top: rem(10);
 
 		@media (min-width: $md5) {
+			margin-top: rem(20);
 			font-size: 1.25rem;
 		}
 
@@ -671,26 +677,36 @@ body {
 	&__th {
 		padding: rem(20) !important;
 		background: transparent;
-		font-size: 1.0625rem;
 		vertical-align: middle;
 		letter-spacing: normal;
+		font-size: 1rem;
+
+		@media (min-width:$md1) {
+			font-size: 1.0625rem;
+
+		}
 
 		&--time-day {
-			flex: 0 0 rem(380);
-			width: rem(474);
+			@media (min-width:$md2) {
+				flex: 0 0 rem(380);
+				width: rem(474);
+			}
 		}
 	}
 
 	// .schedule__table-head-day
 	&__table-head-day {
-		margin-left: 24%;
+		@media (min-width:$md2) {
+			margin-left: 24%;
+
+		}
 	}
 
 	// .schedule__table-body
 	&__table-body {
 		display: flex;
 		flex-direction: column;
-		gap: rem(10);
+		gap: rem(5);
 		background: transparent;
 
 		@media (min-width: $md3) {
@@ -702,12 +718,9 @@ body {
 	// .schedule__row
 	&__row {
 		display: grid;
-		grid-template-columns: rem(119) 1fr;
-		grid-template-areas:
-			"time hall"
-			"time teacher"
-			"time action";
-		gap: rem(3) rem(12);
+		grid-template-columns: rem(119) minmax(0, 1fr);
+		column-gap: rem(12);
+		row-gap: rem(3);
 		align-items: center;
 		padding: rem(12);
 		background: #fff;
@@ -717,10 +730,15 @@ body {
 		@media (min-width: $md3) {
 			display: table-row;
 			width: 100%;
-			padding: rem(15) rem(20);
+			padding: rem(12) rem(16);
 			background: transparent;
 			border-radius: 0;
 			box-shadow: none;
+		}
+
+		@media (min-width:$md1) {
+			padding: rem(15) rem(20);
+
 		}
 
 		&:last-child {
@@ -750,58 +768,87 @@ body {
 		@media (min-width: $md3) {
 			display: table-cell;
 			width: auto;
-			padding: rem(14) rem(20) !important;
+			padding: rem(12) rem(16) !important;
 			background: #fff;
 			border-bottom: rem(1) solid #e6e5e5;
 		}
 
+		@media (min-width:$md1) {
+			padding: rem(14) rem(20) !important;
+
+		}
+
 		&--time-day {
-			grid-area: time;
+			grid-row: span 2;
 			align-self: center;
 			min-width: 0;
 			width: rem(119);
 
 			@media (min-width: $md3) {
+				width: auto;
+			}
+
+			@media (min-width: $md2) {
 				flex: 0 0 rem(380);
 				width: rem(380);
 			}
 		}
 
 		&--hall {
-			grid-area: hall;
-			justify-self: end;
-			text-align: right;
+			justify-self: stretch;
+			text-align: left;
 			font-size: rem(12);
+			line-height: 150%;
 
-			@media (min-width: $md3) {
+			@media (min-width:$md3) {
+				font-size: 1rem;
+			}
+
+			@media (min-width: $md2) {
 				flex: 0 0 rem(200);
 				width: rem(200);
 				justify-self: auto;
-				text-align: left;
+
 				font-size: 1.0625rem;
 			}
 		}
 
-		&--teacher {
-			grid-area: teacher;
-			justify-self: end;
+		&--level {
+			display: none;
 
 			@media (min-width: $md3) {
-				flex: 0 1 rem(410);
-				width: rem(410);
+				display: table-cell;
+			}
+		}
+
+		&--teacher {
+			justify-self: stretch;
+			min-width: 0;
+
+			@media (min-width: $md3) {
+
+				width: rem(320);
 				justify-self: auto;
+			}
+
+			@media (min-width:$md1) {
+				width: rem(410);
+
 			}
 		}
 
 		&--action {
-			grid-area: action;
+			grid-column: span 2;
 			justify-self: end;
+			margin-top: rem(4);
 			white-space: nowrap;
+			text-align: right;
 
 			@media (min-width: $md3) {
 				flex: 0 0 auto;
 				width: rem(135);
 				justify-self: auto;
+				margin-top: 0;
 			}
 		}
 	}
@@ -809,26 +856,21 @@ body {
 	// .schedule__teacher
 	&__teacher {
 		gap: rem(5);
-		flex-wrap: wrap;
-		justify-content: flex-end;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
 
 		@media (min-width: $md3) {
 			gap: rem(11);
-			flex-wrap: nowrap;
-			justify-content: flex-start;
 		}
 	}
 
 	// .schedule__time-day
 	&__time-day {
-		display: flex;
-		flex-direction: column;
 		gap: rem(5);
 		min-height: 0;
 		width: 100%;
 
 		@media (min-width: $md3) {
-			display: block;
 			min-height: rem(35);
 			width: 100%;
 			max-width: rem(380);
@@ -848,36 +890,55 @@ body {
 		background: $accent;
 		box-shadow: 0 0 3.493px rgba(96, 0, 0, 0.2);
 		color: #fff;
+		font-size: rem(12);
+		line-height: 140%;
+		white-space: nowrap;
+
+
+
+		&::before {
+			width: rem(16);
+			height: rem(16);
+			flex-shrink: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+
+			@media (min-width:$md3) {
+				width: rem(20);
+				height: rem(20);
+			}
+
+			@media (min-width: $md1) {
+				width: rem(25);
+				height: rem(25);
+			}
+
+		}
 
 		@media (min-width: $md3) {
+			font-size: 1rem;
+		}
+
+		@media (min-width: $md2) {
+			font-size: 1rem;
+			width: rem(160);
+			gap: rem(7);
+			min-height: rem(35);
+			padding: rem(4) rem(7) rem(4) rem(3);
+		}
+
+		@media (min-width:$md1) {
 			width: rem(190);
+			font-size: 1.0625rem;
 			gap: rem(7);
 			min-height: rem(35);
 			padding: rem(4) rem(14) rem(4) rem(3);
 		}
 	}
 
-	// .schedule__time-icon
-	&__time-icon {
-		width: rem(16);
-		height: rem(16);
 
-		@media (min-width: $md3) {
-			width: rem(25);
-			height: rem(25);
-		}
-	}
-
-	// .schedule__time-text
-	&__time-text {
-		font-size: rem(12);
-		line-height: 140%;
-		white-space: nowrap;
-
-		@media (min-width: $md3) {
-			font-size: 1.0625rem;
-		}
-	}
 
 	// .schedule__day
 	&__day {
@@ -895,15 +956,26 @@ body {
 		line-height: 150%;
 		white-space: nowrap;
 
-		@media (min-width: $md3) {
+		@media (min-width:$md3) {
+			font-size: 1rem;
+
+		}
+
+		@media (min-width: $md2) {
 			position: absolute;
 			top: 0;
-			left: rem(133);
+			left: rem(110);
 			width: auto;
 			justify-content: flex-start;
 			min-height: rem(35);
+			padding: rem(2) rem(12) rem(2) rem(60);
+		}
+
+		@media (min-width:$md1) {
+			left: rem(133);
 			padding: rem(2) rem(20) rem(2) rem(70);
 			font-size: 1.0625rem;
+
 		}
 	}
 
@@ -911,8 +983,15 @@ body {
 	&__teacher-avatar {
 		width: rem(24);
 		height: rem(24);
+		flex-shrink: 0;
+		align-self: center;
 
-		@media (min-width: $md3) {
+		@media (min-width:$md3) {
+			width: rem(30);
+			height: rem(30);
+		}
+
+		@media (min-width: $md1) {
 			width: rem(37);
 			height: rem(37);
 		}
@@ -922,8 +1001,13 @@ body {
 	&__teacher-name {
 		font-size: rem(13);
 		line-height: 1;
+		transition: color 0.3s ease;
 
-		@media (min-width: $md3) {
+		@media (min-width:$md3) {
+			font-size: 1rem;
+		}
+
+		@media (min-width: $md1) {
 			font-size: 1.25rem;
 		}
 
@@ -933,7 +1017,7 @@ body {
 			flex-shrink: 0;
 			font-size: rem(18);
 
-			@media (min-width: $md3) {
+			@media (min-width: $md1) {
 				width: rem(24);
 				height: rem(24);
 				font-size: rem(24);
@@ -942,7 +1026,7 @@ body {
 
 		@media (any-hover: hover) {
 			&:hover {
-				text-decoration: underline;
+				color: darken($color: $accent, $amount: 10);
 			}
 		}
 	}
@@ -952,14 +1036,19 @@ body {
 		font-size: rem(14);
 		line-height: 1;
 		white-space: nowrap;
+		transition: color 0.3s ease;
 
-		@media (min-width: $md3) {
+		@media (min-width:$md2) {
+			font-size: 1rem;
+		}
+
+		@media (min-width: $md1) {
 			font-size: 1.25rem;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				text-decoration: underline;
+				color: darken($color: $accent, $amount: 10);
 			}
 		}
 	}
@@ -990,12 +1079,11 @@ body {
 	&__image {
 		width: rem(134);
 		height: rem(189);
+		min-height: 100%;
 	}
 
 	// .schedule-teacher__photo
-	&__photo {
-		object-position: center top;
-	}
+	&__photo {}
 
 	// .schedule-teacher__content
 	&__content {
