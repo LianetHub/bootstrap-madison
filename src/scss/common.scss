@@ -64,9 +64,14 @@ body {
 .directions {
 
 	&--slider {
-		padding: rem(40) 0;
+		padding: rem(12) 0 rem(20);
 
-		@media (min-width: $md5) {
+		@media (min-width:$md5) {
+			padding: rem(40) 0;
+
+		}
+
+		@media (min-width: $md3) {
 			padding: rem(80) 0;
 		}
 	}

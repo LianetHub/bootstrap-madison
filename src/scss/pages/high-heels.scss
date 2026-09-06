@@ -461,7 +461,7 @@
 	// .outfit__image
 	&__image {
 		position: absolute;
-		z-index: 1;
+		z-index: 2;
 		top: rem(0);
 		right: rem(-166);
 		bottom: auto;
@@ -528,7 +528,7 @@
 	position: relative;
 	z-index: 1;
 	margin: 0 auto;
-	padding: rem(60) 0 rem(80);
+	padding: rem(60) 0 rem(56);
 	overflow: hidden;
 	background:
 		radial-gradient(ellipse 90% 72% at 49.37% 43.69%, transparent 42%, rgba(118, 26, 27, 0.55) 100%),
@@ -608,8 +608,22 @@
 	// .location__body
 	&__body {
 		&.row {
-			--bs-gutter-x: 1.25rem;
-			--bs-gutter-y: 1.5rem;
+			--bs-gutter-x: 0;
+			--bs-gutter-y: 0;
+
+			@media (min-width:$md3) {
+				--bs-gutter-x: 1.25rem;
+				--bs-gutter-y: 1.5rem;
+
+			}
+
+			.col-lg-6 {
+				display: contents;
+
+				@media (min-width:$md3) {
+					display: block;
+				}
+			}
 		}
 	}
 
@@ -618,9 +632,15 @@
 		box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.08);
 		border-radius: rem(15);
 		overflow: hidden;
-		display: flex;
-		flex-direction: column;
 		position: relative;
+		display: block;
+
+
+		@media (max-width:$md3) {
+			margin-bottom: rem(24);
+			width: 100%;
+			aspect-ratio: math.div(355, 224);
+		}
 
 		@media (min-width: $md3) {
 			min-height: 100%;
@@ -640,9 +660,11 @@
 
 	// .location__title
 	&__title {
-		margin-bottom: rem(16);
+		margin-bottom: rem(20);
+		order: -1;
 
 		@media (min-width: $md3) {
+			order: 0;
 			margin-bottom: rem(25);
 		}
 	}
@@ -661,7 +683,12 @@
 		}
 
 		p {
-			margin-bottom: rem(34);
+			margin-bottom: rem(20);
+
+			@media (min-width:$md3) {
+				margin-bottom: rem(34);
+
+			}
 
 			&:last-child {
 				margin-bottom: 0;
@@ -676,6 +703,7 @@
 		list-style: none;
 		font-size: 0.875rem;
 		line-height: 140%;
+		width: 100%;
 
 		@media (min-width: $md5) {
 			font-size: 1.125rem;
@@ -737,7 +765,7 @@
 	// .location__parking-text
 	&__parking-text {
 		color: #222;
-		font-size: 0.875rem;
+		font-size: rem(17);
 		line-height: 140%;
 
 		@media (min-width: $md5) {

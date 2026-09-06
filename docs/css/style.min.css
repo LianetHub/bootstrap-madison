@@ -20,16 +20,16 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Unbounded";
-  src: url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Unbounded-VariableFont_wght.woff") format("woff");
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
+  font-family: "Unbounded";
+  src: url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Unbounded-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -821,9 +821,14 @@ body {
 }
 
 .directions--slider {
-  padding: 2.5rem 0;
+  padding: 0.75rem 0 1.25rem;
 }
 @media (min-width: 576px) {
+  .directions--slider {
+    padding: 2.5rem 0;
+  }
+}
+@media (min-width: 992px) {
   .directions--slider {
     padding: 5rem 0;
   }
@@ -4939,7 +4944,7 @@ body {
 }
 .outfit__image {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0rem;
   right: -10.375rem;
   bottom: auto;
@@ -5008,7 +5013,7 @@ body {
   position: relative;
   z-index: 1;
   margin: 0 auto;
-  padding: 3.75rem 0 5rem;
+  padding: 3.75rem 0 3.5rem;
   overflow: hidden;
   background: radial-gradient(ellipse 90% 72% at 49.37% 43.69%, transparent 42%, rgba(118, 26, 27, 0.55) 100%), radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
 }
@@ -5077,16 +5082,36 @@ body {
   z-index: 3;
 }
 .location__body.row {
-  --bs-gutter-x: 1.25rem;
-  --bs-gutter-y: 1.5rem;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+@media (min-width: 992px) {
+  .location__body.row {
+    --bs-gutter-x: 1.25rem;
+    --bs-gutter-y: 1.5rem;
+  }
+}
+.location__body.row .col-lg-6 {
+  display: contents;
+}
+@media (min-width: 992px) {
+  .location__body.row .col-lg-6 {
+    display: block;
+  }
 }
 .location__map {
   box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.08);
   border-radius: 0.9375rem;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   position: relative;
+  display: block;
+}
+@media (max-width: 992px) {
+  .location__map {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    aspect-ratio: 1.5848214286;
+  }
 }
 @media (min-width: 992px) {
   .location__map {
@@ -5102,10 +5127,12 @@ body {
   min-height: 100%;
 }
 .location__title {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  order: -1;
 }
 @media (min-width: 992px) {
   .location__title {
+    order: 0;
     margin-bottom: 1.5625rem;
   }
 }
@@ -5124,7 +5151,12 @@ body {
   }
 }
 .location__text p {
-  margin-bottom: 2.125rem;
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 992px) {
+  .location__text p {
+    margin-bottom: 2.125rem;
+  }
 }
 .location__text p:last-child {
   margin-bottom: 0;
@@ -5135,6 +5167,7 @@ body {
   list-style: none;
   font-size: 0.875rem;
   line-height: 140%;
+  width: 100%;
 }
 @media (min-width: 576px) {
   .location__list {
@@ -5191,7 +5224,7 @@ body {
 }
 .location__parking-text {
   color: #222;
-  font-size: 0.875rem;
+  font-size: 1.0625rem;
   line-height: 140%;
 }
 @media (min-width: 576px) {
