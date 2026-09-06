@@ -177,23 +177,23 @@
                         </div>
                     </div>
                 </section>
-                <section class="outfit text-white d-flex flex-column justify-content-start">
-                    <div class="outfit__container container">
-                        <div class="outfit__content d-flex flex-column">
-                            <div class="outfit__header row align-items-start">
-                                <div class="col-xl-6 pt-sm-4">
-                                    <span class="outfit__badge badge rounded-5 color-accent bg-white me-auto d-flex fw-normal mt-3">Форма для первого занятия</span>
-                                    <h2 class="outfit__title fs-title text-uppercase font-unbounded fw-semibold lh-base">Что надеть<br>на первое занятие?</h2>
-                                    <p class="outfit__subtitle">Комфорт превыше всего. Главное — чтобы ты чувствовала себя свободно и могла наслаждаться движением.</p>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="outfit__image position-relative d-block h-100">
-                                        <img src="@img/outfit/heels.png" alt="Туфли для танцев High Heels">
+                <section class="outfit text-white">
+                    <div class="outfit__wrapper">
+                        <div class="outfit__container container">
+                            <div class="outfit__content">
+                                <div class="outfit__header row align-items-start">
+                                    <div class="col-xl-7 pt-sm-4">
+                                        <span class="outfit__badge badge rounded-5 color-accent bg-white me-auto d-flex fw-normal mt-3">Форма для первого занятия</span>
+                                        <h2 class="outfit__title fs-title text-uppercase font-unbounded fw-semibold lh-base">Что надеть<br>на первое занятие?</h2>
+                                        <p class="outfit__subtitle">Комфорт превыше всего. Главное — чтобы ты чувствовала себя свободно и могла наслаждаться движением.</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="outfit__cards d-grid gap-3">
-                                @@loop('./html/templates/_school-card.html', './html/json/outfit-cards-high-heels.json')
+                                <div class="outfit__cards d-grid gap-3">
+                                    @@loop('./html/templates/_school-card.html', './html/json/outfit-cards-high-heels.json')
+                                </div>
+                                <div class="outfit__image">
+                                    <img src="@img/outfit/heels.png" alt="Туфли для танцев High Heels">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -275,7 +275,8 @@
                         </div>
                     </div>
                 </section>
-
+                <!-- new block 
+                 here -->
                 <section class="location text-white">
                     <div class="location__container container">
                         <div class="location__content">

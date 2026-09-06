@@ -6,13 +6,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "LTSuperior";
   font-display: swap;
   src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
@@ -20,16 +13,23 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Unbounded";
-  src: url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Unbounded-VariableFont_wght.woff") format("woff");
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Unbounded-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -4807,9 +4807,8 @@ body {
 .outfit {
   position: relative;
   z-index: 1;
-  min-height: 65rem;
+  min-height: 57.5rem;
   margin: 0 auto;
-  padding: 2.5rem 0 6.25rem;
   overflow: hidden;
   background: radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
 }
@@ -4823,11 +4822,6 @@ body {
   height: 100%;
   background: url("../img/school-mask.svg") center/auto 100% no-repeat;
   pointer-events: none;
-}
-@media (min-width: 576px) {
-  .outfit {
-    padding: 5rem 0;
-  }
 }
 @media (min-width: 1920px) {
   .outfit {
@@ -4844,6 +4838,17 @@ body {
     background: linear-gradient(90deg, #edecec 0%, #edecec calc((100% - 3007px) / 2), transparent calc((100% - 3007px) / 2)), linear-gradient(270deg, #edecec 0%, #edecec calc((100% - 3007px) / 2), transparent calc((100% - 3007px) / 2));
     pointer-events: none;
   }
+}
+.outfit__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: url("../img/school-mask-bottom.svg") center/auto 100% no-repeat;
+  pointer-events: none;
 }
 .no-webp .outfit__container::before {
   background: url("../img/halls/02.jpg") center/cover no-repeat; }
@@ -4871,6 +4876,21 @@ body {
 .outfit__content {
   position: relative;
   z-index: 3;
+  padding: 2.5rem 0 5rem;
+}
+@media (min-width: 576px) {
+  .outfit__content {
+    padding: 4rem 0 5rem;
+  }
+}
+@media (min-width: 1488px) {
+  .outfit__content {
+    padding: 4.375rem 0 6.25rem;
+  }
+}
+.outfit__header {
+  position: relative;
+  z-index: 2;
 }
 .outfit__header.row {
   --bs-gutter-x: 2.5rem;
@@ -4894,10 +4914,11 @@ body {
 }
 .outfit__title {
   margin-top: 1.25rem;
+  letter-spacing: normal;
 }
 @media (min-width: 576px) {
   .outfit__title {
-    margin-top: 1.875rem;
+    margin-top: 2.75rem;
   }
 }
 .outfit__subtitle {
@@ -4909,7 +4930,7 @@ body {
 }
 @media (min-width: 576px) {
   .outfit__subtitle {
-    margin-top: 1.5rem;
+    margin-top: 1.875rem;
     font-size: 1.25rem;
   }
 }
@@ -4919,17 +4940,43 @@ body {
   }
 }
 .outfit__image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 26.25rem;
-  margin: 1.25rem auto 0;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  width: 17.5rem;
+  pointer-events: none;
 }
-@media (min-width: 992px) {
+@media (max-width: 576px) {
   .outfit__image {
-    max-width: none;
-    margin: -2.5rem 0 -3.75rem auto;
-    justify-content: flex-end;
+    left: 50%;
+    right: auto;
+    bottom: -1.25rem;
+    width: 67%;
+    max-width: 20rem;
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 768px) {
+  .outfit__image {
+    left: auto;
+    right: 0;
+    width: 28.75rem;
+    bottom: -2.5rem;
+    transform: rotate(11deg);
+  }
+}
+@media (min-width: 1200px) {
+  .outfit__image {
+    right: -3rem;
+    width: 32.5rem;
+  }
+}
+@media (min-width: 1488px) {
+  .outfit__image {
+    width: 50rem;
+    right: -10rem;
+    bottom: -25.5rem;
   }
 }
 .outfit__image picture,
@@ -4937,12 +4984,12 @@ body {
 .outfit__image source {
   display: block;
   width: 100%;
-  max-width: 32.5rem;
   height: auto;
-  transform: rotate(11deg);
-  filter: drop-shadow(0 0.75rem 1.875rem rgba(0, 0, 0, 0.25));
 }
 .outfit__cards {
+  position: relative;
+  z-index: 2;
+  width: 100%;
   margin-top: 1.5rem;
 }
 @media (min-width: 576px) {
