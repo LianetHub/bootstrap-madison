@@ -1874,7 +1874,7 @@ body {
 		bottom: 0;
 		left: 50%;
 		z-index: -1;
-		width: 100vw;
+		width: calc(100% + 2rem);
 		transform: translateX(-50%);
 		background: linear-gradient(0deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.62) 100%), #761A1B;
 		background-blend-mode: overlay, normal;
