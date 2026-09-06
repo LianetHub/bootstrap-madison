@@ -1059,7 +1059,11 @@ body {
 
 		.row {
 			--bs-gutter-x: #{rem(20)};
-			--bs-gutter-y: #{rem(20)};
+			--bs-gutter-y: #{rem(5)};
+
+			@media (min-width: $md3) {
+				--bs-gutter-y: #{rem(20)};
+			}
 		}
 	}
 
@@ -1072,52 +1076,116 @@ body {
 .schedule-teacher {
 	border-radius: rem(15);
 	box-shadow: 0 rem(4) rem(15) 0 rgba(0, 0, 0, 0.08);
-	gap: rem(15);
-	padding-right: rem(15);
+	gap: rem(11);
+	padding-right: rem(11);
+	min-height: rem(144);
 
 	// .schedule-teacher__image
 	&__image {
-		width: rem(134);
-		height: rem(189);
-		min-height: 100%;
+		width: rem(102);
+		height: rem(144);
+		align-self: stretch;
 	}
 
 	// .schedule-teacher__photo
-	&__photo {}
+	&__photo {
+		object-position: center top;
+	}
 
 	// .schedule-teacher__content
 	&__content {
-		padding: rem(20) 0 rem(24);
-		gap: rem(30);
+		padding: rem(15) 0 rem(18);
+		gap: rem(23);
+		min-width: 0;
 	}
 
 	// .schedule-teacher__info
 	&__info {
 		display: flex;
 		flex-direction: column;
-		gap: rem(15);
+		gap: rem(11);
 	}
 
 	// .schedule-teacher__name
 	&__name {
-		font-size: 1.25rem;
+		font-size: rem(15);
 		line-height: 140%;
 		color: #222;
 	}
 
 	// .schedule-teacher__desc
 	&__desc {
-		font-size: 1.0625rem;
+		font-size: rem(13);
 		line-height: 140%;
 		color: rgba(34, 34, 34, 0.8);
 	}
 
 	// .schedule-teacher__link
 	&__link {
-		gap: rem(11);
-		font-size: 1.0625rem;
+		gap: rem(8);
+		font-size: rem(13);
 		line-height: 1;
-		text-decoration: underline;
+
+		& span {
+			text-decoration: underline;
+		}
+
+		&::before {
+			width: rem(18);
+			height: rem(18);
+			font-size: rem(18);
+			flex-shrink: 0;
+			order: 1;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: none;
+				}
+
+			}
+		}
+	}
+
+
+	@media (min-width: $md3) {
+		gap: rem(15);
+		padding-right: rem(15);
+		min-height: rem(189);
+
+		&__image {
+			width: rem(134);
+			height: rem(189);
+			min-height: 100%;
+		}
+
+		&__content {
+			padding: rem(20) 0 rem(24);
+			gap: rem(30);
+		}
+
+		&__info {
+			gap: rem(15);
+		}
+
+		&__name {
+			font-size: 1.25rem;
+		}
+
+		&__desc {
+			font-size: 1.0625rem;
+		}
+
+		&__link {
+			gap: rem(11);
+			font-size: 1.0625rem;
+		}
+
+		&__link-icon {
+			width: rem(24);
+			height: rem(24);
+		}
 	}
 }
 

@@ -6,13 +6,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "LTSuperior";
-  font-display: swap;
-  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -20,16 +13,23 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
+  font-family: "LTSuperior";
+  font-display: swap;
+  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Unbounded-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Unbounded";
-  src: url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Unbounded-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Unbounded-VariableFont_wght.woff") format("woff");
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -1722,7 +1722,12 @@ body {
 }
 .schedule__teachers .row {
   --bs-gutter-x: 1.25rem;
-  --bs-gutter-y: 1.25rem;
+  --bs-gutter-y: 0.3125rem;
+}
+@media (min-width: 992px) {
+  .schedule__teachers .row {
+    --bs-gutter-y: 1.25rem;
+  }
 }
 .schedule__teachers-title {
   letter-spacing: normal;
@@ -1731,38 +1736,90 @@ body {
 .schedule-teacher {
   border-radius: 0.9375rem;
   box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.08);
-  gap: 0.9375rem;
-  padding-right: 0.9375rem;
+  gap: 0.6875rem;
+  padding-right: 0.6875rem;
+  min-height: 9rem;
 }
 .schedule-teacher__image {
-  width: 8.375rem;
-  height: 11.8125rem;
-  min-height: 100%;
+  width: 6.375rem;
+  height: 9rem;
+  align-self: stretch;
+}
+.schedule-teacher__photo {
+  object-position: center top;
 }
 .schedule-teacher__content {
-  padding: 1.25rem 0 1.5rem;
-  gap: 1.875rem;
+  padding: 0.9375rem 0 1.125rem;
+  gap: 1.4375rem;
+  min-width: 0;
 }
 .schedule-teacher__info {
   display: flex;
   flex-direction: column;
-  gap: 0.9375rem;
+  gap: 0.6875rem;
 }
 .schedule-teacher__name {
-  font-size: 1.25rem;
+  font-size: 0.9375rem;
   line-height: 140%;
   color: #222;
 }
 .schedule-teacher__desc {
-  font-size: 1.0625rem;
+  font-size: 0.8125rem;
   line-height: 140%;
   color: rgba(34, 34, 34, 0.8);
 }
 .schedule-teacher__link {
-  gap: 0.6875rem;
-  font-size: 1.0625rem;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
   line-height: 1;
+}
+.schedule-teacher__link span {
   text-decoration: underline;
+}
+.schedule-teacher__link::before {
+  width: 1.125rem;
+  height: 1.125rem;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  order: 1;
+}
+@media (any-hover: hover) {
+  .schedule-teacher__link:hover span {
+    text-decoration: none;
+  }
+}
+@media (min-width: 992px) {
+  .schedule-teacher {
+    gap: 0.9375rem;
+    padding-right: 0.9375rem;
+    min-height: 11.8125rem;
+  }
+  .schedule-teacher__image {
+    width: 8.375rem;
+    height: 11.8125rem;
+    min-height: 100%;
+  }
+  .schedule-teacher__content {
+    padding: 1.25rem 0 1.5rem;
+    gap: 1.875rem;
+  }
+  .schedule-teacher__info {
+    gap: 0.9375rem;
+  }
+  .schedule-teacher__name {
+    font-size: 1.25rem;
+  }
+  .schedule-teacher__desc {
+    font-size: 1.0625rem;
+  }
+  .schedule-teacher__link {
+    gap: 0.6875rem;
+    font-size: 1.0625rem;
+  }
+  .schedule-teacher__link-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 .features {
@@ -4750,9 +4807,9 @@ body {
 .outfit {
   position: relative;
   z-index: 1;
-  min-height: 50rem;
+  min-height: 65rem;
   margin: 0 auto;
-  padding: 2.5rem 0 5rem;
+  padding: 2.5rem 0 6.25rem;
   overflow: hidden;
   background: radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
 }
@@ -4769,7 +4826,7 @@ body {
 }
 @media (min-width: 576px) {
   .outfit {
-    padding: 5rem 0 5.625rem;
+    padding: 5rem 0;
   }
 }
 @media (min-width: 1920px) {
@@ -4787,6 +4844,29 @@ body {
     background: linear-gradient(90deg, #edecec 0%, #edecec calc((100% - 3007px) / 2), transparent calc((100% - 3007px) / 2)), linear-gradient(270deg, #edecec 0%, #edecec calc((100% - 3007px) / 2), transparent calc((100% - 3007px) / 2));
     pointer-events: none;
   }
+}
+.no-webp .outfit__container::before {
+  background: url("../img/halls/02.jpg") center/cover no-repeat; }
+.outfit__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+.outfit__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.3;
+  z-index: -1;
 }
 .outfit__content {
   position: relative;
@@ -5059,4 +5139,5 @@ body {
 .webp .school__container::before { background: url(../img/halls/02.webp) center/cover no-repeat; }
 .webp .halls__container::before { background: url(../img/halls/05.webp) center/cover no-repeat; }
 .webp .start__container::before { background: url(../img/halls/05.webp) center/cover no-repeat; }
+.webp .outfit__container::before { background: url(../img/halls/02.webp) center/cover no-repeat; }
 .webp .location__container::before { background: url(../img/halls/05.webp) center/cover no-repeat; }
