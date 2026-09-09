@@ -698,10 +698,10 @@ body {
 		}
 	}
 
-	// .schedule__table-head-day
-	&__table-head-day {
+	// .schedule__table-head-time
+	&__table-head-time {
 		@media (min-width:$md2) {
-			margin-left: 24%;
+			margin-left: 5%;
 
 		}
 	}
@@ -873,18 +873,23 @@ body {
 		gap: rem(5);
 		min-height: 0;
 		width: 100%;
+		position: relative;
+		text-align: left;
 
 		@media (min-width: $md3) {
 			min-height: rem(35);
 			width: 100%;
 			max-width: rem(380);
 		}
+
+
 	}
 
 	// .schedule__time
 	&__time {
-		position: relative;
-		z-index: 2;
+		position: static;
+		left: auto;
+		z-index: 1;
 		width: 100%;
 		justify-content: center;
 		gap: rem(3);
@@ -897,8 +902,6 @@ body {
 		font-size: rem(12);
 		line-height: 140%;
 		white-space: nowrap;
-
-
 
 		&::before {
 			width: rem(16);
@@ -926,19 +929,23 @@ body {
 		}
 
 		@media (min-width: $md2) {
+			position: absolute;
+			top: 0;
+			left: rem(140);
 			font-size: 1rem;
-			width: rem(160);
+			width: auto;
+			justify-content: flex-start;
+			display: block;
 			gap: rem(7);
-			min-height: rem(35);
-			padding: rem(4) rem(7) rem(4) rem(3);
+			min-height: rem(37);
+			padding: rem(2) rem(12);
 		}
 
 		@media (min-width:$md1) {
-			width: rem(190);
+			left: rem(150);
 			font-size: 1.0625rem;
 			gap: rem(7);
-			min-height: rem(35);
-			padding: rem(4) rem(14) rem(4) rem(3);
+			padding: rem(2) rem(20);
 		}
 	}
 
@@ -946,11 +953,10 @@ body {
 
 	// .schedule__day
 	&__day {
-		position: static;
-		left: auto;
+		position: relative;
 		z-index: 1;
 		width: 100%;
-		justify-content: center;
+		display: block;
 		min-height: 0;
 		margin-top: 0;
 		padding: rem(3) rem(20);
@@ -959,6 +965,7 @@ body {
 		font-size: rem(12);
 		line-height: 150%;
 		white-space: nowrap;
+		justify-content: center;
 
 		@media (min-width:$md3) {
 			font-size: 1rem;
@@ -966,20 +973,15 @@ body {
 		}
 
 		@media (min-width: $md2) {
-			position: absolute;
-			top: 0;
-			left: rem(110);
-			width: auto;
 			justify-content: flex-start;
-			min-height: rem(35);
-			padding: rem(2) rem(12) rem(2) rem(60);
+			width: rem(210);
+			min-height: rem(37);
+			padding: rem(4) rem(70) rem(4) rem(14);
 		}
 
 		@media (min-width:$md1) {
-			left: rem(133);
-			padding: rem(2) rem(20) rem(2) rem(70);
+			padding: rem(4) rem(70) rem(4) rem(14);
 			font-size: 1.0625rem;
-
 		}
 	}
 
