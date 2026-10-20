@@ -4,7 +4,6 @@
   color: #252525;
   background-image: radial-gradient(ellipse at 65% 35%, #ed202d, #a51c20 50%, #481512 100%);
   margin: 2.25rem auto 1.375rem;
-  max-width: 141.9375rem;
 }
 .no-webp .promotion::before{
   background-image: url("../img/halls/05.jpg"); }
@@ -23,6 +22,17 @@
   inset: 0;
   z-index: 4;
   background-image: url("../img/halls-mask.svg");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.promotion__wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background-image: url("../img/halls-mask-bottom.svg");
   background-position: center;
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -53,9 +63,9 @@
 .promotion__photo::before {
   content: "";
   position: absolute;
-  top: 55%;
+  top: 52%;
   transform: translateY(-50%);
-  left: 18%;
+  left: 14%;
   width: 2.375rem;
   height: 3.1875rem;
   background: url("../img/promotions/heart-decor.svg") center/contain no-repeat;
@@ -68,8 +78,15 @@
     min-height: 57.75rem;
   }
 }
+.promotion--certificates::after {
+  z-index: 0;
+}
 .promotion--test-drive::after {
+  z-index: 0;
   background-image: url("../img/start-mask.svg");
+}
+.promotion--test-drive .promotion__wrapper::before {
+  background-image: url("../img/school-mask-bottom.svg");
 }
 @media (min-width: 768px) {
   .promotion {
@@ -542,16 +559,17 @@
   .promotion-friend__visual {
     position: absolute;
     right: 10%;
-    bottom: 2.1875rem;
+    bottom: 0;
     width: 60%;
     height: auto;
     aspect-ratio: 758/1010;
     margin: 0;
+    z-index: 6;
   }
 }
 @media (min-width: 1400px) {
   .promotion-friend__visual {
-    width: 47.375rem;
+    width: 45rem;
     height: 63.125rem;
   }
 }
@@ -560,11 +578,12 @@
   left: 0;
   font-size: clamp(3.49444rem, 10vw, 9.375rem);
   line-height: 1;
+  letter-spacing: normal;
   color: rgba(255, 76, 82, 0.3);
 }
 @media (min-width: 992px) {
   .promotion-friend__wordmark {
-    top: 12.5rem;
+    top: 10.125rem;
     left: -4.25rem;
   }
 }
@@ -575,7 +594,7 @@
 }
 @media (min-width: 992px) {
   .promotion-friend__note {
-    top: 18.125rem;
+    top: 15.625rem;
     right: -4.5rem;
   }
 }
@@ -626,7 +645,7 @@
   .promotion-friend__bonus {
     left: auto;
     right: -3.5rem;
-    bottom: 15.25rem;
+    bottom: 17.25rem;
   }
 }
 .webp .promotion::before{ background-image: url(../img/halls/05.webp); }

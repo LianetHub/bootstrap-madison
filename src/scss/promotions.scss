@@ -19,7 +19,6 @@ $promotion-accent: #bc0482;
     color: #252525;
     background-image: radial-gradient(ellipse at 65% 35%, #ed202d, #a51c20 50%, #481512 100%);
     margin: 2.25rem auto 1.375rem;
-    max-width: 141.9375rem;
 
     &::before {
         content: "";
@@ -42,6 +41,20 @@ $promotion-accent: #bc0482;
         background-size: auto 100%;
         background-repeat: no-repeat;
         pointer-events: none;
+    }
+
+    &__wrapper {
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            background-image: url("@img/halls-mask-bottom.svg");
+            background-position: center;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
     }
 
     &__container {
@@ -67,16 +80,19 @@ $promotion-accent: #bc0482;
     }
 
     &__photo {
+
+
         &::before {
             content: '';
             position: absolute;
-            top: 55%;
+            top: 52%;
             transform: translateY(-50%);
-            left: 18%;
+            left: 14%;
             width: rem(38);
             height: rem(51);
             background: url("@img/promotions/heart-decor.svg") center / contain no-repeat;
         }
+
         & img {
             object-position: center bottom;
         }
@@ -90,9 +106,22 @@ $promotion-accent: #bc0482;
         }
     }
 
+    &--certificates {
+        &::after {
+            z-index: 0;
+        }
+    }
+
     &--test-drive {
         &::after {
+            z-index: 0;
             background-image: url("@img/start-mask.svg");
+        }
+
+        .promotion__wrapper {
+            &::before {
+                background-image: url("@img/school-mask-bottom.svg");
+            }
         }
     }
 
@@ -564,15 +593,16 @@ $promotion-accent: #bc0482;
         @media (min-width: $md3) {
             position: absolute;
             right: 10%;
-            bottom: 2.1875rem;
+            bottom: 0;
             width: 60%;
             height: auto;
             aspect-ratio: 758 / 1010;
             margin: 0;
+            z-index: 6;
         }
 
         @media (min-width: $md1) {
-            width: 47.375rem;
+            width: rem(720);
             height: 63.125rem;
         }
     }
@@ -582,10 +612,11 @@ $promotion-accent: #bc0482;
         left: 0;
         font-size: clamp(3.49444rem, 10vw, 9.375rem);
         line-height: 1;
+        letter-spacing: normal;
         color: rgba(255, 76, 82, .3);
 
         @media (min-width: $md3) {
-            top: 12.5rem;
+            top: rem(162);
             left: -4.25rem;
 
         }
@@ -597,7 +628,7 @@ $promotion-accent: #bc0482;
         line-height: 1.1;
 
         @media (min-width: $md3) {
-            top: rem(290);
+            top: rem(250);
             right: rem(-72);
         }
     }
@@ -649,7 +680,7 @@ $promotion-accent: #bc0482;
         @media (min-width: $md3) {
             left: auto;
             right: rem(-56);
-            bottom: rem(244);
+            bottom: rem(276);
         }
     }
 }
