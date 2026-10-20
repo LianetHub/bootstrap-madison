@@ -110,6 +110,11 @@ $promotion-accent: #bc0482;
         &::after {
             z-index: 0;
         }
+         .promotion__container {
+            @media (min-width: $md3) {
+                min-height: rem(870);
+            }
+        }
     }
 
     &--test-drive {
@@ -133,6 +138,7 @@ $promotion-accent: #bc0482;
 .promotion-certificates {
     &__heading {
         width: 100%;
+        padding-top: 0.5rem;
 
         p {
             font-size: 0.875rem;
@@ -140,7 +146,7 @@ $promotion-accent: #bc0482;
             margin: 0;
 
             @media (min-width: $md4) {
-                font-size: 1.1875rem;
+                font-size: rem(25);
                 margin: 0 0 1.375rem;
             }
         }
@@ -156,52 +162,40 @@ $promotion-accent: #bc0482;
 
         li {
             gap: 0.4375rem;
-            padding: 0.25rem 0.9375rem 0.25rem 0.25rem;
+            padding: 0.3125rem 1.125rem 0.3125rem 0.3125rem;
             color: #252525;
             font-size: 0.75rem;
             font-weight: 400;
             min-height: 2.75rem;
             width: 100%;
-            padding-right: 0.625rem;
+            letter-spacing: 0;
 
             span {
                 width: 2rem;
                 height: 2rem;
-                background-color: #ac2025;
+                background: linear-gradient(90deg, #E42329 -23.8%, #761A1B 122.53%);
 
-                img {
-                    filter: brightness(0) invert(1);
-                }
 
                 @media (min-width: $md4) {
-                    width: 2.625rem;
-                    height: 2.625rem;
+                    width: rem(60);
+                    height: rem(60);
                 }
             }
 
-            img {
-                width: 1.3125rem;
-                height: 1.3125rem;
-
-                @media (min-width: $md4) {
-                    width: 1.625rem;
-                    height: 1.625rem;
-                }
-            }
+          
 
             @media (min-width: $md4) {
                 width: auto;
                 min-height: 3.1875rem;
-                font-size: 1rem;
+                font-size: rem(22);
                 font-weight: 700;
                 gap: 0.625rem;
-                padding-right: 0.9375rem;
             }
         }
 
         @media (min-width: $md4) {
             width: 53%;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
     }
 
@@ -216,18 +210,24 @@ $promotion-accent: #bc0482;
     &__label {
         padding: 0.375rem 0.75rem;
         font-size: 0.8125rem;
+        & img {
+            flex-shrink: 0;
+            width: rem(25);
+            height: rem(25);
+        }
 
         @media (min-width: $md4) {
-            font-size: 1.125rem;
-            padding: 0.5rem 0.75rem;
+            font-size: rem(25);
+            padding: 0.75rem 0.75rem;
         }
     }
 
     h2 {
         margin: 0.75rem 0;
-
+        letter-spacing: normal;
+        line-height: 140%;
         @media (min-width: $md4) {
-            margin: 1.125rem 0;
+            margin: 1.125rem 0 0.5rem;
         }
     }
 
@@ -236,10 +236,19 @@ $promotion-accent: #bc0482;
         position: relative;
         width: 100%;
         height: 18.75rem;
+        &::before {
+            content: '';
+            position: absolute;
+            top: rem(44);
+            left: rem(-44);
+            width: 82%;
+            height: 100%;
+            background: url("@img/promotions/hearts-decor.png") 0 0 / contain no-repeat;
+        }
 
         @media (min-width: $md4) {
             position: absolute;
-            inset: 1.875rem -1.25rem 1.875rem 40%;
+            inset: 1.875rem -1.25rem 1.875rem 37%;
             width: auto;
             height: auto;
         }
@@ -256,27 +265,26 @@ $promotion-accent: #bc0482;
 
         &::after {
             content: "";
-            display: block;
-            width: 80%;
-            height: 1rem;
-            margin: 0.4375rem auto 0;
-            border-top: 0.125rem solid white;
-            border-bottom: 0.125rem solid white;
-            border-radius: 50%;
-            transform: skewX(-35deg);
+            position: absolute;
+            top: 100%;
+            left: rem(46);
+            width: rem(358);
+            height: rem(40);
+            transform: rotate(8deg);
+            background: url("@img/promotions/certs-decor.svg") 0 0 / cover no-repeat;
         }
 
         @media (min-width: $md4) {
             position: absolute;
-            top: 5.9375rem;
+            top: rem(104);
             margin-bottom: 0;
             right: 0.9375rem;
             font-size: 0.8125rem;
         }
 
         @media (min-width: $md2) {
-            right: 0;
-            font-size: 0.9375rem;
+            right: rem(58);
+            font-size: rem(20);
         }
     }
 }

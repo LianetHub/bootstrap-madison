@@ -81,6 +81,11 @@
 .promotion--certificates::after {
   z-index: 0;
 }
+@media (min-width: 992px) {
+  .promotion--certificates .promotion__container {
+    min-height: 54.375rem;
+  }
+}
 .promotion--test-drive::after {
   z-index: 0;
   background-image: url("../img/start-mask.svg");
@@ -96,6 +101,7 @@
 
 .promotion-certificates__heading {
   width: 100%;
+  padding-top: 0.5rem;
 }
 .promotion-certificates__heading p {
   font-size: 0.875rem;
@@ -104,7 +110,7 @@
 }
 @media (min-width: 768px) {
   .promotion-certificates__heading p {
-    font-size: 1.1875rem;
+    font-size: 1.5625rem;
     margin: 0 0 1.375rem;
   }
 }
@@ -119,52 +125,38 @@
 }
 .promotion-certificates__options li {
   gap: 0.4375rem;
-  padding: 0.25rem 0.9375rem 0.25rem 0.25rem;
+  padding: 0.3125rem 1.125rem 0.3125rem 0.3125rem;
   color: #252525;
   font-size: 0.75rem;
   font-weight: 400;
   min-height: 2.75rem;
   width: 100%;
-  padding-right: 0.625rem;
+  letter-spacing: 0;
 }
 .promotion-certificates__options li span {
   width: 2rem;
   height: 2rem;
-  background-color: #ac2025;
-}
-.promotion-certificates__options li span img {
-  filter: brightness(0) invert(1);
+  background: linear-gradient(90deg, #E42329 -23.8%, #761A1B 122.53%);
 }
 @media (min-width: 768px) {
   .promotion-certificates__options li span {
-    width: 2.625rem;
-    height: 2.625rem;
-  }
-}
-.promotion-certificates__options li img {
-  width: 1.3125rem;
-  height: 1.3125rem;
-}
-@media (min-width: 768px) {
-  .promotion-certificates__options li img {
-    width: 1.625rem;
-    height: 1.625rem;
+    width: 3.75rem;
+    height: 3.75rem;
   }
 }
 @media (min-width: 768px) {
   .promotion-certificates__options li {
     width: auto;
     min-height: 3.1875rem;
-    font-size: 1rem;
+    font-size: 1.375rem;
     font-weight: 700;
     gap: 0.625rem;
-    padding-right: 0.9375rem;
   }
 }
 @media (min-width: 768px) {
   .promotion-certificates__options {
     width: 53%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 .promotion-certificates__action {
@@ -179,18 +171,25 @@
   padding: 0.375rem 0.75rem;
   font-size: 0.8125rem;
 }
+.promotion-certificates__label img {
+  flex-shrink: 0;
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
 @media (min-width: 768px) {
   .promotion-certificates__label {
-    font-size: 1.125rem;
-    padding: 0.5rem 0.75rem;
+    font-size: 1.5625rem;
+    padding: 0.75rem 0.75rem;
   }
 }
 .promotion-certificates h2 {
   margin: 0.75rem 0;
+  letter-spacing: normal;
+  line-height: 140%;
 }
 @media (min-width: 768px) {
   .promotion-certificates h2 {
-    margin: 1.125rem 0;
+    margin: 1.125rem 0 0.5rem;
   }
 }
 .promotion-certificates__visual {
@@ -199,10 +198,20 @@
   width: 100%;
   height: 18.75rem;
 }
+.no-webp .promotion-certificates__visual::before{
+  background: url("../img/promotions/hearts-decor.png") 0 0/contain no-repeat; }
+.promotion-certificates__visual::before {
+  content: "";
+  position: absolute;
+  top: 2.75rem;
+  left: -2.75rem;
+  width: 82%;
+  height: 100%;
+}
 @media (min-width: 768px) {
   .promotion-certificates__visual {
     position: absolute;
-    inset: 1.875rem -1.25rem 1.875rem 40%;
+    inset: 1.875rem -1.25rem 1.875rem 37%;
     width: auto;
     height: auto;
   }
@@ -218,19 +227,18 @@
 }
 .promotion-certificates__note::after {
   content: "";
-  display: block;
-  width: 80%;
-  height: 1rem;
-  margin: 0.4375rem auto 0;
-  border-top: 0.125rem solid white;
-  border-bottom: 0.125rem solid white;
-  border-radius: 50%;
-  transform: skewX(-35deg);
+  position: absolute;
+  top: 100%;
+  left: 2.875rem;
+  width: 22.375rem;
+  height: 2.5rem;
+  transform: rotate(8deg);
+  background: url("../img/promotions/certs-decor.svg") 0 0/cover no-repeat;
 }
 @media (min-width: 768px) {
   .promotion-certificates__note {
     position: absolute;
-    top: 5.9375rem;
+    top: 6.5rem;
     margin-bottom: 0;
     right: 0.9375rem;
     font-size: 0.8125rem;
@@ -238,8 +246,8 @@
 }
 @media (min-width: 1200px) {
   .promotion-certificates__note {
-    right: 0;
-    font-size: 0.9375rem;
+    right: 3.625rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -649,3 +657,4 @@
   }
 }
 .webp .promotion::before{ background-image: url(../img/halls/05.webp); }
+.webp .promotion-certificates__visual::before{ background: url(../img/promotions/hearts-decor.webp) 0 0/contain no-repeat; }
