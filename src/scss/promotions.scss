@@ -1,0 +1,655 @@
+// Использование модулей SASS
+@use "sass:math";
+// Использование модулей SASS
+// ======================================МИКСИНЫ==============================================
+@import "mixins";
+
+$md0: 1488px;
+$md1: 1400px;
+$md2: 1200px;
+$md3: 992px;
+$md4: 768px;
+$md5: 576px;
+
+$promotion-accent: #bc0482;
+
+
+.promotion {
+    isolation: isolate;
+    color: #252525;
+    background-image: radial-gradient(ellipse at 65% 35%, #ed202d, #a51c20 50%, #481512 100%);
+    margin: 2.25rem auto 1.375rem;
+    max-width: 141.9375rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-image: url("@img/halls/05.jpg");
+        background-position: center;
+        background-size: cover;
+        opacity: .09;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 4;
+        background-image: url("@img/halls-mask.svg");
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
+
+    &__container {
+        min-height: 0;
+        padding-top: 2.75rem;
+        padding-bottom: 3.75rem;
+
+        @media (min-width: $md4) {
+            min-height: 43.75rem;
+            padding-top: 10.25rem;
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__card {
+        --bs-card-border-width: 0;
+        border-top: 0.375rem solid $promotion-accent;
+        padding: 1.5rem;
+
+        @media (min-width: $md4) {
+            padding: 2.125rem 1.625rem;
+        }
+    }
+
+    &__photo {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 55%;
+            transform: translateY(-50%);
+            left: 18%;
+            width: rem(38);
+            height: rem(51);
+            background: url("@img/promotions/heart-decor.svg") center / contain no-repeat;
+        }
+        & img {
+            object-position: center bottom;
+        }
+    }
+
+    &--friend {
+        .promotion__container {
+            @media (min-width: $md3) {
+                min-height: rem(924);
+            }
+        }
+    }
+
+    &--test-drive {
+        &::after {
+            background-image: url("@img/start-mask.svg");
+        }
+    }
+
+    @media (min-width: $md4) {
+        margin-bottom: 2.25rem;
+    }
+}
+
+.promotion-certificates {
+    &__heading {
+        width: 100%;
+
+        p {
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin: 0;
+
+            @media (min-width: $md4) {
+                font-size: 1.1875rem;
+                margin: 0 0 1.375rem;
+            }
+        }
+
+        @media (min-width: $md4) {
+            width: 53%;
+        }
+    }
+
+    &__options {
+        width: 100%;
+        margin: 0 0 1.125rem;
+
+        li {
+            gap: 0.4375rem;
+            padding: 0.25rem 0.9375rem 0.25rem 0.25rem;
+            color: #252525;
+            font-size: 0.75rem;
+            font-weight: 400;
+            min-height: 2.75rem;
+            width: 100%;
+            padding-right: 0.625rem;
+
+            span {
+                width: 2rem;
+                height: 2rem;
+                background-color: #ac2025;
+
+                img {
+                    filter: brightness(0) invert(1);
+                }
+
+                @media (min-width: $md4) {
+                    width: 2.625rem;
+                    height: 2.625rem;
+                }
+            }
+
+            img {
+                width: 1.3125rem;
+                height: 1.3125rem;
+
+                @media (min-width: $md4) {
+                    width: 1.625rem;
+                    height: 1.625rem;
+                }
+            }
+
+            @media (min-width: $md4) {
+                width: auto;
+                min-height: 3.1875rem;
+                font-size: 1rem;
+                font-weight: 700;
+                gap: 0.625rem;
+                padding-right: 0.9375rem;
+            }
+        }
+
+        @media (min-width: $md4) {
+            width: 53%;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__action {
+        width: 100%;
+
+        @media (min-width: $md4) {
+            width: 53%;
+        }
+    }
+
+    &__label {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.8125rem;
+
+        @media (min-width: $md4) {
+            font-size: 1.125rem;
+            padding: 0.5rem 0.75rem;
+        }
+    }
+
+    h2 {
+        margin: 0.75rem 0;
+
+        @media (min-width: $md4) {
+            margin: 1.125rem 0;
+        }
+    }
+
+    &__visual {
+        inset: auto;
+        position: relative;
+        width: 100%;
+        height: 18.75rem;
+
+        @media (min-width: $md4) {
+            position: absolute;
+            inset: 1.875rem -1.25rem 1.875rem 40%;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__note {
+        position: relative;
+        z-index: 2;
+        font-size: 0.8125rem;
+        line-height: 1.4;
+        transform: rotate(-7deg);
+        inset: auto;
+        margin-bottom: 1.5rem;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 80%;
+            height: 1rem;
+            margin: 0.4375rem auto 0;
+            border-top: 0.125rem solid white;
+            border-bottom: 0.125rem solid white;
+            border-radius: 50%;
+            transform: skewX(-35deg);
+        }
+
+        @media (min-width: $md4) {
+            position: absolute;
+            top: 5.9375rem;
+            margin-bottom: 0;
+            right: 0.9375rem;
+            font-size: 0.8125rem;
+        }
+
+        @media (min-width: $md2) {
+            right: 0;
+            font-size: 0.9375rem;
+        }
+    }
+}
+
+.promotion-test-drive {
+    padding-top: 1.5rem;
+
+    &__card {
+        width: 100%;
+        box-shadow: 0 0.5rem 1.875rem #fff6;
+        padding: 2.25rem 2.375rem;
+
+        p {
+            margin: 1.375rem 0 1.125rem;
+            font-size: 0.9375rem;
+            font-weight: 400;
+            line-height: 1.5;
+
+            @media (min-width: $md4) {
+                font-weight: 700;
+                font-size: 1.125rem;
+                margin: 1.75rem -0.625rem 1.25rem;
+            }
+        }
+
+        @media (min-width: $md4) {
+            width: 30.3125rem;
+        }
+    }
+
+    h2 {
+        margin: 0 0 1.75rem;
+        font-size: clamp(1.375rem, 4.5vw, 2rem);
+        margin-bottom: 1.375rem;
+
+        &::before {
+            content: "✦";
+            position: absolute;
+            top: 0;
+            color: #ed2c9b;
+            font-size: 1.5625rem;
+            left: -0.625rem;
+            transform: rotate(-20deg);
+
+            @media (min-width: $md4) {
+                left: -1.25rem;
+            }
+        }
+
+        &::after {
+            content: "✦";
+            position: absolute;
+            top: 0;
+            color: #ed2c9b;
+            font-size: 1.5625rem;
+            right: -0.625rem;
+            transform: rotate(20deg);
+
+            @media (min-width: $md4) {
+                right: -1.25rem;
+            }
+        }
+
+        @media (min-width: $md4) {
+            font-size: 2.1875rem;
+            margin-bottom: 1.75rem;
+        }
+    }
+
+    &__offer {
+        gap: 0.4375rem;
+        border: 0.0625rem solid #f59bce;
+        border-radius: 0.8125rem;
+        padding: 0.8125rem 0.625rem;
+        transform: rotate(-3deg);
+        margin: 0 -0.625rem;
+
+        strong {
+            font-size: clamp(0.6875rem, 2.3vw, 1rem);
+            line-height: 1.3;
+
+            @media (min-width: $md4) {
+                font-size: 1.0625rem;
+            }
+        }
+
+        span {
+            font-size: clamp(1.5rem, 5vw, 2.125rem);
+            line-height: 1.3;
+            border-bottom: 0.25rem solid #ffa5d6;
+
+            @media (min-width: $md4) {
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: $md4) {
+            padding: 1.125rem;
+            gap: 0.75rem;
+            margin: 0;
+        }
+    }
+
+    &__visual {
+        inset: auto;
+        position: relative;
+        height: 14.375rem;
+        width: 100%;
+
+        @media (min-width: $md4) {
+            position: absolute;
+            inset: 0;
+            height: auto;
+            width: auto;
+        }
+    }
+
+    &__dancer {
+        bottom: -0.3125rem;
+        height: 100%;
+        width: 65%;
+        object-position: bottom;
+
+        @media (min-width: $md4) {
+            bottom: 2.1875rem;
+            height: 90%;
+            width: 44%;
+        }
+    }
+
+    &__dancer--left {
+        left: 0;
+
+        @media (min-width: $md4) {
+            left: -2.5rem;
+        }
+    }
+
+    &__dancer--right {
+        right: 0;
+
+        @media (min-width: $md4) {
+            right: -2.5rem;
+        }
+    }
+
+    &__badge {
+        right: auto;
+        top: 0;
+        gap: 0.375rem;
+        width: 6.25rem;
+        height: 6.25rem;
+        border: 0.1875rem double #ffc0df;
+        background-image: linear-gradient(135deg, #ff74a7, #c90061);
+        font-size: 0.75rem;
+        transform: rotate(-15deg);
+        left: 0;
+
+        img {
+            filter: brightness(0) invert(1);
+            width: 1.1875rem;
+            height: 1.1875rem;
+
+            @media (min-width: $md4) {
+                width: 1.5625rem;
+                height: 1.5625rem;
+            }
+        }
+
+        @media (min-width: $md4) {
+            top: 5.625rem;
+            left: auto;
+            right: -1.5625rem;
+            width: 6.875rem;
+            height: 6.875rem;
+            font-size: 0.8125rem;
+        }
+
+        @media (min-width: $md2) {
+            right: 1.25rem;
+            width: 8.4375rem;
+            height: 8.4375rem;
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: $md4) {
+        padding-top: 6.875rem;
+    }
+}
+
+.promotion-friend {
+    &__card {
+        width: 100%;
+        border-top-width: 0.5rem;
+        gap: 1.25rem;
+        padding: 1.5rem 1.875rem 1.875rem;
+
+        @media (min-width: $md5) {
+            padding: 2.125rem 2.5rem 2.5rem;
+        }
+
+        @media (min-width: $md4) {
+            gap: 2.5rem;
+        }
+
+        @media (min-width: $md3) {
+            width: 31.5625rem;
+        }
+
+        @media (min-width: $md1) {
+            width: rem(640);
+            padding: 2.5rem 2.1875rem;
+            gap: 1.375rem;
+        }
+    }
+
+    &__card-title {
+        font-size: 1.25rem;
+        letter-spacing: normal;
+        margin-bottom: 0;
+
+        @media (min-width: $md5) {
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: $md3) {
+            font-size: 1.75rem;
+        }
+
+        @media (min-width: $md1) {
+            font-size: 1.875rem;
+        }
+    }
+
+    &__card-separator {
+        --bs-border-width: 0.1875rem;
+        width: 3.125rem;
+    }
+
+    &__intro {
+        font-size: 0.875rem;
+        line-height: 140%;
+
+        @media (min-width: $md5) {
+            font-size: 1.375rem;
+        }
+
+        @media (min-width: $md1) {
+            font-size: 1.5625rem;
+        }
+    }
+
+    &__benefits {
+
+        li {
+            grid-template-columns: 1.875rem minmax(5.125rem, .8fr) 1fr;
+            padding: 0.625rem 0 2.25rem 0;
+            gap: 0.625rem;
+
+            &+li {
+                border-top: 0.0625rem solid #eee;
+
+                @media (min-width: $md3) {
+                    border-top: 0;
+                    border-left: 0.0625rem solid #eee;
+                }
+            }
+
+            @media (min-width: $md3) {
+                padding: 0.625rem 0.625rem 2rem;
+            }
+        }
+
+        strong {
+            font-size: 0.875rem;
+            line-height: 140%;
+
+            @media (min-width: $md3) {
+                font-size: 1.375rem;
+            }
+        }
+
+        p {
+            font-size: 0.75rem;
+            line-height: 140%;
+            color: #555;
+
+            @media (min-width: $md3) {
+                font-size: 1.0625rem;
+            }
+        }
+    }
+
+    &__icon {
+        width: 1.875rem;
+        height: 1.875rem;
+        background-color: #f7e2ed;
+        font-size: 1.1875rem;
+
+        @media (min-width: $md3) {
+            width: 3.75rem;
+            height: 3.75rem;
+            font-size: 2rem;
+        }
+    }
+
+    &__visual {
+        position: relative;
+        isolation: isolate;
+        height: 19.375rem;
+        margin: -1.25rem -0.5rem 0;
+
+        @media (min-width: $md3) {
+            position: absolute;
+            right: 10%;
+            bottom: 2.1875rem;
+            width: 60%;
+            height: auto;
+            aspect-ratio: 758 / 1010;
+            margin: 0;
+        }
+
+        @media (min-width: $md1) {
+            width: 47.375rem;
+            height: 63.125rem;
+        }
+    }
+
+    &__wordmark {
+        top: 2.375rem;
+        left: 0;
+        font-size: clamp(3.49444rem, 10vw, 9.375rem);
+        line-height: 1;
+        color: rgba(255, 76, 82, .3);
+
+        @media (min-width: $md3) {
+            top: 12.5rem;
+            left: -4.25rem;
+
+        }
+    }
+
+    &__note {
+        top: 4.375rem;
+        right: 0.5rem;
+        line-height: 1.1;
+
+        @media (min-width: $md3) {
+            top: rem(290);
+            right: rem(-72);
+        }
+    }
+
+    &__bonus {
+        left: 0.9375rem;
+        bottom: 4.0625rem;
+        transform: rotate(-12deg);
+
+        strong {
+            width: 6.5625rem;
+            padding: 0.375rem;
+            border-radius: 4.375rem;
+            background-color: #ef1853;
+            font-size: 2.375rem;
+            font-weight: 800;
+            line-height: 150%;
+            margin-bottom: rem(-20);
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                left: 100%;
+                width: rem(77);
+                height: rem(88);
+                background: url("@img/promotions/lines-decor.svg") 0 0 / cover no-repeat;
+            }
+
+            @media (min-width: $md3) {
+                width: 14.375rem;
+                padding: 0.75rem;
+                font-size: 4.6875rem;
+            }
+        }
+
+        span {
+            border-radius: 1.875rem;
+            padding: 0.4375rem 0.625rem;
+            font-size: 0.75rem;
+            line-height: 140%;
+
+            @media (min-width: $md3) {
+                padding: 0.5rem 0.75rem;
+                font-size: 1.5625rem;
+            }
+        }
+
+        @media (min-width: $md3) {
+            left: auto;
+            right: rem(-56);
+            bottom: rem(244);
+        }
+    }
+}

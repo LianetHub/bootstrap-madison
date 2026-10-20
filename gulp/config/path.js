@@ -24,7 +24,7 @@ export const path = {
 	src: {
 		files: `${srcFolder}/files/**/*.*`,
 		html: `${srcFolder}/*.html`,
-		scss: `${srcFolder}/scss/style.scss`,
+		scss: [`${srcFolder}/scss/style.scss`, `${srcFolder}/scss/promotions.scss`],
 		cssLibs: `${srcFolder}/scss/libs/**/*.*`,
 		normalize: `${srcFolder}/scss/reset.scss`,
 		favicon: `${srcFolder}/fav/**/*`,

@@ -1,4 +1,6 @@
-<svg width="2271" height="764" viewBox="0 0 2271 764" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="22271" height="764" viewBox="-10000 0 22271 764" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Side fields overlap the original mask by 2 units to prevent antialiasing seams. -->
+<path d="M-10000 382H2V764H-10000Z M2269 382H12271V764H2269Z" fill="#EDECEC"/>
 <mask id="mask0_2053_1079" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="382" width="2271" height="382">
 <rect y="382" width="2271" height="382" fill="#D9D9D9"/>
 </mask>
