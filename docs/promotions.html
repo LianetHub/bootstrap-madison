@@ -75,7 +75,7 @@
                                     <span class="d-block bg-white color-accent fw-normal position-relative z-2">Занятие в подарок</span>
                                 </div>
                             </div>
-                            <div class="card rounded-4 promotion__card z-2 promotion-friend__card flex-lg-shrink-0">
+                            <div class="card rounded-4 promotion__card promotion-friend__card flex-lg-shrink-0 position-relative">
                                 <h2 id="promotion-friend-title" class="promotion-friend__card-title font-unbounded text-uppercase fw-bold lh-base">Приведи друга — получи <span class="color-accent">1 занятие в подарок</span></h2>
                                 <hr class="promotion-friend__card-separator color-accent opacity-100 m-0" />
                                 <div class="promotion-friend__intro"><strong>Танцевать вместе ещё веселее!</strong>
@@ -132,13 +132,13 @@
                                 </li>
                                 <li class="d-flex align-items-center rounded-pill bg-white">
                                     <span class="d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle">
-                                        <img src="img/promotions/diamond.svg"   alt="Иконка">
+                                        <img src="img/promotions/diamond.svg" alt="Иконка">
                                     </span>
                                     Абонемент на 4, 8 или 12 групповых занятий
                                 </li>
                                 <li class="d-flex align-items-center rounded-pill bg-white">
                                     <span class="d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle">
-                                        <img src="img/promotions/cards.svg"  alt="Иконка">
+                                        <img src="img/promotions/cards.svg" alt="Иконка">
                                     </span>
                                     Сертификат на индивидуальные занятия
                                 </li>
@@ -154,15 +154,28 @@
                 <section class="promotion position-relative overflow-visible promotion--test-drive" aria-labelledby="promotion-test-drive-title">
                     <div class="promotion__wrapper">
                         <div class="container promotion__container position-relative promotion-test-drive d-flex flex-column flex-md-row align-items-center justify-content-center">
-                            <div class="promotion-test-drive__visual promotion__visual pe-none z-1">
-                                <picture><source srcset="img/promotions/test-drive-left.webp" type="image/webp"><img class="promotion-test-drive__dancer position-absolute object-fit-contain promotion-test-drive__dancer--left" src="img/promotions/test-drive-left.png" alt=""></picture>
-                                <picture><source srcset="img/promotions/test-drive-right.webp" type="image/webp"><img class="promotion-test-drive__dancer position-absolute object-fit-contain promotion-test-drive__dancer--right" src="img/promotions/test-drive-right.png" alt=""></picture>
-                                <span class="promotion-test-drive__badge position-absolute rounded-circle d-flex flex-column align-items-center justify-content-center text-white text-center"><img src="img/icons/crown.svg" width="25" height="25" alt="">Твоё<br>движение<br>начинается<br>здесь</span>
+                            <div class="promotion-test-drive__visual promotion__visual pe-none">
+                                <picture><source srcset="img/promotions/test-drive-left.webp" type="image/webp"><img class="promotion-test-drive__dancer pe-none position-absolute object-fit-contain promotion-test-drive__dancer--left" src="img/promotions/test-drive-left.png" alt="Девушка"></picture>
+                                <picture><source srcset="img/promotions/test-drive-right.webp" type="image/webp"><img class="promotion-test-drive__dancer pe-none position-absolute object-fit-contain promotion-test-drive__dancer--right" src="img/promotions/test-drive-right.png" alt="Девушка"></picture>
+                                <span class="promotion-test-drive__badge position-absolute rounded-circle d-flex flex-column align-items-center justify-content-center text-white text-center">
+                                    <img src="img/icons/crown.svg" width="25" height="25" alt="Иконка">
+                                    Твоё<br>движение<br>начинается<br>здесь
+                                </span>
                             </div>
-                            <div class="card gap-0 promotion__card z-2 promotion-test-drive__card text-center">
-                                <h2 id="promotion-test-drive-title" class="position-relative font-unbounded text-uppercase fw-bold lh-base">Попробуй<br>тест-драйв</h2>
-                                <div class="promotion-test-drive__offer d-flex align-items-center justify-content-between text-start"><strong>2 пробных занятия<br>в разных группах за</strong><span class="color-accent font-unbounded fw-bold text-nowrap">1800&nbsp;₽</span></div>
-                                <p>Познакомься с направлениями<br>и педагогами — выбери то, что тебе по душе!</p>
+                            <div class="card promotion__card z-2 promotion-test-drive__card text-center">
+                                <h2 id="promotion-test-drive-title" class="position-relative font-unbounded text-uppercase fw-bold">
+                                    <img class="promotion-test-drive__heading-decor promotion-test-drive__heading-decor--left position-absolute pe-none" src="img/promotions/test-drive-heading-left.svg" alt="Декор" aria-hidden="true">
+                                    Попробуй<br>тест-драйв
+                                    <img class="promotion-test-drive__heading-decor promotion-test-drive__heading-decor--right position-absolute pe-none" src="img/promotions/test-drive-heading-right.svg" alt="Декор" aria-hidden="true">
+                                </h2>
+                                <div class="promotion-test-drive__offer d-flex align-items-center justify-content-between text-start">
+                                    <strong class="fw-bold">2 пробных занятия<br>в разных группах за</strong>
+                                    <span class="color-accent font-unbounded fw-bold text-nowrap position-relative">
+                                        1800&nbsp;₽
+                                        <img class="promotion-test-drive__price-decor position-absolute pe-none" src="img/promotions/test-drive-price-underline.svg" alt="Декор" aria-hidden="true">
+                                    </span>
+                                </div>
+                                <p class="fw-bold mt-3">Познакомься с направлениями<br>и педагогами — выбери то, что тебе по душе!</p>
                                 <button class="btn btn-primary align-self-center" type="button">Хочу попробовать!</button>
                             </div>
                         </div>
