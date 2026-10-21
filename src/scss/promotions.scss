@@ -105,7 +105,15 @@ $promotion-accent: #bc0482;
     &--friend {
         .promotion__container {
             @media (min-width: $md3) {
-                min-height: rem(924);
+                min-height: rem(780);
+                padding-top: rem(100);
+                padding-bottom: rem(60);
+            }
+
+            @media (min-width: $md2) {
+                min-height: rem(870);
+                padding-top: rem(148);
+                padding-bottom: rem(72);
             }
         }
     }
@@ -117,7 +125,15 @@ $promotion-accent: #bc0482;
 
         .promotion__container {
             @media (min-width: $md3) {
+                min-height: 47.375rem;
+                padding-top: 7.5rem;
+                padding-bottom: 3.75rem;
+            }
+
+            @media (min-width: $md2) {
                 min-height: rem(870);
+                padding-top: 10.25rem;
+                padding-bottom: 5rem;
             }
         }
     }
@@ -154,6 +170,10 @@ $promotion-accent: #bc0482;
                 font-size: rem(25);
                 margin: 0 0 1.375rem;
             }
+
+            @media (min-width: $md3) {
+                font-size: rem(22);
+            }
         }
 
         @media (min-width: $md4) {
@@ -185,6 +205,17 @@ $promotion-accent: #bc0482;
                     width: rem(60);
                     height: rem(60);
                 }
+
+                @media (min-width: $md3) {
+                    width: 3.068182rem;
+                    height: 3.068182rem;
+                }
+
+                img {
+                    @media (min-width: $md3) {
+                        transform: scale(.818182);
+                    }
+                }
             }
 
 
@@ -195,6 +226,12 @@ $promotion-accent: #bc0482;
                 font-size: rem(22);
                 font-weight: 700;
                 gap: 0.625rem;
+            }
+
+            @media (min-width: $md3) {
+                font-size: rem(18);
+                min-height: 2.607955rem;
+                gap: .511364rem;
             }
         }
 
@@ -226,6 +263,10 @@ $promotion-accent: #bc0482;
             font-size: rem(25);
             padding: 0.75rem 0.75rem;
         }
+
+        @media (min-width: $md3) {
+            font-size: rem(22);
+        }
     }
 
     h2 {
@@ -235,6 +276,10 @@ $promotion-accent: #bc0482;
 
         @media (min-width: $md4) {
             margin: 1.125rem 0 0.5rem;
+        }
+
+        @media (min-width: $md3) {
+            font-size: rem(32);
         }
     }
 
@@ -254,6 +299,12 @@ $promotion-accent: #bc0482;
             background: url("@img/promotions/hearts-decor.png") 0 0 / contain no-repeat;
         }
 
+        .promotion__photo {
+            @media (min-width: $md3) {
+                object-position: center bottom;
+            }
+        }
+
         @media (min-width: $md4) {
             position: absolute;
             inset: 1.875rem -1.25rem 1.875rem 37%;
@@ -261,9 +312,17 @@ $promotion-accent: #bc0482;
             height: auto;
         }
 
+        @media (min-width: $md3) {
+            bottom: 0;
+            right: 0;
+            transform-origin: right bottom;
+        }
+
         @media (min-width: $md2) {
+            bottom: 0;
+            right: -1.25rem;
             transform: scale(.9);
-            transform-origin: right center;
+            transform-origin: right bottom;
         }
 
         @media (min-width: $md0) {
@@ -289,6 +348,17 @@ $promotion-accent: #bc0482;
             height: rem(40);
             transform: rotate(8deg);
             background: url("@img/promotions/certs-decor.svg") 0 0 / cover no-repeat;
+
+            @media (min-width: $md3) {
+                left: 0;
+                width: 100%;
+                background-size: contain;
+            }
+
+            @media (min-width: $md2) {
+                width: rem(358);
+                background-size: cover;
+            }
         }
 
         @media (min-width: $md4) {
@@ -299,14 +369,20 @@ $promotion-accent: #bc0482;
             font-size: 0.8125rem;
         }
 
+        @media (min-width: $md3) {
+            right: rem(55);
+        }
+
         @media (min-width: $md2) {
-            right: rem(58);
+            right: rem(90);
             font-size: rem(20);
         }
     }
 }
 
 .promotion-test-drive {
+    $card-scale: .9375;
+
     padding-top: 1.5rem;
 
     &__card {
@@ -326,8 +402,14 @@ $promotion-accent: #bc0482;
                 margin: 1.75rem -0.625rem 1.25rem;
             }
 
-            @media (min-width: $md1) {
-                font-size: rem(25);
+            @media (min-width: $md3) {
+                font-size: rem(14.85);
+                line-height: 140%;
+                margin: 0;
+            }
+
+            @media (min-width: $md2) {
+                font-size: rem(25 * $card-scale);
                 line-height: 140%;
                 margin: 0;
             }
@@ -335,14 +417,20 @@ $promotion-accent: #bc0482;
 
         @media (min-width: $md4) {
             width: 30.3125rem;
+            padding: 2.25rem 2.375rem;
         }
 
-        @media (min-width: $md1) {
-            width: rem(640);
-            min-height: rem(563.38);
-            border-top-width: rem(8);
-            padding: rem(60) rem(45) rem(50);
-            gap: rem(25);
+        @media (min-width: $md3) {
+            width: rem(400);
+            padding: rem(29.7) rem(31.35);
+        }
+
+        @media (min-width: $md2) {
+            width: rem(640 * $card-scale);
+            min-height: rem(563.38 * $card-scale);
+            border-top-width: rem(8 * $card-scale);
+            padding: rem(60 * $card-scale) rem(45 * $card-scale) rem(50 * $card-scale);
+            gap: rem(25 * $card-scale);
         }
     }
 
@@ -356,8 +444,13 @@ $promotion-accent: #bc0482;
             margin-bottom: 1.75rem;
         }
 
-        @media (min-width: $md1) {
-            font-size: rem(50);
+        @media (min-width: $md3) {
+            font-size: rem(28.875);
+            margin-bottom: rem(23.1);
+        }
+
+        @media (min-width: $md2) {
+            font-size: rem(50 * $card-scale);
             line-height: 110%;
             letter-spacing: normal;
             margin: 0;
@@ -377,9 +470,9 @@ $promotion-accent: #bc0482;
                 left: -.625rem;
             }
 
-            @media (min-width: $md1) {
-                left: rem(25);
-                top: rem(-15);
+            @media (min-width: $md2) {
+                left: rem(25 * $card-scale);
+                top: rem(-15 * $card-scale);
             }
         }
 
@@ -391,9 +484,9 @@ $promotion-accent: #bc0482;
                 right: -.625rem;
             }
 
-            @media (min-width: $md1) {
-                right: rem(-8);
-                top: rem(-12);
+            @media (min-width: $md2) {
+                right: rem(-8 * $card-scale);
+                top: rem(-12 * $card-scale);
             }
         }
 
@@ -401,8 +494,8 @@ $promotion-accent: #bc0482;
             transform: scale(.65);
         }
 
-        @media (min-width: $md1) {
-            transform: none;
+        @media (min-width: $md2) {
+            transform: scale($card-scale);
         }
     }
 
@@ -422,8 +515,12 @@ $promotion-accent: #bc0482;
                 font-size: 1.0625rem;
             }
 
-            @media (min-width: $md1) {
-                font-size: rem(25);
+            @media (min-width: $md3) {
+                font-size: rem(14.025);
+            }
+
+            @media (min-width: $md2) {
+                font-size: rem(25 * $card-scale);
                 line-height: 120%;
             }
         }
@@ -436,8 +533,12 @@ $promotion-accent: #bc0482;
                 font-size: 2rem;
             }
 
-            @media (min-width: $md1) {
-                font-size: rem(40);
+            @media (min-width: $md3) {
+                font-size: rem(26.4);
+            }
+
+            @media (min-width: $md2) {
+                font-size: rem(40 * $card-scale);
                 line-height: 100%;
                 letter-spacing: normal;
             }
@@ -449,13 +550,18 @@ $promotion-accent: #bc0482;
             margin: 0;
         }
 
-        @media (min-width: $md1) {
-            width: rem(509);
-            min-height: rem(110);
+        @media (min-width: $md3) {
+            padding: rem(14.85);
+            gap: rem(9.9);
+        }
+
+        @media (min-width: $md2) {
+            width: rem(509 * $card-scale);
+            min-height: rem(110 * $card-scale);
             border-color: #ff8bcc;
-            border-radius: rem(15);
-            padding: rem(20) rem(25);
-            gap: rem(15);
+            border-radius: rem(15 * $card-scale);
+            padding: rem(20 * $card-scale) rem(25 * $card-scale);
+            gap: rem(15 * $card-scale);
             margin: 0 auto;
             transform: rotate(-2.65deg);
         }
@@ -472,10 +578,14 @@ $promotion-accent: #bc0482;
             transform: scale(.8);
         }
 
-        @media (min-width: $md1) {
+        @media (min-width: $md3) {
+            transform: scale(.66);
+        }
+
+        @media (min-width: $md2) {
             top: 90%;
-            left: -2rem;
-            transform: none;
+            left: rem(-32 * $card-scale);
+            transform: scale($card-scale);
         }
     }
 
@@ -493,7 +603,11 @@ $promotion-accent: #bc0482;
             width: auto;
         }
 
-        @media (min-width: $md1) {
+        @media (min-width: $md3) {
+            z-index: 3;
+        }
+
+        @media (min-width: $md2) {
             z-index: 3;
         }
     }
@@ -510,9 +624,14 @@ $promotion-accent: #bc0482;
             width: 44%;
         }
 
-        @media (min-width: $md1) {
+        @media (min-width: $md3) {
             height: auto;
-            bottom: auto;
+            bottom: 0;
+        }
+
+        @media (min-width: $md2) {
+            height: auto;
+            bottom: 0;
         }
     }
 
@@ -523,11 +642,17 @@ $promotion-accent: #bc0482;
             left: -2.5rem;
         }
 
-        @media (min-width: $md1) {
-            width: rem(854);
-            top: rem(69);
-            left: calc(50% - #{rem(947)});
-            right: auto;
+        @media (min-width: $md3) {
+            width: rem(450);
+            left: auto;
+            right: calc(50% + #{rem(88)});
+        }
+
+        @media (min-width: $md2) {
+            width: min(#{rem(897)}, calc(100vw - #{rem(820)}));
+            top: auto;
+            left: auto;
+            right: calc(50% + #{rem(104)});
         }
     }
 
@@ -538,11 +663,17 @@ $promotion-accent: #bc0482;
             right: -2.5rem;
         }
 
-        @media (min-width: $md1) {
-            width: rem(706);
-            top: rem(0);
+        @media (min-width: $md3) {
+            width: rem(440);
             right: auto;
-            left: calc(50% + #{rem(81)});
+            left: calc(50% + #{rem(60)});
+        }
+
+        @media (min-width: $md2) {
+            width: rem(741);
+            top: auto;
+            right: auto;
+            left: calc(50% + #{rem(76)});
         }
     }
 
@@ -563,6 +694,14 @@ $promotion-accent: #bc0482;
             border-radius: 50%;
             inset: rem(4);
             border: 0.1875rem solid #ffc0df;
+
+            @media (min-width: $md3) {
+                border-width: rem(1.5);
+            }
+
+            @media (min-width: $md2) {
+                border-width: rem(1.5);
+            }
         }
 
         img {
@@ -585,20 +724,18 @@ $promotion-accent: #bc0482;
             font-size: 0.8125rem;
         }
 
-        @media (min-width: $md2) {
-            right: 1.25rem;
-            width: 8.4375rem;
-            height: 8.4375rem;
-            font-size: 1rem;
+        @media (min-width: $md3) {
+            right: rem(45);
+            top: rem(70);
         }
 
-        @media (min-width: $md1) {
+        @media (min-width: $md2) {
             width: rem(180);
             height: rem(180);
             font-size: rem(20);
             line-height: 110%;
             top: rem(105);
-            right: rem(40);
+            right: rem(110);
         }
     }
 
@@ -606,7 +743,14 @@ $promotion-accent: #bc0482;
         padding-top: 6.875rem;
     }
 
-    @media (min-width: $md1) {
+    @media (min-width: $md3) {
+        height: rem(560);
+        min-height: rem(560);
+        padding-top: rem(60);
+        padding-bottom: rem(60);
+    }
+
+    @media (min-width: $md2) {
         height: rem(820);
         min-height: rem(820);
         padding-top: rem(80);
@@ -615,29 +759,38 @@ $promotion-accent: #bc0482;
 }
 
 .promotion-friend {
+    $card-scale: .9;
+
     &__card {
         width: 100%;
         border-top-width: 0.5rem;
-        gap: 1.25rem;
-        padding: 1.5rem 1.875rem 1.875rem;
+        gap: 1rem;
+        padding: 1.5rem 1.5rem 1.875rem;
         z-index: 6;
 
         @media (min-width: $md5) {
-            padding: 2.125rem 2.5rem 2.5rem;
+            padding: 2.125rem 1.5rem 2.5rem;
         }
 
         @media (min-width: $md4) {
-            gap: 2.5rem;
+            gap: 1rem;
+            padding: 2.125rem 1.5rem 2.5rem;
         }
 
         @media (min-width: $md3) {
-            width: 31.5625rem;
+            width: rem(404);
+            --bs-border-radius-xl: #{rem(12.8)};
+            border-top-width: rem(6.4);
+            padding: rem(27.2) 1.5rem rem(32);
+            gap: 1rem;
         }
 
         @media (min-width: $md2) {
-            width: rem(640);
-            padding: 2.5rem 2.1875rem;
-            gap: 1.375rem;
+            --bs-border-radius-xl: #{rem(16 * $card-scale)};
+            width: rem(640 * $card-scale);
+            border-top-width: rem(8 * $card-scale);
+            padding: rem(40 * $card-scale) 1.5rem;
+            gap: 1rem;
         }
     }
 
@@ -651,17 +804,27 @@ $promotion-accent: #bc0482;
         }
 
         @media (min-width: $md3) {
-            font-size: 1.75rem;
+            font-size: rem(22.4);
         }
 
         @media (min-width: $md2) {
-            font-size: 1.875rem;
+            font-size: rem(30 * $card-scale);
         }
     }
 
     &__card-separator {
         --bs-border-width: 0.1875rem;
         width: 3.125rem;
+
+        @media (min-width: $md3) {
+            --bs-border-width: #{rem(2.4)};
+            width: rem(40);
+        }
+
+        @media (min-width: $md2) {
+            --bs-border-width: #{rem(3 * $card-scale)};
+            width: rem(50 * $card-scale);
+        }
     }
 
     &__intro {
@@ -672,8 +835,12 @@ $promotion-accent: #bc0482;
             font-size: 1.375rem;
         }
 
+        @media (min-width: $md3) {
+            font-size: rem(17.6);
+        }
+
         @media (min-width: $md2) {
-            font-size: 1.5625rem;
+            font-size: rem(25 * $card-scale);
         }
     }
 
@@ -687,14 +854,21 @@ $promotion-accent: #bc0482;
             &+li {
                 border-top: 0.0625rem solid #eee;
 
-                @media (min-width: $md3) {
+                @media (min-width: $md2) {
                     border-top: 0;
-                    border-left: 0.0625rem solid #eee;
+                    border-left: rem(1 * $card-scale) solid #eee;
                 }
             }
 
             @media (min-width: $md3) {
-                padding: 0.625rem 0.625rem 2rem;
+                grid-template-columns: rem(48) minmax(0, .85fr) minmax(0, 1fr);
+                padding: .75rem 0;
+                gap: .75rem;
+            }
+
+            @media (min-width: $md2) {
+                padding: rem(10 * $card-scale) rem(10 * $card-scale) rem(32 * $card-scale);
+                gap: rem(10 * $card-scale);
             }
         }
 
@@ -703,7 +877,11 @@ $promotion-accent: #bc0482;
             line-height: 140%;
 
             @media (min-width: $md3) {
-                font-size: 1.375rem;
+                font-size: rem(17.6);
+            }
+
+            @media (min-width: $md2) {
+                font-size: rem(22 * $card-scale);
             }
         }
 
@@ -713,7 +891,11 @@ $promotion-accent: #bc0482;
             color: #555;
 
             @media (min-width: $md3) {
-                font-size: 1.0625rem;
+                font-size: rem(13.6);
+            }
+
+            @media (min-width: $md2) {
+                font-size: rem(17 * $card-scale);
             }
         }
     }
@@ -725,9 +907,25 @@ $promotion-accent: #bc0482;
         font-size: 1.1875rem;
 
         @media (min-width: $md3) {
-            width: 3.75rem;
-            height: 3.75rem;
-            font-size: 2rem;
+            width: rem(48);
+            height: rem(48);
+            font-size: rem(25.6);
+        }
+
+        @media (min-width: $md2) {
+            width: rem(60 * $card-scale);
+            height: rem(60 * $card-scale);
+            font-size: rem(32 * $card-scale);
+        }
+
+        img {
+            @media (min-width: $md3) {
+                transform: scale(.8);
+            }
+
+            @media (min-width: $md2) {
+                transform: scale($card-scale);
+            }
         }
     }
 
@@ -741,20 +939,17 @@ $promotion-accent: #bc0482;
             position: absolute;
             right: 10%;
             bottom: 0;
-            width: 60%;
-            height: auto;
+            width: rem(540);
+            height: rem(720);
             aspect-ratio: 758 / 1010;
             margin: 0;
             z-index: 5;
         }
 
         @media (min-width: $md2) {
-            width: rem(720);
-            height: 63.125rem;
-        
+            width: rem(684);
+            height: rem(959.5);
         }
-
-       
     }
 
     &__wordmark {
@@ -778,8 +973,15 @@ $promotion-accent: #bc0482;
         line-height: 1.1;
 
         @media (min-width: $md3) {
-            top: rem(250);
+            top: rem(115);
+            right: 0;
+            width: rem(150);
+        }
+
+        @media (min-width: $md2) {
+            top: rem(175);
             right: rem(-72);
+            width: auto;
         }
     }
 
@@ -829,6 +1031,11 @@ $promotion-accent: #bc0482;
 
         @media (min-width: $md3) {
             left: auto;
+            right: 0;
+            bottom: rem(200);
+        }
+
+        @media (min-width: $md2) {
             right: rem(-56);
             bottom: rem(276);
         }
