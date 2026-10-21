@@ -67,6 +67,10 @@ $promotion-accent: #bc0482;
             padding-top: 10.25rem;
             padding-bottom: 5rem;
         }
+
+        @media (min-width: $md2) {
+            max-width: rem(1464);
+        }
     }
 
     &__card {
@@ -255,6 +259,15 @@ $promotion-accent: #bc0482;
             inset: 1.875rem -1.25rem 1.875rem 37%;
             width: auto;
             height: auto;
+        }
+
+        @media (min-width: $md2) {
+            transform: scale(.9);
+            transform-origin: right center;
+        }
+
+        @media (min-width: $md0) {
+            transform: none;
         }
     }
 
@@ -621,7 +634,7 @@ $promotion-accent: #bc0482;
             width: 31.5625rem;
         }
 
-        @media (min-width: $md1) {
+        @media (min-width: $md2) {
             width: rem(640);
             padding: 2.5rem 2.1875rem;
             gap: 1.375rem;
@@ -641,7 +654,7 @@ $promotion-accent: #bc0482;
             font-size: 1.75rem;
         }
 
-        @media (min-width: $md1) {
+        @media (min-width: $md2) {
             font-size: 1.875rem;
         }
     }
@@ -659,7 +672,7 @@ $promotion-accent: #bc0482;
             font-size: 1.375rem;
         }
 
-        @media (min-width: $md1) {
+        @media (min-width: $md2) {
             font-size: 1.5625rem;
         }
     }
@@ -735,10 +748,13 @@ $promotion-accent: #bc0482;
             z-index: 5;
         }
 
-        @media (min-width: $md1) {
+        @media (min-width: $md2) {
             width: rem(720);
             height: 63.125rem;
+        
         }
+
+       
     }
 
     &__wordmark {
