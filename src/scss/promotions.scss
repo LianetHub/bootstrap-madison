@@ -547,11 +547,11 @@ $promotion-accent: #bc0482;
         }
 
         @media (min-width: $md3) {
-            right: rem(55);
+            right: rem(15);
         }
 
         @media (min-width: $md2) {
-            right: rem(90);
+            right: rem(15);
             font-size: rem(20);
         }
     }
@@ -938,6 +938,7 @@ $promotion-accent: #bc0482;
     }
 
     &__badge {
+        z-index: -1;
         right: auto;
         top: 1.041667rem;
         gap: .3125rem;
@@ -998,7 +999,7 @@ $promotion-accent: #bc0482;
         }
 
         @media (min-width: $md3) {
-            right: rem(45);
+            right: 0;
             top: rem(70);
         }
 
@@ -1008,11 +1009,11 @@ $promotion-accent: #bc0482;
             font-size: rem(20);
             line-height: 110%;
             top: rem(105);
-            right: rem(110);
+            right: rem(15);
         }
 
         @media (min-width: $md0) {
-            right: rem(-140);
+            right: rem(-260);
         }
     }
 
@@ -1381,17 +1382,25 @@ $promotion-accent: #bc0482;
             width: auto;
         }
 
+        @media (min-width: 900px) and (max-width: 991.98px) {
+            top: 6rem;
+            right: 0;
+            width: 9rem;
+        }
+
         @media (min-width: $md3) {
-            top: rem(115);
+            top: rem(45);
             right: 0;
             width: rem(150);
         }
 
         @media (min-width: $md2) {
-            top: rem(175);
-            right: rem(-72);
+                top: rem(140);
+           right: rem(-132);
             width: auto;
         }
+
+        
     }
 
     &__bonus {

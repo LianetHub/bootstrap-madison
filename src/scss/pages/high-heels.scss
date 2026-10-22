@@ -530,7 +530,7 @@
 	position: relative;
 	z-index: 1;
 	margin: 0 auto;
-	padding: rem(60) 0 rem(56);
+	padding: rem(84) 0 rem(56);
 	overflow: hidden;
 	background:
 		radial-gradient(ellipse 90% 72% at 49.37% 43.69%, transparent 42%, rgba(118, 26, 27, 0.55) 100%),
@@ -550,11 +550,11 @@
 
 	@media (min-width: $md5) {
 		min-height: rem(720);
-		padding: rem(100) 0 rem(110);
+		padding: rem(140) 0 rem(110);
 	}
 
 	@media (min-width: $md3) {
-		padding: rem(130) 0;
+		padding: rem(170) 0 rem(130);
 	}
 
 	@media (min-width: 1920px) {
@@ -604,7 +604,7 @@
 	// .location__content
 	&__content {
 		position: relative;
-		z-index: 3;
+		z-index: 1;
 	}
 
 	// .location__body

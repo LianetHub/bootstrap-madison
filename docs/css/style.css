@@ -7,17 +7,17 @@
 }
 
 @font-face {
-  font-family: "LTSuperior";
+  font-family: "icons";
   font-display: swap;
-  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "icons";
+  font-family: "LTSuperior";
   font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -3162,7 +3162,7 @@ body {
   position: relative;
   z-index: 1;
   margin: 0 auto;
-  padding: 3.75rem 0 3.5rem;
+  padding: 5.25rem 0 3.5rem;
   overflow: hidden;
   background: radial-gradient(ellipse 90% 72% at 49.37% 43.69%, transparent 42%, rgba(118, 26, 27, 0.55) 100%), radial-gradient(52.59% 73.17% at 49.37% 43.69%, #e42329 0%, #761a1b 100%);
 }
@@ -3206,7 +3206,7 @@ body {
 
 .location__content {
   position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
 .location__body.row {
@@ -3923,7 +3923,7 @@ body {
 
   .location {
     min-height: 45rem;
-    padding: 6.25rem 0 6.875rem;
+    padding: 8.75rem 0 6.875rem;
   }
 
   .location__text {
@@ -5151,7 +5151,7 @@ body {
   }
 
   .location {
-    padding: 8.125rem 0;
+    padding: 10.625rem 0 8.125rem;
   }
 
   .location__body.row {
