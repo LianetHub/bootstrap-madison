@@ -1,51 +1,14 @@
 <div class="directions-catalog__card-col col-12 col-lg-8 @@position">
     <article class="directions-catalog__card directions-catalog__card--@@slug bg-white rounded-4 d-flex flex-column flex-lg-row">
-        <div class="directions-catalog__photo directions-catalog__photo--@@slug rounded-3 overflow-hidden position-relative flex-shrink-0">
-            @@if (slug === "heels") {
-                <img src="@img/directions-page/catalog-high-heels-photo-1.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--1 d-none d-lg-block position-absolute" alt="" loading="lazy">
-                <img src="@img/directions-page/catalog-high-heels-photo-2.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--2 position-absolute" alt="Хай Хилс" loading="lazy">
-            }
-            @@if (slug === "strip") {
-                <img src="@img/directions-page/catalog-strip-plastic-photo-1.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--1 d-none d-lg-block position-absolute" alt="" loading="lazy">
-                <img src="@img/directions-page/catalog-strip-plastic-photo-2.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--2 d-none d-lg-block position-absolute" alt="" loading="lazy">
-                <img src="@img/directions-page/catalog-strip-plastic-photo-3.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--3 position-absolute" alt="Стрип-пластика" loading="lazy">
-            }
-            @@if (slug === "lady") {
-                <img src="@img/directions-page/catalog-lady-dance-photo-1.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--1 d-none d-lg-block position-absolute" alt="" loading="lazy">
-                <span class="directions-catalog__photo-age-label d-none d-xxl-block position-absolute text-white font-unbounded fw-bold">группы</span>
-                <span class="directions-catalog__photo-age d-none d-xxl-block position-absolute text-white font-unbounded fw-bold">18+</span>
-                <img src="@img/directions-page/catalog-lady-dance-photo-2.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--2 d-none d-lg-block position-absolute" alt="" loading="lazy">
-                <img src="@img/directions-page/catalog-lady-dance-photo-3.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--3 position-absolute" alt="Леди Дэнс" loading="lazy">
-            }
-            @@if (slug === "latina") {
-                <img src="@img/directions-page/catalog-latin-solo-photo-1.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--1 d-xxl-none position-absolute" alt="" loading="lazy">
-                <img src="@img/directions-page/catalog-latin-solo-photo-2.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--2 d-xxl-none position-absolute" alt="" loading="lazy">
-                <img src="@img/directions-page/catalog-latin-solo-photo-3.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--3 position-absolute" alt="Латина Соло" loading="lazy">
-            }
-            @@if (slug === "jazz") {
-                <img src="@img/directions-page/catalog-jazz-funk-photo-1.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--1 d-none d-lg-block position-absolute" alt="" loading="lazy">
-                <img src="@img/directions-page/catalog-jazz-funk-photo-2.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--2 d-none d-lg-block position-absolute" alt="" loading="lazy">
-                <img src="@img/directions-page/catalog-jazz-funk-photo-3.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--3 position-absolute" alt="Джаз-фанк" loading="lazy">
-            }
-            @@if (slug === "hiphop") {
-                <img src="@img/directions-page/catalog-hip-hop-photo-1.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--1 position-absolute" alt="" loading="lazy">
-                <img src="@img/directions-page/catalog-hip-hop-photo-2.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--2 position-absolute" alt="Хип-хоп" loading="lazy">
-            }
-            @@if (slug === "modern") {
-                <img src="@img/directions-page/catalog-modern-photo.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--1 position-absolute" alt="Современные танцы" loading="lazy">
-            }
-            @@if (slug === "teenjazz") {
-                <img src="@img/directions-page/catalog-teens-jazz-funk-photo.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--1 position-absolute" alt="Джаз-фанк" loading="lazy">
-            }
+        <div class="directions-catalog__photo directions-catalog__photo--@@slug rounded-3 overflow-hidden position-relative flex-shrink-0 align-self-lg-start">
+            <img src="@img/directions-page/@@image" class="directions-catalog__image d-block h-100 object-fit-cover position-absolute top-0 start-0" alt="@@title" loading="lazy">
             @@if (slug === "kids68") {
-                <img src="@img/directions-page/catalog-children-6-8-photo.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--1 position-absolute" alt="Современные танцы для детей 6–8 лет" loading="lazy">
                 <p class="directions-catalog__age position-absolute font-unbounded fw-bold text-nowrap mb-0">
                     6—8
                     <span class="d-block">лет</span>
                 </p>
             }
             @@if (slug === "kids911") {
-                <img src="@img/directions-page/catalog-children-9-11-photo.png" class="directions-catalog__photo-layer directions-catalog__photo-layer--1 position-absolute" alt="Современные танцы для детей 9–11 лет" loading="lazy">
                 <p class="directions-catalog__age position-absolute font-unbounded fw-bold text-nowrap mb-0">
                     9—11
                     <span class="d-block">лет</span>
