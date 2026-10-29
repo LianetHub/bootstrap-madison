@@ -1,5 +1,7 @@
 "use strict";
 
+import initDirectionsCatalog from "./modules/directionsCatalog.js";
+
 //  Fancybox
 if (typeof Fancybox !== "undefined" && Fancybox !== null) {
 	Fancybox.bind("[data-fancybox]", {
@@ -9,6 +11,7 @@ if (typeof Fancybox !== "undefined" && Fancybox !== null) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+	initDirectionsCatalog();
 	// webP support fallback
 	function testWebP(callback) {
 		let webP = new Image();

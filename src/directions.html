@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+        'title': 'Направления танцев'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {})
+            <main class="page directions-page">
+                <section class="directions-hero text-white position-relative" aria-labelledby="directions-title">
+                    <div class="container position-relative z-1">
+                        <nav class="directions-hero__breadcrumbs breadcrumbs fw-light py-2 py-lg-3" aria-label="Хлебные крошки">
+                            <ol class="breadcrumbs__list d-flex flex-wrap align-items-center">
+                                <li class="breadcrumbs__item d-inline-flex align-items-center">
+                                    <a class="breadcrumbs__link" href="index.html">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item d-inline-flex align-items-center">
+                                    <span class="fw-bold" aria-current="page">Все направления</span>
+                                </li>
+                            </ol>
+                        </nav>
+                        <div class="directions-hero__content row">
+                            <div class="col-lg-7 d-flex flex-column align-items-center align-items-lg-start">
+                                <h1 id="directions-title" class="directions-hero__title font-unbounded fw-bold text-uppercase text-center text-lg-start mb-0">Направления танцев для детей и&nbsp;взрослых</h1>
+                                <div class="directions-hero__lead order-3 order-lg-0">
+                                    <p class="fw-bold">В Madison легко найти танец под своё настроение, характер и цели.</p>
+                                    <p class="mb-0">Для детей, подростков и взрослых у нас есть современные танцевальные направления — от энергичного хип-хопа и яркого джаз-фанка до Хай Хилс, женской хореографии и зажигательных латиноамериканских танцев. Начать заниматься можно даже без танцевального опыта.</p>
+                                </div>
+                                <ul class="directions-hero__benefits d-flex flex-wrap flex-column flex-lg-row align-self-start align-items-start">
+                                    <li class="d-flex align-items-center gap-2">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/hero-icon-community-mobile.svg">
+                                            <img src="@img/directions-page/icon-dance-community.svg" class="directions-hero__icon flex-shrink-0" alt="">
+                                        </picture>
+                                        <span>
+                                            Современные
+                                            <br>
+                                            направления
+                                        </span>
+                                    </li>
+                                    <li class="d-flex align-items-center gap-2">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/hero-icon-heart-mobile.svg">
+                                            <img src="@img/directions-page/icon-heart.svg" class="directions-hero__icon flex-shrink-0" alt="">
+                                        </picture>
+                                        <span>
+                                            Для любого
+                                            <br>
+                                            возраста
+                                        </span>
+                                    </li>
+                                    <li class="d-flex align-items-center gap-2">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/hero-icon-star-mobile.svg">
+                                            <img src="@img/directions-page/icon-star.svg" class="directions-hero__icon flex-shrink-0" alt="">
+                                        </picture>
+                                        <span>
+                                            Дружная
+                                            <br>
+                                            атмосфера
+                                        </span>
+                                    </li>
+                                </ul>
+                                <div class="directions-hero__cta d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+                                    <p class="fw-bold mb-0">Выбирай направление, которое подходит именно тебе, познакомься с программой и приходи на пробное занятие!</p>
+                                    <a href="index.html#sign-up" class="btn btn-outline-primary bg-white">Хочу попробовать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="directions-catalog" id="directions-catalog" data-directions-catalog aria-labelledby="directions-catalog-title">
+                    <div class="container">
+                        <div class="directions-catalog__header d-flex flex-column align-items-center text-center">
+                            <h2 class="directions-catalog__title font-unbounded fw-semibold text-uppercase mb-0" id="directions-catalog-title">
+                                <span class="d-none d-lg-inline">Выбери</span>
+                                <span class="d-lg-none">Выберите</span>
+                                своё направление
+                            </h2>
+                            <p class="directions-catalog__subtitle mb-0">Танец для каждого. В любом возрасте. С любой истории.</p>
+                            <div class="directions-catalog__tabs d-none d-lg-flex align-items-center justify-content-center" role="tablist" aria-label="Возрастная группа">
+                                <button class="directions-catalog__tab btn d-flex align-items-center rounded-pill border-0 fw-bold font-unbounded" type="button" id="catalog-tab-adults" role="tab" aria-controls="catalog-panel-adults" aria-selected="true" tabindex="0" data-catalog-tab="adults">
+                                    <span class="directions-catalog__tab-icon position-relative flex-shrink-0" aria-hidden="true">
+                                        <img src="@img/directions-page/icon-high-heels.svg" class="directions-catalog__icon-default w-100 h-100" alt="">
+                                        <img src="@img/directions-page/icon-high-heels-active.svg" class="directions-catalog__icon-active position-absolute top-0 start-0 w-100 h-100" alt="">
+                                    </span>
+                                    Танцы для взрослых
+                                </button>
+                                <button class="directions-catalog__tab btn d-flex align-items-center rounded-pill border-0 fw-bold font-unbounded" type="button" id="catalog-tab-teens" role="tab" aria-controls="catalog-panel-teens" aria-selected="false" tabindex="-1" data-catalog-tab="teens">
+                                    <span class="directions-catalog__tab-icon position-relative flex-shrink-0" aria-hidden="true">
+                                        <img src="@img/directions-page/icon-teens.svg" class="directions-catalog__icon-default w-100 h-100" alt="">
+                                        <img src="@img/directions-page/icon-teens-active.svg" class="directions-catalog__icon-active position-absolute top-0 start-0 w-100 h-100" alt="">
+                                    </span>
+                                    Танцы для подростков
+                                </button>
+                                <button class="directions-catalog__tab btn d-flex align-items-center rounded-pill border-0 fw-bold font-unbounded" type="button" id="catalog-tab-children" role="tab" aria-controls="catalog-panel-children" aria-selected="false" tabindex="-1" data-catalog-tab="children">
+                                    <span class="directions-catalog__tab-icon position-relative flex-shrink-0" aria-hidden="true">
+                                        <img src="@img/directions-page/icon-children.svg" class="directions-catalog__icon-default w-100 h-100" alt="">
+                                        <img src="@img/directions-page/icon-children-active.svg" class="directions-catalog__icon-active position-absolute top-0 start-0 w-100 h-100" alt="">
+                                    </span>
+                                    Танцы для детей
+                                </button>
+                            </div>
+                            <div class="directions-catalog__select-wrap d-lg-none position-relative w-100">
+                                <label class="visually-hidden" for="catalog-age">Выберите возраст</label>
+                                <select class="visually-hidden" id="catalog-age" data-catalog-select aria-hidden="true" tabindex="-1">
+                                    <option value="" disabled selected>Выберите возраст</option>
+                                    <option value="adults">Танцы для взрослых</option>
+                                    <option value="teens">Танцы для подростков</option>
+                                    <option value="children">Танцы для детей</option>
+                                </select>
+                                <button class="directions-catalog__select-trigger btn d-flex align-items-center justify-content-between text-start bg-white rounded w-100" type="button" role="combobox" aria-label="Выберите возраст" aria-haspopup="listbox" aria-expanded="false" aria-controls="catalog-age-options" data-catalog-select-trigger>
+                                    <span class="directions-catalog__select-value d-flex align-items-center">
+                                        <img src="@img/directions-page/icon-age-select.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true" data-catalog-select-icon>
+                                        <span data-catalog-select-label>Выберите возраст</span>
+                                    </span>
+                                    <span class="directions-catalog__select-arrow flex-shrink-0" aria-hidden="true"></span>
+                                </button>
+                                <div class="directions-catalog__select-options w-100 overflow-hidden" id="catalog-age-options" role="listbox" aria-label="Возрастная группа" data-catalog-select-options hidden>
+                                    <button class="directions-catalog__select-option btn d-flex align-items-center justify-content-start text-start bg-white w-100" type="button" role="option" id="catalog-age-adults" aria-selected="false" tabindex="-1" data-catalog-select-option="adults">
+                                        <img src="@img/directions-page/icon-high-heels-select.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true">
+                                        <span>Танцы для взрослых</span>
+                                    </button>
+                                    <button class="directions-catalog__select-option btn d-flex align-items-center justify-content-start text-start bg-white w-100" type="button" role="option" id="catalog-age-teens" aria-selected="false" tabindex="-1" data-catalog-select-option="teens">
+                                        <img src="@img/directions-page/icon-teens.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true">
+                                        <span>Танцы для подростков</span>
+                                    </button>
+                                    <button class="directions-catalog__select-option btn d-flex align-items-center justify-content-start text-start bg-white w-100" type="button" role="option" id="catalog-age-children" aria-selected="false" tabindex="-1" data-catalog-select-option="children">
+                                        <img src="@img/directions-page/icon-children.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true">
+                                        <span>Танцы для детей</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="directions-catalog__panel directions-catalog__panel--adults position-relative mx-auto" id="catalog-panel-adults" role="tabpanel" aria-labelledby="catalog-tab-adults" aria-hidden="false" tabindex="0" data-catalog-panel="adults">
+                            <picture class="directions-responsive-image">
+                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-age-halo-mobile.svg">
+                                <img src="@img/directions-page/catalog-age-halo.svg" class="directions-catalog__halo position-absolute" alt="" aria-hidden="true">
+                            </picture>
+                            <div class="directions-catalog__intro position-relative">
+                                <h3 class="directions-catalog__heading font-unbounded fw-bold mb-0">Танцы для взрослых</h3>
+                                <div class="directions-catalog__accent" aria-hidden="true"></div>
+                                <p class="directions-catalog__intro-text mb-0 d-none d-lg-block">Направления для тех, кто хочет научиться красиво танцевать и двигаться, стать пластичнее и женственнее, переключиться после рабочего дня или найти новое увлечение для себя. В Madison можно выбрать направление под своё настроение, начать с нуля и постепенно развиваться в выбранном стиле.</p>
+                                <p class="directions-catalog__intro-text mb-0 d-lg-none">Женственная и выразительная хореография на каблуках, которая помогает развивать пластику, осанку, грацию и подачу. На занятиях мы поработаем над походкой, разучим эффектные танцы, научимся красиво двигаться и увереннее чувствовать себя в движении, раскрывая свою женственность и яркую сторону.</p>
+                            </div>
+                            <div class="directions-catalog__art directions-catalog__art--adults position-relative" aria-hidden="true">
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-adults-shape-mobile.svg">
+                                    <img src="@img/directions-page/catalog-dancer-shape.svg" class="directions-catalog__art-swoosh position-absolute" alt="" loading="lazy">
+                                </picture>
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-adults-line-mobile.svg">
+                                    <img src="@img/directions-page/catalog-adults-line.svg" class="directions-catalog__art-line position-absolute" alt="" loading="lazy">
+                                </picture>
+                                <img src="@img/directions-page/catalog-adults-dancer.png" class="directions-catalog__art-person position-absolute" alt="" loading="lazy">
+                                <img src="@img/directions-page/catalog-note-adults.png" class="directions-catalog__art-note position-absolute" alt="" loading="lazy">
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-adults-arrow-mobile.svg">
+                                    <img src="@img/directions-page/catalog-adults-arrow.svg" class="directions-catalog__art-doodle position-absolute" alt="" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="directions-catalog__cards row gx-0 position-relative">
+                                @@loop('./html/templates/_directions-catalog-card.html', './html/json/directions-catalog-adults.json')
+                            </div>
+                            <div class="directions-catalog__art-secondary d-none d-lg-block position-absolute" aria-hidden="true">
+                                <img src="@img/directions-page/catalog-secondary-shape.svg" class="directions-catalog__secondary-swoosh position-absolute" alt="" loading="lazy">
+                                <img src="@img/directions-page/catalog-secondary-line.svg" class="directions-catalog__secondary-line position-absolute" alt="" loading="lazy">
+                                <div class="directions-catalog__secondary-person position-absolute overflow-hidden">
+                                    <img src="@img/directions-page/catalog-secondary-dancer.png" class="position-absolute" alt="" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="directions-catalog__action text-center position-relative">
+                                <a href="#" class="btn btn-primary text-uppercase">Направления для взрослых</a>
+                            </div>
+                        </div>
+                        <div class="directions-catalog__panel directions-catalog__panel--teens position-relative mx-auto d-none" id="catalog-panel-teens" role="tabpanel" aria-labelledby="catalog-tab-teens" aria-hidden="true" tabindex="0" data-catalog-panel="teens">
+                            <picture class="directions-responsive-image">
+                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-age-halo-mobile.svg">
+                                <img src="@img/directions-page/catalog-age-halo.svg" class="directions-catalog__halo position-absolute" alt="" aria-hidden="true">
+                            </picture>
+                            <div class="directions-catalog__intro position-relative">
+                                <h3 class="directions-catalog__heading font-unbounded fw-bold mb-0">Танцы для подростков</h3>
+                                <div class="directions-catalog__accent" aria-hidden="true"></div>
+                                <p class="directions-catalog__intro-text mb-0">В Madison подростки могут раскрыть характер, энергию и свой стиль, стать частью команды и найти новых друзей.</p>
+                            </div>
+                            <div class="directions-catalog__art directions-catalog__art--teens position-relative" aria-hidden="true">
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-teens-shape-mobile.svg">
+                                    <img src="@img/directions-page/catalog-dancer-shape.svg" class="directions-catalog__art-swoosh position-absolute" alt="" loading="lazy">
+                                </picture>
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-teens-line-mobile.svg">
+                                    <img src="@img/directions-page/catalog-teens-line.svg" class="directions-catalog__art-line position-absolute" alt="" loading="lazy">
+                                </picture>
+                                <img src="@img/directions-page/catalog-teens-dancer.png" class="directions-catalog__art-person position-absolute" alt="" loading="lazy">
+                                <img src="@img/directions-page/catalog-note-teens.png" class="directions-catalog__art-note position-absolute" alt="" loading="lazy">
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-teens-decor-mobile.svg">
+                                    <img src="@img/directions-page/catalog-teens-decor.svg" class="directions-catalog__art-doodle position-absolute" alt="" loading="lazy">
+                                </picture>
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-teens-sparkle-mobile.svg">
+                                    <img src="@img/directions-page/catalog-teens-sparkle.svg" class="directions-catalog__art-doodle-extra position-absolute" alt="" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="directions-catalog__cards row gx-0 position-relative">
+                                @@loop('./html/templates/_directions-catalog-card.html', './html/json/directions-catalog-teens.json')
+                            </div>
+                            <p class="directions-catalog__aside mb-0">
+                                <strong>На занятиях подростки изучают</strong>
+                                популярные танцевальные направления, разучивают модные постановки, снимаются в танцевальных видео и выступают на концертах, конкурсах и чемпионатах
+                            </p>
+                            <div class="directions-catalog__action text-center position-relative">
+                                <a href="#" class="btn btn-primary text-uppercase">Направления для подростков</a>
+                            </div>
+                        </div>
+                        <div class="directions-catalog__panel directions-catalog__panel--children position-relative mx-auto d-none" id="catalog-panel-children" role="tabpanel" aria-labelledby="catalog-tab-children" aria-hidden="true" tabindex="0" data-catalog-panel="children">
+                            <picture class="directions-responsive-image">
+                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-children-halo-mobile.svg">
+                                <img src="@img/directions-page/catalog-children-halo.svg" class="directions-catalog__halo position-absolute" alt="" aria-hidden="true">
+                            </picture>
+                            <div class="directions-catalog__intro position-relative">
+                                <h3 class="directions-catalog__heading font-unbounded fw-bold mb-0">Танцы для детей</h3>
+                                <div class="directions-catalog__accent" aria-hidden="true"></div>
+                                <p class="directions-catalog__intro-text mb-0">Занятия в Madison знакомят детей с музыкой, ритмом и современной хореографией с учётом их возраста.</p>
+                            </div>
+                            <div class="directions-catalog__art directions-catalog__art--children position-relative" aria-hidden="true">
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-children-shape-mobile.svg">
+                                    <img src="@img/directions-page/catalog-children-shape.svg" class="directions-catalog__art-swoosh position-absolute" alt="" loading="lazy">
+                                </picture>
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-children-line-mobile.svg">
+                                    <img src="@img/directions-page/catalog-children-line.svg" class="directions-catalog__art-line position-absolute" alt="" loading="lazy">
+                                </picture>
+                                <img src="@img/directions-page/catalog-children-dancer.png" class="directions-catalog__art-person position-absolute" alt="" loading="lazy">
+                                <img src="@img/directions-page/catalog-note-children.png" class="directions-catalog__art-note position-absolute" alt="" loading="lazy">
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-children-decor-mobile.svg">
+                                    <img src="@img/directions-page/catalog-children-decor.svg" class="directions-catalog__art-doodle position-absolute" alt="" loading="lazy">
+                                </picture>
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-children-sparkle-mobile.svg">
+                                    <img src="@img/directions-page/catalog-children-sparkle.svg" class="directions-catalog__art-doodle-extra position-absolute" alt="" loading="lazy">
+                                </picture>
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/catalog-children-star-mobile.svg">
+                                    <img src="@img/directions-page/catalog-children-star.svg" class="directions-catalog__art-doodle-star position-absolute" alt="" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="directions-catalog__cards row gx-0 position-relative">
+                                @@loop('./html/templates/_directions-catalog-card.html', './html/json/directions-catalog-children.json')
+                            </div>
+                            <p class="directions-catalog__aside mb-0">
+                                <strong>Программы и постановки адаптированы для каждой возрастной группы:</strong>
+                                малыши осваивают движения через игру, а дети постарше изучают современные танцевальные направления, разучивают яркие постановки и выступают на концертах, конкурсах и чемпионатах.
+                            </p>
+                            <div class="directions-catalog__action text-center position-relative">
+                                <a href="#" class="btn btn-primary text-uppercase">Танцевальные направления для детей</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="directions-help directions-creative text-white position-relative overflow-hidden" aria-labelledby="directions-help-title">
+                    <div class="directions-creative__background d-block position-absolute top-0 start-50 translate-middle-x w-100 h-100 pe-none" aria-hidden="true"></div>
+                    <div class="directions-creative__wrapper">
+                        <div class="directions-help__art position-absolute pe-none" aria-hidden="true">
+                            <div class="directions-help__dancer-mask">
+                                <img src="@img/directions-page/help-dancer.png" alt="" class="directions-help__dancer">
+                            </div>
+                            <span class="directions-help__dancer-top position-absolute d-none d-lg-block overflow-hidden">
+                                <img src="@img/directions-page/help-dancer-top.png" class="position-absolute" alt="">
+                            </span>
+                        </div>
+                        <img src="@img/directions-page/help-bubble-heels.png" class="directions-help__bubble directions-help__bubble--heels position-absolute d-none d-lg-block pe-none" alt="" aria-hidden="true">
+                        <img src="@img/directions-page/help-bubble-latina.png" class="directions-help__bubble directions-help__bubble--latina position-absolute d-none d-lg-block pe-none" alt="" aria-hidden="true">
+                        <img src="@img/directions-page/help-bubble-modern.png" class="directions-help__bubble directions-help__bubble--modern position-absolute d-none d-lg-block pe-none" alt="" aria-hidden="true">
+                        <div class="directions-help__container container position-relative z-3">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <h2 id="directions-help-title" class="directions-help__title font-unbounded fw-semibold text-uppercase mb-0">Не знаешь, какое направление выбрать?</h2>
+                                    <p class="directions-help__intro">Не обязательно разбираться во всех танцевальных стилях, чтобы начать. Мы поможем найти то, что подойдет именно тебе!</p>
+                                    <div class="directions-help__questions d-flex flex-wrap flex-column flex-lg-row">
+                                        <div class="directions-help__question d-flex align-items-center gap-2">
+                                            <picture class="directions-responsive-image">
+                                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/icon-music-mobile.svg">
+                                                <img src="@img/directions-page/icon-music.svg" class="flex-shrink-0" alt="">
+                                            </picture>
+                                            <p class="fw-bold mb-0">
+                                                Какая музыка
+                                                <br>
+                                                тебе ближе?
+                                            </p>
+                                        </div>
+                                        <div class="directions-help__question d-flex align-items-center gap-2">
+                                            <span class="directions-help__move-icon rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                                                <picture class="directions-responsive-image">
+                                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/icon-movement-mobile.svg">
+                                                    <img src="@img/directions-page/icon-movement.svg" alt="">
+                                                </picture>
+                                            </span>
+                                            <p class="fw-bold mb-0">
+                                                Какой характер
+                                                <br>
+                                                движений нравится?
+                                            </p>
+                                        </div>
+                                        <div class="directions-help__question d-flex align-items-center gap-2">
+                                            <picture class="directions-responsive-image">
+                                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/icon-mood-mobile.svg">
+                                                <img src="@img/directions-page/icon-mood.svg" class="flex-shrink-0" alt="">
+                                            </picture>
+                                            <p class="fw-bold mb-0">
+                                                Какое настроение
+                                                <br>
+                                                у тебя сейчас?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="directions-help__bottom d-flex flex-column flex-xxl-row align-items-lg-start">
+                                        <div class="directions-help__think flex-shrink-0" aria-hidden="true">
+                                            <img src="@img/directions-page/help-note.png" class="directions-help__handwriting" alt="">
+                                            <picture class="directions-responsive-image">
+                                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/help-note-arrow-mobile.svg">
+                                                <img src="@img/directions-page/help-note-arrow.svg" class="directions-help__arrow position-absolute" alt="">
+                                            </picture>
+                                            <picture class="directions-responsive-image">
+                                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/help-note-underline-mobile.svg">
+                                                <img src="@img/directions-page/help-note-underline.svg" class="directions-help__underline position-absolute" alt="">
+                                            </picture>
+                                        </div>
+                                        <p class="directions-help__outro fw-bold flex-shrink-0 mb-0">
+                                            — а мы поможем найти направление, в котором захочется танцевать!
+                                            <br>
+                                            см. ниже 👇
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="directions-mood" aria-labelledby="directions-mood-title">
+                    <div class="container">
+                        <div class="directions-mood__heading position-relative text-center">
+                            <h2 id="directions-mood-title" class="font-unbounded fw-semibold lh-base text-uppercase mb-0">Найди свой танец</h2>
+                            <span class="directions-mood__note directions-section-label bg-white rounded-pill d-inline-flex align-items-center justify-content-center text-nowrap">По настроению ⚡️</span>
+                        </div>
+                        <div class="directions-mood__cards row">
+                            <div class="col-lg-6">
+                                <article class="directions-mood__card directions-mood__card--energy bg-white rounded-4 position-relative">
+                                    <div class="directions-mood__art position-absolute" aria-hidden="true">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/mood-energy-shape-mobile.svg">
+                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-energy-shape.svg" alt="">
+                                        </picture>
+                                        <img class="directions-mood__dancer position-absolute" src="@img/directions-page/mood-energy-dancer.png" alt="">
+                                    </div>
+                                    <div class="directions-mood__copy d-flex flex-column align-items-start">
+                                        <h3 class="fw-bold mb-0">Хочется энергии и драйва?</h3>
+                                        <span class="directions-section-label rounded-pill fw-bold text-uppercase text-center">Хип-хоп или джаз-фанк</span>
+                                        <p class="mb-0">Динамичная музыка, яркие связки и выразительные движения для тех, кто хочет научиться эффектно танцевать.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-lg-6">
+                                <article class="directions-mood__card directions-mood__card--feminine bg-white rounded-4 position-relative">
+                                    <div class="directions-mood__art position-absolute" aria-hidden="true">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/mood-feminine-shape-mobile.svg">
+                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-feminine-shape.svg" alt="">
+                                        </picture>
+                                        <div class="directions-mood__dancer position-absolute overflow-hidden">
+                                            <img src="@img/directions-page/mood-feminine-dancer.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="directions-mood__copy d-flex flex-column align-items-start">
+                                        <h3 class="fw-bold mb-0">Хочется больше пластики и женственности?</h3>
+                                        <span class="directions-section-label rounded-pill fw-bold text-uppercase text-center">Хай-хилс, леди дэнс или стрип-пластика</span>
+                                        <p class="mb-0">На занятиях ты научишься красиво танцевать, развивать грацию, выразительность и уверенную женственную подачу.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-lg-6">
+                                <article class="directions-mood__card directions-mood__card--latin bg-white rounded-4 position-relative">
+                                    <div class="directions-mood__art position-absolute" aria-hidden="true">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/mood-latin-shape-mobile.svg">
+                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-latin-shape.svg" alt="">
+                                        </picture>
+                                        <img class="directions-mood__dancer position-absolute" src="@img/directions-page/mood-latin-dancer.png" alt="">
+                                    </div>
+                                    <div class="directions-mood__copy d-flex flex-column align-items-start">
+                                        <h3 class="fw-bold mb-0">Нравятся латиноамериканские ритмы?</h3>
+                                        <span class="directions-section-label rounded-pill fw-bold text-uppercase text-center">Латина соло</span>
+                                        <p class="mb-0">Яркая музыка, энергия, легкие танцевальные связки и много эмоций — и все это без партнера.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-lg-6">
+                                <article class="directions-mood__card directions-mood__card--modern bg-white rounded-4 position-relative">
+                                    <div class="directions-mood__art position-absolute" aria-hidden="true">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/mood-modern-shape-mobile.svg">
+                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-modern-shape.svg" alt="">
+                                        </picture>
+                                        <img class="directions-mood__dancer position-absolute" src="@img/directions-page/mood-modern-dancer.png" alt="">
+                                    </div>
+                                    <div class="directions-mood__copy d-flex flex-column align-items-start">
+                                        <h3 class="fw-bold mb-0">Нравятся современные танцы?</h3>
+                                        <span class="directions-section-label rounded-pill fw-bold text-uppercase text-center">Современные танцы</span>
+                                        <p class="mb-0">Современная музыка, популярные стили и яркие танцевальные постановки, адаптированные под возраст.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="directions-mood__action text-center">
+                            <a class="btn btn-primary text-uppercase" href="index.html#sign-up">Начать танцевать</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="directions-types" aria-label="Форматы занятий">
+                    <div class="container d-flex flex-column">
+                        <article class="directions-types__card directions-types__card--beginners bg-white rounded-4">
+                            <div class="row g-0 align-items-start">
+                                <div class="col-lg-4 flex-shrink-0">
+                                    <div class="directions-types__shoes position-relative mx-auto" aria-hidden="true">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/types-sneakers-shape-mobile.svg">
+                                            <img class="directions-types__shoes-shape position-absolute" src="@img/directions-page/types-sneakers-shape.svg" alt="">
+                                        </picture>
+                                        <img class="directions-types__shoes-photo position-absolute" src="@img/directions-page/types-sneakers.png" alt="">
+                                        <img class="directions-types__shoes-note position-absolute" src="@img/directions-page/types-note.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 flex-md-grow-1 flex-lg-grow-0">
+                                    <div class="directions-types__copy d-flex flex-column align-items-center align-items-lg-start">
+                                        <span class="directions-section-label rounded-pill fw-bold text-uppercase text-center">Первые шаги к большим возможностям</span>
+                                        <h2 class="font-unbounded fw-semibold text-uppercase text-center text-lg-start mb-0">Танцы для начинающих</h2>
+                                        <div class="directions-types__detail d-flex align-items-start align-items-lg-center">
+                                            <span class="directions-types__icon directions-types__icon--support rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
+                                                <picture class="directions-responsive-image">
+                                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/icon-support-mobile.svg">
+                                                    <img src="@img/directions-page/icon-support.svg" alt="">
+                                                </picture>
+                                            </span>
+                                            <p class="mb-0 flex-grow-1">Начать танцевать можно в любом возрасте и без специальной подготовки. В Madison есть группы для начинающих, где ты изучаешь базовые движения, соединяешь их в танцевальные связки и разучиваешь яркую современную хореографию, подходящую твоему уровню</p>
+                                        </div>
+                                        <p class="fw-bold text-center text-lg-start mb-0">Не нужно заранее уметь танцевать, быть пластичной или быстро запоминать движения. Всё развивается постепенно, а с каждым занятием ты чувствуешь себя в танце всё увереннее.</p>
+                                        <a class="btn btn-primary text-uppercase" href="index.html#sign-up">Записаться на пробное</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="directions-types__card directions-types__card--individual bg-white rounded-4 position-relative overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-lg-8">
+                                    <div class="directions-types__copy d-flex flex-column align-items-center align-items-lg-start position-relative">
+                                        <span class="directions-section-label rounded-pill fw-bold text-uppercase text-center">Твои цели — наше внимание</span>
+                                        <h2 class="font-unbounded fw-semibold text-uppercase text-center text-lg-start mb-0">
+                                            Индивидуальные
+                                            <br>
+                                            занятия
+                                            <br class="d-lg-none">
+                                            с хореографом
+                                        </h2>
+                                        <div class="directions-types__detail d-flex align-items-start">
+                                            <picture class="directions-responsive-image">
+                                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/icon-diamond-mobile.svg">
+                                                <img class="directions-types__icon flex-shrink-0" src="@img/directions-page/icon-diamond.svg" alt="">
+                                            </picture>
+                                            <p class="mb-0 flex-grow-1">Возможность заниматься один на один с хореографом и сосредоточиться именно на своих целях. Можно освоить понравившееся направление, разобрать сложные элементы, улучшить технику, выучить определенный танец или подготовить номер для важного события.</p>
+                                        </div>
+                                        <p class="text-center text-lg-start mb-0">
+                                            Программа и темп занятий подбираются с учётом твоего уровня подготовки и задачи.
+                                            <strong>Такой формат подойдёт и тем, кто только начинает танцевать, и тем, кто хочет быстрее развиваться в выбранном направлении или поработать над конкретными навыками.</strong>
+                                        </p>
+                                        <a class="btn btn-primary text-uppercase" href="index.html#sign-up">Записаться на индивидуальное занятие</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="directions-types__individual-art position-relative" aria-hidden="true">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/types-individual-shapes-mobile.svg">
+                                            <img class="directions-types__individual-shape directions-types__individual-shape--large position-absolute" src="@img/directions-page/types-individual-shape-large.svg" alt="">
+                                        </picture>
+                                        <img class="directions-types__individual-shape directions-types__individual-shape--small position-absolute d-none d-lg-block" src="@img/directions-page/types-individual-shape-small.svg" alt="">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/types-individual-line-mobile.svg">
+                                            <img class="directions-types__individual-line position-absolute" src="@img/directions-page/types-individual-line.svg" alt="">
+                                        </picture>
+                                        <div class="directions-types__individual-photo position-absolute overflow-hidden">
+                                            <img src="@img/directions-page/types-individual-dancer.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="directions-events directions-creative text-white position-relative overflow-hidden" aria-labelledby="directions-events-title">
+                    <div class="directions-creative__background d-block position-absolute top-0 start-50 translate-middle-x w-100 h-100 pe-none" aria-hidden="true"></div>
+                    <div class="directions-creative__wrapper">
+                        <div class="directions-events__art position-absolute pe-none" aria-hidden="true">
+                            <picture class="directions-responsive-image">
+                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/events-photo-shape-mobile.svg">
+                                <img src="@img/directions-page/events-photo-shape.svg" class="directions-events__shape position-absolute" alt="">
+                            </picture>
+                            <picture class="directions-responsive-image">
+                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/events-photo-shape-front-mobile.svg">
+                                <img src="@img/directions-page/events-photo-shape-front.svg" class="directions-events__shape-front position-absolute" alt="">
+                            </picture>
+                            <picture class="directions-responsive-image">
+                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/events-couple-mobile.png">
+                                <img src="@img/directions-page/events-couple.png" class="directions-events__couple position-absolute" alt="">
+                            </picture>
+                            <picture class="directions-responsive-image">
+                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/events-note-mobile.png">
+                                <img src="@img/directions-page/events-note.png" class="directions-events__note position-absolute" alt="">
+                            </picture>
+                        </div>
+                        <picture class="directions-responsive-image">
+                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/events-line-primary-mobile.svg">
+                            <img src="@img/directions-page/events-line-primary.svg" class="directions-events__line position-absolute pe-none" alt="" aria-hidden="true">
+                        </picture>
+                        <picture class="directions-responsive-image">
+                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/events-line-secondary-mobile.svg">
+                            <img src="@img/directions-page/events-line-secondary.svg" class="directions-events__line directions-events__line--second position-absolute pe-none" alt="" aria-hidden="true">
+                        </picture>
+                        <div class="directions-events__container container position-relative z-3">
+                            <h2 id="directions-events-title" class="directions-events__title position-relative font-unbounded fw-semibold text-uppercase">
+                                Постановка танца
+                                <br class="d-none d-lg-block">
+                                для особого события
+                            </h2>
+                            <div class="directions-events__cards row align-items-start">
+                                <div class="col-lg-4">
+                                    <article class="directions-events__card bg-white rounded-4 d-flex flex-column">
+                                        <span class="directions-events__wedding-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <picture class="directions-responsive-image">
+                                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/icon-wedding-rings-mobile.svg">
+                                                <img src="@img/directions-page/icon-wedding-rings.svg" alt="">
+                                            </picture>
+                                        </span>
+                                        <div>
+                                            <h3 class="fw-bold mb-0">Постановка свадебного танца</h3>
+                                            <p class="directions-events__description mb-0">Подберём музыку, стиль и хореографию с учётом твоей идеи, уровня подготовки и атмосферы свадьбы. Воплотим задумку в красивый свадебный танец, который станет ярким моментом праздника и запомнится тебе, твоему партнеру и вашим гостям.</p>
+                                        </div>
+                                        <a href="#" class="directions-events__details fw-bold mt-auto">Узнать подробнее →</a>
+                                    </article>
+                                </div>
+                                <div class="col-lg-4">
+                                    <article class="directions-events__card directions-events__card--middle bg-white rounded-4 d-flex flex-column">
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/icon-balloon-mobile.svg">
+                                            <img src="@img/directions-page/icon-balloon.svg" class="directions-events__icon" alt="">
+                                        </picture>
+                                        <div>
+                                            <h3 class="fw-bold mb-0">Постановка танца для праздника или выступления</h3>
+                                            <p class="directions-events__description mb-0">День рождения, подарок близкому, корпоратив или другое особое событие — поставим танец соло, для пары или небольшой группы. Подберём музыку и хореографию под твою идею и уровень подготовки.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-lg-4">
+                                    <article class="directions-events__card bg-white rounded-4 d-flex flex-column">
+                                        <img src="@img/directions-page/icon-high-heels.svg" class="directions-events__icon" alt="">
+                                        <div>
+                                            <h3 class="fw-bold mb-0">Танцевальный мастер-класс для праздника</h3>
+                                            <p class="directions-events__description mb-0">Девичник, день рождения, встреча с друзьями или необычное свидание можно провести в формате танцевального мастер-класса. Выбираем стиль и музыку, а хореограф адаптирует занятие под формат и уровень участников.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="directions-events__cta d-flex justify-content-center">
+                                <a href="index.html#sign-up" class="btn btn-outline-primary bg-white">Оставить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="directions-life" aria-labelledby="directions-life-title">
+                    <div class="container">
+                        <div class="directions-life__heading d-flex flex-column align-items-center text-center">
+                            <h2 id="directions-life-title" class="font-unbounded fw-semibold lh-base text-uppercase mb-0">Как проходят занятия в Madison</h2>
+                            <span class="directions-life__label directions-section-label bg-white rounded-pill">Место, где хочется танцевать</span>
+                        </div>
+                        <div class="directions-life__body row align-items-start align-items-lg-center align-items-xxl-start position-relative">
+                            <div class="directions-life__center col-lg-4 order-first order-xxl-2">
+                                <div class="directions-life__main-art position-relative mx-auto" aria-hidden="true">
+                                    <picture class="directions-responsive-image">
+                                        <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/life-collage-shape-mobile.svg">
+                                        <img class="directions-life__backdrop position-absolute" src="@img/directions-page/life-collage-shape.svg" alt="">
+                                    </picture>
+                                    <picture class="directions-responsive-image">
+                                        <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/life-collage-frame-mobile.svg">
+                                        <img class="directions-life__frame position-absolute" src="@img/directions-page/life-collage-frame.svg" alt="">
+                                    </picture>
+                                    <div class="directions-life__main-mask position-absolute">
+                                        <img class="directions-life__main-source directions-life__main-source--room position-absolute" src="@img/directions-page/life-collage-room.png" alt="">
+                                        <img class="directions-life__main-source directions-life__main-source--class position-absolute" src="@img/directions-page/life-collage-class.png" alt="">
+                                        <img class="directions-life__main-source directions-life__main-source--dancer position-absolute" src="@img/directions-page/life-collage-dancer.png" alt="">
+                                    </div>
+                                    <div class="directions-life__main-cutout position-absolute overflow-hidden">
+                                        <img src="@img/directions-page/life-collage-cutout.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="directions-life__side directions-life__side--left col-lg-4 order-1 d-flex flex-column">
+                                <article class="directions-life__feature directions-life__feature--groups row g-0 flex-nowrap align-items-start order-1 order-lg-0">
+                                    <div class="directions-life__text flex-grow-1 col-7 col-lg-9 text-lg-end">
+                                        <h3 class="fw-bold mb-0 text-nowrap">Группы по возрасту и уровню</h3>
+                                        <p class="mb-0">Программы подобраны так, чтобы заниматься было комфортно и начинающим, и ученикам с танцевальным опытом.</p>
+                                    </div>
+                                    <div class="col-5 col-lg-3 flex-shrink-0">
+                                        <div class="directions-life__portrait directions-life__portrait--groups position-relative" aria-hidden="true">
+                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="">
+                                            <div class="directions-life__portrait-mask position-absolute">
+                                                <img src="@img/directions-page/life-groups-photo.png" alt="">
+                                            </div>
+                                            <div class="directions-life__portrait-top position-absolute overflow-hidden">
+                                                <img src="@img/directions-page/life-groups-cutout.png" alt="">
+                                            </div>
+                                            <picture class="directions-responsive-image">
+                                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/life-groups-heart-mobile.svg">
+                                                <img class="directions-life__spark position-absolute" src="@img/directions-page/life-groups-heart.svg" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="directions-life__feature directions-life__feature--teachers row g-0 flex-nowrap align-items-start order-3 order-lg-0">
+                                    <div class="directions-life__text flex-grow-1 col-7 col-lg-9 text-lg-end">
+                                        <h3 class="fw-bold mb-0">Профессиональные преподаватели</h3>
+                                        <p class="mb-0">Хореографы Madison умеют влюблять в танец: поддерживают с первых шагов, помогают почувствовать музыку и учат танцевать всё свободнее и увереннее с каждым занятием.</p>
+                                    </div>
+                                    <div class="col-5 col-lg-3 flex-shrink-0">
+                                        <div class="directions-life__portrait directions-life__portrait--teachers position-relative" aria-hidden="true">
+                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="">
+                                            <div class="directions-life__portrait-mask position-absolute">
+                                                <img src="@img/directions-page/life-teachers-photo.png" alt="">
+                                            </div>
+                                            <div class="directions-life__portrait-top position-absolute overflow-hidden">
+                                                <img src="@img/directions-page/life-teachers-photo.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="directions-life__side directions-life__side--right col-lg-4 order-3 d-flex flex-column">
+                                <article class="directions-life__feature directions-life__feature--events row g-0 flex-nowrap align-items-start order-2 order-lg-0">
+                                    <div class="col-5 col-lg-3 flex-shrink-0">
+                                        <div class="directions-life__portrait directions-life__portrait--events position-relative" aria-hidden="true">
+                                            <img class="directions-life__portrait-dot position-absolute" src="@img/directions-page/life-events-dot.svg" alt="">
+                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="">
+                                            <div class="directions-life__portrait-mask position-absolute">
+                                                <img src="@img/directions-page/life-events-photo.png" alt="">
+                                            </div>
+                                            <div class="directions-life__portrait-top position-absolute overflow-hidden">
+                                                <img src="@img/directions-page/life-events-cutout.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="directions-life__text flex-grow-1 col-7 col-lg-9">
+                                        <h3 class="fw-bold mb-0">Выступления и танцевальные события</h3>
+                                        <p class="mb-0">Ученики Madison участвуют в концертах, конкурсах, чемпионатах, танцевальных съёмках и других ярких проектах школы</p>
+                                    </div>
+                                </article>
+                                <article class="directions-life__feature directions-life__feature--friends row g-0 flex-nowrap align-items-start order-4 order-lg-0">
+                                    <div class="col-5 col-lg-3 flex-shrink-0">
+                                        <div class="directions-life__portrait directions-life__portrait--friends position-relative" aria-hidden="true">
+                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="">
+                                            <div class="directions-life__portrait-mask position-absolute">
+                                                <img src="@img/directions-page/life-friends-photo.png" alt="">
+                                            </div>
+                                            <div class="directions-life__portrait-top position-absolute overflow-hidden">
+                                                <img src="@img/directions-page/life-friends-photo.png" alt="">
+                                            </div>
+                                            <picture class="directions-responsive-image">
+                                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/life-friends-sparkle-mobile.svg">
+                                                <img class="directions-life__spark position-absolute" src="@img/directions-page/life-friends-sparkle.svg" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="directions-life__text flex-grow-1 col-7 col-lg-9">
+                                        <h3 class="fw-bold mb-0">Пространство для своих</h3>
+                                        <p class="mb-0">В Madison мы устраиваем тематические вечеринки, проводим мастер-классы и пробуем новое вместе. Здесь находят компанию по душе, а знакомства на занятиях перерастают в дружбу за пределами зала.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="directions-life__action d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-xxl-start">
+                            <p class="font-unbounded fw-medium text-uppercase mb-0">Попробуй начать!</p>
+                            <a class="btn btn-primary text-uppercase" href="index.html#sign-up">Записаться на занятие</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="directions-final directions-creative text-white position-relative overflow-hidden" aria-labelledby="directions-final-title">
+                    <div class="directions-creative__background d-block position-absolute top-0 start-50 translate-middle-x w-100 h-100 pe-none" aria-hidden="true"></div>
+                    <div class="directions-creative__wrapper">
+                        <div class="directions-final__art position-absolute pe-none" aria-hidden="true">
+                            <img src="@img/directions-page/final-photo-left.png" class="directions-final__photo directions-final__photo--left position-absolute" alt="">
+                            <img src="@img/directions-page/final-photo-right.png" class="directions-final__photo directions-final__photo--right position-absolute" alt="">
+                            <div class="directions-final__dancer-mask">
+                                <img src="@img/directions-page/final-dancer.png" class="directions-final__dancer position-absolute" alt="">
+                            </div>
+                            <picture class="directions-responsive-image">
+                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/final-ribbon-mobile.svg">
+                                <img src="@img/directions-page/final-ribbon.svg" class="directions-final__ribbon position-absolute" alt="">
+                            </picture>
+                            <span class="directions-final__restore directions-final__restore--arms position-absolute d-none d-lg-block overflow-hidden">
+                                <img src="@img/directions-page/final-dancer.png" class="position-absolute" alt="">
+                            </span>
+                            <span class="directions-final__restore directions-final__restore--neck position-absolute d-none d-lg-block overflow-hidden">
+                                <img src="@img/directions-page/final-dancer.png" class="position-absolute" alt="">
+                            </span>
+                            <span class="directions-final__restore directions-final__restore--hips position-absolute overflow-hidden">
+                                <img src="@img/directions-page/final-dancer.png" class="position-absolute" alt="">
+                            </span>
+                            <picture class="directions-responsive-image">
+                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/final-heart-left-mobile.svg">
+                                <img src="@img/directions-page/final-heart-left.svg" class="directions-final__heart directions-final__heart--left position-absolute" alt="">
+                            </picture>
+                            <picture class="directions-responsive-image">
+                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/final-heart-right-mobile.svg">
+                                <img src="@img/directions-page/final-heart-right.svg" class="directions-final__heart directions-final__heart--right position-absolute" alt="">
+                            </picture>
+                        </div>
+                        <div class="directions-final__container container position-relative z-3 text-center text-lg-start">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="directions-final__label-wrap position-relative d-block">
+                                        <span class="directions-final__label d-inline-block rounded-pill bg-white color-accent text-center">Попробуй тест-драйв!</span>
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/final-label-decor-left-mobile.svg">
+                                            <img src="@img/directions-page/final-label-decor-left.svg" class="directions-final__label-decor directions-final__label-decor--left position-absolute pe-none" alt="" aria-hidden="true">
+                                        </picture>
+                                        <picture class="directions-responsive-image">
+                                            <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/final-label-decor-right-mobile.svg">
+                                            <img src="@img/directions-page/final-label-decor-right.svg" class="directions-final__label-decor directions-final__label-decor--right position-absolute pe-none" alt="" aria-hidden="true">
+                                        </picture>
+                                    </div>
+                                    <h2 id="directions-final-title" class="directions-final__title font-unbounded fw-semibold text-uppercase">
+                                        Найди своё направление
+                                        <br>
+                                        и попробуй!
+                                    </h2>
+                                    <p class="directions-final__intro">Мы сделали для тебя спецпредложение:</p>
+                                    <div class="directions-final__offer d-inline-flex align-items-center bg-white rounded-4">
+                                        <strong>
+                                            2 пробных занятия
+                                            <br>
+                                            в разных группах за
+                                        </strong>
+                                        <span class="directions-final__price position-relative font-unbounded fw-bold color-accent text-nowrap">
+                                            <span class="directions-final__price-value">1 800 ₽</span>
+                                            <picture class="directions-responsive-image">
+                                                <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/final-price-underline-mobile.svg">
+                                                <img src="@img/directions-page/final-price-underline.svg" class="directions-final__price-line position-absolute" alt="" aria-hidden="true">
+                                            </picture>
+                                        </span>
+                                    </div>
+                                    <p class="directions-final__intro directions-final__tagline">
+                                        Чтобы ты могла попробовать
+                                        <br>
+                                        и выбрать то, что подходит именно тебе!
+                                    </p>
+                                    <div class="directions-final__actions d-flex flex-wrap flex-column flex-lg-row align-items-center align-items-lg-start">
+                                        <a href="index.html#sign-up" class="btn text-nowrap btn-outline-primary bg-white">Записаться на пробное занятие</a>
+                                        <a href="#" class="btn text-nowrap btn-primary">Посмотреть расписание</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="directions-final__note border border-white rounded-4 d-flex align-items-center">
+                                <picture class="directions-responsive-image">
+                                    <source class="d-none" media="(max-width: 991.98px)" srcset="@img/directions-page/icon-dance-discovery-mobile.svg">
+                                    <img src="@img/directions-page/icon-dance-discovery.svg" class="directions-final__note-icon flex-shrink-0" alt="">
+                                </picture>
+                                <p class="fw-bold mb-0">Можно долго выбирать стиль по описанию, но понять, какой танец действительно твой, проще всего на занятии 💫</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="faq" aria-labelledby="directions-faq-title">
+                    <div class="container">
+                        <h2 id="directions-faq-title" class="faq__title fs-title text-uppercase text-center font-unbounded fw-bold lh-base">Частые вопросы о танцевальных направлениях</h2>
+                        <ol class="faq__list">
+                            @@loop('./html/templates/_faq-item.html', './html/json/faq-directions.json')
+                        </ol>
+                        <div class="faq__actions d-flex justify-content-center flex-wrap">
+                            <a href="https://t.me/madison_dance" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-uppercase order-md-0 order-1">Задать вопрос</a>
+                            <a href="index.html#sign-up" class="btn btn-primary text-uppercase order-md-0 order-first">Записаться на пробное занятие</a>
+                            <a href="https://max.ru/u/f9LHodD0cOJ6tGKOH8PGYR4YaaJ5YH2cN688Gz_E0Ilgy8_Wv5ONSmrXwHE" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary text-uppercase order-md-0 order-3">
+                                <img src="@img/icons/max.svg" width="30" height="30" class="flex-shrink-0" alt="">
+                                MAX
+                            </a>
+                            <a href="https://t.me/madison_dance" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary text-uppercase order-md-0 order-3">
+                                <img src="@img/icons/telegram.svg" width="30" height="30" class="flex-shrink-0" alt="">
+                                Telegram
+                            </a>
+                            <a href="tel:+74954320814" class="btn btn-outline-primary text-uppercase order-md-0 order-2">Звонок</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_js.html', {})
+        </div>
+    </body>
+</html>
