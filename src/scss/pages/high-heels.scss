@@ -464,6 +464,10 @@
 	&__image {
 		position: absolute;
 		z-index: 2;
+
+		@media (max-width: 374.98px) {
+			z-index: 1;
+		}
 		top: rem(0);
 		right: rem(-166);
 		bottom: auto;
@@ -2039,5 +2043,88 @@ $outcomes-m-h: 958;
 		@media (min-width: $md3) {
 			font-size: 1.875rem;
 		}
+	}
+}
+
+// Narrow phones: let each outcome grow with its text instead of fixed coordinates.
+@media (max-width: 349.98px) {
+	.trial-lesson__cards .card__content-desc {
+		word-break: normal;
+		overflow-wrap: normal;
+		hyphens: auto;
+	}
+
+	.outcomes__list {
+		display: flex;
+		aspect-ratio: auto;
+		gap: rem(24);
+		padding: rem(24) 0 0;
+	}
+
+	.outcomes__item {
+		position: relative;
+		inset: auto;
+		display: flex;
+		align-items: center;
+		gap: rem(12);
+
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+		}
+
+		&:nth-child(n) .outcomes__item-content {
+			position: static;
+			width: auto;
+			flex: 1;
+			min-width: 0;
+			hyphens: auto;
+		}
+
+		&:nth-child(n) .outcomes__item-image {
+			position: relative;
+			inset: auto;
+			flex: 0 0 rem(100);
+			width: rem(100);
+			height: rem(140);
+			overflow: hidden;
+
+			&::before {
+				inset: auto auto rem(20) 50%;
+				transform: translateX(-50%);
+				width: rem(84);
+				height: rem(84);
+			}
+
+			img {
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				transform: none;
+			}
+		}
+
+		&:nth-child(5) .outcomes__item-image {
+			height: rem(100);
+		}
+
+		&:nth-child(3) .outcomes__item-image img,
+		&:nth-child(4) .outcomes__item-image img {
+			transform: scale(2);
+		}
+	}
+
+	.outcomes__deco--silhouette {
+		top: 0;
+		left: auto;
+		right: 0;
+		height: rem(28);
+		width: rem(10);
+	}
+
+	.outcomes__deco--woman {
+		top: auto;
+		bottom: 0;
+		left: 50%;
 	}
 }

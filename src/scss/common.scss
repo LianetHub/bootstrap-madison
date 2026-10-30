@@ -1088,12 +1088,15 @@ body {
 	// .schedule-teacher__image
 	&__image {
 		width: rem(102);
-		height: rem(144);
+		position: relative;
 		align-self: stretch;
 	}
 
 	// .schedule-teacher__photo
 	&__photo {
+		position: absolute;
+		inset: 0;
+		object-fit: cover;
 		object-position: center top;
 	}
 
@@ -1251,6 +1254,8 @@ body {
 		line-height: 140%;
 		box-shadow: 0 0 rem(7) 0 rgba(96, 0, 0, 0.2);
 		width: fit-content;
+		max-width: 100%;
+		white-space: normal;
 		font-size: 0.875rem;
 
 		@media (min-width: $md5) {
@@ -1875,7 +1880,7 @@ body {
 		bottom: 0;
 		left: 50%;
 		z-index: -1;
-		width: calc(100% + 2rem);
+		width: 100vw;
 		transform: translateX(-50%);
 		background: linear-gradient(0deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.62) 100%), #761A1B;
 		background-blend-mode: overlay, normal;

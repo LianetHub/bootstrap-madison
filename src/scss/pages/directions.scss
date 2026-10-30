@@ -259,6 +259,10 @@
 	mask-repeat: repeat;
 	overflow: visible;
 
+	@media (min-width: $md4) {
+		min-height: auto;
+	}
+
 	@media (min-width: $md3) {
 		background-color: #761a1b;
 		min-height: 47.5rem;
@@ -288,6 +292,11 @@
 			line-height: 1.25;
 			width: 100%;
 			max-width: 33.75rem;
+		}
+
+		@media (min-width: $md4) {
+			max-width: 40rem;
+			font-size: 2.125rem;
 		}
 
 		@media (min-width: $md3) {
@@ -320,6 +329,11 @@
 			font-size: 1rem;
 			line-height: 1.4;
 			max-width: 37.5rem;
+		}
+
+		@media (min-width: $md4) {
+			margin-top: 1.5rem;
+			max-width: 40rem;
 		}
 
 		@media (min-width: $md3) {
@@ -372,6 +386,12 @@
 			min-height: 13.75rem;
 		}
 
+		@media (min-width: $md4) {
+			min-height: 0;
+			margin-top: 1.5rem;
+			gap: 1.5rem;
+		}
+
 		@media (min-width: $md3) {
 			gap: 1.5625rem;
 			text-transform: uppercase;
@@ -405,6 +425,10 @@
 		width: 100%;
 		gap: 0.9375rem;
 		margin-top: 2.5rem;
+
+		@media (min-width: $md4) {
+			margin-top: 1.5rem;
+		}
 
 		@media (min-width: $md3) {
 			gap: 1.25rem;
@@ -446,6 +470,10 @@
 			mask-size: 100% 100%;
 		}
 
+		@media (min-width: $md4) {
+			background-image: linear-gradient(90deg, rgba(118, 26, 27, .85), rgba(118, 26, 27, .3)), url("@img/directions-page/hero-background.png");
+		}
+
 		@media (min-width: $md3) {
 			background-repeat: repeat, no-repeat;
 			background-color: transparent;
@@ -478,6 +506,11 @@
 	&__content {
 		--bs-gutter-x: 0;
 		padding: 2.25rem 0 2.625rem;
+
+		@media (min-width: $md4) {
+			padding-top: 2.5rem;
+			padding-bottom: 4rem;
+		}
 
 		@media (min-width: $md3) {
 			padding-top: 1.875rem;
@@ -563,6 +596,7 @@
 			padding-top: 1.6100625rem !important;
 			padding-bottom: 0.9375rem !important;
 		}
+
 	}
 
 	// .directions-hero::after
@@ -2298,6 +2332,10 @@
 	--bs-border-radius-lg: 0.625rem;
 	min-height: 42.125rem;
 
+	@media (min-width: $md4) {
+		min-height: auto;
+	}
+
 	@media (min-width: $md3) {
 		min-height: 45rem;
 	}
@@ -2323,6 +2361,12 @@
 		line-height: 1.875rem;
 		width: 16.8125rem;
 		max-width: 100%;
+
+		@media (min-width: $md4) {
+			font-size: 1.75rem;
+			line-height: 1.4;
+			width: 26rem;
+		}
 
 		@media (min-width: $md3) {
 			max-width: 100%;
@@ -2353,6 +2397,14 @@
 
 		@media (min-width: $md5) {
 			width: 18.75rem;
+		}
+
+		@media (min-width: $md4) {
+			font-size: 1rem;
+			line-height: 1.4;
+			width: 24rem;
+			margin-top: 1.5rem;
+			margin-bottom: 2rem;
 		}
 
 		@media (min-width: $md3) {
@@ -2452,6 +2504,13 @@
 		min-width: 0;
 		max-width: none;
 
+		@media (min-width: $md4) {
+			width: 26rem;
+			max-width: 100%;
+			font-size: 1rem;
+			line-height: 1.4;
+		}
+
 		@media (min-width: $md3) {
 			font-size: 1rem;
 			line-height: 1.4;
@@ -2482,6 +2541,11 @@
 	// .directions-help__container
 	&__container {
 		padding: 3.875rem 1.25rem 4.375rem;
+
+		@media (min-width: $md4) {
+			padding-top: 4rem;
+			padding-bottom: 6rem;
+		}
 
 		@media (min-width: $md3) {
 			padding: 5.5rem calc(var(--bs-gutter-x) * .5) 3rem;
@@ -2614,6 +2678,11 @@
 		gap: 0.9375rem;
 		margin-left: 1.8125rem;
 
+		@media (min-width: $md4) {
+			width: auto;
+			margin-left: 0;
+		}
+
 		@media (min-width: $md3) {
 			width: auto;
 			margin-left: 0;
@@ -2674,8 +2743,14 @@
 		gap: 3.75rem;
 		margin-top: 2.1875rem;
 
+		@media (min-width: $md4) {
+			gap: 1rem;
+			margin-top: 1.5rem;
+		}
+
 		@media (min-width: $md3) {
 			gap: 1rem;
+			margin-top: 2.1875rem;
 		}
 
 		@media (min-width: $md2) {
@@ -2696,6 +2771,12 @@
 		width: 10.66375rem;
 		height: 4.73125rem;
 		position: absolute;
+
+		@media (min-width: $md4) {
+			position: relative;
+			left: auto;
+			top: auto;
+		}
 
 		@media (min-width: $md3) {
 			width: 14.25rem;
@@ -2908,12 +2989,19 @@
 		top: 1.1275rem;
 		background-image: url("@img/directions-page/help-outline-mobile.svg");
 
+		@media (min-width: $md4) {
+			height: calc(100% - 2rem);
+			top: 1rem;
+			background-size: 100% 100%;
+		}
+
 		@media (min-width: $md3) {
 			width: auto;
 			height: auto;
 			left: auto;
 			top: auto;
 			background-image: none;
+			background-size: contain;
 		}
 
 		@media (min-width: $md0) {
@@ -2933,12 +3021,19 @@
 		top: 2.314875rem;
 		background-image: url("@img/directions-page/help-background-ellipse-mobile.png");
 
+		@media (min-width: $md4) {
+			height: calc(100% - 4rem);
+			top: 2rem;
+			background-size: 100% 100%;
+		}
+
 		@media (min-width: $md3) {
 			width: auto;
 			height: auto;
 			left: auto;
 			top: auto;
 			background-image: none;
+			background-size: contain;
 		}
 
 		@media (min-width: $md0) {
@@ -2958,7 +3053,7 @@
 	min-height: auto;
 	padding: 1.25rem 0;
 
-	@media (min-width: $md3) {
+	@media (min-width: $md4) {
 		padding-top: 1.875rem;
 		padding-bottom: 1.875rem;
 	}
@@ -2980,7 +3075,7 @@
 		max-width: none !important;
 		gap: 0;
 
-		@media (min-width: $md3) {
+		@media (min-width: $md4) {
 			position: relative;
 			margin-left: 47.7% !important;
 			padding-top: 1.25rem !important;
@@ -3005,7 +3100,7 @@
 			top: 1.25rem;
 			left: 1.25rem;
 
-			@media (min-width: $md3) {
+			@media (min-width: $md4) {
 				font-size: 1.125rem;
 				line-height: 1.4;
 				position: static;
@@ -3027,7 +3122,7 @@
 			position: absolute;
 			z-index: 1;
 
-			@media (min-width: $md3) {
+			@media (min-width: $md4) {
 				font-size: 0.9375rem;
 				line-height: 1.4;
 				position: static;
@@ -3048,7 +3143,7 @@
 			line-height: 1.0625rem;
 			padding: 0.4375rem 0.875rem;
 
-			@media (min-width: $md3) {
+			@media (min-width: $md4) {
 				position: static;
 				z-index: auto;
 				line-height: 1.4;
@@ -3080,7 +3175,7 @@
 			margin-bottom: 3.125rem;
 		}
 
-		@media (min-width: $md3) {
+		@media (min-width: $md4) {
 			margin-bottom: 2.5rem;
 		}
 	}
@@ -3089,7 +3184,7 @@
 	&__title {
 		font-size: 1.25rem;
 
-		@media (min-width: $md3) {
+		@media (min-width: $md4) {
 			font-size: 2.375rem;
 		}
 
@@ -3114,7 +3209,7 @@
 			left: calc(50% - 10.625rem);
 		}
 
-		@media (min-width: $md3) {
+		@media (min-width: $md4) {
 			right: auto;
 			top: auto;
 			transform: rotate(-4.99deg);
@@ -3152,11 +3247,6 @@
 		--bs-gutter-y: 0.625rem;
 
 		@media (min-width: $md4) {
-			--bs-gutter-x: 1rem;
-			--bs-gutter-y: 1rem;
-		}
-
-		@media (min-width: $md3) {
 			--bs-gutter-x: 1.5625rem;
 			--bs-gutter-y: 1.875rem;
 		}
@@ -3170,7 +3260,7 @@
 		> .col-lg-6 {
 			width: 100%;
 
-			@media (min-width: $md4) {
+			@media (min-width: $md3) {
 				width: 50%;
 			}
 		}
@@ -3182,9 +3272,6 @@
 
 		@media (min-width: $md4) {
 			min-height: 18.75rem;
-		}
-
-		@media (min-width: $md3) {
 			height: 100%;
 		}
 
@@ -3196,7 +3283,7 @@
 		&--energy {
 			min-height: 13.9375rem;
 
-			@media (min-width: $md3) {
+			@media (min-width: $md4) {
 				min-height: 18.75rem;
 			}
 
@@ -3208,7 +3295,7 @@
 				left: 52.92%;
 				top: 8.2%;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: 40.57%;
 					height: 73.3%;
 					left: 4.75%;
@@ -3233,9 +3320,7 @@
 
 				@media (min-width: $md4) {
 					height: 10.625rem;
-				}
 
-				@media (min-width: $md3) {
 					width: 36.63%;
 					height: 108.33%;
 					left: 6.93%;
@@ -3261,7 +3346,7 @@
 			h3 {
 				width: 41%;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: auto;
 				}
 			}
@@ -3271,7 +3356,7 @@
 				left: 1.25rem;
 				top: 4.875rem;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					left: auto;
 					top: auto;
 				}
@@ -3283,7 +3368,7 @@
 				right: 1.25rem;
 				top: 9.3125rem;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					left: auto;
 					right: auto;
 					top: auto;
@@ -3296,7 +3381,7 @@
 			min-height: 16.8125rem;
 			overflow: hidden;
 
-			@media (min-width: $md3) {
+			@media (min-width: $md4) {
 				min-height: 18.75rem;
 				overflow: visible;
 			}
@@ -3309,7 +3394,7 @@
 				padding-right: 0;
 				padding-left: 1.25rem;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					margin-left: 0 !important;
 					padding-left: 1.25rem !important;
 					padding-right: 0 !important;
@@ -3331,7 +3416,7 @@
 				right: 54.5%;
 				top: 38%;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: 38.52%;
 					height: 95.1%;
 					right: 6.85%;
@@ -3354,7 +3439,7 @@
 				bottom: auto;
 				top: 26.77%;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: 58.1%;
 					height: 110%;
 					right: -1.4%;
@@ -3378,7 +3463,7 @@
 					left: -0.04%;
 					top: 0;
 
-					@media (min-width: $md3) {
+					@media (min-width: $md4) {
 						height: auto;
 					}
 
@@ -3393,7 +3478,7 @@
 			h3 {
 				width: 62%;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: auto;
 				}
 			}
@@ -3407,7 +3492,7 @@
 				max-width: calc(57.5% - 1.25rem);
 				right: auto;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					left: auto;
 					top: auto;
 					white-space: normal;
@@ -3428,7 +3513,7 @@
 				top: 8.5rem;
 				text-align: center;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: auto;
 					right: auto;
 					top: auto;
@@ -3442,7 +3527,7 @@
 			min-height: 18.75rem;
 			overflow: hidden;
 
-			@media (min-width: $md3) {
+			@media (min-width: $md4) {
 				overflow: visible;
 			}
 
@@ -3454,7 +3539,7 @@
 				padding-right: 0;
 				padding-left: 1.25rem;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					margin-left: 0 !important;
 					padding-left: 1.25rem !important;
 					padding-right: 0 !important;
@@ -3476,7 +3561,7 @@
 				right: 46.2%;
 				top: 46.9%;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: 45.47%;
 					height: 82.22%;
 					right: 4%;
@@ -3498,7 +3583,7 @@
 				left: -7.94%;
 				bottom: -0.3%;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: 58.94%;
 					height: 117.33%;
 					left: 45.3%;
@@ -3518,7 +3603,7 @@
 			h3 {
 				width: 36.6%;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: auto;
 				}
 			}
@@ -3534,9 +3619,7 @@
 
 				@media (min-width: $md4) {
 					right: 0.75rem;
-				}
 
-				@media (min-width: $md3) {
 					left: auto;
 					right: auto;
 					top: auto;
@@ -3558,7 +3641,7 @@
 				right: 1.25rem;
 				top: 4.25rem;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					left: auto;
 					right: auto;
 					top: auto;
@@ -3571,7 +3654,7 @@
 			min-height: 13.1875rem;
 			overflow: hidden;
 
-			@media (min-width: $md3) {
+			@media (min-width: $md4) {
 				min-height: 18.75rem;
 				overflow: visible;
 			}
@@ -3583,7 +3666,7 @@
 				left: 56.35%;
 				top: 33.75%;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: 35.33%;
 					height: 87.25%;
 					left: 5.65%;
@@ -3605,7 +3688,7 @@
 				right: -4%;
 				bottom: 0;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: 62%;
 					height: 106%;
 					right: 47.7%;
@@ -3626,7 +3709,7 @@
 				p {
 					width: 49.3%;
 
-					@media (min-width: $md3) {
+					@media (min-width: $md4) {
 						width: auto;
 					}
 
@@ -3640,7 +3723,7 @@
 			h3 {
 				right: 1.25rem;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					right: auto;
 				}
 			}
@@ -3650,7 +3733,7 @@
 				left: 1.25rem;
 				top: 4.875rem;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					left: auto;
 					top: auto;
 				}
@@ -3662,7 +3745,7 @@
 				left: 1.25rem;
 				top: 7.4375rem;
 
-				@media (min-width: $md3) {
+				@media (min-width: $md4) {
 					width: auto;
 					left: auto;
 					top: auto;
@@ -3700,7 +3783,7 @@
 	&__action {
 		margin-top: 1.25rem;
 
-		@media (min-width: $md3) {
+		@media (min-width: $md4) {
 			margin-top: 2.5rem;
 		}
 	}
@@ -3906,7 +3989,7 @@
 				width: 100%;
 
 				@media (min-width: $md4) {
-					width: 13.125rem;
+					width: 100%;
 				}
 
 				@media (min-width: $md3) {
@@ -3925,7 +4008,7 @@
 
 				@media (min-width: $md4) {
 					min-width: 0;
-					width: 0;
+					width: 100%;
 				}
 
 				@media (min-width: $md3) {
@@ -4084,9 +4167,9 @@
 		margin-top: 0;
 
 		@media (min-width: $md4) {
-			width: 13.125rem;
-			height: 10.625rem;
-			margin-top: 3.125rem;
+			width: 19.6875rem;
+			height: 11.9375rem;
+			margin-top: 0;
 		}
 
 		@media (min-width: $md3) {
@@ -4257,6 +4340,10 @@
 	--bs-border-radius-lg: 0.625rem;
 	min-height: 73.5rem;
 
+	@media (min-width: $md4) {
+		min-height: auto;
+	}
+
 	@media (min-width: $md3) {
 		min-height: 52rem;
 	}
@@ -4287,6 +4374,13 @@
 			max-width: 37.5rem;
 		}
 
+		@media (min-width: $md4) {
+			max-width: 24rem;
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: 2.5rem;
+		}
+
 		@media (min-width: $md3) {
 			font-size: 1.75rem;
 			line-height: 1.5;
@@ -4295,6 +4389,7 @@
 			text-align: inherit;
 			transform: none;
 			margin-bottom: 3.125rem;
+			max-width: 37.5rem;
 		}
 
 		@media (min-width: $md2) {
@@ -4395,6 +4490,11 @@
 		padding-top: 11.6875rem;
 		padding-bottom: 5rem;
 
+		@media (min-width: $md4) {
+			padding-top: 5rem;
+			padding-bottom: 4rem;
+		}
+
 		@media (min-width: $md3) {
 			padding-top: 8.75rem;
 			padding-bottom: 5rem;
@@ -4419,6 +4519,11 @@
 		top: 0;
 		width: 23.4375rem;
 		height: 23.5rem;
+
+		@media (min-width: $md4) {
+			left: calc(50% + 1rem);
+			top: 1rem;
+		}
 
 		@media (min-width: $md3) {
 			width: 52.5rem;
@@ -4683,6 +4788,12 @@
 		top: 1.28465625rem;
 		background-image: url("@img/directions-page/events-outline-mobile.svg");
 
+		@media (min-width: $md4) {
+			height: calc(100% - 2rem);
+			top: 1rem;
+			background-size: 100% 100%;
+		}
+
 		@media (min-width: $md3) {
 			transform: none;
 			width: auto;
@@ -4690,6 +4801,7 @@
 			left: auto;
 			top: auto;
 			background-image: none;
+			background-size: contain;
 		}
 
 		@media (min-width: $md0) {
@@ -4711,6 +4823,12 @@
 		top: 2.5788125rem;
 		background-image: url("@img/directions-page/events-background-ellipse-mobile.png");
 
+		@media (min-width: $md4) {
+			height: calc(100% - 4rem);
+			top: 2rem;
+			background-size: 100% 100%;
+		}
+
 		@media (min-width: $md3) {
 			transform: none;
 			width: auto;
@@ -4718,6 +4836,7 @@
 			left: auto;
 			top: auto;
 			background-image: none;
+			background-size: contain;
 		}
 
 		@media (min-width: $md0) {
@@ -6548,6 +6667,144 @@
 			transform: none;
 			font-size: inherit;
 			line-height: inherit;
+		}
+	}
+}
+
+// Compact phones: preserve the approved layout from 375px upwards.
+@media (max-width: 374.98px) {
+	.directions-mood__card {
+		padding: rem(20);
+		min-height: 0;
+
+		.directions-mood__copy {
+			gap: rem(10);
+		}
+
+		.directions-mood__copy h3,
+		.directions-mood__copy p,
+		.directions-mood__copy .directions-section-label {
+			position: relative;
+			inset: auto;
+			max-width: 100%;
+			white-space: normal;
+		}
+
+		.directions-mood__copy h3 {
+			width: 100%;
+		}
+
+		&--energy {
+			.directions-mood__copy h3 { width: 52%; }
+			.directions-section-label { width: 60%; }
+			.directions-mood__dancer { height: rem(140); top: 0; }
+		}
+
+		&--feminine,
+		&--modern {
+			.directions-mood__copy .directions-section-label,
+			.directions-mood__copy p {
+				width: 55%;
+				margin-left: auto;
+			}
+			.directions-mood__dancer {
+				top: auto;
+				bottom: 0;
+				height: rem(200);
+				object-position: center bottom;
+			}
+		}
+
+		&--modern .directions-mood__dancer { width: 52%; }
+		&--feminine .directions-mood__dancer { right: 50%; }
+
+		&--latin {
+			.directions-mood__dancer {
+				height: rem(150);
+				object-position: center bottom;
+			}
+		}
+	}
+
+	.directions-types__copy .directions-section-label {
+		white-space: normal;
+		max-width: 100%;
+	}
+
+	.directions-events__note {
+		left: calc((23.4375rem - 100vw) / 2 + 1rem);
+	}
+
+	.directions-events .directions-creative__background {
+		&::before {
+			height: calc(100% - 2rem);
+			top: 1rem;
+			background-size: 100% 100%;
+		}
+		&::after {
+			height: calc(100% - 4rem);
+			top: 2rem;
+			background-size: 100% 100%;
+		}
+	}
+
+	.directions-final__offer {
+		gap: rem(6);
+		padding-inline: rem(10);
+		strong {
+			flex: 0 0 rem(120);
+			width: rem(120);
+			font-size: rem(13);
+			br { display: none; }
+		}
+		.directions-final__offer-line { display: block; white-space: nowrap; }
+	}
+	.directions-final__price { min-width: 0; flex: 1; }
+	.directions-final__price-value { font-size: rem(25); }
+
+	.directions-catalog__photo .directions-catalog__age {
+		left: auto;
+		right: rem(8);
+		font-size: rem(34);
+		line-height: 1.2;
+		span { font-size: rem(28); }
+	}
+}
+
+@media (max-width: 375px) {
+	.directions-life__feature > .col-5 {
+		width: rem(120);
+	}
+	.directions-life__feature h3 {
+		hyphens: auto;
+	}
+	.directions-life__feature .directions-life__portrait {
+		transform: scale(0.85);
+		transform-origin: center top;
+	}
+}
+
+// Intermediate mobile widths need fluid artwork without changing the 375px layout.
+@media (min-width: 375.02px) and (max-width: 767.98px) {
+	.directions-hero::before {
+		background-size: 100% 100%, cover;
+		background-position: center, center top;
+		mask-size: 100% 100%;
+	}
+
+	.directions-events {
+		min-height: auto;
+
+		.directions-creative__background::before {
+			height: calc(100% - 2rem);
+			top: 1rem;
+			background-size: 100% 100%;
+		}
+
+		.directions-creative__background::after {
+			height: calc(100% - 4rem);
+			top: 2rem;
+			background-size: 100% 100%;
 		}
 	}
 }

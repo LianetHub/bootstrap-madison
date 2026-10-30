@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "LTSuperior";
-  font-display: swap;
-  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "druktextwidecyr";
   font-display: swap;
   src: url("../fonts/druktextwidecyr-medium.woff2") format("woff2"), url("../fonts/druktextwidecyr-medium.woff") format("woff");
@@ -18,6 +10,14 @@
   font-family: "icons";
   font-display: swap;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LTSuperior";
+  font-display: swap;
+  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -1331,13 +1331,17 @@ body {
 
 .schedule-teacher__image {
   width: 6.375rem;
-  height: 9rem;
+  position: relative;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
 }
 
 .schedule-teacher__photo {
+  position: absolute;
+  inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
   -o-object-position: center top;
      object-position: center top;
 }
@@ -1416,6 +1420,8 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 100%;
+  white-space: normal;
   font-size: 0.875rem;
 }
 
@@ -1751,7 +1757,7 @@ body {
   bottom: 0;
   left: 50%;
   z-index: -1;
-  width: calc(100% + 2rem);
+  width: 100vw;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -7548,34 +7554,354 @@ body {
     margin-top: 1.875rem;
   }
 
-  .directions-mood__cards {
-    --bs-gutter-x: 1rem;
-    --bs-gutter-y: 1rem;
+  .directions-hero {
+    min-height: auto;
   }
 
-  .directions-mood__cards > .col-lg-6 {
-    width: 50%;
+  .directions-hero__title {
+    max-width: 40rem;
+    font-size: 2.125rem;
+  }
+
+  .directions-hero__lead {
+    margin-top: 1.5rem;
+    max-width: 40rem;
+  }
+
+  .directions-hero__benefits {
+    min-height: 0;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .directions-hero__cta {
+    margin-top: 1.5rem;
+  }
+
+  .no-webp .directions-hero::before {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.85)), to(rgba(118, 26, 27, 0.3))), url("../img/directions-page/hero-background.png");
+    background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.85), rgba(118, 26, 27, 0.3)), url("../img/directions-page/hero-background.png"); }
+
+  .directions-hero__content {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .directions-help {
+    min-height: auto;
+  }
+
+  .directions-help__title {
+    font-size: 1.75rem;
+    line-height: 1.4;
+    width: 26rem;
+  }
+
+  .directions-help__intro {
+    font-size: 1rem;
+    line-height: 1.4;
+    width: 24rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .directions-help__outro {
+    width: 26rem;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .directions-help__container {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+
+  .directions-help__questions {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .directions-help__bottom {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .directions-help__think {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+
+  .directions-help .directions-creative__background::before {
+    height: calc(100% - 2rem);
+    top: 1rem;
+    background-size: 100% 100%;
+  }
+
+  .directions-help .directions-creative__background::after {
+    height: calc(100% - 4rem);
+    top: 2rem;
+    background-size: 100% 100%;
+  }
+
+  .directions-mood {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
+  .directions-mood__copy {
+    position: relative;
+    margin-left: 47.7% !important;
+    padding-top: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+    gap: 0.75rem;
+  }
+
+  .directions-mood__copy h3 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    position: static;
+    z-index: auto;
+    top: auto;
+    left: auto;
+  }
+
+  .directions-mood__copy p {
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    position: static;
+    z-index: auto;
+  }
+
+  .directions-mood__copy .directions-section-label {
+    position: static;
+    z-index: auto;
+    line-height: 1.4;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    font-size: 0.6875rem;
+    white-space: normal;
+    max-width: 100%;
+  }
+
+  .directions-mood__heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .directions-mood__title {
+    font-size: 2.375rem;
+  }
+
+  .directions-mood__note {
+    right: auto;
+    top: auto;
+    -webkit-transform: rotate(-4.99deg);
+        -ms-transform: rotate(-4.99deg);
+            transform: rotate(-4.99deg);
+    font-size: 1.25rem !important;
+    left: auto;
+    position: static;
+    margin-top: 1.25rem;
+  }
+
+  .directions-mood__cards {
+    --bs-gutter-x: 1.5625rem;
+    --bs-gutter-y: 1.875rem;
   }
 
   .directions-mood__card {
     min-height: 18.75rem;
+    height: 100%;
+  }
+
+  .directions-mood__card--energy {
+    min-height: 18.75rem;
+  }
+
+  .directions-mood__card--energy .directions-mood__shape {
+    width: 40.57%;
+    height: 73.3%;
+    left: 4.75%;
+    top: 13.2%;
   }
 
   .directions-mood__card--energy .directions-mood__dancer {
     height: 10.625rem;
+    width: 36.63%;
+    height: 108.33%;
+    left: 6.93%;
+    bottom: 0.9%;
+    top: auto;
+    -o-object-position: center bottom;
+       object-position: center bottom;
+  }
+
+  .directions-mood__card--energy h3 {
+    width: auto;
+  }
+
+  .directions-mood__card--energy .directions-section-label {
+    left: auto;
+    top: auto;
+  }
+
+  .directions-mood__card--energy p {
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+
+  .directions-mood__card--feminine {
+    min-height: 18.75rem;
+    overflow: visible;
+  }
+
+  .directions-mood__card--feminine .directions-mood__copy {
+    margin-left: 0 !important;
+    padding-left: 1.25rem !important;
+    padding-right: 0 !important;
+    width: 50% !important;
+    max-width: 21.875rem !important;
+  }
+
+  .directions-mood__card--feminine .directions-mood__shape {
+    width: 38.52%;
+    height: 95.1%;
+    right: 6.85%;
+    top: 6.5%;
+  }
+
+  .directions-mood__card--feminine .directions-mood__dancer {
+    width: 58.1%;
+    height: 110%;
+    right: -1.4%;
+    bottom: 0;
+    top: auto;
+  }
+
+  .directions-mood__card--feminine .directions-mood__dancer img {
+    height: auto;
+  }
+
+  .directions-mood__card--feminine h3 {
+    width: auto;
+  }
+
+  .directions-mood__card--feminine .directions-section-label {
+    left: auto;
+    top: auto;
+    white-space: normal;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .directions-mood__card--feminine p {
+    width: auto;
+    right: auto;
+    top: auto;
+    text-align: inherit;
+  }
+
+  .directions-mood__card--modern {
+    overflow: visible;
+  }
+
+  .directions-mood__card--modern .directions-mood__copy {
+    margin-left: 0 !important;
+    padding-left: 1.25rem !important;
+    padding-right: 0 !important;
+    width: 50% !important;
+    max-width: 21.875rem !important;
+  }
+
+  .directions-mood__card--modern .directions-mood__shape {
+    width: 45.47%;
+    height: 82.22%;
+    right: 4%;
+    top: calc(15.5% - 0.375rem);
+  }
+
+  .directions-mood__card--modern .directions-mood__dancer {
+    width: 58.94%;
+    height: 117.33%;
+    left: 45.3%;
+    bottom: 0;
+    -o-object-position: center bottom;
+       object-position: center bottom;
+  }
+
+  .directions-mood__card--modern h3 {
+    width: auto;
   }
 
   .directions-mood__card--modern .directions-section-label {
     right: 0.75rem;
+    left: auto;
+    right: auto;
+    top: auto;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    font-size: 0.6875rem;
+  }
+
+  .directions-mood__card--modern p {
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+
+  .directions-mood__card--latin {
+    min-height: 18.75rem;
+    overflow: visible;
+  }
+
+  .directions-mood__card--latin .directions-mood__shape {
+    width: 35.33%;
+    height: 87.25%;
+    left: 5.65%;
+    top: 9.1%;
+  }
+
+  .directions-mood__card--latin .directions-mood__dancer {
+    width: 62%;
+    height: 106%;
+    right: 47.7%;
+    -o-object-position: center bottom;
+       object-position: center bottom;
+  }
+
+  .directions-mood__card--latin .directions-mood__copy p {
+    width: auto;
+  }
+
+  .directions-mood__card--latin h3 {
+    right: auto;
+  }
+
+  .directions-mood__card--latin .directions-section-label {
+    left: auto;
+    top: auto;
+  }
+
+  .directions-mood__card--latin p {
+    width: auto;
+    left: auto;
+    top: auto;
+  }
+
+  .directions-mood__action {
+    margin-top: 2.5rem;
   }
 
   .directions-types__card--beginners .col-lg-4 {
-    width: 13.125rem;
+    width: 100%;
   }
 
   .directions-types__card--beginners .col-lg-8 {
     min-width: 0;
-    width: 0;
+    width: 100%;
   }
 
   .directions-types__card--beginners > .row {
@@ -7599,9 +7925,42 @@ body {
   }
 
   .directions-types__shoes {
-    width: 13.125rem;
-    height: 10.625rem;
-    margin-top: 3.125rem;
+    width: 19.6875rem;
+    height: 11.9375rem;
+    margin-top: 0;
+  }
+
+  .directions-events {
+    min-height: auto;
+  }
+
+  .directions-events__title {
+    max-width: 24rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .directions-events__container {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+
+  .directions-events__art {
+    left: calc(50% + 1rem);
+    top: 1rem;
+  }
+
+  .directions-events .directions-creative__background::before {
+    height: calc(100% - 2rem);
+    top: 1rem;
+    background-size: 100% 100%;
+  }
+
+  .directions-events .directions-creative__background::after {
+    height: calc(100% - 4rem);
+    top: 2rem;
+    background-size: 100% 100%;
   }
 }
 
@@ -9365,6 +9724,7 @@ body {
 
   .directions-help__bottom {
     gap: 1rem;
+    margin-top: 2.1875rem;
   }
 
   .directions-help__think {
@@ -9433,6 +9793,7 @@ body {
     left: auto;
     top: auto;
     background-image: none;
+    background-size: contain;
   }
 
   .directions-help .directions-creative__background::after {
@@ -9441,11 +9802,7 @@ body {
     left: auto;
     top: auto;
     background-image: none;
-  }
-
-  .directions-mood {
-    padding-top: 1.875rem;
-    padding-bottom: 1.875rem;
+    background-size: contain;
   }
 
   .directions-mood .btn {
@@ -9459,246 +9816,8 @@ body {
     height: auto;
   }
 
-  .directions-mood__copy {
-    position: relative;
-    margin-left: 47.7% !important;
-    padding-top: 1.25rem !important;
-    padding-right: 1.25rem !important;
-    padding-bottom: 1.25rem !important;
-    gap: 0.75rem;
-  }
-
-  .directions-mood__copy h3 {
-    font-size: 1.125rem;
-    line-height: 1.4;
-    position: static;
-    z-index: auto;
-    top: auto;
-    left: auto;
-  }
-
-  .directions-mood__copy p {
-    font-size: 0.9375rem;
-    line-height: 1.4;
-    position: static;
-    z-index: auto;
-  }
-
-  .directions-mood__copy .directions-section-label {
-    position: static;
-    z-index: auto;
-    line-height: 1.4;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
-    font-size: 0.6875rem;
-    white-space: normal;
-    max-width: 100%;
-  }
-
-  .directions-mood__heading {
-    margin-bottom: 2.5rem;
-  }
-
-  .directions-mood__title {
-    font-size: 2.375rem;
-  }
-
-  .directions-mood__note {
-    right: auto;
-    top: auto;
-    -webkit-transform: rotate(-4.99deg);
-        -ms-transform: rotate(-4.99deg);
-            transform: rotate(-4.99deg);
-    font-size: 1.25rem !important;
-    left: auto;
-    position: static;
-    margin-top: 1.25rem;
-  }
-
-  .directions-mood__cards {
-    --bs-gutter-x: 1.5625rem;
-    --bs-gutter-y: 1.875rem;
-  }
-
-  .directions-mood__card {
-    height: 100%;
-  }
-
-  .directions-mood__card--energy {
-    min-height: 18.75rem;
-  }
-
-  .directions-mood__card--energy .directions-mood__shape {
-    width: 40.57%;
-    height: 73.3%;
-    left: 4.75%;
-    top: 13.2%;
-  }
-
-  .directions-mood__card--energy .directions-mood__dancer {
-    width: 36.63%;
-    height: 108.33%;
-    left: 6.93%;
-    bottom: 0.9%;
-    top: auto;
-    -o-object-position: center bottom;
-       object-position: center bottom;
-  }
-
-  .directions-mood__card--energy h3 {
-    width: auto;
-  }
-
-  .directions-mood__card--energy .directions-section-label {
-    left: auto;
-    top: auto;
-  }
-
-  .directions-mood__card--energy p {
-    left: auto;
-    right: auto;
-    top: auto;
-  }
-
-  .directions-mood__card--feminine {
-    min-height: 18.75rem;
-    overflow: visible;
-  }
-
-  .directions-mood__card--feminine .directions-mood__copy {
-    margin-left: 0 !important;
-    padding-left: 1.25rem !important;
-    padding-right: 0 !important;
-    width: 50% !important;
-    max-width: 21.875rem !important;
-  }
-
-  .directions-mood__card--feminine .directions-mood__shape {
-    width: 38.52%;
-    height: 95.1%;
-    right: 6.85%;
-    top: 6.5%;
-  }
-
-  .directions-mood__card--feminine .directions-mood__dancer {
-    width: 58.1%;
-    height: 110%;
-    right: -1.4%;
-    bottom: 0;
-    top: auto;
-  }
-
-  .directions-mood__card--feminine .directions-mood__dancer img {
-    height: auto;
-  }
-
-  .directions-mood__card--feminine h3 {
-    width: auto;
-  }
-
-  .directions-mood__card--feminine .directions-section-label {
-    left: auto;
-    top: auto;
-    white-space: normal;
-    width: auto;
-    max-width: 100%;
-  }
-
-  .directions-mood__card--feminine p {
-    width: auto;
-    right: auto;
-    top: auto;
-    text-align: inherit;
-  }
-
-  .directions-mood__card--modern {
-    overflow: visible;
-  }
-
-  .directions-mood__card--modern .directions-mood__copy {
-    margin-left: 0 !important;
-    padding-left: 1.25rem !important;
-    padding-right: 0 !important;
-    width: 50% !important;
-    max-width: 21.875rem !important;
-  }
-
-  .directions-mood__card--modern .directions-mood__shape {
-    width: 45.47%;
-    height: 82.22%;
-    right: 4%;
-    top: calc(15.5% - 0.375rem);
-  }
-
-  .directions-mood__card--modern .directions-mood__dancer {
-    width: 58.94%;
-    height: 117.33%;
-    left: 45.3%;
-    bottom: 0;
-    -o-object-position: center bottom;
-       object-position: center bottom;
-  }
-
-  .directions-mood__card--modern h3 {
-    width: auto;
-  }
-
-  .directions-mood__card--modern .directions-section-label {
-    left: auto;
-    right: auto;
-    top: auto;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    font-size: 0.6875rem;
-  }
-
-  .directions-mood__card--modern p {
-    left: auto;
-    right: auto;
-    top: auto;
-  }
-
-  .directions-mood__card--latin {
-    min-height: 18.75rem;
-    overflow: visible;
-  }
-
-  .directions-mood__card--latin .directions-mood__shape {
-    width: 35.33%;
-    height: 87.25%;
-    left: 5.65%;
-    top: 9.1%;
-  }
-
-  .directions-mood__card--latin .directions-mood__dancer {
-    width: 62%;
-    height: 106%;
-    right: 47.7%;
-    -o-object-position: center bottom;
-       object-position: center bottom;
-  }
-
-  .directions-mood__card--latin .directions-mood__copy p {
-    width: auto;
-  }
-
-  .directions-mood__card--latin h3 {
-    right: auto;
-  }
-
-  .directions-mood__card--latin .directions-section-label {
-    left: auto;
-    top: auto;
-  }
-
-  .directions-mood__card--latin p {
-    width: auto;
-    left: auto;
-    top: auto;
-  }
-
-  .directions-mood__action {
-    margin-top: 2.5rem;
+  .directions-mood__cards > .col-lg-6 {
+    width: 50%;
   }
 
   .directions-types {
@@ -9919,6 +10038,7 @@ body {
         -ms-transform: none;
             transform: none;
     margin-bottom: 3.125rem;
+    max-width: 37.5rem;
   }
 
   .directions-events__card {
@@ -10039,6 +10159,7 @@ body {
     left: auto;
     top: auto;
     background-image: none;
+    background-size: contain;
   }
 
   .directions-events .directions-creative__background::after {
@@ -10050,6 +10171,7 @@ body {
     left: auto;
     top: auto;
     background-image: none;
+    background-size: contain;
   }
 
   .directions-life {
@@ -13064,7 +13186,7 @@ body {
   }
 
   .header__top {
-    padding: 0.25rem 3rem 1.25rem;
+    padding: 0.25rem 1rem 1.25rem 3rem;
   }
 
   .header__social {
@@ -13454,6 +13576,292 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  .directions-life__feature > .col-5 {
+    width: 7.5rem;
+  }
+
+  .directions-life__feature h3 {
+    -ms-hyphens: auto;
+        hyphens: auto;
+  }
+
+  .directions-life__feature .directions-life__portrait {
+    -webkit-transform: scale(0.85);
+        -ms-transform: scale(0.85);
+            transform: scale(0.85);
+    -webkit-transform-origin: center top;
+        -ms-transform-origin: center top;
+            transform-origin: center top;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .outfit__image {
+    z-index: 1;
+  }
+
+  .directions-mood__card {
+    padding: 1.25rem;
+    min-height: 0;
+  }
+
+  .directions-mood__card .directions-mood__copy {
+    gap: 0.625rem;
+  }
+
+  .directions-mood__card .directions-mood__copy h3,
+  .directions-mood__card .directions-mood__copy p,
+  .directions-mood__card .directions-mood__copy .directions-section-label {
+    position: relative;
+    inset: auto;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .directions-mood__card .directions-mood__copy h3 {
+    width: 100%;
+  }
+
+  .directions-mood__card--energy .directions-mood__copy h3 {
+    width: 52%;
+  }
+
+  .directions-mood__card--energy .directions-section-label {
+    width: 60%;
+  }
+
+  .directions-mood__card--energy .directions-mood__dancer {
+    height: 8.75rem;
+    top: 0;
+  }
+
+  .directions-mood__card--feminine .directions-mood__copy .directions-section-label,
+  .directions-mood__card--feminine .directions-mood__copy p,
+  .directions-mood__card--modern .directions-mood__copy .directions-section-label,
+  .directions-mood__card--modern .directions-mood__copy p {
+    width: 55%;
+    margin-left: auto;
+  }
+
+  .directions-mood__card--feminine .directions-mood__dancer,
+  .directions-mood__card--modern .directions-mood__dancer {
+    top: auto;
+    bottom: 0;
+    height: 12.5rem;
+    -o-object-position: center bottom;
+       object-position: center bottom;
+  }
+
+  .directions-mood__card--modern .directions-mood__dancer {
+    width: 52%;
+  }
+
+  .directions-mood__card--feminine .directions-mood__dancer {
+    right: 50%;
+  }
+
+  .directions-mood__card--latin .directions-mood__dancer {
+    height: 9.375rem;
+    -o-object-position: center bottom;
+       object-position: center bottom;
+  }
+
+  .directions-types__copy .directions-section-label {
+    white-space: normal;
+    max-width: 100%;
+  }
+
+  .directions-events__note {
+    left: calc((23.4375rem - 100vw) / 2 + 1rem);
+  }
+
+  .directions-events .directions-creative__background::before {
+    height: calc(100% - 2rem);
+    top: 1rem;
+    background-size: 100% 100%;
+  }
+
+  .directions-events .directions-creative__background::after {
+    height: calc(100% - 4rem);
+    top: 2rem;
+    background-size: 100% 100%;
+  }
+
+  .directions-final__offer {
+    gap: 0.375rem;
+    padding-inline: 0.625rem;
+  }
+
+  .directions-final__offer strong {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 7.5rem;
+            flex: 0 0 7.5rem;
+    width: 7.5rem;
+    font-size: 0.8125rem;
+  }
+
+  .directions-final__offer strong br {
+    display: none;
+  }
+
+  .directions-final__offer .directions-final__offer-line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .directions-final__price {
+    min-width: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+
+  .directions-final__price-value {
+    font-size: 1.5625rem;
+  }
+
+  .directions-catalog__photo .directions-catalog__age {
+    left: auto;
+    right: 0.5rem;
+    font-size: 2.125rem;
+    line-height: 1.2;
+  }
+
+  .directions-catalog__photo .directions-catalog__age span {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 349.98px) {
+  .trial-lesson__cards .card__content-desc {
+    word-break: normal;
+    overflow-wrap: normal;
+    -ms-hyphens: auto;
+        hyphens: auto;
+  }
+
+  .outcomes__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    aspect-ratio: auto;
+    gap: 1.5rem;
+    padding: 1.5rem 0 0;
+  }
+
+  .outcomes__item {
+    position: relative;
+    inset: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.75rem;
+  }
+
+  .outcomes__item:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  .outcomes__item:nth-child(n) .outcomes__item-content {
+    position: static;
+    width: auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    min-width: 0;
+    -ms-hyphens: auto;
+        hyphens: auto;
+  }
+
+  .outcomes__item:nth-child(n) .outcomes__item-image {
+    position: relative;
+    inset: auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 6.25rem;
+            flex: 0 0 6.25rem;
+    width: 6.25rem;
+    height: 8.75rem;
+    overflow: hidden;
+  }
+
+  .outcomes__item:nth-child(n) .outcomes__item-image::before {
+    inset: auto auto 1.25rem 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 5.25rem;
+    height: 5.25rem;
+  }
+
+  .outcomes__item:nth-child(n) .outcomes__item-image img {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .outcomes__item:nth-child(5) .outcomes__item-image {
+    height: 6.25rem;
+  }
+
+  .outcomes__item:nth-child(3) .outcomes__item-image img,
+  .outcomes__item:nth-child(4) .outcomes__item-image img {
+    -webkit-transform: scale(2);
+        -ms-transform: scale(2);
+            transform: scale(2);
+  }
+
+  .outcomes__deco--silhouette {
+    top: 0;
+    left: auto;
+    right: 0;
+    height: 1.75rem;
+    width: 0.625rem;
+  }
+
+  .outcomes__deco--woman {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+  }
+}
+
+@media (min-width: 375.02px) and (max-width: 767.98px) {
+  .directions-hero::before {
+    background-size: 100% 100%, cover;
+    background-position: center, center top;
+    -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+  }
+
+  .directions-events {
+    min-height: auto;
+  }
+
+  .directions-events .directions-creative__background::before {
+    height: calc(100% - 2rem);
+    top: 1rem;
+    background-size: 100% 100%;
+  }
+
+  .directions-events .directions-creative__background::after {
+    height: calc(100% - 4rem);
+    top: 2rem;
+    background-size: 100% 100%;
+  }
+}
+
 @media (any-hover: hover) {
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
@@ -13582,6 +13990,11 @@ body {
 @media (min-width: 768px) {
 
   .webp .outcomes__item:nth-child(5) .outcomes__item-image { background: url(../img/benefits/05-bg.webp) 0 0/cover no-repeat; }
+}
+
+@media (min-width: 768px) {
+
+  .webp .directions-hero::before { background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.85)), to(rgba(118, 26, 27, 0.3))), url(../img/directions-page/hero-background.webp); background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.85), rgba(118, 26, 27, 0.3)), url(../img/directions-page/hero-background.webp); }
 }
 
 @media (min-width: 992px) {
