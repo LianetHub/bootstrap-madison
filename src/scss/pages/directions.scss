@@ -2048,9 +2048,16 @@
 			@media (min-width: $md3) {
 				width: 139.79%;
 				max-width: none;
+				height: auto;
+				top: auto;
+				left: -39.79%;
+				bottom: 0;
+			}
+
+			@media (min-width: $md2) {
 				height: 123.02%;
 				top: -14.36%;
-				left: -39.79%;
+				bottom: auto;
 			}
 		}
 	}
@@ -2292,7 +2299,7 @@
 	min-height: 42.125rem;
 
 	@media (min-width: $md3) {
-		min-height: 55.8125rem;
+		min-height: 45rem;
 	}
 
 	@media (min-width: $md2) {
@@ -2318,10 +2325,16 @@
 		max-width: 100%;
 
 		@media (min-width: $md3) {
-			max-width: 145%;
-			font-size: 2.375rem;
+			max-width: 100%;
+			font-size: 2rem;
 			line-height: 1.5;
+			width: 33rem;
+		}
+
+		@media (min-width: $md2) {
+			font-size: 2.375rem;
 			width: 50rem;
+			max-width: 145%;
 		}
 
 		@media (min-width: $md0) {
@@ -2343,12 +2356,19 @@
 		}
 
 		@media (min-width: $md3) {
-			margin-top: 1.875rem;
-			margin-bottom: 2.5rem;
-			font-size: 1.25rem;
+			margin-top: 1.5rem;
+			margin-bottom: 2rem;
+			font-size: 1.0625rem;
 			line-height: 1.4;
 			width: auto;
+			max-width: 28rem;
+		}
+
+		@media (min-width: $md2) {
+			font-size: 1.25rem;
 			max-width: 31.25rem;
+			margin-top: 1.875rem;
+			margin-bottom: 2.5rem;
 		}
 
 		@media (min-width: $md0) {
@@ -2364,8 +2384,12 @@
 		white-space: nowrap;
 
 		@media (min-width: $md3) {
-			font-size: 1rem;
+			font-size: 0.875rem;
 			line-height: 1.2;
+		}
+
+		@media (min-width: $md2) {
+			font-size: 1rem;
 		}
 
 		@media (min-width: $md0) {
@@ -2378,6 +2402,11 @@
 			height: 1.875rem;
 
 			@media (min-width: $md3) {
+				width: 2.5rem;
+				height: 2.5rem;
+			}
+
+			@media (min-width: $md2) {
 				width: 3.125rem;
 				height: 3.125rem;
 			}
@@ -2396,6 +2425,11 @@
 				height: 1.875rem;
 
 				@media (min-width: $md3) {
+					width: 2.5rem;
+					height: 2.5rem;
+				}
+
+				@media (min-width: $md2) {
 					width: 3.125rem;
 					height: 3.125rem;
 				}
@@ -2419,14 +2453,16 @@
 		max-width: none;
 
 		@media (min-width: $md3) {
-			font-size: 1.25rem;
+			font-size: 1rem;
 			line-height: 1.4;
 			width: 100%;
-			max-width: 28.5rem;
+			max-width: 27.5rem;
 		}
 
 		@media (min-width: $md2) {
 			width: calc(100% - 15.75rem);
+			font-size: 1.25rem;
+			max-width: 28.5rem;
 		}
 
 		@media (min-width: $md1) {
@@ -2448,7 +2484,7 @@
 		padding: 3.875rem 1.25rem 4.375rem;
 
 		@media (min-width: $md3) {
-			padding: 11.5625rem calc(var(--bs-gutter-x) * .5) 7.5rem;
+			padding: 5.5rem calc(var(--bs-gutter-x) * .5) 3rem;
 		}
 
 		@media (min-width: $md2) {
@@ -2481,11 +2517,11 @@
 		}
 
 		@media (min-width: $md3) {
-			height: 53.125rem;
-			top: 0.625rem;
+			height: 44.25rem;
+			top: 4.5rem;
 			left: auto;
-			right: -8.75rem;
-			width: 40.625rem;
+			right: -7.5rem;
+			width: 32.5rem;
 		}
 
 		@media (min-width: $md2) {
@@ -2529,7 +2565,7 @@
 		@media (min-width: $md3) {
 			height: auto;
 			object-fit: fill;
-			width: 40.625rem;
+			width: 32.5rem;
 		}
 
 		@media (min-width: $md2) {
@@ -2563,7 +2599,7 @@
 			top: -1.375rem;
 		}
 
-		@media (min-width: $md2) {
+		@media (min-width: $md3) {
 			visibility: hidden;
 		}
 
@@ -2581,6 +2617,10 @@
 		@media (min-width: $md3) {
 			width: auto;
 			margin-left: 0;
+			gap: 0.75rem;
+		}
+
+		@media (min-width: $md2) {
 			gap: 1rem;
 		}
 
@@ -2609,6 +2649,11 @@
 		height: 1.875rem;
 
 		@media (min-width: $md3) {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+
+		@media (min-width: $md2) {
 			width: 3.125rem;
 			height: 3.125rem;
 		}
@@ -2628,6 +2673,10 @@
 	&__bottom {
 		gap: 3.75rem;
 		margin-top: 2.1875rem;
+
+		@media (min-width: $md3) {
+			gap: 1rem;
+		}
 
 		@media (min-width: $md2) {
 			gap: 1.5rem;
@@ -2649,11 +2698,13 @@
 		position: absolute;
 
 		@media (min-width: $md3) {
-			width: 20.1875rem;
-			height: 6.875rem;
+			width: 14.25rem;
+			height: 4.8125rem;
 			position: relative;
 			left: auto;
 			top: auto;
+			transform: scale(0.7);
+			transform-origin: left top;
 		}
 
 		@media (min-width: $md2) {
@@ -2729,6 +2780,13 @@
 			top: 6.4375rem;
 			left: auto;
 
+			@media (min-width: $md3) {
+				width: 9rem;
+				left: calc(50% - 1rem);
+				right: auto;
+				top: 4rem;
+			}
+
 			@media (min-width: $md2) {
 				width: 10rem;
 				left: min(calc(50% - 3.75rem), calc(100% - 46.25rem));
@@ -2756,9 +2814,16 @@
 			top: 1.8125rem;
 			left: auto;
 
+			@media (min-width: $md3) {
+				width: 10rem;
+				right: 1rem;
+				top: 1.5rem;
+			}
+
 			@media (min-width: $md2) {
 				right: 1rem;
 				top: 0.75rem;
+				width: 11rem;
 			}
 
 			@media (min-width: $md1) {
@@ -2778,6 +2843,13 @@
 			right: 11%;
 			top: 11.6875rem;
 			left: auto;
+
+			@media (min-width: $md3) {
+				width: 9rem;
+				left: auto;
+				right: 0.5rem;
+				top: 9rem;
+			}
 
 			@media (min-width: $md2) {
 				left: auto;
@@ -2983,6 +3055,13 @@
 				padding-right: 0.625rem;
 				padding-left: 0.625rem;
 				font-size: 0.6875rem;
+				white-space: normal;
+				max-width: 100%;
+			}
+
+			@media (min-width: $md2) {
+				white-space: nowrap;
+				max-width: none;
 			}
 
 			@media (min-width: $md0) {
@@ -3036,11 +3115,23 @@
 		}
 
 		@media (min-width: $md3) {
-			right: 6.875rem;
-			top: 0.3125rem;
-			transform: rotate(-4.99deg) translateX(50%);
-			font-size: 1.5625rem !important;
+			right: auto;
+			top: auto;
+			transform: rotate(-4.99deg);
+			font-size: 1.25rem !important;
 			left: auto;
+			position: static;
+			margin-top: 1.25rem;
+		}
+
+		@media (min-width: $md2) {
+			position: absolute;
+			top: 0.3125rem;
+			right: 6.875rem;
+			left: auto;
+			transform: rotate(-4.99deg) translateX(50%);
+			margin-top: 0;
+			font-size: 1.5625rem !important;
 		}
 
 		@media (min-width: $md0) {
@@ -3093,6 +3184,14 @@
 			min-height: 18.75rem;
 		}
 
+		@media (min-width: $md3) {
+			height: 100%;
+		}
+
+		@media (min-width: $md2) {
+			height: auto;
+		}
+
 		// .directions-mood__card--energy
 		&--energy {
 			min-height: 13.9375rem;
@@ -3142,6 +3241,11 @@
 					left: 6.93%;
 					bottom: 0.9%;
 					top: auto;
+					object-position: center bottom;
+				}
+
+				@media (min-width: $md2) {
+					object-position: center;
 				}
 
 				@media (min-width: $md0) {
@@ -3274,7 +3378,7 @@
 					left: -0.04%;
 					top: 0;
 
-					@media (min-width: $md2) {
+					@media (min-width: $md3) {
 						height: auto;
 					}
 
@@ -3306,8 +3410,13 @@
 				@media (min-width: $md3) {
 					left: auto;
 					top: auto;
-					white-space: nowrap;
+					white-space: normal;
 					width: auto;
+					max-width: 100%;
+				}
+
+				@media (min-width: $md2) {
+					white-space: nowrap;
 					max-width: none;
 				}
 			}
@@ -3394,9 +3503,6 @@
 					height: 117.33%;
 					left: 45.3%;
 					bottom: 0;
-				}
-
-				@media (min-width: $md2) {
 					object-position: center bottom;
 				}
 
@@ -3503,9 +3609,6 @@
 					width: 62%;
 					height: 106%;
 					right: 47.7%;
-				}
-
-				@media (min-width: $md2) {
 					object-position: center bottom;
 				}
 
@@ -4155,7 +4258,7 @@
 	min-height: 73.5rem;
 
 	@media (min-width: $md3) {
-		min-height: 58.375rem;
+		min-height: 52rem;
 	}
 
 	@media (min-width: $md2) {
@@ -4185,17 +4288,18 @@
 		}
 
 		@media (min-width: $md3) {
-			font-size: 2.125rem;
+			font-size: 1.75rem;
 			line-height: 1.5;
 			margin-right: 0;
 			margin-left: 0;
 			text-align: inherit;
 			transform: none;
-			margin-bottom: 3.75rem;
+			margin-bottom: 3.125rem;
 		}
 
 		@media (min-width: $md2) {
 			margin-bottom: 2.5rem;
+			font-size: 2.125rem;
 		}
 
 		@media (min-width: $md0) {
@@ -4214,8 +4318,14 @@
 		gap: 0.625rem;
 
 		@media (min-width: $md3) {
-			gap: 1.25rem;
+			gap: 0.75rem;
 			min-height: 20.625rem;
+			padding: 1rem;
+		}
+
+		@media (min-width: $md2) {
+			padding: 1.25rem;
+			gap: 1.25rem;
 		}
 
 		// .directions-events__card h3
@@ -4224,8 +4334,12 @@
 			line-height: 1.5rem;
 
 			@media (min-width: $md3) {
-				font-size: 1.25rem;
+				font-size: 1.125rem;
 				line-height: 1.4;
+			}
+
+			@media (min-width: $md2) {
+				font-size: 1.25rem;
 			}
 
 			@media (min-width: $md0) {
@@ -4282,8 +4396,8 @@
 		padding-bottom: 5rem;
 
 		@media (min-width: $md3) {
-			padding-top: 11.875rem;
-			padding-bottom: 7.5rem;
+			padding-top: 8.75rem;
+			padding-bottom: 5rem;
 		}
 
 		@media (min-width: $md2) {
@@ -4309,15 +4423,18 @@
 		@media (min-width: $md3) {
 			width: 52.5rem;
 			height: 45.625rem;
-			right: calc(50% - 52.5rem);
-			top: 0.3125rem;
+			right: calc(50% - 30rem);
+			top: 1.5rem;
 			left: auto;
+			transform: scale(0.64);
+			transform-origin: right top;
 		}
 
 		@media (min-width: $md2) {
 			right: calc(50% - 43rem);
 			transform: scale(0.78);
 			transform-origin: right top;
+			top: 0.3125rem;
 		}
 
 		@media (min-width: $md0) {
@@ -4405,8 +4522,8 @@
 
 		@media (min-width: $md3) {
 			width: 16.125rem;
-			left: 10.625rem;
-			top: 6.875rem;
+			left: -4rem;
+			top: 2.5rem;
 			height: auto;
 		}
 
@@ -4434,11 +4551,12 @@
 		top: 2.414375rem;
 
 		@media (min-width: $md3) {
-			top: 0;
-			right: -18%;
-			width: 128.125rem;
-			left: auto;
+			top: -2rem;
+			right: auto;
+			width: 80rem;
+			left: calc(50% - 28rem);
 			height: auto;
+			z-index: 2;
 		}
 
 		@media (min-width: $md2) {
@@ -4464,9 +4582,9 @@
 			top: 2.25rem;
 
 			@media (min-width: $md3) {
-				top: 0.625rem;
-				right: -18.5%;
-				left: auto;
+				top: -2.625rem;
+				right: auto;
+				left: calc(50% - 27.5rem);
 			}
 
 			@media (min-width: $md2) {
@@ -4499,6 +4617,11 @@
 		height: 1.875rem;
 
 		@media (min-width: $md3) {
+			width: 3rem;
+			height: 3rem;
+		}
+
+		@media (min-width: $md2) {
 			width: 3.75rem;
 			height: 3.75rem;
 		}
@@ -4515,6 +4638,11 @@
 		height: 1.875rem;
 
 		@media (min-width: $md3) {
+			width: 3rem;
+			height: 3rem;
+		}
+
+		@media (min-width: $md2) {
 			width: 3.75rem;
 			height: 3.75rem;
 		}
@@ -4963,6 +5091,11 @@
 
 			@media (min-width: $md3) {
 				margin-top: 1.875rem;
+				padding-left: 2rem;
+			}
+
+			@media (min-width: $md2) {
+				padding-left: calc(var(--bs-gutter-x) * .5);
 			}
 
 			@media (min-width: $md1) {
@@ -5028,6 +5161,11 @@
 
 			@media (min-width: $md3) {
 				margin-top: 1.875rem;
+				padding-right: 2rem;
+			}
+
+			@media (min-width: $md2) {
+				padding-right: calc(var(--bs-gutter-x) * .5);
 			}
 
 			@media (min-width: $md1) {
@@ -5154,6 +5292,10 @@
 				}
 
 				@media (min-width: $md3) {
+					white-space: normal !important;
+				}
+
+				@media (min-width: $md2) {
 					white-space: nowrap !important;
 				}
 			}
@@ -5324,6 +5466,16 @@
 	&__portrait {
 		width: 7.5rem;
 		height: 9.375rem;
+
+		@media (min-width: $md3) {
+			transform: scale(0.85);
+			transform-origin: center top;
+		}
+
+		@media (min-width: $md2) {
+			transform: none;
+			transform-origin: 50% 50%;
+		}
 
 		// .directions-life__portrait--teachers
 		&--teachers {
@@ -5576,7 +5728,7 @@
 	min-height: 62.0625rem;
 
 	@media (min-width: $md3) {
-		min-height: 61.25rem;
+		min-height: 53.125rem;
 	}
 
 	@media (min-width: $md2) {
@@ -5628,7 +5780,7 @@
 			width: 64.375rem;
 			max-width: 145%;
 			margin-bottom: 1.25rem;
-			font-size: 2.375rem;
+			font-size: 1.875rem;
 			line-height: 1.5;
 			margin-left: 0;
 			margin-right: 0;
@@ -5651,8 +5803,12 @@
 
 		@media (min-width: $md3) {
 			margin-bottom: 1.25rem;
-			font-size: 1.25rem;
+			font-size: 1.0625rem;
 			line-height: 1.4;
+		}
+
+		@media (min-width: $md2) {
+			font-size: 1.25rem;
 		}
 
 		@media (min-width: $md0) {
@@ -5777,7 +5933,7 @@
 		padding: 3.9375rem 0.5625rem 4.625rem 0.6875rem;
 
 		@media (min-width: $md3) {
-			padding: 11.875rem calc(var(--bs-gutter-x) * .5) 10.625rem;
+			padding: 8.75rem calc(var(--bs-gutter-x) * .5) 6.25rem;
 		}
 
 		@media (min-width: $md2) {
