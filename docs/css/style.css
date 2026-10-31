@@ -7,6 +7,14 @@
 }
 
 @font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "LTSuperior";
   font-display: swap;
   src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
@@ -21,14 +29,6 @@
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
-}
-
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
 }
 
 @font-face {
@@ -3489,16 +3489,19 @@ body {
           transform: rotate(5.23deg);
 }
 
+.no-webp .directions-creative__background::after {
+  background-image: radial-gradient(ellipse at center, rgba(181, 28, 34, 0.94), rgba(96, 23, 25, 0.97)), url("../img/halls/02.jpg"); }
+
 .directions-creative__background::after {
+  border-radius: 50%;
   width: 120.9374375rem;
   height: 37.709rem;
   left: calc(50% - 59.17559375rem);
   top: 2.314875rem;
-  background-image: none;
   content: "";
   position: absolute;
   background-position: center;
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   -webkit-transform: rotate(5.23deg);
       -ms-transform: rotate(5.23deg);
@@ -4700,9 +4703,6 @@ body {
   background-image: url("../img/directions-page/help-outline-mobile.svg");
 }
 
-.no-webp .directions-help .directions-creative__background::after {
-  background-image: url("../img/directions-page/help-background-ellipse-mobile.png"); }
-
 .directions-help .directions-creative__background::after {
   width: 120.9374375rem;
   height: 37.709rem;
@@ -5441,7 +5441,7 @@ body {
 }
 
 .no-webp .directions-events .directions-creative__background::after {
-  background-image: url("../img/directions-page/events-background-ellipse-mobile.png"); }
+  background-image: radial-gradient(ellipse at center, rgba(181, 28, 34, 0.94), rgba(96, 23, 25, 0.97)), url("../img/halls/05.jpg"); }
 
 .directions-events .directions-creative__background::after {
   -webkit-transform: rotate(176.47deg) skewX(0.55deg) scaleY(-1);
@@ -6291,9 +6291,6 @@ body {
   top: 1.04521875rem;
   background-image: url("../img/directions-page/final-outline-mobile.svg");
 }
-
-.no-webp .directions-final .directions-creative__background::after {
-  background-image: url("../img/directions-page/final-background-ellipse-mobile.png"); }
 
 .directions-final .directions-creative__background::after {
   width: 180.9256875rem;
@@ -9802,8 +9799,6 @@ body {
     height: auto;
     left: auto;
     top: auto;
-    background-image: none;
-    background-size: contain;
   }
 
   .directions-mood .btn {
@@ -10171,8 +10166,6 @@ body {
     height: auto;
     left: auto;
     top: auto;
-    background-image: none;
-    background-size: contain;
   }
 
   .directions-life {
@@ -10692,7 +10685,6 @@ body {
     width: auto;
     height: auto;
     left: auto;
-    background-image: none;
   }
 
   .directions-final__dancer-mask {
@@ -11949,14 +11941,11 @@ body {
     background-image: url("../img/directions-page/banner-outline.svg");
   }
 
-  .no-webp .directions-creative__background::after {
-    background-image: url("../img/directions-page/banner-background-ellipse.png"); }
-
   .directions-creative__background::after {
     content: "";
     position: absolute;
     background-position: center;
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     -webkit-transform: rotate(5.23deg);
         -ms-transform: rotate(5.23deg);
@@ -12668,9 +12657,6 @@ body {
     top: 0.6674375rem;
     background-image: url("../img/directions-page/events-outline.svg");
   }
-
-  .no-webp .directions-events .directions-creative__background::after {
-    background-image: url("../img/directions-page/events-background-ellipse.png"); }
 
   .directions-events .directions-creative__background::after {
     -webkit-transform: rotate(176.47deg) skewX(0.55deg) scaleY(-1);
@@ -14224,13 +14210,11 @@ body {
 
 .webp .directions-creative::before { background-image: url(../img/halls/05.webp); }
 
+.webp .directions-creative__background::after { background-image: radial-gradient(ellipse at center, rgba(181, 28, 34, 0.94), rgba(96, 23, 25, 0.97)), url(../img/halls/02.webp); }
+
 .webp .directions-hero::before { background-image: linear-gradient(180.059deg, transparent 34.51%, rgba(118, 26, 27, 0.472) 47.066%, rgba(118, 26, 27, 0.8) 99.965%), url(../img/directions-page/hero-background-mobile.webp); }
 
-.webp .directions-help .directions-creative__background::after { background-image: url(../img/directions-page/help-background-ellipse-mobile.webp); }
-
-.webp .directions-events .directions-creative__background::after { background-image: url(../img/directions-page/events-background-ellipse-mobile.webp); }
-
-.webp .directions-final .directions-creative__background::after { background-image: url(../img/directions-page/final-background-ellipse-mobile.webp); }
+.webp .directions-events .directions-creative__background::after { background-image: radial-gradient(ellipse at center, rgba(181, 28, 34, 0.94), rgba(96, 23, 25, 0.97)), url(../img/halls/05.webp); }
 
 @media (min-width: 768px) {
 
@@ -14254,17 +14238,7 @@ body {
 
 @media (min-width: 1488px) {
 
-  .webp .directions-creative__background::after { background-image: url(../img/directions-page/banner-background-ellipse.webp); }
-}
-
-@media (min-width: 1488px) {
-
   .webp .directions-hero { background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.8)), color-stop(63%, transparent)), url(../img/directions-page/hero-background-extended.webp); background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.8), transparent 63%), url(../img/directions-page/hero-background-extended.webp); }
-}
-
-@media (min-width: 1488px) {
-
-  .webp .directions-events .directions-creative__background::after { background-image: url(../img/directions-page/events-background-ellipse.webp); }
 }
 
 @media (max-width: 768px) {
