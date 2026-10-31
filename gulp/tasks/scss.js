@@ -7,6 +7,7 @@ import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
 import shorthand from 'gulp-shorthand';
+import { inlineSvgMasks } from '../config/svg-masks.js';
 
 const sass = gulpSass(dartSass);
 
@@ -25,6 +26,7 @@ export const scss = () => {
         .pipe(sass({
             outputStyle: 'expanded'
         }))
+        .pipe(app.plugins.replace(/[\s\S]+/g, css => inlineSvgMasks(css, `${app.path.srcFolder}/img`)))
         .pipe(
             app.plugins.if(
                 app.isBuild,

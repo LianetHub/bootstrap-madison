@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
+    "preview": "browser-sync start --server docs --port 3000 --no-open --no-ui --no-online",
+    "test": "node --test",
     "zip": "gulp deployZIP --build",
     "deploy": "npm run build && git add . && git commit -m \"commit\" && git push",
     "ftp": "npm run build && node .vscode/ftp-deploy-config.js"

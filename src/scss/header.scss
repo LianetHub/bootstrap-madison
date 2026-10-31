@@ -15,6 +15,15 @@
 			padding: 0.25rem 1rem 1.25rem 3rem;
 		}
 
+		@media (max-width: 374.98px) {
+			margin-inline: -1rem;
+			padding-left: 3rem;
+
+			.header__social {
+				left: 1rem;
+			}
+		}
+
 		@media (min-width: $md3) {
 			gap: rem(30);
 			color: $accent;
@@ -65,6 +74,7 @@
 	// .header__phone
 	&__phone {
 		line-height: 140%;
+		white-space: nowrap;
 		transition: color 0.3s ease;
 		font-size: 1.25rem;
 

@@ -1923,3 +1923,46 @@ body {
 	// .breadcrumbs__current
 	&__current {}
 }
+
+@media (max-width: 374.98px) {
+	.trial-lesson__banner-caption .text-nowrap {
+		white-space: normal !important;
+	}
+
+	.trial-lesson__caption {
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.trial-lesson__caption-icon {
+		width: 4rem;
+		height: 4rem;
+	}
+
+	.trial-lesson__caption-text {
+		min-width: 0;
+		margin-left: -1rem;
+	}
+
+	.trial-lesson__form {
+		padding: 1.25rem 1rem 1.5rem;
+	}
+
+	.trial-lesson__cards > .row > .col-6 {
+		width: 100%;
+	}
+}
+
+@media (max-width: 320px) {
+	.schedule__td--time-day {
+		width: 100%;
+	}
+
+	.schedule__td--action {
+		text-align: left;
+	}
+
+	.schedule__sign-up {
+		margin-left: 0 !important;
+	}
+}
