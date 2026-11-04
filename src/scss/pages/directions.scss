@@ -1,3 +1,8 @@
+// Intrinsic dimensions reserve space; component styles still control the artwork.
+:where(.directions-page, .header, .footer) :where(img[width][height]) {
+	height: auto;
+}
+
 // Общие настройки секций страницы.
 @mixin directions-section {
 
@@ -52,6 +57,11 @@
 // .directions-responsive-image
 .directions-responsive-image {
 	display: contents;
+
+	// With display: contents, an empty source would become a flex item and add a gap.
+	> source {
+		display: none;
+	}
 }
 
 // Reuse the hall photos; the ellipse and red tint are drawn in CSS.
@@ -250,6 +260,14 @@
 }
 
 // .directions-hero
+// Keep image selection independent of the JS WebP probe and gulp-webpcss.
+@mixin directions-hero-image($name) {
+	--directions-hero-image: url("@img/directions-page/#{$name}.jpg");
+	@supports (background-image: image-set(url("image.webp") type("image/webp"))) {
+		--directions-hero-image: image-set(url("@img/directions-page/#{$name}.webp") type("image/webp"), url("@img/directions-page/#{$name}.jpg") type("image/jpeg"));
+	}
+}
+
 .directions-hero {
 	isolation: isolate;
 	--bs-border-radius-xl: 0.9375rem;
@@ -278,7 +296,8 @@
 
 	@media (min-width: $md0) {
 		min-height: 60.125rem;
-		background-image: linear-gradient(90deg, rgba(118, 26, 27, .8), transparent 63%), url("@img/directions-page/hero-background-extended.png");
+		@include directions-hero-image("hero-background-extended");
+		background-image: linear-gradient(90deg, rgba(118, 26, 27, .8), transparent 63%), var(--directions-hero-image);
 		background-position: center;
 		background-size: 100% 100%, cover;
 		background-repeat: no-repeat;
@@ -462,7 +481,8 @@
 		z-index: -1;
 		mask-repeat: no-repeat;
 		top: 2.0625rem;
-		background-image: linear-gradient(180.059deg, transparent 34.51%, rgba(118, 26, 27, 0.472) 47.066%, rgba(118, 26, 27, 0.8) 99.965%), url("@img/directions-page/hero-background-mobile.png");
+		@include directions-hero-image("hero-background-mobile");
+		background-image: linear-gradient(180.059deg, transparent 34.51%, rgba(118, 26, 27, 0.472) 47.066%, rgba(118, 26, 27, 0.8) 99.965%), var(--directions-hero-image);
 		mask-size: auto 100%;
 		mask-position: calc(50% + 0.03125rem) bottom;
 		background-size: 100% 100%, 31rem 49.625rem;
@@ -478,7 +498,8 @@
 		}
 
 		@media (min-width: $md4) {
-			background-image: linear-gradient(90deg, rgba(118, 26, 27, .85), rgba(118, 26, 27, .3)), url("@img/directions-page/hero-background.png");
+			@include directions-hero-image("hero-background");
+			background-image: linear-gradient(90deg, rgba(118, 26, 27, .85), rgba(118, 26, 27, .3)), var(--directions-hero-image);
 		}
 
 		@media (min-width: $md3) {
@@ -489,7 +510,7 @@
 			mask-position: 0% 0%;
 			mask-size: auto;
 			mask-repeat: repeat;
-			background-image: linear-gradient(90deg, rgba(118, 26, 27, .8), transparent 63%), url("@img/directions-page/hero-background.png");
+			background-image: linear-gradient(90deg, rgba(118, 26, 27, .8), transparent 63%), var(--directions-hero-image);
 			background-position: center, center;
 		}
 
@@ -5139,10 +5160,11 @@
 
 		// .directions-life__main-source--class
 		&--class {
-			width: 306.71%;
-			height: 230.94%;
-			left: -104.9%;
-			top: -72.98%;
+			// Invisible source margins were cropped; preserve the original visible composition.
+			width: 100.438059%;
+			height: 100.501667%;
+			left: -0.202080%;
+			top: -0.276667%;
 		}
 
 		// .directions-life__main-source--dancer

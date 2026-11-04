@@ -15,20 +15,20 @@
 }
 
 @font-face {
-  font-family: "LTSuperior";
-  font-display: swap;
-  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2 supports variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff2") format("woff2-variations"), url("../fonts/Roboto-VariableFont_wdth,wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "LTSuperior";
+  font-display: swap;
+  src: url("../fonts/LTSuperior-Regular.woff2") format("woff2"), url("../fonts/LTSuperior-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
@@ -3395,6 +3395,10 @@ body {
   line-height: 150%;
 }
 
+:where(.directions-page, .header, .footer) :where(img[width][height]) {
+  height: auto;
+}
+
 .directions-section-label {
   background-image: none;
   background-position: 0% 0%;
@@ -3409,6 +3413,10 @@ body {
 
 .directions-responsive-image {
   display: contents;
+}
+
+.directions-responsive-image > source {
+  display: none;
 }
 
 .directions-creative {
@@ -3596,9 +3604,6 @@ body {
   margin-top: 2.5rem;
 }
 
-.no-webp .directions-hero::before {
-  background-image: linear-gradient(180.059deg, transparent 34.51%, rgba(118, 26, 27, 0.472) 47.066%, rgba(118, 26, 27, 0.8) 99.965%), url("../img/directions-page/hero-background-mobile.png"); }
-
 .directions-hero::before {
   content: "";
   position: absolute;
@@ -3609,6 +3614,8 @@ body {
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   top: 2.0625rem;
+  --directions-hero-image: url("../img/directions-page/hero-background-mobile.jpg");
+  background-image: linear-gradient(180.059deg, transparent 34.51%, rgba(118, 26, 27, 0.472) 47.066%, rgba(118, 26, 27, 0.8) 99.965%), var(--directions-hero-image);
   -webkit-mask-size: auto 100%;
           mask-size: auto 100%;
   -webkit-mask-position: calc(50% + 0.03125rem) bottom;
@@ -3619,6 +3626,12 @@ body {
   background-color: #761a1b;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20width%3D%22496%22%20height%3D%22720%22%20viewBox%3D%220%200%20496%20720%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20id%3D%22Intersect%22%20d%3D%22M496%20682.334C436.385%20705.375%20347.404%20720%20248%20720C148.596%20720%2059.6151%20705.375%200%20682.334V0H496V682.334Z%22%20fill%3D%22%23D9D9D9%22%2F%3E%0A%3C%2Fsvg%3E%0A");
           mask-image: url("data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%22none%22%20overflow%3D%22visible%22%20style%3D%22display%3A%20block%3B%22%20width%3D%22496%22%20height%3D%22720%22%20viewBox%3D%220%200%20496%20720%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20id%3D%22Intersect%22%20d%3D%22M496%20682.334C436.385%20705.375%20347.404%20720%20248%20720C148.596%20720%2059.6151%20705.375%200%20682.334V0H496V682.334Z%22%20fill%3D%22%23D9D9D9%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+
+@supports ((background-image: -webkit-image-set(url("image.webp") type("image/webp"))) or (background-image: image-set(url("image.webp") type("image/webp")))) {
+  .directions-hero::before {
+    --directions-hero-image: image-set(url("../img/directions-page/hero-background-mobile.webp") type("image/webp"), url("../img/directions-page/hero-background-mobile.jpg") type("image/jpeg"));
+  }
 }
 
 .directions-hero__content {
@@ -5599,10 +5612,10 @@ body {
 }
 
 .directions-life__main-source--class {
-  width: 306.71%;
-  height: 230.94%;
-  left: -104.9%;
-  top: -72.98%;
+  width: 100.438059%;
+  height: 100.501667%;
+  left: -0.20208%;
+  top: -0.276667%;
 }
 
 .directions-life__main-source--dancer {
@@ -7576,9 +7589,17 @@ body {
     margin-top: 1.5rem;
   }
 
-  .no-webp .directions-hero::before {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.85)), to(rgba(118, 26, 27, 0.3))), url("../img/directions-page/hero-background.png");
-    background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.85), rgba(118, 26, 27, 0.3)), url("../img/directions-page/hero-background.png"); }
+  .directions-hero::before {
+    --directions-hero-image: url("../img/directions-page/hero-background.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.85)), to(rgba(118, 26, 27, 0.3))), var(--directions-hero-image);
+    background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.85), rgba(118, 26, 27, 0.3)), var(--directions-hero-image);
+  }
+
+@supports ((background-image: -webkit-image-set(url("image.webp") type("image/webp"))) or (background-image: image-set(url("image.webp") type("image/webp")))) {
+    .directions-hero::before {
+      --directions-hero-image: image-set(url("../img/directions-page/hero-background.webp") type("image/webp"), url("../img/directions-page/hero-background.jpg") type("image/jpeg"));
+    }
+}
 
   .directions-hero__content {
     padding-top: 2.5rem;
@@ -8961,10 +8982,6 @@ body {
     width: auto;
   }
 
-  .no-webp .directions-hero::before {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.8)), color-stop(63%, transparent)), url("../img/directions-page/hero-background.png");
-    background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.8), transparent 63%), url("../img/directions-page/hero-background.png"); }
-
   .directions-hero::before {
     background-repeat: repeat, no-repeat;
     background-color: transparent;
@@ -8977,6 +8994,8 @@ body {
             mask-size: auto;
     -webkit-mask-repeat: repeat;
             mask-repeat: repeat;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.8)), color-stop(63%, transparent)), var(--directions-hero-image);
+    background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.8), transparent 63%), var(--directions-hero-image);
     background-position: center, center;
   }
 
@@ -11956,16 +11975,21 @@ body {
     top: 4.1031875rem;
   }
 
-  .no-webp .directions-hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.8)), color-stop(63%, transparent)), url("../img/directions-page/hero-background-extended.png");
-    background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.8), transparent 63%), url("../img/directions-page/hero-background-extended.png"); }
-
   .directions-hero {
     min-height: 60.125rem;
+    --directions-hero-image: url("../img/directions-page/hero-background-extended.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.8)), color-stop(63%, transparent)), var(--directions-hero-image);
+    background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.8), transparent 63%), var(--directions-hero-image);
     background-position: center;
     background-size: 100% 100%, cover;
     background-repeat: no-repeat;
   }
+
+@supports ((background-image: -webkit-image-set(url("image.webp") type("image/webp"))) or (background-image: image-set(url("image.webp") type("image/webp")))) {
+    .directions-hero {
+      --directions-hero-image: image-set(url("../img/directions-page/hero-background-extended.webp") type("image/webp"), url("../img/directions-page/hero-background-extended.jpg") type("image/jpeg"));
+    }
+}
 
   .directions-hero__title {
     font-size: 3.75rem;
@@ -14212,8 +14236,6 @@ body {
 
 .webp .directions-creative__background::after { background-image: radial-gradient(ellipse at center, rgba(181, 28, 34, 0.94), rgba(96, 23, 25, 0.97)), url(../img/halls/02.webp); }
 
-.webp .directions-hero::before { background-image: linear-gradient(180.059deg, transparent 34.51%, rgba(118, 26, 27, 0.472) 47.066%, rgba(118, 26, 27, 0.8) 99.965%), url(../img/directions-page/hero-background-mobile.webp); }
-
 .webp .directions-events .directions-creative__background::after { background-image: radial-gradient(ellipse at center, rgba(181, 28, 34, 0.94), rgba(96, 23, 25, 0.97)), url(../img/halls/05.webp); }
 
 @media (min-width: 768px) {
@@ -14224,21 +14246,6 @@ body {
 @media (min-width: 768px) {
 
   .webp .outcomes__item:nth-child(5) .outcomes__item-image { background: url(../img/benefits/05-bg.webp) 0 0/cover no-repeat; }
-}
-
-@media (min-width: 768px) {
-
-  .webp .directions-hero::before { background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.85)), to(rgba(118, 26, 27, 0.3))), url(../img/directions-page/hero-background.webp); background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.85), rgba(118, 26, 27, 0.3)), url(../img/directions-page/hero-background.webp); }
-}
-
-@media (min-width: 992px) {
-
-  .webp .directions-hero::before { background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.8)), color-stop(63%, transparent)), url(../img/directions-page/hero-background.webp); background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.8), transparent 63%), url(../img/directions-page/hero-background.webp); }
-}
-
-@media (min-width: 1488px) {
-
-  .webp .directions-hero { background-image: -webkit-gradient(linear, left top, right top, from(rgba(118, 26, 27, 0.8)), color-stop(63%, transparent)), url(../img/directions-page/hero-background-extended.webp); background-image: linear-gradient(90deg, rgba(118, 26, 27, 0.8), transparent 63%), url(../img/directions-page/hero-background-extended.webp); }
 }
 
 @media (max-width: 768px) {

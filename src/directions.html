@@ -5,7 +5,7 @@
     })
     <body>
         <div class="wrapper">
-            @@include('html/_header.html', {})
+            @@include('html/_header.html', {'currentPage': 'directions'})
             <main class="page directions-page">
                 <section class="directions-hero text-white position-relative" aria-labelledby="directions-title">
                     <div class="container position-relative z-1">
@@ -29,8 +29,8 @@
                                 <ul class="directions-hero__benefits d-flex flex-wrap flex-column flex-md-row align-self-start align-self-md-center align-self-lg-start align-items-start">
                                     <li class="d-flex align-items-center gap-2">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-dance-community.svg">
-                                            <img src="@img/directions-page/hero-icon-community-mobile.svg" class="directions-hero__icon flex-shrink-0" alt="">
+                                            <source media="(min-width: 992px)" srcset="@img/directions-page/icon-dance-community.svg" width="60" height="60">
+                                            <img src="@img/directions-page/hero-icon-community-mobile.svg" class="directions-hero__icon flex-shrink-0" alt="" width="30" height="30">
                                         </picture>
                                         <span>
                                             Современные
@@ -40,8 +40,8 @@
                                     </li>
                                     <li class="d-flex align-items-center gap-2">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-heart.svg">
-                                            <img src="@img/directions-page/hero-icon-heart-mobile.svg" class="directions-hero__icon flex-shrink-0" alt="">
+                                            <source media="(min-width: 992px)" srcset="@img/directions-page/icon-heart.svg" width="60" height="60">
+                                            <img src="@img/directions-page/hero-icon-heart-mobile.svg" class="directions-hero__icon flex-shrink-0" alt="" width="30" height="30">
                                         </picture>
                                         <span>
                                             Для любого
@@ -51,8 +51,8 @@
                                     </li>
                                     <li class="d-flex align-items-center gap-2">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-star.svg">
-                                            <img src="@img/directions-page/hero-icon-star-mobile.svg" class="directions-hero__icon flex-shrink-0" alt="">
+                                            <source media="(min-width: 992px)" srcset="@img/directions-page/icon-star.svg" width="60" height="60">
+                                            <img src="@img/directions-page/hero-icon-star-mobile.svg" class="directions-hero__icon flex-shrink-0" alt="" width="30" height="30">
                                         </picture>
                                         <span>
                                             Дружная
@@ -77,7 +77,7 @@
                                 <span class="d-lg-none">Выберите</span>
                                 своё направление
                             </h2>
-                            <p class="directions-catalog__subtitle mb-0">Танец для каждого. В любом возрасте. С любой истории.</p>
+                            <p class="directions-catalog__subtitle mb-0">Танец для каждого. В любом возрасте. С любой историей.</p>
                             <div class="directions-catalog__tabs d-none d-lg-flex align-items-center justify-content-center" role="tablist" aria-label="Возрастная группа">
                                 <button class="directions-catalog__tab btn d-flex align-items-center rounded-pill border-0 fw-bold font-unbounded" type="button" id="catalog-tab-adults" role="tab" aria-controls="catalog-panel-adults" aria-selected="true" tabindex="0" data-catalog-tab="adults">
                                     <span class="directions-catalog__tab-icon rounded-circle flex-shrink-0" aria-hidden="true">
@@ -114,22 +114,22 @@
                                 </select>
                                 <button class="directions-catalog__select-trigger btn d-flex align-items-center justify-content-between text-start bg-white rounded w-100" type="button" role="combobox" aria-label="Выберите возраст" aria-haspopup="listbox" aria-expanded="false" aria-controls="catalog-age-options" data-catalog-select-trigger>
                                     <span class="directions-catalog__select-value d-flex align-items-center">
-                                        <img src="@img/directions-page/icon-age-select.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true" data-catalog-select-icon>
+                                        <img src="@img/directions-page/icon-age-select.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true" data-catalog-select-icon width="23" height="23" loading="lazy">
                                         <span data-catalog-select-label>Выберите возраст</span>
                                     </span>
                                     <span class="directions-catalog__select-arrow flex-shrink-0" aria-hidden="true"></span>
                                 </button>
                                 <div class="directions-catalog__select-options w-100 overflow-hidden" id="catalog-age-options" role="listbox" aria-label="Возрастная группа" data-catalog-select-options hidden>
                                     <button class="directions-catalog__select-option btn d-flex align-items-center justify-content-start text-start bg-white w-100" type="button" role="option" id="catalog-age-adults" aria-selected="false" tabindex="-1" data-catalog-select-option="adults">
-                                        <img src="@img/directions-page/icon-high-heels-select.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true">
+                                        <img src="@img/directions-page/icon-high-heels-select.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true" width="25" height="25" loading="lazy">
                                         <span>Танцы для взрослых</span>
                                     </button>
                                     <button class="directions-catalog__select-option btn d-flex align-items-center justify-content-start text-start bg-white w-100" type="button" role="option" id="catalog-age-teens" aria-selected="false" tabindex="-1" data-catalog-select-option="teens">
-                                        <img src="@img/directions-page/icon-teens.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true">
+                                        <img src="@img/directions-page/icon-teens.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true" width="60" height="60" loading="lazy">
                                         <span>Танцы для подростков</span>
                                     </button>
                                     <button class="directions-catalog__select-option btn d-flex align-items-center justify-content-start text-start bg-white w-100" type="button" role="option" id="catalog-age-children" aria-selected="false" tabindex="-1" data-catalog-select-option="children">
-                                        <img src="@img/directions-page/icon-children.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true">
+                                        <img src="@img/directions-page/icon-children.svg" class="directions-catalog__select-symbol flex-shrink-0" alt="" aria-hidden="true" width="60" height="60" loading="lazy">
                                         <span>Танцы для детей</span>
                                     </button>
                                 </div>
@@ -137,39 +137,38 @@
                         </div>
                         <div class="directions-catalog__panel directions-catalog__panel--adults position-relative mx-auto" id="catalog-panel-adults" role="tabpanel" aria-labelledby="catalog-tab-adults" aria-hidden="false" tabindex="0" data-catalog-panel="adults">
                             <picture class="directions-responsive-image">
-                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-age-halo.svg">
-                                <img src="@img/directions-page/catalog-age-halo-mobile.svg" class="directions-catalog__halo position-absolute" alt="" aria-hidden="true">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-age-halo.svg" width="257" height="257">
+                                <img src="@img/directions-page/catalog-age-halo-mobile.svg" class="directions-catalog__halo position-absolute" alt="" aria-hidden="true" width="187" height="187" loading="lazy">
                             </picture>
                             <div class="directions-catalog__intro position-relative">
                                 <h3 class="directions-catalog__heading font-unbounded fw-bold mb-0">Танцы для взрослых</h3>
                                 <div class="directions-catalog__accent" aria-hidden="true"></div>
-                                <p class="directions-catalog__intro-text mb-0 d-none d-lg-block">Направления для тех, кто хочет научиться красиво танцевать и двигаться, стать пластичнее и женственнее, переключиться после рабочего дня или найти новое увлечение для себя. В Madison можно выбрать направление под своё настроение, начать с нуля и постепенно развиваться в выбранном стиле.</p>
-                                <p class="directions-catalog__intro-text mb-0 d-lg-none">Женственная и выразительная хореография на каблуках, которая помогает развивать пластику, осанку, грацию и подачу. На занятиях мы поработаем над походкой, разучим эффектные танцы, научимся красиво двигаться и увереннее чувствовать себя в движении, раскрывая свою женственность и яркую сторону.</p>
+                                <p class="directions-catalog__intro-text mb-0">Направления для тех, кто хочет научиться красиво танцевать и двигаться, стать пластичнее и женственнее, переключиться после рабочего дня или найти новое увлечение для себя. В Madison можно выбрать направление под своё настроение, начать с нуля и постепенно развиваться в выбранном стиле.</p>
                             </div>
                             <div class="directions-catalog__art directions-catalog__art--adults position-relative" aria-hidden="true">
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-dancer-shape.svg">
-                                    <img src="@img/directions-page/catalog-adults-shape-mobile.svg" class="directions-catalog__art-swoosh position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-dancer-shape.svg" width="703" height="503">
+                                    <img src="@img/directions-page/catalog-adults-shape-mobile.svg" class="directions-catalog__art-swoosh position-absolute" alt="" loading="lazy" width="282" height="201">
                                 </picture>
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-adults-line.svg">
-                                    <img src="@img/directions-page/catalog-adults-line-mobile.svg" class="directions-catalog__art-line position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-adults-line.svg" width="672" height="451">
+                                    <img src="@img/directions-page/catalog-adults-line-mobile.svg" class="directions-catalog__art-line position-absolute" alt="" loading="lazy" width="269" height="181">
                                 </picture>
-                                <img src="@img/directions-page/catalog-adults-dancer.png" class="directions-catalog__art-person position-absolute" alt="" loading="lazy">
-                                <img src="@img/directions-page/catalog-note-adults.svg" class="directions-catalog__art-note position-absolute" alt="" loading="lazy">
+                                <img src="@img/directions-page/catalog-adults-dancer.png" class="directions-catalog__art-person position-absolute" alt="" loading="lazy" width="914" height="1142">
+                                <img src="@img/directions-page/catalog-note-adults.svg" class="directions-catalog__art-note position-absolute" alt="" loading="lazy" width="189" height="98">
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-adults-arrow.svg">
-                                    <img src="@img/directions-page/catalog-adults-arrow-mobile.svg" class="directions-catalog__art-doodle position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-adults-arrow.svg" width="24" height="40">
+                                    <img src="@img/directions-page/catalog-adults-arrow-mobile.svg" class="directions-catalog__art-doodle position-absolute" alt="" loading="lazy" width="10" height="16">
                                 </picture>
                             </div>
                             <div class="directions-catalog__cards row gx-0 position-relative">
                                 @@loop('./html/templates/_directions-catalog-card.html', './html/json/directions-catalog-adults.json')
                             </div>
                             <div class="directions-catalog__art-secondary d-none d-lg-block position-absolute" aria-hidden="true">
-                                <img src="@img/directions-page/catalog-secondary-shape.svg" class="directions-catalog__secondary-swoosh position-absolute" alt="" loading="lazy">
-                                <img src="@img/directions-page/catalog-secondary-line.svg" class="directions-catalog__secondary-line position-absolute" alt="" loading="lazy">
+                                <img src="@img/directions-page/catalog-secondary-shape.svg" class="directions-catalog__secondary-swoosh position-absolute" alt="" loading="lazy" width="651" height="465">
+                                <img src="@img/directions-page/catalog-secondary-line.svg" class="directions-catalog__secondary-line position-absolute" alt="" loading="lazy" width="629" height="347">
                                 <div class="directions-catalog__secondary-person position-absolute overflow-hidden">
-                                    <img src="@img/directions-page/catalog-secondary-dancer.png" class="position-absolute" alt="" loading="lazy">
+                                    <img src="@img/directions-page/catalog-secondary-dancer.png" class="position-absolute" alt="" loading="lazy" width="1177" height="1336">
                                 </div>
                             </div>
                             <div class="directions-catalog__action text-center position-relative">
@@ -178,8 +177,8 @@
                         </div>
                         <div class="directions-catalog__panel directions-catalog__panel--teens position-relative mx-auto d-none" id="catalog-panel-teens" role="tabpanel" aria-labelledby="catalog-tab-teens" aria-hidden="true" tabindex="0" data-catalog-panel="teens">
                             <picture class="directions-responsive-image">
-                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-age-halo.svg">
-                                <img src="@img/directions-page/catalog-age-halo-mobile.svg" class="directions-catalog__halo position-absolute" alt="" aria-hidden="true">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-age-halo.svg" width="257" height="257">
+                                <img src="@img/directions-page/catalog-age-halo-mobile.svg" class="directions-catalog__halo position-absolute" alt="" width="187" height="187" loading="lazy">
                             </picture>
                             <div class="directions-catalog__intro position-relative">
                                 <h3 class="directions-catalog__heading font-unbounded fw-bold mb-0">Танцы для подростков</h3>
@@ -188,22 +187,22 @@
                             </div>
                             <div class="directions-catalog__art directions-catalog__art--teens position-relative" aria-hidden="true">
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-dancer-shape.svg">
-                                    <img src="@img/directions-page/catalog-teens-shape-mobile.svg" class="directions-catalog__art-swoosh position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-dancer-shape.svg" width="703" height="503">
+                                    <img src="@img/directions-page/catalog-teens-shape-mobile.svg" class="directions-catalog__art-swoosh position-absolute" alt="" loading="lazy" width="283" height="203">
                                 </picture>
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-teens-line.svg">
-                                    <img src="@img/directions-page/catalog-teens-line-mobile.svg" class="directions-catalog__art-line position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-teens-line.svg" width="548" height="419">
+                                    <img src="@img/directions-page/catalog-teens-line-mobile.svg" class="directions-catalog__art-line position-absolute" alt="" loading="lazy" width="221" height="169">
                                 </picture>
-                                <img src="@img/directions-page/catalog-teens-dancer.png" class="directions-catalog__art-person position-absolute" alt="" loading="lazy">
-                                <img src="@img/directions-page/catalog-note-teens.svg" class="directions-catalog__art-note position-absolute" alt="" loading="lazy">
+                                <img src="@img/directions-page/catalog-teens-dancer.png" class="directions-catalog__art-person position-absolute" alt="" loading="lazy" width="962" height="1202">
+                                <img src="@img/directions-page/catalog-note-teens.svg" class="directions-catalog__art-note position-absolute" alt="" loading="lazy" width="137" height="67">
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-teens-decor.svg">
-                                    <img src="@img/directions-page/catalog-teens-decor-mobile.svg" class="directions-catalog__art-doodle position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-teens-decor.svg" width="82" height="49">
+                                    <img src="@img/directions-page/catalog-teens-decor-mobile.svg" class="directions-catalog__art-doodle position-absolute" alt="" loading="lazy" width="33" height="20">
                                 </picture>
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-teens-sparkle.svg">
-                                    <img src="@img/directions-page/catalog-teens-sparkle-mobile.svg" class="directions-catalog__art-doodle-extra position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-teens-sparkle.svg" width="33" height="53">
+                                    <img src="@img/directions-page/catalog-teens-sparkle-mobile.svg" class="directions-catalog__art-doodle-extra position-absolute" alt="" loading="lazy" width="13" height="21">
                                 </picture>
                             </div>
                             <div class="directions-catalog__cards row gx-0 position-relative">
@@ -219,8 +218,8 @@
                         </div>
                         <div class="directions-catalog__panel directions-catalog__panel--children position-relative mx-auto d-none" id="catalog-panel-children" role="tabpanel" aria-labelledby="catalog-tab-children" aria-hidden="true" tabindex="0" data-catalog-panel="children">
                             <picture class="directions-responsive-image">
-                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-halo.svg">
-                                <img src="@img/directions-page/catalog-children-halo-mobile.svg" class="directions-catalog__halo position-absolute" alt="" aria-hidden="true">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-halo.svg" width="257" height="257">
+                                <img src="@img/directions-page/catalog-children-halo-mobile.svg" class="directions-catalog__halo position-absolute" alt="" width="187" height="187" loading="lazy">
                             </picture>
                             <div class="directions-catalog__intro position-relative">
                                 <h3 class="directions-catalog__heading font-unbounded fw-bold mb-0">Танцы для детей</h3>
@@ -229,26 +228,26 @@
                             </div>
                             <div class="directions-catalog__art directions-catalog__art--children position-relative" aria-hidden="true">
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-shape.svg">
-                                    <img src="@img/directions-page/catalog-children-shape-mobile.svg" class="directions-catalog__art-swoosh position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-shape.svg" width="670" height="514">
+                                    <img src="@img/directions-page/catalog-children-shape-mobile.svg" class="directions-catalog__art-swoosh position-absolute" alt="" loading="lazy" width="296" height="227">
                                 </picture>
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-line.svg">
-                                    <img src="@img/directions-page/catalog-children-line-mobile.svg" class="directions-catalog__art-line position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-line.svg" width="387" height="356">
+                                    <img src="@img/directions-page/catalog-children-line-mobile.svg" class="directions-catalog__art-line position-absolute" alt="" loading="lazy" width="171" height="157">
                                 </picture>
-                                <img src="@img/directions-page/catalog-children-dancer.png" class="directions-catalog__art-person position-absolute" alt="" loading="lazy">
-                                <img src="@img/directions-page/catalog-note-children.svg" class="directions-catalog__art-note position-absolute" alt="" loading="lazy">
+                                <img src="@img/directions-page/catalog-children-dancer.png" class="directions-catalog__art-person position-absolute" alt="" loading="lazy" width="1013" height="1265">
+                                <img src="@img/directions-page/catalog-note-children.svg" class="directions-catalog__art-note position-absolute" alt="" loading="lazy" width="215" height="139">
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-decor.svg">
-                                    <img src="@img/directions-page/catalog-children-decor-mobile.svg" class="directions-catalog__art-doodle position-absolute" alt="" loading="lazy">
-                                </picture>
-                                <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-sparkle.svg">
-                                    <img src="@img/directions-page/catalog-children-sparkle-mobile.svg" class="directions-catalog__art-doodle-extra position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-decor.svg" width="23" height="36">
+                                    <img src="@img/directions-page/catalog-children-decor-mobile.svg" class="directions-catalog__art-doodle position-absolute" alt="" loading="lazy" width="10" height="16">
                                 </picture>
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-star.svg">
-                                    <img src="@img/directions-page/catalog-children-star-mobile.svg" class="directions-catalog__art-doodle-star position-absolute" alt="" loading="lazy">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-sparkle.svg" width="24" height="40">
+                                    <img src="@img/directions-page/catalog-children-sparkle-mobile.svg" class="directions-catalog__art-doodle-extra position-absolute" alt="" loading="lazy" width="11" height="18">
+                                </picture>
+                                <picture class="directions-responsive-image">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/catalog-children-star.svg" width="42" height="42">
+                                    <img src="@img/directions-page/catalog-children-star-mobile.svg" class="directions-catalog__art-doodle-star position-absolute" alt="" loading="lazy" width="18" height="19">
                                 </picture>
                             </div>
                             <div class="directions-catalog__cards row gx-0 position-relative">
@@ -269,15 +268,15 @@
                     <div class="directions-creative__wrapper">
                         <div class="directions-help__art position-absolute pe-none" aria-hidden="true">
                             <div class="directions-help__dancer-mask">
-                                <img src="@img/directions-page/help-dancer.png" alt="" class="directions-help__dancer">
+                                <img src="@img/directions-page/help-dancer.png" alt="" class="directions-help__dancer" width="1076" height="1462" loading="lazy">
                             </div>
                             <span class="directions-help__dancer-top position-absolute d-none d-lg-block overflow-hidden">
-                                <img src="@img/directions-page/help-dancer-top.png" class="position-absolute" alt="">
+                                <img src="@img/directions-page/help-dancer-top.png" class="position-absolute" alt="" width="1114" height="1513" loading="lazy">
                             </span>
                         </div>
-                        <img src="@img/directions-page/help-bubble-heels.svg" class="directions-help__bubble directions-help__bubble--heels position-absolute d-none d-lg-block pe-none" alt="" aria-hidden="true">
-                        <img src="@img/directions-page/help-bubble-latina.svg" class="directions-help__bubble directions-help__bubble--latina position-absolute d-none d-xxl-block pe-none" alt="" aria-hidden="true">
-                        <img src="@img/directions-page/help-bubble-modern.svg" class="directions-help__bubble directions-help__bubble--modern position-absolute d-none d-lg-block pe-none" alt="" aria-hidden="true">
+                        <img src="@img/directions-page/help-bubble-heels.svg" class="directions-help__bubble directions-help__bubble--heels position-absolute d-none d-lg-block pe-none" alt="" aria-hidden="true" width="192" height="108" loading="lazy">
+                        <img src="@img/directions-page/help-bubble-latina.svg" class="directions-help__bubble directions-help__bubble--latina position-absolute d-none d-xxl-block pe-none" alt="" aria-hidden="true" width="178" height="95" loading="lazy">
+                        <img src="@img/directions-page/help-bubble-modern.svg" class="directions-help__bubble directions-help__bubble--modern position-absolute d-none d-lg-block pe-none" alt="" aria-hidden="true" width="232" height="154" loading="lazy">
                         <div class="directions-help__container container position-relative z-3">
                             <div class="row">
                                 <div class="col-lg-7">
@@ -286,8 +285,8 @@
                                     <div class="directions-help__questions d-flex flex-wrap flex-column flex-lg-row">
                                         <div class="directions-help__question d-flex align-items-center gap-2">
                                             <picture class="directions-responsive-image">
-                                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-music.svg">
-                                                <img src="@img/directions-page/icon-music-mobile.svg" class="flex-shrink-0" alt="">
+                                                <source media="(min-width: 992px)" srcset="@img/directions-page/icon-music.svg" width="60" height="60">
+                                                <img src="@img/directions-page/icon-music-mobile.svg" class="flex-shrink-0" alt="" width="30" height="30" loading="lazy">
                                             </picture>
                                             <p class="fw-bold mb-0">
                                                 Какая музыка
@@ -298,8 +297,8 @@
                                         <div class="directions-help__question d-flex align-items-center gap-2">
                                             <span class="directions-help__move-icon rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
                                                 <picture class="directions-responsive-image">
-                                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-movement.svg">
-                                                    <img src="@img/directions-page/icon-movement-mobile.svg" alt="">
+                                                    <source media="(min-width: 992px)" srcset="@img/directions-page/icon-movement.svg" width="40" height="39">
+                                                    <img src="@img/directions-page/icon-movement-mobile.svg" alt="" width="20" height="20" loading="lazy">
                                                 </picture>
                                             </span>
                                             <p class="fw-bold mb-0">
@@ -310,8 +309,8 @@
                                         </div>
                                         <div class="directions-help__question d-flex align-items-center gap-2">
                                             <picture class="directions-responsive-image">
-                                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-mood.svg">
-                                                <img src="@img/directions-page/icon-mood-mobile.svg" class="flex-shrink-0" alt="">
+                                                <source media="(min-width: 992px)" srcset="@img/directions-page/icon-mood.svg" width="60" height="60">
+                                                <img src="@img/directions-page/icon-mood-mobile.svg" class="flex-shrink-0" alt="" width="30" height="30" loading="lazy">
                                             </picture>
                                             <p class="fw-bold mb-0">
                                                 Какое настроение
@@ -322,14 +321,14 @@
                                     </div>
                                     <div class="directions-help__bottom d-flex flex-column flex-xl-row align-items-lg-start">
                                         <div class="directions-help__think flex-shrink-0" aria-hidden="true">
-                                            <img src="@img/directions-page/help-note.svg" class="directions-help__handwriting" alt="">
+                                            <img src="@img/directions-page/help-note.svg" class="directions-help__handwriting" alt="" width="196" height="90" loading="lazy">
                                             <picture class="directions-responsive-image">
-                                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/help-note-arrow.svg">
-                                                <img src="@img/directions-page/help-note-arrow-mobile.svg" class="directions-help__arrow position-absolute" alt="">
+                                                <source media="(min-width: 992px)" srcset="@img/directions-page/help-note-arrow.svg" width="114" height="60">
+                                                <img src="@img/directions-page/help-note-arrow-mobile.svg" class="directions-help__arrow position-absolute" alt="" width="40" height="26" loading="lazy">
                                             </picture>
                                             <picture class="directions-responsive-image">
-                                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/help-note-underline.svg">
-                                                <img src="@img/directions-page/help-note-underline-mobile.svg" class="directions-help__underline position-absolute" alt="">
+                                                <source media="(min-width: 992px)" srcset="@img/directions-page/help-note-underline.svg" width="82" height="49">
+                                                <img src="@img/directions-page/help-note-underline-mobile.svg" class="directions-help__underline position-absolute" alt="" width="66" height="39" loading="lazy">
                                             </picture>
                                         </div>
                                         <p class="directions-help__outro fw-bold flex-shrink-0 mb-0">
@@ -346,7 +345,7 @@
                 <section class="directions-mood" aria-labelledby="directions-mood-title">
                     <div class="container">
                         <div class="directions-mood__heading position-relative text-center">
-                            <div id="directions-mood-title" class="directions-mood__title font-unbounded fw-semibold lh-base text-uppercase mb-0">Найди свой танец</div>
+                            <h2 id="directions-mood-title" class="directions-mood__title font-unbounded fw-semibold lh-base text-uppercase mb-0">Найди свой танец</h2>
                             <span class="directions-mood__note directions-section-label bg-white rounded-pill d-inline-flex align-items-center justify-content-center text-nowrap">По настроению ⚡️</span>
                         </div>
                         <div class="directions-mood__cards row">
@@ -354,10 +353,10 @@
                                 <article class="directions-mood__card directions-mood__card--energy bg-white rounded-4 position-relative">
                                     <div class="directions-mood__art position-absolute" aria-hidden="true">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 768px)" srcset="@img/directions-page/mood-energy-shape.svg">
-                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-energy-shape-mobile.svg" alt="">
+                                            <source media="(min-width: 768px)" srcset="@img/directions-page/mood-energy-shape.svg" width="287" height="220">
+                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-energy-shape-mobile.svg" alt="" width="150" height="115" loading="lazy">
                                         </picture>
-                                        <img class="directions-mood__dancer position-absolute" src="@img/directions-page/mood-energy-dancer.png" alt="">
+                                        <img class="directions-mood__dancer position-absolute" src="@img/directions-page/mood-energy-dancer.png" alt="" width="913" height="1143" loading="lazy">
                                     </div>
                                     <div class="directions-mood__copy d-flex flex-column align-items-start">
                                         <h3 class="fw-bold mb-0">Хочется энергии и драйва?</h3>
@@ -370,11 +369,11 @@
                                 <article class="directions-mood__card directions-mood__card--feminine bg-white rounded-4 position-relative">
                                     <div class="directions-mood__art position-absolute" aria-hidden="true">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 768px)" srcset="@img/directions-page/mood-feminine-shape.svg">
-                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-feminine-shape-mobile.svg" alt="">
+                                            <source media="(min-width: 768px)" srcset="@img/directions-page/mood-feminine-shape.svg" width="273" height="285">
+                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-feminine-shape-mobile.svg" alt="" width="168" height="175" loading="lazy">
                                         </picture>
                                         <div class="directions-mood__dancer position-absolute overflow-hidden">
-                                            <img src="@img/directions-page/mood-feminine-dancer.png" alt="">
+                                            <img src="@img/directions-page/mood-feminine-dancer.png" alt="" width="1122" height="1402" loading="lazy">
                                         </div>
                                     </div>
                                     <div class="directions-mood__copy d-flex flex-column align-items-start">
@@ -388,10 +387,10 @@
                                 <article class="directions-mood__card directions-mood__card--latin bg-white rounded-4 position-relative">
                                     <div class="directions-mood__art position-absolute" aria-hidden="true">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 768px)" srcset="@img/directions-page/mood-latin-shape.svg">
-                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-latin-shape-mobile.svg" alt="">
+                                            <source media="(min-width: 768px)" srcset="@img/directions-page/mood-latin-shape.svg" width="250" height="262">
+                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-latin-shape-mobile.svg" alt="" width="128" height="134" loading="lazy">
                                         </picture>
-                                        <img class="directions-mood__dancer position-absolute" src="@img/directions-page/mood-latin-dancer.png" alt="">
+                                        <img class="directions-mood__dancer position-absolute" src="@img/directions-page/mood-latin-dancer.png" alt="" width="1473" height="1068" loading="lazy">
                                     </div>
                                     <div class="directions-mood__copy d-flex flex-column align-items-start">
                                         <h3 class="fw-bold mb-0">Нравятся латиноамериканские ритмы?</h3>
@@ -404,10 +403,10 @@
                                 <article class="directions-mood__card directions-mood__card--modern bg-white rounded-4 position-relative">
                                     <div class="directions-mood__art position-absolute" aria-hidden="true">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 768px)" srcset="@img/directions-page/mood-modern-shape.svg">
-                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-modern-shape-mobile.svg" alt="">
+                                            <source media="(min-width: 768px)" srcset="@img/directions-page/mood-modern-shape.svg" width="322" height="247">
+                                            <img class="directions-mood__shape position-absolute" src="@img/directions-page/mood-modern-shape-mobile.svg" alt="" width="200" height="153" loading="lazy">
                                         </picture>
-                                        <img class="directions-mood__dancer position-absolute" src="@img/directions-page/mood-modern-dancer.png" alt="">
+                                        <img class="directions-mood__dancer position-absolute" src="@img/directions-page/mood-modern-dancer.png" alt="" width="1367" height="1151" loading="lazy">
                                     </div>
                                     <div class="directions-mood__copy d-flex flex-column align-items-start">
                                         <h3 class="fw-bold mb-0">Нравятся современные танцы?</h3>
@@ -429,11 +428,11 @@
                                 <div class="col-lg-4 flex-shrink-0">
                                     <div class="directions-types__shoes position-relative mx-auto" aria-hidden="true">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/types-sneakers-shape.svg">
-                                            <img class="directions-types__shoes-shape position-absolute" src="@img/directions-page/types-sneakers-shape-mobile.svg" alt="">
+                                            <source media="(min-width: 992px)" srcset="@img/directions-page/types-sneakers-shape.svg" width="346" height="289">
+                                            <img class="directions-types__shoes-shape position-absolute" src="@img/directions-page/types-sneakers-shape-mobile.svg" alt="" width="217" height="181" loading="lazy">
                                         </picture>
-                                        <img class="directions-types__shoes-photo position-absolute" src="@img/directions-page/types-sneakers.png" alt="">
-                                        <img class="directions-types__shoes-note position-absolute" src="@img/directions-page/types-note.svg" alt="">
+                                        <img class="directions-types__shoes-photo position-absolute" src="@img/directions-page/types-sneakers.png" alt="" width="1254" height="1254" loading="lazy">
+                                        <img class="directions-types__shoes-note position-absolute" src="@img/directions-page/types-note.svg" alt="" width="220" height="89" loading="lazy">
                                     </div>
                                 </div>
                                 <div class="col-lg-8">
@@ -443,8 +442,8 @@
                                         <div class="directions-types__detail d-flex align-items-start align-items-lg-center">
                                             <span class="directions-types__icon directions-types__icon--support rounded-circle d-flex align-items-center justify-content-center flex-shrink-0">
                                                 <picture class="directions-responsive-image">
-                                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-support.svg">
-                                                    <img src="@img/directions-page/icon-support-mobile.svg" alt="">
+                                                    <source media="(min-width: 992px)" srcset="@img/directions-page/icon-support.svg" width="33" height="36">
+                                                    <img src="@img/directions-page/icon-support-mobile.svg" alt="" width="17" height="18" loading="lazy">
                                                 </picture>
                                             </span>
                                             <p class="mb-0 flex-grow-1">Начать танцевать можно в любом возрасте и без специальной подготовки. В Madison есть группы для начинающих, где ты изучаешь базовые движения, соединяешь их в танцевальные связки и разучиваешь яркую современную хореографию, подходящую твоему уровню</p>
@@ -469,8 +468,8 @@
                                         </h2>
                                         <div class="directions-types__detail d-flex align-items-start">
                                             <picture class="directions-responsive-image">
-                                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-diamond.svg">
-                                                <img class="directions-types__icon flex-shrink-0" src="@img/directions-page/icon-diamond-mobile.svg" alt="">
+                                                <source media="(min-width: 992px)" srcset="@img/directions-page/icon-diamond.svg" width="60" height="60">
+                                                <img class="directions-types__icon flex-shrink-0" src="@img/directions-page/icon-diamond-mobile.svg" alt="" width="30" height="30" loading="lazy">
                                             </picture>
                                             <p class="mb-0 flex-grow-1">Возможность заниматься один на один с хореографом и сосредоточиться именно на своих целях. Можно освоить понравившееся направление, разобрать сложные элементы, улучшить технику, выучить определенный танец или подготовить номер для важного события.</p>
                                         </div>
@@ -484,16 +483,16 @@
                                 <div class="col-lg-4">
                                     <div class="directions-types__individual-art position-relative" aria-hidden="true">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/types-individual-shape-large.svg">
-                                            <img class="directions-types__individual-shape directions-types__individual-shape--large position-absolute" src="@img/directions-page/types-individual-shapes-mobile.svg" alt="">
+                                            <source media="(min-width: 992px)" srcset="@img/directions-page/types-individual-shape-large.svg" width="427" height="327">
+                                            <img class="directions-types__individual-shape directions-types__individual-shape--large position-absolute" src="@img/directions-page/types-individual-shapes-mobile.svg" alt="" width="275" height="278" loading="lazy">
                                         </picture>
-                                        <img class="directions-types__individual-shape directions-types__individual-shape--small position-absolute d-none d-lg-block" src="@img/directions-page/types-individual-shape-small.svg" alt="">
+                                        <img class="directions-types__individual-shape directions-types__individual-shape--small position-absolute d-none d-lg-block" src="@img/directions-page/types-individual-shape-small.svg" alt="" width="246" height="227" loading="lazy">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/types-individual-line.svg">
-                                            <img class="directions-types__individual-line position-absolute" src="@img/directions-page/types-individual-line-mobile.svg" alt="">
+                                            <source media="(min-width: 992px)" srcset="@img/directions-page/types-individual-line.svg" width="636" height="413">
+                                            <img class="directions-types__individual-line position-absolute" src="@img/directions-page/types-individual-line-mobile.svg" alt="" width="371" height="241" loading="lazy">
                                         </picture>
                                         <div class="directions-types__individual-photo position-absolute overflow-hidden">
-                                            <img src="@img/directions-page/types-individual-dancer.png" alt="">
+                                            <img src="@img/directions-page/types-individual-dancer.png" alt="" width="1086" height="1448" loading="lazy">
                                         </div>
                                     </div>
                                 </div>
@@ -506,29 +505,32 @@
                     <div class="directions-creative__wrapper">
                         <div class="directions-events__art position-absolute pe-none" aria-hidden="true">
                             <picture class="directions-responsive-image">
-                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/events-photo-shape.svg">
-                                <img src="@img/directions-page/events-photo-shape-mobile.svg" class="directions-events__shape position-absolute" alt="">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/events-photo-shape.svg" width="670" height="633">
+                                <img src="@img/directions-page/events-photo-shape-mobile.svg" class="directions-events__shape position-absolute" alt="" width="325" height="307" loading="lazy">
                             </picture>
                             <picture class="directions-responsive-image">
-                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/events-photo-shape-front.svg">
-                                <img src="@img/directions-page/events-photo-shape-front-mobile.svg" class="directions-events__shape-front position-absolute" alt="">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/events-photo-shape-front.svg" width="504" height="290">
+                                <img src="@img/directions-page/events-photo-shape-front-mobile.svg" class="directions-events__shape-front position-absolute" alt="" width="297" height="171" loading="lazy">
                             </picture>
                             <picture class="directions-responsive-image">
-                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/events-couple.webp">
-                                <img src="@img/directions-page/events-couple-mobile.webp" class="directions-events__couple position-absolute" alt="">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/events-couple.webp" type="image/webp" width="846" height="1015">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/events-couple.png" type="image/png" width="846" height="1015">
+                                <source srcset="@img/directions-page/events-couple-mobile.webp" type="image/webp" width="410" height="496">
+                                <img src="@img/directions-page/events-couple-mobile.png" class="directions-events__couple position-absolute" alt="" width="410" height="496" loading="lazy">
                             </picture>
                             <picture class="directions-responsive-image">
-                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/events-note.svg">
-                                <img src="@img/directions-page/events-note-mobile.webp" class="directions-events__note position-absolute" alt="">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/events-note.svg" width="256" height="107">
+                                <source srcset="@img/directions-page/events-note-mobile.webp" type="image/webp" width="261" height="108">
+                                <img src="@img/directions-page/events-note-mobile.png" class="directions-events__note position-absolute" alt="" width="261" height="108" loading="lazy">
                             </picture>
                         </div>
                         <picture class="directions-responsive-image">
-                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/events-line-primary.svg">
-                            <img src="@img/directions-page/events-line-primary-mobile.svg" class="directions-events__line position-absolute pe-none" alt="" aria-hidden="true">
+                            <source media="(min-width: 992px)" srcset="@img/directions-page/events-line-primary.svg" width="2052" height="622">
+                            <img src="@img/directions-page/events-line-primary-mobile.svg" class="directions-events__line position-absolute pe-none" alt="" aria-hidden="true" width="540" height="164" loading="lazy">
                         </picture>
                         <picture class="directions-responsive-image">
-                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/events-line-secondary.svg">
-                            <img src="@img/directions-page/events-line-secondary-mobile.svg" class="directions-events__line directions-events__line--second position-absolute pe-none" alt="" aria-hidden="true">
+                            <source media="(min-width: 992px)" srcset="@img/directions-page/events-line-secondary.svg" width="2052" height="622">
+                            <img src="@img/directions-page/events-line-secondary-mobile.svg" class="directions-events__line directions-events__line--second position-absolute pe-none" alt="" aria-hidden="true" width="540" height="164" loading="lazy">
                         </picture>
                         <div class="directions-events__container container position-relative z-3">
                             <h2 id="directions-events-title" class="directions-events__title position-relative font-unbounded fw-semibold text-uppercase">
@@ -541,8 +543,8 @@
                                     <article class="directions-events__card bg-white rounded-4 d-flex flex-column">
                                         <span class="directions-events__wedding-icon rounded-circle d-flex align-items-center justify-content-center">
                                             <picture class="directions-responsive-image">
-                                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-wedding-rings.svg">
-                                                <img src="@img/directions-page/icon-wedding-rings-mobile.svg" alt="">
+                                                <source media="(min-width: 992px)" srcset="@img/directions-page/icon-wedding-rings.svg" width="36" height="40">
+                                                <img src="@img/directions-page/icon-wedding-rings-mobile.svg" alt="" width="18" height="20" loading="lazy">
                                             </picture>
                                         </span>
                                         <div>
@@ -555,8 +557,8 @@
                                 <div class="col-lg-4">
                                     <article class="directions-events__card directions-events__card--middle bg-white rounded-4 d-flex flex-column">
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-balloon.svg">
-                                            <img src="@img/directions-page/icon-balloon-mobile.svg" class="directions-events__icon" alt="">
+                                            <source media="(min-width: 992px)" srcset="@img/directions-page/icon-balloon.svg" width="60" height="60">
+                                            <img src="@img/directions-page/icon-balloon-mobile.svg" class="directions-events__icon" alt="" width="30" height="30" loading="lazy">
                                         </picture>
                                         <div>
                                             <h3 class="fw-bold mb-0">Постановка танца для праздника или выступления</h3>
@@ -566,7 +568,7 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <article class="directions-events__card bg-white rounded-4 d-flex flex-column">
-                                        <img src="@img/directions-page/icon-high-heels.svg" class="directions-events__icon" alt="">
+                                        <img src="@img/directions-page/icon-high-heels.svg" class="directions-events__icon" alt="" width="60" height="60" loading="lazy">
                                         <div>
                                             <h3 class="fw-bold mb-0">Танцевальный мастер-класс для праздника</h3>
                                             <p class="directions-events__description mb-0">Девичник, день рождения, встреча с друзьями или необычное свидание можно провести в формате танцевального мастер-класса. Выбираем стиль и музыку, а хореограф адаптирует занятие под формат и уровень участников.</p>
@@ -590,20 +592,20 @@
                             <div class="directions-life__center col-lg-4 order-first order-xxl-2">
                                 <div class="directions-life__main-art position-relative mx-auto" aria-hidden="true">
                                     <picture class="directions-responsive-image">
-                                        <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/life-collage-shape.svg">
-                                        <img class="directions-life__backdrop position-absolute" src="@img/directions-page/life-collage-shape-mobile.svg" alt="">
+                                        <source media="(min-width: 992px)" srcset="@img/directions-page/life-collage-shape.svg" width="672" height="451">
+                                        <img class="directions-life__backdrop position-absolute" src="@img/directions-page/life-collage-shape-mobile.svg" alt="" width="444" height="298" loading="lazy">
                                     </picture>
                                     <picture class="directions-responsive-image">
-                                        <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/life-collage-frame.svg">
-                                        <img class="directions-life__frame position-absolute" src="@img/directions-page/life-collage-frame-mobile.svg" alt="">
+                                        <source media="(min-width: 992px)" srcset="@img/directions-page/life-collage-frame.svg" width="390" height="391">
+                                        <img class="directions-life__frame position-absolute" src="@img/directions-page/life-collage-frame-mobile.svg" alt="" width="273" height="273" loading="lazy">
                                     </picture>
                                     <div class="directions-life__main-mask position-absolute">
-                                        <img class="directions-life__main-source directions-life__main-source--room position-absolute" src="@img/directions-page/life-collage-room.png" alt="">
-                                        <img class="directions-life__main-source directions-life__main-source--class position-absolute" src="@img/directions-page/life-collage-class.jpg" alt="">
-                                        <img class="directions-life__main-source directions-life__main-source--dancer position-absolute" src="@img/directions-page/life-collage-dancer.png" alt="">
+                                        <img class="directions-life__main-source directions-life__main-source--room position-absolute" src="@img/directions-page/life-collage-room.jpg" alt="" width="1448" height="1086" loading="lazy">
+                                        <img class="directions-life__main-source directions-life__main-source--class position-absolute" src="@img/directions-page/life-collage-class.jpg" alt="" width="1061" height="940" loading="lazy">
+                                        <img class="directions-life__main-source directions-life__main-source--dancer position-absolute" src="@img/directions-page/life-collage-dancer.jpg" alt="" width="1448" height="1086" loading="lazy">
                                     </div>
                                     <div class="directions-life__main-cutout position-absolute overflow-hidden">
-                                        <img src="@img/directions-page/life-collage-cutout.png" alt="">
+                                        <img src="@img/directions-page/life-collage-cutout.png" alt="" width="1064" height="798" loading="lazy">
                                     </div>
                                 </div>
                             </div>
@@ -615,16 +617,16 @@
                                     </div>
                                     <div class="col-5 col-lg-3 flex-shrink-0">
                                         <div class="directions-life__portrait directions-life__portrait--groups position-relative" aria-hidden="true">
-                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="">
+                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="" width="120" height="120" loading="lazy">
                                             <div class="directions-life__portrait-mask position-absolute">
-                                                <img src="@img/directions-page/life-groups-photo.png" alt="">
+                                                <img src="@img/directions-page/life-groups-photo.jpg" alt="" width="1254" height="1254" loading="lazy">
                                             </div>
                                             <div class="directions-life__portrait-top position-absolute overflow-hidden">
-                                                <img src="@img/directions-page/life-groups-cutout.png" alt="">
+                                                <img src="@img/directions-page/life-groups-cutout.png" alt="" width="1254" height="1254" loading="lazy">
                                             </div>
                                             <picture class="directions-responsive-image">
-                                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/life-groups-heart.svg">
-                                                <img class="directions-life__spark position-absolute" src="@img/directions-page/life-groups-heart-mobile.svg" alt="">
+                                                <source media="(min-width: 992px)" srcset="@img/directions-page/life-groups-heart.svg" width="37" height="47">
+                                                <img class="directions-life__spark position-absolute" src="@img/directions-page/life-groups-heart-mobile.svg" alt="" width="20" height="25" loading="lazy">
                                             </picture>
                                         </div>
                                     </div>
@@ -636,12 +638,12 @@
                                     </div>
                                     <div class="col-5 col-lg-3 flex-shrink-0">
                                         <div class="directions-life__portrait directions-life__portrait--teachers position-relative" aria-hidden="true">
-                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="">
+                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="" width="120" height="120" loading="lazy">
                                             <div class="directions-life__portrait-mask position-absolute">
-                                                <img src="@img/directions-page/life-teachers-photo.png" alt="">
+                                                <img src="@img/directions-page/life-teachers-photo.png" alt="" width="1254" height="1254" loading="lazy">
                                             </div>
                                             <div class="directions-life__portrait-top position-absolute overflow-hidden">
-                                                <img src="@img/directions-page/life-teachers-photo.png" alt="">
+                                                <img src="@img/directions-page/life-teachers-photo.png" alt="" width="1254" height="1254" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -651,13 +653,13 @@
                                 <article class="directions-life__feature directions-life__feature--events row g-0 flex-nowrap align-items-start order-2 order-lg-0">
                                     <div class="col-5 col-lg-3 flex-shrink-0">
                                         <div class="directions-life__portrait directions-life__portrait--events position-relative" aria-hidden="true">
-                                            <img class="directions-life__portrait-dot position-absolute" src="@img/directions-page/life-events-dot.svg" alt="">
-                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="">
+                                            <img class="directions-life__portrait-dot position-absolute" src="@img/directions-page/life-events-dot.svg" alt="" width="50" height="51" loading="lazy">
+                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="" width="120" height="120" loading="lazy">
                                             <div class="directions-life__portrait-mask position-absolute">
-                                                <img src="@img/directions-page/life-events-photo.png" alt="">
+                                                <img src="@img/directions-page/life-events-photo.jpg" alt="" width="1254" height="1254" loading="lazy">
                                             </div>
                                             <div class="directions-life__portrait-top position-absolute overflow-hidden">
-                                                <img src="@img/directions-page/life-events-cutout.png" alt="">
+                                                <img src="@img/directions-page/life-events-cutout.png" alt="" width="1021" height="1021" loading="lazy">
                                             </div>
                                         </div>
                                     </div>
@@ -669,16 +671,16 @@
                                 <article class="directions-life__feature directions-life__feature--friends row g-0 flex-nowrap align-items-start order-4 order-lg-0">
                                     <div class="col-5 col-lg-3 flex-shrink-0">
                                         <div class="directions-life__portrait directions-life__portrait--friends position-relative" aria-hidden="true">
-                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="">
+                                            <img class="directions-life__portrait-ring position-absolute" src="@img/directions-page/life-portrait-ring.svg" alt="" width="120" height="120" loading="lazy">
                                             <div class="directions-life__portrait-mask position-absolute">
-                                                <img src="@img/directions-page/life-friends-photo.png" alt="">
+                                                <img src="@img/directions-page/life-friends-photo.png" alt="" width="876" height="876" loading="lazy">
                                             </div>
                                             <div class="directions-life__portrait-top position-absolute overflow-hidden">
-                                                <img src="@img/directions-page/life-friends-photo.png" alt="">
+                                                <img src="@img/directions-page/life-friends-photo.png" alt="" width="876" height="876" loading="lazy">
                                             </div>
                                             <picture class="directions-responsive-image">
-                                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/life-friends-sparkle.svg">
-                                                <img class="directions-life__spark position-absolute" src="@img/directions-page/life-friends-sparkle-mobile.svg" alt="">
+                                                <source media="(min-width: 992px)" srcset="@img/directions-page/life-friends-sparkle.svg" width="32" height="36">
+                                                <img class="directions-life__spark position-absolute" src="@img/directions-page/life-friends-sparkle-mobile.svg" alt="" width="23" height="26" loading="lazy">
                                             </picture>
                                         </div>
                                     </div>
@@ -699,31 +701,31 @@
                     <div class="directions-creative__background d-block position-absolute top-0 start-50 translate-middle-x w-100 h-100 pe-none" aria-hidden="true"></div>
                     <div class="directions-creative__wrapper">
                         <div class="directions-final__art position-absolute pe-none" aria-hidden="true">
-                            <img src="@img/directions-page/final-photo-left.png" class="directions-final__photo directions-final__photo--left position-absolute" alt="">
-                            <img src="@img/directions-page/final-photo-right.png" class="directions-final__photo directions-final__photo--right position-absolute" alt="">
+                            <img src="@img/directions-page/final-photo-left.png" class="directions-final__photo directions-final__photo--left position-absolute" alt="" width="1466" height="1466" loading="lazy">
+                            <img src="@img/directions-page/final-photo-right.png" class="directions-final__photo directions-final__photo--right position-absolute" alt="" width="1800" height="1800" loading="lazy">
                             <div class="directions-final__dancer-mask">
-                                <img src="@img/directions-page/final-dancer.png" class="directions-final__dancer position-absolute" alt="">
+                                <img src="@img/directions-page/final-dancer.png" class="directions-final__dancer position-absolute" alt="" width="1236" height="1273" loading="lazy">
                             </div>
                             <picture class="directions-responsive-image">
-                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/final-ribbon.svg">
-                                <img src="@img/directions-page/final-ribbon-mobile.svg" class="directions-final__ribbon position-absolute" alt="">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/final-ribbon.svg" width="937" height="684">
+                                <img src="@img/directions-page/final-ribbon-mobile.svg" class="directions-final__ribbon position-absolute" alt="" width="395" height="264" loading="lazy">
                             </picture>
                             <span class="directions-final__restore directions-final__restore--arms position-absolute d-none d-lg-block overflow-hidden">
-                                <img src="@img/directions-page/final-dancer.png" class="position-absolute" alt="">
+                                <img src="@img/directions-page/final-dancer.png" class="position-absolute" alt="" width="1236" height="1273" loading="lazy">
                             </span>
                             <span class="directions-final__restore directions-final__restore--neck position-absolute d-none d-lg-block overflow-hidden">
-                                <img src="@img/directions-page/final-dancer.png" class="position-absolute" alt="">
+                                <img src="@img/directions-page/final-dancer.png" class="position-absolute" alt="" width="1236" height="1273" loading="lazy">
                             </span>
                             <span class="directions-final__restore directions-final__restore--hips position-absolute overflow-hidden">
-                                <img src="@img/directions-page/final-dancer.png" class="position-absolute" alt="">
+                                <img src="@img/directions-page/final-dancer.png" class="position-absolute" alt="" width="1236" height="1273" loading="lazy">
                             </span>
                             <picture class="directions-responsive-image">
-                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/final-heart-left.svg">
-                                <img src="@img/directions-page/final-heart-left-mobile.svg" class="directions-final__heart directions-final__heart--left position-absolute" alt="">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/final-heart-left.svg" width="38" height="49">
+                                <img src="@img/directions-page/final-heart-left-mobile.svg" class="directions-final__heart directions-final__heart--left position-absolute" alt="" width="17" height="21" loading="lazy">
                             </picture>
                             <picture class="directions-responsive-image">
-                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/final-heart-right.svg">
-                                <img src="@img/directions-page/final-heart-right-mobile.svg" class="directions-final__heart directions-final__heart--right position-absolute" alt="">
+                                <source media="(min-width: 992px)" srcset="@img/directions-page/final-heart-right.svg" width="38" height="49">
+                                <img src="@img/directions-page/final-heart-right-mobile.svg" class="directions-final__heart directions-final__heart--right position-absolute" alt="" width="17" height="21" loading="lazy">
                             </picture>
                         </div>
                         <div class="directions-final__container container position-relative z-3 text-center text-lg-start">
@@ -732,12 +734,12 @@
                                     <div class="directions-final__label-wrap position-relative d-block">
                                         <span class="directions-final__label d-inline-block rounded-pill bg-white color-accent text-center">Попробуй тест-драйв!</span>
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/final-label-decor-right.svg">
-                                            <img src="@img/directions-page/final-label-decor-left-mobile.svg" class="directions-final__label-decor directions-final__label-decor--left position-absolute pe-none" alt="" aria-hidden="true">
+                                            <source media="(min-width: 992px)" srcset="@img/directions-page/final-label-decor-right.svg" width="43" height="47">
+                                            <img src="@img/directions-page/final-label-decor-left-mobile.svg" class="directions-final__label-decor directions-final__label-decor--left position-absolute pe-none" alt="" aria-hidden="true" width="24" height="26" loading="lazy">
                                         </picture>
                                         <picture class="directions-responsive-image">
-                                            <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/final-label-decor-right.svg">
-                                            <img src="@img/directions-page/final-label-decor-right-mobile.svg" class="directions-final__label-decor directions-final__label-decor--right position-absolute pe-none" alt="" aria-hidden="true">
+                                            <source media="(min-width: 992px)" srcset="@img/directions-page/final-label-decor-right.svg" width="43" height="47">
+                                            <img src="@img/directions-page/final-label-decor-right-mobile.svg" class="directions-final__label-decor directions-final__label-decor--right position-absolute pe-none" alt="" aria-hidden="true" width="29" height="31" loading="lazy">
                                         </picture>
                                     </div>
                                     <h2 id="directions-final-title" class="directions-final__title font-unbounded fw-semibold text-uppercase">
@@ -755,8 +757,8 @@
                                         <span class="directions-final__price position-relative font-unbounded fw-bold color-accent text-nowrap">
                                             <span class="directions-final__price-value">1 800 ₽</span>
                                             <picture class="directions-responsive-image">
-                                                <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/final-price-underline.svg">
-                                                <img src="@img/directions-page/final-price-underline-mobile.svg" class="directions-final__price-line position-absolute" alt="" aria-hidden="true">
+                                                <source media="(min-width: 992px)" srcset="@img/directions-page/final-price-underline.svg" width="205" height="28">
+                                                <img src="@img/directions-page/final-price-underline-mobile.svg" class="directions-final__price-line position-absolute" alt="" aria-hidden="true" width="146" height="20" loading="lazy">
                                             </picture>
                                         </span>
                                     </div>
@@ -773,8 +775,8 @@
                             </div>
                             <div class="directions-final__note border border-white rounded-4 d-flex align-items-center">
                                 <picture class="directions-responsive-image">
-                                    <source class="d-none" media="(min-width: 992px)" srcset="@img/directions-page/icon-dance-discovery.svg">
-                                    <img src="@img/directions-page/icon-dance-discovery-mobile.svg" class="directions-final__note-icon flex-shrink-0" alt="">
+                                    <source media="(min-width: 992px)" srcset="@img/directions-page/icon-dance-discovery.svg" width="60" height="60">
+                                    <img src="@img/directions-page/icon-dance-discovery-mobile.svg" class="directions-final__note-icon flex-shrink-0" alt="" width="40" height="40" loading="lazy">
                                 </picture>
                                 <p class="fw-bold mb-0">Можно долго выбирать стиль по описанию, но понять, какой танец действительно твой, проще всего на занятии 💫</p>
                             </div>
@@ -791,11 +793,11 @@
                             <a href="https://t.me/madison_dance" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-uppercase order-md-0 order-1">Задать вопрос</a>
                             <a href="index.html#sign-up" class="btn btn-primary text-uppercase order-md-0 order-first">Записаться на пробное занятие</a>
                             <a href="https://max.ru/u/f9LHodD0cOJ6tGKOH8PGYR4YaaJ5YH2cN688Gz_E0Ilgy8_Wv5ONSmrXwHE" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary text-uppercase order-md-0 order-3">
-                                <img src="@img/icons/max.svg" width="30" height="30" class="flex-shrink-0" alt="">
+                                <img src="@img/icons/max.svg" width="30" height="30" class="flex-shrink-0" alt="" loading="lazy">
                                 MAX
                             </a>
                             <a href="https://t.me/madison_dance" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary text-uppercase order-md-0 order-3">
-                                <img src="@img/icons/telegram.svg" width="30" height="30" class="flex-shrink-0" alt="">
+                                <img src="@img/icons/telegram.svg" width="30" height="30" class="flex-shrink-0" alt="" loading="lazy">
                                 Telegram
                             </a>
                             <a href="tel:+74954320814" class="btn btn-outline-primary text-uppercase order-md-0 order-2">Звонок</a>

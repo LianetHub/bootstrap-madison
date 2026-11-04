@@ -10,7 +10,13 @@ export const images = () => {
             }))
         )
         .pipe(app.plugins.newer(app.path.build.images))
-        .pipe(webp())
+        .pipe(app.plugins.if(
+            file => file.relative.replace(/\\/g, '/') === 'directions-page/life-collage-class.jpg',
+            // The source now contains only the visible crop. Keep its native
+            // resolution and use higher quality for the detailed collage.
+            webp({ quality: 85, method: 6 }),
+            webp()
+        ))
         .pipe(
             app.plugins.if(
                 app.isBuild,
