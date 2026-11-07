@@ -8,12 +8,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/libs/bootstrap.min.css?_v=20261104211922">
-	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20261104211922">
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20261104211922">
+	<link rel="stylesheet" href="css/libs/bootstrap.min.css?_v=20261107173926">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20261107173926">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20261107173926">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20261104211922">
-	<link rel="stylesheet" href="css/style.min.css?_v=20261104211922">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20261107173926">
+	<link rel="stylesheet" href="css/style.min.css?_v=20261107173926">
 </head>
 
 <body>
@@ -933,11 +933,11 @@
 								<div class="directions-final__label-wrap position-relative d-block">
 									<span class="directions-final__label d-inline-block rounded-pill bg-white color-accent text-center">Попробуй тест-драйв!</span>
 									<picture class="directions-responsive-image">
-										<source media="(min-width: 992px)" srcset="img/directions-page/final-label-decor-right.svg" width="43" height="47">
+										<source media="(min-width: 992px)" srcset="img/directions-page/final-label-decor-desktop.svg" width="43" height="47">
 										<img src="img/directions-page/final-label-decor-left-mobile.svg" class="directions-final__label-decor directions-final__label-decor--left position-absolute pe-none" alt="" aria-hidden="true" width="24" height="26" loading="lazy">
 									</picture>
 									<picture class="directions-responsive-image">
-										<source media="(min-width: 992px)" srcset="img/directions-page/final-label-decor-right.svg" width="43" height="47">
+										<source media="(min-width: 992px)" srcset="img/directions-page/final-label-decor-desktop.svg" width="43" height="47">
 										<img src="img/directions-page/final-label-decor-right-mobile.svg" class="directions-final__label-decor directions-final__label-decor--right position-absolute pe-none" alt="" aria-hidden="true" width="29" height="31" loading="lazy">
 									</picture>
 								</div>
@@ -979,40 +979,40 @@
 					<h2 id="directions-faq-title" class="faq__title fs-title text-uppercase text-center font-unbounded fw-bold lh-base">Частые вопросы о танцевальных направлениях</h2>
 					<ol class="faq__list">
 						<li class="faq__item">
-							<div class="faq__item-question rounded-4 bg-white d-flex align-items-center text-left fw-bold">Как понять, какое направление танцев мне подойдёт?</div>
-							<div class="faq__item-answer typography-block">
+							<button type="button" class="faq__item-question rounded-4 bg-white d-flex align-items-center text-start fw-bold w-100" aria-expanded="false" aria-controls="faq-directions-answer-1">Как понять, какое направление танцев мне подойдёт?</button>
+							<div id="faq-directions-answer-1" class="faq__item-answer typography-block">
 								<p>Ориентируйся на музыку и характер танца, который тебе нравится. Хочется драйва и яркой хореографии — попробуй хип-хоп или джаз-фанк, больше пластики и женственности — Хай Хилс, Леди Дэнс или стрип-пластику, а если любишь зажигательные латиноамериканские ритмы — Латина Соло.</p>
 							</div>
 						</li>
 						<li class="faq__item">
-							<div class="faq__item-question rounded-4 bg-white d-flex align-items-center text-left fw-bold">Чем отличаются Хай Хилс, Леди Дэнс и стрип-пластика?</div>
-							<div class="faq__item-answer typography-block">
+							<button type="button" class="faq__item-question rounded-4 bg-white d-flex align-items-center text-start fw-bold w-100" aria-expanded="false" aria-controls="faq-directions-answer-2">Чем отличаются Хай Хилс, Леди Дэнс и стрип-пластика?</button>
+							<div id="faq-directions-answer-2" class="faq__item-answer typography-block">
 								<p>Хай Хилс — женственная хореография на каблуках с акцентом на пластику и подачу.</p>
 								<p>Леди Дэнс — современные женские танцы в кроссовках с разнообразной хореографией. Стрип-пластика более чувственная и включает много пластики и работы в партере.</p>
 							</div>
 						</li>
 						<li class="faq__item">
-							<div class="faq__item-question rounded-4 bg-white d-flex align-items-center text-left fw-bold">Какое направление выбрать, если я не хочу танцевать на каблуках?</div>
-							<div class="faq__item-answer typography-block">
+							<button type="button" class="faq__item-question rounded-4 bg-white d-flex align-items-center text-start fw-bold w-100" aria-expanded="false" aria-controls="faq-directions-answer-3">Какое направление выбрать, если я не хочу танцевать на каблуках?</button>
+							<div id="faq-directions-answer-3" class="faq__item-answer typography-block">
 								<p>Попробуй Леди Дэнс, джаз-фанк, Латину соло или другие современные направления. В них можно развивать пластику, музыкальность и грацию в танце без специальной обуви на каблуке.</p>
 							</div>
 						</li>
 						<li class="faq__item">
-							<div class="faq__item-question rounded-4 bg-white d-flex align-items-center text-left fw-bold">Что выбрать: Леди Дэнс или Джаз-фанк?</div>
-							<div class="faq__item-answer typography-block">
+							<button type="button" class="faq__item-question rounded-4 bg-white d-flex align-items-center text-start fw-bold w-100" aria-expanded="false" aria-controls="faq-directions-answer-4">Что выбрать: Леди Дэнс или Джаз-фанк?</button>
+							<div id="faq-directions-answer-4" class="faq__item-answer typography-block">
 								<p>Леди Дэнс подойдёт, если хочется разнообразной женственной хореографии и пластики.</p>
 								<p>Джаз-фанк — если ближе драйв, динамичные связки, яркие акценты и выразительная подача под современную музыку.</p>
 							</div>
 						</li>
 						<li class="faq__item">
-							<div class="faq__item-question rounded-4 bg-white d-flex align-items-center text-left fw-bold">Какое направление выбрать ребёнку или подростку?</div>
-							<div class="faq__item-answer typography-block">
+							<button type="button" class="faq__item-question rounded-4 bg-white d-flex align-items-center text-start fw-bold w-100" aria-expanded="false" aria-controls="faq-directions-answer-5">Какое направление выбрать ребёнку или подростку?</button>
+							<div id="faq-directions-answer-5" class="faq__item-answer typography-block">
 								<p>Ориентируйтесь на возраст, любимую музыку и то, какие танцы нравятся самому ребёнку. В Madison программы для детей и подростков адаптированы по возрасту: от первых танцевальных навыков до современной хореографии, хип-хопа и джаз-фанка.</p>
 							</div>
 						</li>
 						<li class="faq__item">
-							<div class="faq__item-question rounded-4 bg-white d-flex align-items-center text-left fw-bold">Как понять, что выбранное направление мне подходит?</div>
-							<div class="faq__item-answer typography-block">
+							<button type="button" class="faq__item-question rounded-4 bg-white d-flex align-items-center text-start fw-bold w-100" aria-expanded="false" aria-controls="faq-directions-answer-6">Как понять, что выбранное направление мне подходит?</button>
+							<div id="faq-directions-answer-6" class="faq__item-answer typography-block">
 								<p>Обрати внимание на свои ощущения после пробного занятия: нравится ли тебе музыка, характер движений, темп и сама хореография. Главное, чтобы занятие вызывало желание танцевать дальше и возвращаться снова.</p>
 							</div>
 						</li>
@@ -1078,10 +1078,10 @@
 			</div>
 		</footer>
 		<!-- plugins -->
-		<script src="js/libs/fancybox.umd.js?_v=20261104211922"></script>
-		<script src="js/libs/swiper-bundle.min.js?_v=20261104211922"></script>
+		<script src="js/libs/fancybox.umd.js?_v=20261107173926"></script>
+		<script src="js/libs/swiper-bundle.min.js?_v=20261107173926"></script>
 		<!-- plugins -->
-		<script src="js/app.min.js?_v=20261104211922"></script>
+		<script src="js/app.min.js?_v=20261107173926"></script>
 	</div>
 </body>
 

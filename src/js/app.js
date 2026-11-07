@@ -29,13 +29,22 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 
-	document.addEventListener("click", function (e) {
-		const target = e.target;
+	const animatingFaqAnswers = new WeakSet();
 
-		if (target.matches(".faq__item-question")) {
-			target.classList.toggle("active");
-			target.nextElementSibling.slideToggle();
-		}
+	document.addEventListener("click", function (e) {
+		const question = e.target.closest(".faq__item-question");
+		if (!question) return;
+
+		const answer = document.getElementById(question.getAttribute("aria-controls"));
+		if (!answer || animatingFaqAnswers.has(answer)) return;
+
+		const expanded = question.getAttribute("aria-expanded") !== "true";
+		animatingFaqAnswers.add(answer);
+		question.classList.toggle("active", expanded);
+		question.setAttribute("aria-expanded", String(expanded));
+		answer.slideToggle(400, function () {
+			animatingFaqAnswers.delete(answer);
+		});
 	});
 
 	// sliders
